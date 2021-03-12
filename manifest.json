@@ -1,0 +1,13 @@
+{
+    "name": "Heaton.dev",
+    "short_name": "Heaton.dev",
+    "start_url": "https://joeheaton.github.io",
+    "display": "standalone",
+    "background_color": "#519cff",
+    "description": "Joe Heaton&#39;s technology-focused murmurings.",
+    "icons": [{
+      "src": "images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }]
+}

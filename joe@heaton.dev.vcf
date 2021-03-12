@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Heaton;Joe;;Mr;
+FN:Joe Heaton
+EMAIL;type=HOME,INTERNET:joe@heaton.dev
+URL:https://www.heaton.dev
+KIND:individual
+REV:2020-09-17T00:00:00.000Z
+END:VCARD
