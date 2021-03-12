@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dev on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/dev/</link>
+    <description>Recent content in dev on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>my Vim</title>
+      <link>https://blog.heaton.dev/blog/2020/10/my-vim/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/10/my-vim/</guid>
+      <description>&lt;p&gt;This is my &lt;code&gt;.vimrc&lt;/code&gt;, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrate Static Site to Digital Ocean Web App Platform</title>
+      <link>https://blog.heaton.dev/blog/2020/10/migrate-static-site-to-digital-ocean-web-app-platform/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/10/migrate-static-site-to-digital-ocean-web-app-platform/</guid>
+      <description>&lt;p&gt;Digital Ocean released a new &lt;a href=&#34;https://www.digitalocean.com/docs/app-platform/&#34;&gt;App Platform&lt;/a&gt; for running serverless apps with support in their free-tier for static sites. There are two approaches to hosting a static site on the App Platform, either include the build process in the repo and allow App Platform to build your site, or use a branch/repo with only the HTML output.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows Terminal - Change default profile</title>
+      <link>https://blog.heaton.dev/blog/2020/02/windows-terminal-change-default-profile/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/windows-terminal-change-default-profile/</guid>
+      <description>Open the new tab dropdown, found to the right of your tabs:
+Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this will open a JSON file (for now) which looks something like this:
+{ &amp;#34;defaultProfile&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;profiles&amp;#34;: [ { &amp;#34;guid&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Debian&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, { &amp;#34;guid&amp;#34;: &amp;#34;{123-456-789}&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Windows PowerShell&amp;#34;, &amp;#34;commandline&amp;#34;: &amp;#34;powershell.exe&amp;#34;, &amp;#34;hidden&amp;#34;: false }, Copy the guid value from whichever flavour of Linux you want to set as default.</description>
+    </item>
+    
+    <item>
+      <title>Useful Unixisms</title>
+      <link>https://blog.heaton.dev/blog/2020/02/useful-unixisms/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/useful-unixisms/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Github CLI headless install</title>
+      <link>https://blog.heaton.dev/blog/2020/02/github-cli-headless-install/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/github-cli-headless-install/</guid>
+      <description>Download &amp;amp; Install Github CLI.
+Run gh pr status, you will be prompted to connect gh to your Github account, open the github.com link it generates in a web browser, login and authorize the application. You will be redirected to a localhost address, copy the full address.
+Now you will need another terminal open one the same system, use wget/curl to pass the authorization onto the gh client:
+wget -O- GITHUB_URL</description>
+    </item>
+    
+    <item>
+      <title>Run for every updated file</title>
+      <link>https://blog.heaton.dev/blog/2020/02/run-for-every-updated-file/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/run-for-every-updated-file/</guid>
+      <description>&lt;p&gt;Using &lt;code&gt;inotifywait&lt;/code&gt; to watch for file changes recursively in the current directory. I use &lt;code&gt;$CHECK&lt;/code&gt; to ignore unwanted directories and filetypes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git feature branch &amp; merge</title>
+      <link>https://blog.heaton.dev/blog/2019/04/git-feature-branch-merge/</link>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2019/04/git-feature-branch-merge/</guid>
+      <description>Start with your master branch
+git checkout master git fetch origin If your local master has been modified, you can reset its state.
+git reset --hard origin/master
+Checkout a new feature branch.
+git checkout -b my-feature
+Make changes in this branch, committing as usual.
+git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push your branch to allow others and yourself to evaluate and commit further to it.</description>
+    </item>
+    
+    <item>
+      <title>tmux</title>
+      <link>https://blog.heaton.dev/blog/2019/04/tmux/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2019/04/tmux/</guid>
+      <description>&lt;p&gt;I find myself working on the move a lot more recently and I often have to deal with poor terminal emulators, iffy connectivity and sometimes I need resume my work on another machine entirely. As such I am trying out tmux as a way of persisting my working environment between sessions, supporting multiple tabs for when my emulator lacks it (Looking at you PuTTY, Git Bash) and lastly allowing me to resume my work on another desktop.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

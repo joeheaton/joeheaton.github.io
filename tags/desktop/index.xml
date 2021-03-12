@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>desktop on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/desktop/</link>
+    <description>Recent content in desktop on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enjoying GNOME3</title>
+      <link>https://blog.heaton.dev/blog/2013/08/enjoying-gnome3/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2013/08/enjoying-gnome3/</guid>
+      <description>The options Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.
+I won&amp;rsquo;t go too in-depth into the actual choices available and their ups &amp;amp; downs as this isn&amp;rsquo;t a comparison posting, I just want to express my feelings on my choice.</description>
+    </item>
+    
+  </channel>
+</rss>

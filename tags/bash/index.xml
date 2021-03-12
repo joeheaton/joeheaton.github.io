@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bash on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/bash/</link>
+    <description>Recent content in bash on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Unixisms</title>
+      <link>https://blog.heaton.dev/blog/2020/02/useful-unixisms/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/useful-unixisms/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My terminal login message</title>
+      <link>https://blog.heaton.dev/blog/2018/07/my-terminal-login-message/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2018/07/my-terminal-login-message/</guid>
+      <description>&lt;p&gt;Following on from &lt;a href=&#34;https://blog.heaton.dev/2018/07/25/bashrc.html&#34;&gt;bashrc&lt;/a&gt;, here is a snapshot and explaination of my &lt;code&gt;.motd&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My bash profile</title>
+      <link>https://blog.heaton.dev/blog/2018/07/my-bash-profile/</link>
+      <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2018/07/my-bash-profile/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s a snapshot of my .bashrc, I put this together to normalise my environment; which is particularly useful when working across CentOS/RHEL 6/7, SLES11/12 &amp;amp; Debian/Ubuntu.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll overexplain some lines and underexplain others, depending on how interesting they are.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

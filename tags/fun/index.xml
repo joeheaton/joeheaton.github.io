@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fun on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/fun/</link>
+    <description>Recent content in fun on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Wed, 23 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supercomputers in media</title>
+      <link>https://blog.heaton.dev/blog/2020/09/supercomputers-in-media/</link>
+      <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/09/supercomputers-in-media/</guid>
+      <description>&lt;p&gt;I thought it would be fun to gather together all the amazing looking fictional supercomputers!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

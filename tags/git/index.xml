@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/git/</link>
+    <description>Recent content in git on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github CLI headless install</title>
+      <link>https://blog.heaton.dev/blog/2020/02/github-cli-headless-install/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2020/02/github-cli-headless-install/</guid>
+      <description>Download &amp;amp; Install Github CLI.
+Run gh pr status, you will be prompted to connect gh to your Github account, open the github.com link it generates in a web browser, login and authorize the application. You will be redirected to a localhost address, copy the full address.
+Now you will need another terminal open one the same system, use wget/curl to pass the authorization onto the gh client:
+wget -O- GITHUB_URL</description>
+    </item>
+    
+    <item>
+      <title>Git feature branch &amp; merge</title>
+      <link>https://blog.heaton.dev/blog/2019/04/git-feature-branch-merge/</link>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/blog/2019/04/git-feature-branch-merge/</guid>
+      <description>Start with your master branch
+git checkout master git fetch origin If your local master has been modified, you can reset its state.
+git reset --hard origin/master
+Checkout a new feature branch.
+git checkout -b my-feature
+Make changes in this branch, committing as usual.
+git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push your branch to allow others and yourself to evaluate and commit further to it.</description>
+    </item>
+    
+  </channel>
+</rss>
