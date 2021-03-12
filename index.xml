@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Heaton.dev</title>
-    <link>https://joeheaton.github.io/</link>
+    <link>https://blog.heaton.dev/</link>
     <description>Recent content on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://joeheaton.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hi</title>
-      <link>https://joeheaton.github.io/me/</link>
+      <link>https://blog.heaton.dev/me/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://joeheaton.github.io/me/</guid>
+      <guid>https://blog.heaton.dev/me/</guid>
       <description>This place is perpetually in-development!
 Me Well, I&amp;rsquo;m told I am INTJ-T.
 Socials You can find a list of my socials at the top right of the page!
@@ -22,10 +22,10 @@ Referral Links Digital Ocean is my hosting provider, known as the &amp;ldquo;dev
     
     <item>
       <title>Privacy Policy</title>
-      <link>https://joeheaton.github.io/privacy/</link>
+      <link>https://blog.heaton.dev/privacy/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://joeheaton.github.io/privacy/</guid>
+      <guid>https://blog.heaton.dev/privacy/</guid>
       <description>Basically, you can keep your privacy!
 Contact me should you have any questions!
 How to clear website data from your browser  Firefox - Block websites from storing cookies and site data in Firefox Brave/Chrome - Clear, enable, and manage cookies in Chrome Edge - Delete cookies in Microsoft Edge  </description>
