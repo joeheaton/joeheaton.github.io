@@ -102,15 +102,6 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
     </item>
     
     <item>
-      <title>Mattermost - Self-Hosted Slack</title>
-      <link>https://blog.heaton.dev/blog/2020/02/mattermost-self-hosted-slack/</link>
-      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/blog/2020/02/mattermost-self-hosted-slack/</guid>
-      <description>&lt;p&gt;Mattermost is an accurate clone of Slack, providing open-source self-hosted team chat. Mattermost Inc produces client apps for most platforms, the back-end is written in Go so I imagine even a single instance should scale rather well.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Useful Unixisms</title>
       <link>https://blog.heaton.dev/blog/2020/02/useful-unixisms/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
