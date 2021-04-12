@@ -10,10 +10,10 @@
     <lastBuildDate>Sat, 01 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firefox-based browser add-on suggestions</title>
-      <link>https://blog.heaton.dev/blog/2013/06/firefox-based-browser-add-on-suggestions/</link>
+      <link>https://blog.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</link>
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2013/06/firefox-based-browser-add-on-suggestions/</guid>
+      <guid>https://blog.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</guid>
       <description>HTTPS Everywhere [GPLv3+] Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
     </item>
     

@@ -10,29 +10,29 @@
     <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robinhood NoSQL - Mixing tables</title>
-      <link>https://blog.heaton.dev/blog/2018/09/robinhood-nosql-part-2/</link>
+      <link>https://blog.heaton.dev/2018/09/robinhood-nosql-part-2/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2018/09/robinhood-nosql-part-2/</guid>
+      <guid>https://blog.heaton.dev/2018/09/robinhood-nosql-part-2/</guid>
       <description>&lt;p&gt;In &lt;a href=&#34;https://blog.heaton.dev/blog/2018/08/robinhood-nosql&#34;&gt;Robinhood NoSQL&lt;/a&gt; I experimented with porting the Robinhood database from Elasticsearch, it being a commonly-used NoSQL database with specialisation in behaving like a Search Engine. Having ingested the &lt;code&gt;ENTRIES&lt;/code&gt; table I now need to augment the records with filepaths from &lt;code&gt;ANNEX_INFO&lt;/code&gt;, as I found out previously:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Robinhood NoSQL</title>
-      <link>https://blog.heaton.dev/blog/2018/08/robinhood-nosql/</link>
+      <link>https://blog.heaton.dev/2018/08/robinhood-nosql/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2018/08/robinhood-nosql/</guid>
+      <guid>https://blog.heaton.dev/2018/08/robinhood-nosql/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
 &lt;p&gt;It does this by scanning every file on the filesystem as efficiently as possible to initially populate its MySQL/MariaDB relational database, then it continuously listen for changelogs coming from Lustre to keep its state in-line with reality.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Patching Lustre 2.10 for Linux 4.14</title>
-      <link>https://blog.heaton.dev/blog/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
+      <link>https://blog.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
+      <guid>https://blog.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
       <description>&lt;p&gt;The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&amp;rsquo;t seem to come back into existing Lustre releases, since those releases don&amp;rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!&lt;/p&gt;</description>
     </item>
     

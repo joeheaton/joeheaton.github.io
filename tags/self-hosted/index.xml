@@ -10,10 +10,10 @@
     <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pixelfed - self-hosted &amp; federated photo hosting</title>
-      <link>https://blog.heaton.dev/blog/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
+      <link>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
+      <guid>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
       <description>In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
 Following PixelFed&amp;rsquo;s Manual Setup instructions.
 git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:

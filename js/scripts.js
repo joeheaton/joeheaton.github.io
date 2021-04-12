@@ -3,9 +3,8 @@ var html = document.getElementsByTagName("html")[0];
 var head = document.getElementsByTagName("head")[0];
 
 // Site base URI - proto://domain.tld unless site_uri set in <head>
-if (!(site_uri)) { var site_uri = document.location.origin; }
+var site_uri = document.location.origin.concat("/");
 var site_fqdn = document.location.host;
-var site_uri = site_uri.concat("/");
 var noSubdomain = window.location.host.split('.').slice(1).join(".");
 
 /*

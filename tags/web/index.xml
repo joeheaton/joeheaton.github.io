@@ -10,29 +10,29 @@
     <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OAuth with Mastodon &amp; Pleroma</title>
-      <link>https://blog.heaton.dev/blog/2020/09/oauth-mastodon-pleroma/</link>
+      <link>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2020/09/oauth-mastodon-pleroma/</guid>
+      <guid>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</guid>
       <description>&lt;p&gt;Mastodon &amp;amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dynamically load fonts</title>
-      <link>https://blog.heaton.dev/blog/2020/08/dynamically-load-fonts/</link>
+      <link>https://blog.heaton.dev/2020/08/dynamically-load-fonts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2020/08/dynamically-load-fonts/</guid>
+      <guid>https://blog.heaton.dev/2020/08/dynamically-load-fonts/</guid>
       <description>I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!
 This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</description>
     </item>
     
     <item>
       <title>Pixelfed - self-hosted &amp; federated photo hosting</title>
-      <link>https://blog.heaton.dev/blog/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
+      <link>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
+      <guid>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
       <description>In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
 Following PixelFed&amp;rsquo;s Manual Setup instructions.
 git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:
@@ -41,10 +41,10 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
     
     <item>
       <title>Firefox-based browser add-on suggestions</title>
-      <link>https://blog.heaton.dev/blog/2013/06/firefox-based-browser-add-on-suggestions/</link>
+      <link>https://blog.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</link>
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/blog/2013/06/firefox-based-browser-add-on-suggestions/</guid>
+      <guid>https://blog.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</guid>
       <description>HTTPS Everywhere [GPLv3+] Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
     </item>
     
