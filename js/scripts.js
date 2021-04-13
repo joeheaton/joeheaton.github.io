@@ -21,7 +21,7 @@ function escapeRegexp(string) {
 
 function annotate_external_links() {
     var hyperlinks = document.getElementsByTagName("a");
-    var whitelist = ["localhost", site_fqdn];
+    var whitelist = ["localhost", site_fqdn, noSubdomain];
 
     for ( var i = 0; i < hyperlinks.length; i++ ) {
       for ( var x = 0; x < whitelist.length; x++ ) {
