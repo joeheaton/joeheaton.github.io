@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting my Hugo static website on GitHub Pages using Actions and my own domain</title>
+      <link>https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/</guid>
+      <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
+My existing workflow combines three repositories to build the website:
+ Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
+    </item>
+    
     <item>
       <title>my Vim</title>
       <link>https://blog.heaton.dev/2020/10/my-vim/</link>
@@ -15,15 +26,6 @@
       
       <guid>https://blog.heaton.dev/2020/10/my-vim/</guid>
       <description>&lt;p&gt;This is my &lt;code&gt;.vimrc&lt;/code&gt;, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Migrate Static Site to Digital Ocean Web App Platform</title>
-      <link>https://blog.heaton.dev/2020/10/migrate-static-site-to-digital-ocean-web-app-platform/</link>
-      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/2020/10/migrate-static-site-to-digital-ocean-web-app-platform/</guid>
-      <description>&lt;p&gt;Digital Ocean released a new &lt;a href=&#34;https://www.digitalocean.com/docs/app-platform/&#34;&gt;App Platform&lt;/a&gt; for running serverless apps with support in their free-tier for static sites. There are two approaches to hosting a static site on the App Platform, either include the build process in the repo and allow App Platform to build your site, or use a branch/repo with only the HTML output.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,18 +110,6 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
       
       <guid>https://blog.heaton.dev/2020/02/useful-unixisms/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Pixelfed - self-hosted &amp; federated photo hosting</title>
-      <link>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
-      <description>In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
-Following PixelFed&amp;rsquo;s Manual Setup instructions.
-git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:
- APP_URL, with protocol (https://) APP_DOMAIN ADMIN_DOMAIN SESSION_DOMAIN  Using the Laravel &amp;ldquo;Artisan&amp;rdquo; console we prepare the app &amp;amp; database.</description>
     </item>
     
     <item>

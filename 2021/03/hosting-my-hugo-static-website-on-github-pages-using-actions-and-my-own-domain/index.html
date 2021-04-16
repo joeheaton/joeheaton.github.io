@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head><meta charset="utf-8">
-<title>Heaton.dev | Pixelfed - self-hosted &amp; federated photo hosting</title>
+<title>Heaton.dev | Hosting my Hugo static website on GitHub Pages using Actions and my own domain</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -11,15 +11,14 @@
 <meta name="keywords" content="Joe Heaton, developer, ">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="Pixelfed - self-hosted &amp; federated photo hosting" />
-<meta property="og:description" content="In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
-Following PixelFed&rsquo;s Manual Setup instructions.
-git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:
- APP_URL, with protocol (https://) APP_DOMAIN ADMIN_DOMAIN SESSION_DOMAIN  Using the Laravel &ldquo;Artisan&rdquo; console we prepare the app &amp; database." />
+<meta property="og:title" content="Hosting my Hugo static website on GitHub Pages using Actions and my own domain" />
+<meta property="og:description" content="In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
+My existing workflow combines three repositories to build the website:
+ Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-02-15T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-02-15T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
+<meta property="og:url" content="https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-12T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-04-16T14:04:26&#43;00:00" /><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
 
 
 
@@ -27,11 +26,10 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/umisqTL.png"/>
 
-<meta name="twitter:title" content="Pixelfed - self-hosted &amp; federated photo hosting"/>
-<meta name="twitter:description" content="In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
-Following PixelFed&rsquo;s Manual Setup instructions.
-git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:
- APP_URL, with protocol (https://) APP_DOMAIN ADMIN_DOMAIN SESSION_DOMAIN  Using the Laravel &ldquo;Artisan&rdquo; console we prepare the app &amp; database."/>
+<meta name="twitter:title" content="Hosting my Hugo static website on GitHub Pages using Actions and my own domain"/>
+<meta name="twitter:description" content="In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
+My existing workflow combines three repositories to build the website:
+ Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton."/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -44,7 +42,7 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
 <!-- Formats -->
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/">
+<link rel="canonical" href="https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/">
 <link rel="icon" href="https://blog.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -94,16 +92,16 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
   {
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
-    "url": "https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/",
-    "headline": "Pixelfed - self-hosted \u0026 federated photo hosting","wordCount": "156",
+    "url": "https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/",
+    "headline": "Hosting my Hugo static website on GitHub Pages using Actions and my own domain","wordCount": "838",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2020-02-15T00:00:00Z",
+    "datePublished": "2021-03-12T00:00:00Z",
     
-    "dateModified": "2020-02-15T00:00:00Z",
-    "keywords": "Joe Heaton, developer, web, self-hosted",
+    "dateModified": "2021-04-16T14:04:26.296708533Z",
+    "keywords": "Joe Heaton, developer, automation, github, linux, webdev",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
@@ -279,9 +277,9 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
 
 
 <h2>
-  <a href="https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/" title="Pixelfed - self-hosted &amp; federated photo hosting" target="_self">
+  <a href="https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/" title="Hosting my Hugo static website on GitHub Pages using Actions and my own domain" target="_self">
     
-      Pixelfed - self-hosted &amp; federated photo hosting
+      Hosting my Hugo static website on GitHub Pages using Actions and my own domain
     
   </a>
 </h2>
@@ -296,10 +294,10 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
         
            
             <span>Posted</span>
-            <time datetime="2020-02-15T00:00:00Z">
-              15th
-              Feb
-              2020
+            <time datetime="2021-03-12T00:00:00Z">
+              12th
+              Mar
+              2021
             </time>
            
          
@@ -317,16 +315,32 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
         
             
 
-            <a href="https://blog.heaton.dev/tags/web" rel="tag" target="_self">
-                <span>web</span>
+            <a href="https://blog.heaton.dev/tags/automation" rel="tag" target="_self">
+                <span>automation</span>
             </a>
         
             
                 <span>|</span>
             
 
-            <a href="https://blog.heaton.dev/tags/self-hosted" rel="tag" target="_self">
-                <span>self-hosted</span>
+            <a href="https://blog.heaton.dev/tags/github" rel="tag" target="_self">
+                <span>github</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/linux" rel="tag" target="_self">
+                <span>linux</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/webdev" rel="tag" target="_self">
+                <span>webdev</span>
             </a>
         
 
@@ -339,10 +353,19 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
 
       
       
-
-      
-      
-      
+        
+        
+          
+          
+            &ndash;
+           
+          
+          <span>Updated</span>
+          <time datetime="2021-04-16T14:04:26Z">
+            16th
+            Apr
+            2021
+          </time>
         
       
 
@@ -350,7 +373,11 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
       
       
         
-          <i class="fas fa-exclamation-triangle text-info" title="Keep in mind this article is over a year old!"></i>
+      
+
+      
+      
+      
         
        
   </div>
@@ -365,31 +392,79 @@ git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chow
   <section class="content">
     
 
-    <p>In addition to a typical PHP server, you will need to install the <code>php-bcmath</code> package. Install image processing libraries <code>apt install jpegoptim optipng pngquant</code>.</p>
-<p>Following PixelFed&rsquo;s <a href="https://docs.pixelfed.org/installing-pixelfed/installation.html#manual-setup">Manual Setup instructions</a>.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git clone https://github.com/pixelfed/pixelfed
-cd pixelfed
-composer install
-chown -c www-data:www-data -R storage/
-</code></pre></div><p>Set the website domain name for the following variables in <code>.env</code>:</p>
+    <p>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.</p>
+<p>My existing workflow combines three repositories to build the website:</p>
 <ul>
-<li><code>APP_URL</code>, with protocol (https://)</li>
-<li><code>APP_DOMAIN</code></li>
-<li><code>ADMIN_DOMAIN</code></li>
-<li><code>SESSION_DOMAIN</code></li>
+<li>Hugs (Repo) - Contains my Hugo configuration and assets</li>
+<li>Blog (Repo) - Contains the blog posts</li>
+<li>Hugo-theme (Repo) - Contains the Hugo theme</li>
 </ul>
-<p>Using the Laravel &ldquo;Artisan&rdquo; console we prepare the app &amp; database.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">php artisan key:generate
-php artisan migrate
-php artisan config:cache
-php artisan route:cache
-php artisan horizon:install
-php artisan storage:link
-php artisan optimize
-</code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
-<p>Application logs can be found in <code>./storage/logs/laravel.log</code>, although, unless PHP is crashing you won&rsquo;t find much in these logs. Luckily you can put the app into debug mode with <code>DEBUG=true</code> in <code>.env</code>.</p>
-<p>Once in debug mode any internal errors are explained on in-place of the page you&rsquo;re trying to load.</p>
-<p>My particular issue was caused by me setting <code>MAIL_ENCRYPTION</code> to <code>tls</code> instead of <code>ssl</code>&hellip;</p>
+<p>In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.github.io (Repo). This is the repository that will contain final static site&rsquo;s assets, such as HTML, CSS, etc.. and be hosted on joeheaton.github.io.</p>
+<h2 id="github-actions">GitHub Actions</h2>
+<p>GitHub Actions are defined in YAML which defines the steps to run against your repo. Github hosts a <a href="https://github.com/marketplace">library</a> of official &amp; community Actions with configurable behaviour, these are useful for common operations such as checkout a git branch, etc.</p>
+<p>I used <code>actions/checkout</code>,  <code>peaceiris/actions-hugo</code> &amp; <code>peaceiris/actions-gh-pages</code>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">name: github pages
+on:
+  push:
+    branches:
+      - main
+</code></pre></div><p>Here we define what behaviour the Action triggers for, I specified Push, which means the Action is triggered for every <code>git push origin main</code> that hits my repository. Larger projects will probably want to set this to <code>pull_request</code> or one of the <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">many other events</a>.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare repos 🥣
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+</code></pre></div><p>My build process is fairly simple so it&rsquo;s all grouped in one job called &ldquo;deploy&rdquo;. All Actions run in a container, which means we have a choice of Operating System. I don&rsquo;t have strict requirements so I set this to <code>ubuntu-latest</code>.</p>
+<p><code>steps</code> is where the build process is defined; the first step is to checkout the repo this Action is attached to. In my case this is the <code>hugs</code> repo, and I need to clone each submodule fully.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Checkout joeheaton.github.io to ./public/
+  uses: actions/checkout@v2
+  with:
+    repository: joeheaton/joeheaton.github.io
+    ref: gh-pages
+    path: ./public
+    fetch-depth: 0
+</code></pre></div><p>I clone another repo, this time it&rsquo;s the <code>joeheaton.github.io</code> that will host the end result, I clone this into <code>./public</code>, this means when hugo builds my website it will overwrite the contents of <code>joeheaton.github.io</code>, which I can then commit and push.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Setup Hugo 🧪
+  uses: peaceiris/actions-hugo@v2
+  with:
+    hugo-version: &#39;0.81.0&#39;
+    # extended: true
+</code></pre></div><p>This is all that&rsquo;s needed to install any version of hugo thanks to the <code>peaceiris/actions-hugo</code> Action.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Prepare environment 🧪
+  run: |
+    sudo apt-get install -y sassc
+
+- name: Build 🔨
+  run: |
+    SITE=joeheaton.github.io make css hugo-prod
+</code></pre></div><p>Since I defined <code>runs-on: ubuntu-latest</code> at the top of my YAML, I can fulfil one of my dependcies using Ubuntu&rsquo;s package manager, after that I use my Makefile from <code>hugs</code> to invoke <code>sassc</code> &amp; <code>hugo</code> to build the static site! These commands get executed in the container using the <code>run</code> attribute, we can even use <code>sudo</code> to run as root if needed.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Deploy 📦
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    external_repository: joeheaton/joeheaton.github.io
+    publish_dir: ./public
+</code></pre></div><p>Lastly we use <code>peaceiris/actions-gh-pages</code> to deploy the modified<code> joeheaton.github.io</code>, cloned to the <code>./public</code> directory. The Action uses a predefined GitHub Secret called <code>ACTIONS_DEPLOY_KEY</code> to get write access my <code>joeheaton.github.io</code> repository and push the contents of <code>./public</code>!</p>
+<p>Done, now every commit to <code>hugs</code> results in this Action&rsquo;s YAML being run through from start to finish.</p>
+<h2>GitHub Secrets</h2>
+<p>I mentioned the <code>ACTIONS_DEPLOY_KEY</code> which allows the Action to push changes to an external repository, this is how you set that up. I followed <a href="https://github.com/peaceiris/actions-gh-pages">this documentation</a></p>
+<p>This will create a new keypair in the current directory, we will add the private key as Secret in the repo with the static site generator, this is done via the web interface and the Secret should be named <code>ACTIONS_DEPLOY_KEY</code> for <code>peaceiris/actions-gh-pages</code> to pick it up by default.</p>
+<figure class="wp-block-image size-large"><img src="https://heatondata.files.wordpress.com/2021/03/image.png?w=1024" alt="" class="wp-image-190"/></figure>
+<p>Add the public key as a Deploy Key on <code>joeheaton.github.io</code>.</p>
+<figure class="wp-block-image"><img src="https://heatondata.files.wordpress.com/2021/03/image-1.png?w=1024" alt="" class="wp-image-192"/></figure>
+<p>Once this is done the Actions on <code>hugs</code> can now push changes to <code>joeheaton.github.io</code>!</p>
+<h2>Domains &amp; CNAME</h2>
+<p>To complete replacing my old static site with GitHub Pages I need to map my personal domain to the website hosted on <code>joeheaton.github.io</code>.</p>
+<p>On GitHub navigate to your <code>me.github.io</code> repository, go Settings and scroll down to GitHub Pages and set your Custom Domain.</p>
+<p>Go to your Domain name&rsquo;s DNS provider and add a CNAME record pointing to your <code>me.github.io</code> address. Done, you should see your auto-generated GitHub Pages website when you visit your domain!</p>
+<p>I haven&rsquo;t covered enabling HTTPS, you may have noticed there is an option in GitHub to enforce HTTPS for your GitHub Pages custom domain which isn&rsquo;t checked by default. I didn&rsquo;t need to go through with this as my website is routed via Cloudflare which enforces HTTPS on my domain. Technically, that might mean Cloudflare is connecting to GitHub insecurely, not sure.</p>
+<hr>
+<h2 id="addendum">Addendum</h2>
+<p>I realised after setting my <code>blog</code> and <code>hugs</code> repos back to private, that the  <code>hugs</code> repo is able to clone itself with the <code>checkout@v2</code> action because it inherently is allowed access to itself, despite being private, but it cannot access <code>blog</code>. To fix this</p>
 
   </section>
 
@@ -462,47 +537,47 @@ php artisan optimize
       <nav class="nav sharing-icons d-flex justify-content-center">
   <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
 
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f&amp;text=Cool article &quot;Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting&quot; from Heaton.dev!" title="Tweet this" target="_blank">
+  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f&amp;text=Cool article &quot;Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain&quot; from Heaton.dev!" title="Tweet this" target="_blank">
     <span class="fab fa-twitter"></span>
   </a>
   
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share on Reddit" target="_blank">
+  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share on Reddit" target="_blank">
     <span class="fab fa-reddit-alien" aria-hidden="true"></span>
   </a>
   
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share on Tumblr" target="_blank">
+  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share on Tumblr" target="_blank">
     <span class="fab fa-tumblr" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share on Facebook" target="_blank">
+  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share on Facebook" target="_blank">
     <span class="fab fa-facebook-f" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f&amp;description=Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting" title="Share on Pintrest" target="_blank">
+  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f&amp;description=Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain" title="Share on Pintrest" target="_blank">
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f&amp;title=Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting&summary=In%20addition%20to%20a%20typical%20PHP%20server%2c%20you%20will%20need%20to%20install%20the%20php-bcmath%20package.%20Install%20image%20processing%20libraries%20apt%20install%20jpegoptim%20optipng%20pngquant.%0aFollowing%20PixelFed%26rsquo%3bs%20Manual%20Setup%20instructions.%0agit%20clone%20https%3a%2f%2fgithub.com%2fpixelfed%2fpixelfed%20cd%20pixelfed%20composer%20install%20chown%20-c%20www-data%3awww-data%20-R%20storage%2f%20Set%20the%20website%20domain%20name%20for%20the%20following%20variables%20in%20.env%3a%0a%20APP_URL%2c%20with%20protocol%20%28https%3a%2f%2f%29%20APP_DOMAIN%20ADMIN_DOMAIN%20SESSION_DOMAIN%20%20Using%20the%20Laravel%20%26ldquo%3bArtisan%26rdquo%3b%20console%20we%20prepare%20the%20app%20%26amp%3b%20database." title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f&amp;title=Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain&summary=In%20a%20cost-saving%20exercise%20I%20wanted%20to%20try%20host%20my%20personal%20website%20on%20a%20free%20platform%2c%20since%20the%20code%20repository%20is%20hosted%20on%20GitHub%2c%20I%20decided%20to%20look%20into%20GitHub%20pages.%0aMy%20existing%20workflow%20combines%20three%20repositories%20to%20build%20the%20website%3a%0a%20Hugs%20%28Repo%29%20-%20Contains%20my%20Hugo%20configuration%20and%20assets%20Blog%20%28Repo%29%20-%20Contains%20the%20blog%20posts%20Hugo-theme%20%28Repo%29%20-%20Contains%20the%20Hugo%20theme%20%20In%20order%20to%20use%20GitHub%20Pages%20I%20needed%20a%20fourth%20repository%20named%20after%20my%20GitHub%20account%3a%20joeheaton." title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share on Xing" target="_blank">
+  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share on Xing" target="_blank">
     <span class="fab fa-xing" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share on Hackernews" target="_blank">
+  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share on Hackernews" target="_blank">
     <span class="fab fa-hacker-news" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting&quot; from Heaton.dev!&amp;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f" title="Share via Telegram" target="_blank">
+  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain&quot; from Heaton.dev!&amp;url=https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f" title="Share via Telegram" target="_blank">
     <span class="fab fa-telegram-plane" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting&quot; from https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f !" title="Share via WhatsApp" target="_blank">
+  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain&quot; from https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f !" title="Share via WhatsApp" target="_blank">
     <span class="fab fa-whatsapp" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="mailto:?subject=Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting from https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f&amp;body=Look at this cool article &quot;Pixelfed%20-%20self-hosted%20%26%20federated%20photo%20hosting&quot; from https%3a%2f%2fblog.heaton.dev%2f2020%2f02%2fpixelfed-self-hosted-federated-photo-hosting%2f!" title="Share via Email" target="_blank">
+  <a class="nav-item" href="mailto:?subject=Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain from https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f&amp;body=Look at this cool article &quot;Hosting%20my%20Hugo%20static%20website%20on%20GitHub%20Pages%20using%20Actions%20and%20my%20own%20domain&quot; from https%3a%2f%2fblog.heaton.dev%2f2021%2f03%2fhosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain%2f!" title="Share via Email" target="_blank">
     <span class="fas fa-envelope" aria-hidden="true"></span>
   </a>
 </nav>
@@ -552,13 +627,13 @@ php artisan optimize
 
     <div class="tag-cloud">
             
-            <a href="https://blog.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.223rem" target="_self">bash</a>
+            <a href="https://blog.heaton.dev/tags/automation" aria-label="automation (1 posts)" style="font-size: 0.800rem" target="_self">automation</a>
             
-            <a href="https://blog.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://blog.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.252rem" target="_self">bash</a>
             
             <a href="https://blog.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
-            <a href="https://blog.heaton.dev/tags/dev" aria-label="dev (8 posts)" style="font-size: 1.600rem" target="_self">dev</a>
+            <a href="https://blog.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.600rem" target="_self">dev</a>
             
             <a href="https://blog.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -570,31 +645,33 @@ php artisan optimize
             
             <a href="https://blog.heaton.dev/tags/game" aria-label="game (1 posts)" style="font-size: 0.800rem" target="_self">game</a>
             
-            <a href="https://blog.heaton.dev/tags/git" aria-label="git (2 posts)" style="font-size: 1.067rem" target="_self">git</a>
+            <a href="https://blog.heaton.dev/tags/git" aria-label="git (2 posts)" style="font-size: 1.085rem" target="_self">git</a>
+            
+            <a href="https://blog.heaton.dev/tags/github" aria-label="github (1 posts)" style="font-size: 0.800rem" target="_self">github</a>
             
             <a href="https://blog.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
             <a href="https://blog.heaton.dev/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
             
-            <a href="https://blog.heaton.dev/tags/hpc" aria-label="hpc (3 posts)" style="font-size: 1.223rem" target="_self">hpc</a>
+            <a href="https://blog.heaton.dev/tags/hpc" aria-label="hpc (3 posts)" style="font-size: 1.252rem" target="_self">hpc</a>
             
-            <a href="https://blog.heaton.dev/tags/linux" aria-label="linux (3 posts)" style="font-size: 1.223rem" target="_self">linux</a>
+            <a href="https://blog.heaton.dev/tags/linux" aria-label="linux (4 posts)" style="font-size: 1.370rem" target="_self">linux</a>
             
-            <a href="https://blog.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.223rem" target="_self">monitoring</a>
+            <a href="https://blog.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.252rem" target="_self">monitoring</a>
             
             <a href="https://blog.heaton.dev/tags/pleroma" aria-label="pleroma (1 posts)" style="font-size: 0.800rem" target="_self">pleroma</a>
             
             <a href="https://blog.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
             
-            <a href="https://blog.heaton.dev/tags/self-hosted" aria-label="self-hosted (1 posts)" style="font-size: 0.800rem" target="_self">self-hosted</a>
-            
             <a href="https://blog.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
             <a href="https://blog.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://blog.heaton.dev/tags/web" aria-label="web (4 posts)" style="font-size: 1.333rem" target="_self">web</a>
+            <a href="https://blog.heaton.dev/tags/web" aria-label="web (3 posts)" style="font-size: 1.252rem" target="_self">web</a>
             
-            <a href="https://blog.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.223rem" target="_self">windows</a></div>
+            <a href="https://blog.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
+            
+            <a href="https://blog.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.252rem" target="_self">windows</a></div>
     </section>
   
 
@@ -972,15 +1049,29 @@ php artisan optimize
                 
                 
                 <li>
-                    <a href="https://blog.heaton.dev/tags/web/index.xml" rel="alternative" type="application/rss+xml">
-                        web
+                    <a href="https://blog.heaton.dev/tags/automation/index.xml" rel="alternative" type="application/rss+xml">
+                        automation
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="https://blog.heaton.dev/tags/self-hosted/index.xml" rel="alternative" type="application/rss+xml">
-                        self-hosted
+                    <a href="https://blog.heaton.dev/tags/github/index.xml" rel="alternative" type="application/rss+xml">
+                        github
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://blog.heaton.dev/tags/linux/index.xml" rel="alternative" type="application/rss+xml">
+                        linux
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://blog.heaton.dev/tags/webdev/index.xml" rel="alternative" type="application/rss+xml">
+                        webdev
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>

@@ -28,18 +28,6 @@ This involved creating a small toggle function to turn the feature on and off, b
     </item>
     
     <item>
-      <title>Pixelfed - self-hosted &amp; federated photo hosting</title>
-      <link>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/2020/02/pixelfed-self-hosted-federated-photo-hosting/</guid>
-      <description>In addition to a typical PHP server, you will need to install the php-bcmath package. Install image processing libraries apt install jpegoptim optipng pngquant.
-Following PixelFed&amp;rsquo;s Manual Setup instructions.
-git clone https://github.com/pixelfed/pixelfed cd pixelfed composer install chown -c www-data:www-data -R storage/ Set the website domain name for the following variables in .env:
- APP_URL, with protocol (https://) APP_DOMAIN ADMIN_DOMAIN SESSION_DOMAIN  Using the Laravel &amp;ldquo;Artisan&amp;rdquo; console we prepare the app &amp;amp; database.</description>
-    </item>
-    
-    <item>
       <title>Firefox-based browser add-on suggestions</title>
       <link>https://blog.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</link>
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>

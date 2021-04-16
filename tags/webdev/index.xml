@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webdev on Heaton.dev</title>
+    <link>https://blog.heaton.dev/tags/webdev/</link>
+    <description>Recent content in webdev on Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting my Hugo static website on GitHub Pages using Actions and my own domain</title>
+      <link>https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/</guid>
+      <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
+My existing workflow combines three repositories to build the website:
+ Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
+    </item>
+    
+  </channel>
+</rss>
