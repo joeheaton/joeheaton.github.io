@@ -93,8 +93,8 @@
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2020-09-28T00:00:00Z",
-    "dateModified": "2021-04-16T14:11:40.870275061Z",
+    "datePublished": "2020-08-26T00:00:00Z",
+    "dateModified": "2020-08-26T00:00:00Z",
     "keywords": "Joe Heaton, developer",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -118,31 +118,16 @@
     <a href="#main" target="_self" class="skip-to-main">Skip to content.</a>
 
     
-    <!-- site masthead -->
-    <div class="masthead-super container d-flex flex-row justify-content-between">
-      <div>
-        Joe Heaton&#39;s Webzone
-      </div>
-
-      <div>
-        🥐 ☕
-      </div>
-
-      <div>
-        Online since 2011
-      </div>
-    </div>
-    
 
     <!-- site container -->
-    <div id="tallest" class="container">
+    <div id="tallest" class="container-fluid">
 
       
       <div class="masthead">
 
         
           
-          <div class="banner d-flex">
+          <div class="container-xl banner d-flex">
             
             <a href="https://blog.heaton.dev" class="avatar" target="_self">
               <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
@@ -214,32 +199,34 @@
         
 
         <!-- site nav -->
-        <nav class="nav blog-nav d-flex justify-content-between">
-          <div class="d-flex flex-row">
-              <a class="nav-link" href="https://blog.heaton.dev/" title="" target="_self">
-                Home
-              </a>
-            
-              <a class="nav-link" href="https://blog.heaton.dev/me/" title="" target="_self">
-                Me
-              </a>
-            
-          </div>
+        <div class="blog-nav">
+          <nav class="container-xl nav d-flex justify-content-between">
+            <div class="d-flex flex-row">
+                <a class="nav-link" href="https://blog.heaton.dev/" title="" target="_self">
+                  Home
+                </a>
+              
+                <a class="nav-link" href="https://blog.heaton.dev/me/" title="" target="_self">
+                  Me
+                </a>
+              
+            </div>
 
-          <div class="d-flex flex-row-reverse">
-            <!-- site search -->
-            <form id="sitesearch" class="search" role="search">
-              <label for="search-input">
-                <i class="fa fa-search "></i>
-              </label>
+            <div class="d-flex flex-row-reverse">
+              <!-- site search -->
+              <form id="sitesearch" class="search" role="search">
+                <label for="search-input">
+                  <i class="fa fa-search "></i>
+                </label>
 
-              <input type="search" id="sitesearch-input" class="search-input">
-            </form>
-          </div>
+                <input type="search" id="sitesearch-input" class="search-input">
+              </form>
+            </div>
 
-          <div id="search-results" class="container">
-          </div>
-        </nav>
+            <div id="search-results" class="container">
+            </div>
+          </nav>
+        </div>
       </div>
 
       <template id="search-result" hidden>
@@ -256,7 +243,7 @@
 
       
       <!-- main content -->
-      <main id="main" class="container">
+      <main id="main" class="container-xl">
         <div class="row">
           <div class="col-sm-8 container-fluid main">
 
@@ -270,143 +257,8 @@
   
     
   
-    
-  
 
   
-  
-    
-      
-        <article class="blog-post">
-  <header>
-    
-
-
-
-
-<h2>
-  <a href="https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/" title="OAuth with Mastodon &amp; Pleroma" target="_self">
-    
-      OAuth with Mastodon &amp; Pleroma
-    
-  </a>
-</h2>
-
-
-<div class="row">
-  <div class="col-8 metadata">
-      
-      
-        
-
-        
-           
-            <span>Posted</span>
-            <time datetime="2020-09-28T00:00:00Z">
-              28th
-              Sep
-              2020
-            </time>
-           
-         
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://blog.heaton.dev/tags/web" rel="tag" target="_self">
-                <span>web</span>
-            </a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://blog.heaton.dev/tags/pleroma" rel="tag" target="_self">
-                <span>pleroma</span>
-            </a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-        
-        
-          
-          
-            &ndash;
-           
-          
-          <span>Updated</span>
-          <time datetime="2021-04-16T14:11:40Z">
-            16th
-            Apr
-            2021
-          </time>
-        
-      
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-  </div>
-
-  <div class="col text-right">
-    
-  </div>
-</div>
-
-  </header>
-
-  
-  <section class="content">
-    <picture class="thumbnail">
-      
-      
-
-      
-    </picture>
-
-    <span>
-      <p>Mastodon &amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2.</p>
-    </span>
-
-    <a href="https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-      
-    
   
     
       
@@ -759,15 +611,13 @@ This involved creating a small toggle function to turn the feature on and off, b
             
             <a href="https://blog.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.252rem" target="_self">monitoring</a>
             
-            <a href="https://blog.heaton.dev/tags/pleroma" aria-label="pleroma (1 posts)" style="font-size: 0.800rem" target="_self">pleroma</a>
-            
             <a href="https://blog.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
             
             <a href="https://blog.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
             <a href="https://blog.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://blog.heaton.dev/tags/web" aria-label="web (3 posts)" style="font-size: 1.252rem" target="_self">web</a>
+            <a href="https://blog.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.085rem" target="_self">web</a>
             
             <a href="https://blog.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             

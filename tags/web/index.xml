@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OAuth with Mastodon &amp; Pleroma</title>
-      <link>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</guid>
-      <description>&lt;p&gt;Mastodon &amp;amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dynamically load fonts</title>
       <link>https://blog.heaton.dev/2020/08/dynamically-load-fonts/</link>

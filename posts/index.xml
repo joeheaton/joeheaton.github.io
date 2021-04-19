@@ -47,15 +47,6 @@ My existing workflow combines three repositories to build the website:
     </item>
     
     <item>
-      <title>OAuth with Mastodon &amp; Pleroma</title>
-      <link>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/</guid>
-      <description>&lt;p&gt;Mastodon &amp;amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Supercomputers in media</title>
       <link>https://blog.heaton.dev/2020/09/supercomputers-in-media/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>

@@ -13,9 +13,8 @@ html {
 }
 
 body {
-  padding: 0 0.5rem;
   color: #333;
-  background: #606578;
+  background: #f3f3f3;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
@@ -116,7 +115,7 @@ figure {
   text-align: center;
   background: #2d2b38;
   border-radius: 8px;
-  box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #b4b4b4;
 }
 
 figure a:hover {
@@ -151,16 +150,9 @@ figure .image .copyright {
   font-size: 0.6rem;
 }
 
-#tallest.container {
-  padding: 0;
-}
-
 #tallest {
+  padding: 0;
   border-radius: 8px;
-}
-
-.container {
-  max-width: 60rem;
 }
 
 .masthead-super {
@@ -168,8 +160,15 @@ figure .image .copyright {
   padding: 0 0.5rem;
   font-size: 0.6rem;
   font-family: Hack, monospace, 'Courier New', Courier;
-  color: #fff;
-  text-shadow: #333 1px 1px 4px;
+  color: #2d2b38;
+  text-shadow: #b4b4b4 1px 1px 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .masthead-super {
+    color: #d8d8d8;
+    text-shadow: #b4b4b4 1px 1px 4px;
+  }
 }
 
 .masthead-super * {
@@ -177,17 +176,17 @@ figure .image .copyright {
 }
 
 .masthead {
-  box-shadow: 0 0 0.25rem #333;
-  border-radius: 8px;
+  background: repeating-linear-gradient(45deg, #2d2b38, #2d2b38 20px, #5d4672 20px, #5d4672 40px) repeat center center #2d2b38;
+  background-image: url("//blog.heaton.dev/images/chamber_of_sages.webp");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 0.25rem #b4b4b4;
+  border-radius: 0 0 8px 8px;
 }
 
 .masthead .banner {
   min-height: 180px;
   padding: 1%;
-  background: repeating-linear-gradient(45deg, #2d2b38, #2d2b38 20px, #5d4672 20px, #5d4672 40px) repeat center center #2d2b38;
-  background-image: url("//www.heaton.dev/images/chamber_of_sages.webp");
-  background-position: center -12rem;
-  background-size: cover;
   border-radius: 8px 8px 0 0;
   box-shadow: inset 0 -0.1rem 0.25rem rgba(0, 0, 0, 0.1);
 }
@@ -218,26 +217,28 @@ figure .image .copyright {
 }
 
 .masthead .blog-nav {
-  position: relative;
   background: linear-gradient(to bottom, #519cff 0%, #2965b4 100%) repeat center center #2965b4;
-  color: #fff;
   border-radius: 0 0 8px 8px;
-  box-shadow: inset 0 -1px 1px #373737;
+}
+
+.masthead .blog-nav .nav {
+  position: relative;
+  color: #fff;
   /* Nav links */
   /* Site Search */
 }
 
-.masthead .blog-nav .nav-link {
+.masthead .blog-nav .nav .nav-link {
   padding: 0.3rem 1rem;
   color: #fff;
   text-shadow: 0 1px 2px #333;
 }
 
-.masthead .blog-nav .nav-link:hover, .masthead .blog-nav .nav-link:focus {
+.masthead .blog-nav .nav .nav-link:hover, .masthead .blog-nav .nav .nav-link:focus {
   color: #fff;
 }
 
-.masthead .blog-nav .search {
+.masthead .blog-nav .nav .search {
   position: relative;
   height: 84%;
   margin: 1%;
@@ -245,21 +246,21 @@ figure .image .copyright {
   border-radius: 8px;
 }
 
-.masthead .blog-nav .search label {
+.masthead .blog-nav .nav .search label {
   position: absolute;
   top: 2px;
   left: 6px;
   margin: 0;
 }
 
-.masthead .blog-nav .search input {
+.masthead .blog-nav .nav .search input {
   height: 100%;
   padding: 0 0 0 30px;
   background: transparent;
   border: none;
 }
 
-.masthead .blog-nav #search-results {
+.masthead .blog-nav .nav #search-results {
   position: absolute;
   top: 100%;
   right: 1rem;
@@ -268,25 +269,25 @@ figure .image .copyright {
   background: #fff;
   color: #000;
   border-radius: 8px;
-  box-shadow: 0 0 12px #333;
+  box-shadow: 0 0 12px #b4b4b4;
 }
 
-.masthead .blog-nav #search-results .close {
+.masthead .blog-nav .nav #search-results .close {
   position: absolute;
   right: 1rem;
   top: 0;
   font-size: 2rem;
 }
 
-.masthead .blog-nav #search-results .search-title {
+.masthead .blog-nav .nav #search-results .search-title {
   margin: 1rem 0;
 }
 
-.masthead .blog-nav #search-results article.search-result {
+.masthead .blog-nav .nav #search-results article.search-result {
   padding: 0 0.4rem;
 }
 
-.masthead .blog-nav #search-results article.search-result .search-result-summary {
+.masthead .blog-nav .nav #search-results article.search-result .search-result-summary {
   margin: 0.6rem 0 1rem 1rem;
   font-size: 0.8rem;
 }
@@ -336,7 +337,7 @@ figure .image .copyright {
   background: #fff;
   border-color: transparent;
   border-radius: 2rem;
-  box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 3px #b4b4b4;
 }
 
 .blog-pagination .btn-outline-primary:hover {
@@ -347,13 +348,14 @@ figure .image .copyright {
  * Blog posts
  */
 .blog-post,
-.sidebar-blob {
+.sidebar-blob,
+.twitter-timeline {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 0.4rem;
-  box-shadow: 0 0 0.25rem #333;
+  box-shadow: 0 0 0.25rem #b4b4b4;
   /*&:not(:last-child) {
     border-bottom: 1px dashed #aaa;
   }*/
@@ -361,121 +363,142 @@ figure .image .copyright {
 
 @media (prefers-color-scheme: light) {
   .blog-post,
-.sidebar-blob {
-    background: #fff;
+.sidebar-blob,
+.twitter-timeline {
+    background: white;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .blog-post,
-.sidebar-blob {
+.sidebar-blob,
+.twitter-timeline {
     background: #2f2f2f;
   }
 }
 
 .blog-post:first-child,
-.sidebar-blob:first-child {
+.sidebar-blob:first-child,
+.twitter-timeline:first-child {
   margin-top: 0;
 }
 
 .blog-post header h2,
-.sidebar-blob header h2 {
+.sidebar-blob header h2,
+.twitter-timeline header h2 {
   margin: 0;
 }
 
 .blog-post .description,
-.sidebar-blob .description {
+.sidebar-blob .description,
+.twitter-timeline .description {
   color: #999;
 }
 
 .blog-post .metadata,
-.sidebar-blob .metadata {
+.sidebar-blob .metadata,
+.twitter-timeline .metadata {
   margin: 0;
   font-size: 0.8rem;
   color: #999;
 }
 
 .blog-post .metadata .fa.fa-tag,
-.sidebar-blob .metadata .fa.fa-tag {
+.sidebar-blob .metadata .fa.fa-tag,
+.twitter-timeline .metadata .fa.fa-tag {
   vertical-align: bottom;
   color: #2965B4;
 }
 
 .blog-post .content,
-.sidebar-blob .content {
+.sidebar-blob .content,
+.twitter-timeline .content {
   margin: 1rem 0;
 }
 
 .blog-post .content .thumbnail,
-.sidebar-blob .content .thumbnail {
+.sidebar-blob .content .thumbnail,
+.twitter-timeline .content .thumbnail {
   float: right;
   margin: 0 0 0.2rem 0.4rem;
 }
 
 .blog-post .content .thumbnail img,
-.sidebar-blob .content .thumbnail img {
+.sidebar-blob .content .thumbnail img,
+.twitter-timeline .content .thumbnail img {
   max-width: 256px;
   max-height: 128px;
   border-radius: 8px;
-  box-shadow: 0 4px 4px -4px #333;
+  box-shadow: 0 4px 4px -4px #b4b4b4;
 }
 
 .blog-post .content .footnotes,
-.sidebar-blob .content .footnotes {
+.sidebar-blob .content .footnotes,
+.twitter-timeline .content .footnotes {
   margin: 2rem 0 0 0;
 }
 
 .blog-post .content .footnotes hr,
-.sidebar-blob .content .footnotes hr {
+.sidebar-blob .content .footnotes hr,
+.twitter-timeline .content .footnotes hr {
   display: none;
 }
 
 .blog-post footer,
-.sidebar-blob footer {
+.sidebar-blob footer,
+.twitter-timeline footer {
   padding: 0 0.8%;
   margin: 0 0 0.4rem;
 }
 
 .blog-post.single #TableOfContents ul,
-.sidebar-blob.single #TableOfContents ul {
+.sidebar-blob.single #TableOfContents ul,
+.twitter-timeline.single #TableOfContents ul {
   padding-left: 0;
   counter-reset: item;
 }
 
 .blog-post.single #TableOfContents ul ul,
-.sidebar-blob.single #TableOfContents ul ul {
+.sidebar-blob.single #TableOfContents ul ul,
+.twitter-timeline.single #TableOfContents ul ul {
   padding-left: 1rem;
 }
 
 .blog-post.single #TableOfContents ul li,
-.sidebar-blob.single #TableOfContents ul li {
+.sidebar-blob.single #TableOfContents ul li,
+.twitter-timeline.single #TableOfContents ul li {
   list-style-type: none;
 }
 
 .blog-post.single #TableOfContents ul li:before,
-.sidebar-blob.single #TableOfContents ul li:before {
+.sidebar-blob.single #TableOfContents ul li:before,
+.twitter-timeline.single #TableOfContents ul li:before {
   content: counters(item, ".") " ";
   counter-increment: item;
 }
 
 .blog-post.single .footer,
-.sidebar-blob.single .footer {
+.sidebar-blob.single .footer,
+.twitter-timeline.single .footer {
   margin: 0;
 }
 
 .blog-post.single .sharing-icons,
-.sidebar-blob.single .sharing-icons {
+.sidebar-blob.single .sharing-icons,
+.twitter-timeline.single .sharing-icons {
   font-size: 1.6rem;
   margin: 1rem 0;
 }
 
 .blog-post.single .sharing-icons a span,
-.sidebar-blob.single .sharing-icons a span {
+.sidebar-blob.single .sharing-icons a span,
+.twitter-timeline.single .sharing-icons a span {
   min-width: 2.2rem;
 }
 
 .blog-post.single .sharing-icons .sharethis .text,
-.sidebar-blob.single .sharing-icons .sharethis .text {
+.sidebar-blob.single .sharing-icons .sharethis .text,
+.twitter-timeline.single .sharing-icons .sharethis .text {
   position: absolute;
   top: 0;
   left: 0;
@@ -485,14 +508,16 @@ figure .image .copyright {
 }
 
 .blog-post article img,
-.sidebar-blob article img {
+.sidebar-blob article img,
+.twitter-timeline article img {
   max-width: 100%;
   height: auto;
   margin: 13px auto;
 }
 
 .blog-post .vcard:before,
-.sidebar-blob .vcard:before {
+.sidebar-blob .vcard:before,
+.twitter-timeline .vcard:before {
   content: "▲";
   position: absolute;
   top: -0.9rem;
@@ -645,7 +670,7 @@ p > code {
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
   border-radius: 8px;
-  box-shadow: 0 0 3px #333;
+  box-shadow: 0 0 3px #b4b4b4;
 }
 
 #footer p:last-child {
@@ -746,7 +771,7 @@ p > code {
 .asciinema-player {
   margin: 0 0 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 3px 1px #0003;
+  box-shadow: 0 0 3px 1px #b4b4b4;
 }
 
 .twitter-timeline {
@@ -761,7 +786,7 @@ p > code {
 .map-embed,
 .mastodon-embed {
   border-radius: 8px;
-  box-shadow: 0 0 3px 1px #0003;
+  box-shadow: 0 0 3px 1px #b4b4b4;
 }
 
 .youtube-player {

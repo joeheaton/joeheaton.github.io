@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head><meta charset="utf-8">
-<title>Heaton.dev | OAuth with Mastodon &amp; Pleroma</title>
+<title>Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -11,12 +11,10 @@
 <meta name="keywords" content="Joe Heaton, developer, ">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="OAuth with Mastodon &amp; Pleroma" />
-<meta property="og:description" content="Mastodon &amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="article:section" content="posts" />
-
-<meta property="article:modified_time" content="2021-04-16T14:11:40&#43;00:00" /><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
+<meta property="og:title" content="Tags" />
+<meta property="og:description" content="Joe Heaton&#39;s technology-focused murmurings." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.heaton.dev/tags/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
 
 
 
@@ -24,8 +22,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/umisqTL.png"/>
 
-<meta name="twitter:title" content="OAuth with Mastodon &amp; Pleroma"/>
-<meta name="twitter:description" content="Mastodon &amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2."/>
+<meta name="twitter:title" content="Tags"/>
+<meta name="twitter:description" content="Joe Heaton&#39;s technology-focused murmurings."/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -36,9 +34,10 @@
 <meta name="msapplication-TileColor" content="#519cff">
 
 <!-- Formats -->
+<link rel="alternate" type="application/rss+xml" href="https://blog.heaton.dev/tags/index.xml" title="Heaton.dev">
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/">
+<link rel="canonical" href="https://blog.heaton.dev/tags/">
 <link rel="icon" href="https://blog.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -87,16 +86,16 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
-    "@type": "BlogPosting",
-    "url": "https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/",
-    "headline": "OAuth with Mastodon \u0026 Pleroma","wordCount": "142",
+    "@type": "Page",
+    "url": "https://blog.heaton.dev/tags/",
+    "headline": "Tags",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2020-09-28T00:00:00Z",
-    "dateModified": "2021-04-16T14:11:40.870275061Z",
-    "keywords": "Joe Heaton, developer, web, pleroma",
+    "datePublished": "2021-03-12T00:00:00Z",
+    "dateModified": "2021-04-19T12:05:00.495890338Z",
+    "keywords": "Joe Heaton, developer",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
@@ -119,31 +118,16 @@
     <a href="#main" target="_self" class="skip-to-main">Skip to content.</a>
 
     
-    <!-- site masthead -->
-    <div class="masthead-super container d-flex flex-row justify-content-between">
-      <div>
-        Joe Heaton&#39;s Webzone
-      </div>
-
-      <div>
-        🥐 ☕
-      </div>
-
-      <div>
-        Online since 2011
-      </div>
-    </div>
-    
 
     <!-- site container -->
-    <div id="tallest" class="container">
+    <div id="tallest" class="container-fluid">
 
       
       <div class="masthead">
 
         
           
-          <div class="banner d-flex">
+          <div class="container-xl banner d-flex">
             
             <a href="https://blog.heaton.dev" class="avatar" target="_self">
               <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
@@ -215,32 +199,34 @@
         
 
         <!-- site nav -->
-        <nav class="nav blog-nav d-flex justify-content-between">
-          <div class="d-flex flex-row">
-              <a class="nav-link" href="https://blog.heaton.dev/" title="" target="_self">
-                Home
-              </a>
-            
-              <a class="nav-link" href="https://blog.heaton.dev/me/" title="" target="_self">
-                Me
-              </a>
-            
-          </div>
+        <div class="blog-nav">
+          <nav class="container-xl nav d-flex justify-content-between">
+            <div class="d-flex flex-row">
+                <a class="nav-link" href="https://blog.heaton.dev/" title="" target="_self">
+                  Home
+                </a>
+              
+                <a class="nav-link" href="https://blog.heaton.dev/me/" title="" target="_self">
+                  Me
+                </a>
+              
+            </div>
 
-          <div class="d-flex flex-row-reverse">
-            <!-- site search -->
-            <form id="sitesearch" class="search" role="search">
-              <label for="search-input">
-                <i class="fa fa-search "></i>
-              </label>
+            <div class="d-flex flex-row-reverse">
+              <!-- site search -->
+              <form id="sitesearch" class="search" role="search">
+                <label for="search-input">
+                  <i class="fa fa-search "></i>
+                </label>
 
-              <input type="search" id="sitesearch-input" class="search-input">
-            </form>
-          </div>
+                <input type="search" id="sitesearch-input" class="search-input">
+              </form>
+            </div>
 
-          <div id="search-results" class="container">
-          </div>
-        </nav>
+            <div id="search-results" class="container">
+            </div>
+          </nav>
+        </div>
       </div>
 
       <template id="search-result" hidden>
@@ -257,14 +243,26 @@
 
       
       <!-- main content -->
-      <main id="main" class="container">
+      <main id="main" class="container-xl">
         <div class="row">
           <div class="col-sm-8 container-fluid main">
 
             
 
             
-<article class="blog-post single">
+
+  
+  
+    
+  
+    
+  
+
+  
+  
+    
+      
+        <article class="blog-post">
   <header>
     
 
@@ -272,9 +270,9 @@
 
 
 <h2>
-  <a href="https://blog.heaton.dev/2020/09/oauth-mastodon-pleroma/" title="OAuth with Mastodon &amp; Pleroma" target="_self">
+  <a href="https://blog.heaton.dev/tags/gnome/" title="gnome" target="_self">
     
-      OAuth with Mastodon &amp; Pleroma
+      gnome
     
   </a>
 </h2>
@@ -289,10 +287,10 @@
         
            
             <span>Posted</span>
-            <time datetime="2020-09-28T00:00:00Z">
-              28th
-              Sep
-              2020
+            <time datetime="2013-08-04T00:00:00Z">
+              4th
+              Aug
+              2013
             </time>
            
          
@@ -300,64 +298,17 @@
         
 
         
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://blog.heaton.dev/tags/web" rel="tag" target="_self">
-                <span>web</span>
-            </a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://blog.heaton.dev/tags/pleroma" rel="tag" target="_self">
-                <span>pleroma</span>
-            </a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
        
 
       
       
-        
-        
-          
-          
-            &ndash;
-           
-          
-          <span>Updated</span>
-          <time datetime="2021-04-16T14:11:40Z">
-            16th
-            Apr
-            2021
-          </time>
-        
-      
 
       
       
       
-        
-      
 
       
       
-      
-        
        
   </div>
 
@@ -368,44 +319,138 @@
 
   </header>
 
+  
   <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+    </picture>
+
+    <span>
+      
+    </span>
+
+    <a href="https://blog.heaton.dev/tags/gnome/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
+
+  <footer>
+    
+  </footer>
+</article> 
+
+      
+    
+  
+    
+      
+        <article class="blog-post">
+  <header>
     
 
-    <p>Mastodon &amp; Pleroma are federated social networks, in order to pull statistics I needed to use OAuth2.</p>
-<p>First we need an OAuth app, this can be done either as a HTTP request or via the admin tools.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">curl -X POST <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>	-F <span style="color:#ed9d13">&#39;client_name=Test&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>	-F <span style="color:#ed9d13">&#39;redirect_uris=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>	-F <span style="color:#ed9d13">&#39;scopes=read&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>	-F <span style="color:#ed9d13">&#39;website=https://pleroma.heaton.dev&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>	https://mastodon.example/api/v1/apps
-</code></pre></div><p>Scopes can be any combination of: <code>read</code>, <code>write</code>, <code>follow</code>, <code>push</code>.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>For Pleroma, you can use <code>pleroma_ctl</code> to create your OAuth app<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">./bin/pleroma_ctl app create -n APP_NAME -s read -r REDIRECT_URI
-</code></pre></div><p>Now to request an Authorization token via the OAuth API:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">curl -X POST <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>  -F <span style="color:#ed9d13">&#39;client_id=ABC&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>  -F <span style="color:#ed9d13">&#39;client_secret=XYZ&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>  -F <span style="color:#ed9d13">&#39;redirect_uri=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#ed9d13">\
-</span><span style="color:#ed9d13"></span>  -F <span style="color:#ed9d13">&#39;grant_type=client_credentials&#39;</span> https://pleroma.example.org/oauth/token
-</code></pre></div><p>Insert your values in the fields <code>client_id</code>, <code>client_secret</code> and set your domain name.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>Success! You can use this token to make requests against the Mastodon &amp; Pleroma API!</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://docs.joinmastodon.org/client/token/">https://docs.joinmastodon.org/client/token/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://docs-develop.pleroma.social/backend/administration/CLI_tasks/oauth_app/">https://docs-develop.pleroma.social/backend/administration/CLI_tasks/oauth_app/</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+
+
+
+<h2>
+  <a href="https://blog.heaton.dev/tags/firefox/" title="firefox" target="_self">
+    
+      firefox
+    
+  </a>
+</h2>
+
+
+<div class="row">
+  <div class="col-8 metadata">
+      
+      
+        
+
+        
+           
+            <span>Posted</span>
+            <time datetime="2013-06-01T00:00:00Z">
+              1st
+              Jun
+              2013
+            </time>
+           
+         
+        
+        
+
+        
+       
+
+      
+      
+
+      
+      
+      
+
+      
+      
+       
+  </div>
+
+  <div class="col text-right">
+    
+  </div>
+</div>
+
+  </header>
+
+  
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+    </picture>
+
+    <span>
+      
+    </span>
+
+    <a href="https://blog.heaton.dev/tags/firefox/"  target="_self">
+      Read more →
+    </a>
   </section>
+  
+
+  <footer>
+    
+  </footer>
+</article> 
+
+      
+    
+  
+
+  
+  
+    <nav class="blog-pagination">
+  
+
+  
+    <a class="btn btn-outline-primary" href="https://blog.heaton.dev/tags/page/2/" target="_self" rel="prev" role="button">Previous page</a>
+
+    <a class="btn btn-outline-primary disabled" href="#" target="_self" role="button" aria-disabled="true">Next page</a>
+  
+  
+  
+</nav>
 
   
 
-  <footer class="footer">
+  
+  
     <section class="vcard card mb-3 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
         <div class="col-md-4">
@@ -467,82 +512,8 @@
         </div>
     </div>
 </section>
-    
-    
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f&amp;text=Cool article &quot;OAuth%20with%20Mastodon%20%26%20Pleroma&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
   
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
 
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f&amp;description=OAuth%20with%20Mastodon%20%26%20Pleroma" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f&amp;title=OAuth%20with%20Mastodon%20%26%20Pleroma&summary=%3cp%3eMastodon%20%26amp%3b%20Pleroma%20are%20federated%20social%20networks%2c%20in%20order%20to%20pull%20statistics%20I%20needed%20to%20use%20OAuth2.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;OAuth%20with%20Mastodon%20%26%20Pleroma&quot; from Heaton.dev!&amp;url=https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;OAuth%20with%20Mastodon%20%26%20Pleroma&quot; from https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=OAuth%20with%20Mastodon%20%26%20Pleroma from https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f&amp;body=Look at this cool article &quot;OAuth%20with%20Mastodon%20%26%20Pleroma&quot; from https%3a%2f%2fblog.heaton.dev%2f2020%2f09%2foauth-mastodon-pleroma%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
-    
-
-    
-      <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "heaton-dev" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-  </footer>
-
-</article> 
 
 
           </div> <!-- /.blog-main -->
@@ -594,15 +565,13 @@
             
             <a href="https://blog.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.252rem" target="_self">monitoring</a>
             
-            <a href="https://blog.heaton.dev/tags/pleroma" aria-label="pleroma (1 posts)" style="font-size: 0.800rem" target="_self">pleroma</a>
-            
             <a href="https://blog.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
             
             <a href="https://blog.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
             <a href="https://blog.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://blog.heaton.dev/tags/web" aria-label="web (3 posts)" style="font-size: 1.252rem" target="_self">web</a>
+            <a href="https://blog.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.085rem" target="_self">web</a>
             
             <a href="https://blog.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
@@ -981,22 +950,6 @@
                     </a>
                 </li>
 
-                
-                
-                <li>
-                    <a href="https://blog.heaton.dev/tags/web/index.xml" rel="alternative" type="application/rss+xml">
-                        web
-                        <i class="fa fa-tag" aria-hidden="true"></i>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://blog.heaton.dev/tags/pleroma/index.xml" rel="alternative" type="application/rss+xml">
-                        pleroma
-                        <i class="fa fa-tag" aria-hidden="true"></i>
-                    </a>
-                </li>
-                
                 
             </ul>
         </div>
