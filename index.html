@@ -93,8 +93,8 @@
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2021-03-12T00:00:00Z",
-    "dateModified": "2021-04-20T18:51:10.169003983Z",
+    "datePublished": "2021-04-20T00:00:00Z",
+    "dateModified": "2021-04-20T18:58:40.224347247Z",
     "keywords": "Joe Heaton, developer",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -264,6 +264,135 @@
 
 
 <h2>
+  <a href="https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/" title="Hugo: baseURL set in GitHub Actions" target="_self">
+    
+      Hugo: baseURL set in GitHub Actions
+    
+  </a>
+</h2>
+
+
+<div class="row">
+  <div class="col-8 metadata">
+      
+      
+        
+
+        
+           
+            <span>Posted</span>
+            <time datetime="2021-04-20T00:00:00Z">
+              20th
+              Apr
+              2021
+            </time>
+           
+         
+        
+        
+
+        
+          in
+          
+
+
+    
+
+    <span class="d-inline tags">
+        
+            
+
+            <a href="https://blog.heaton.dev/tags/automation" rel="tag" target="_self">
+                <span>automation</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/github" rel="tag" target="_self">
+                <span>github</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/hugo" rel="tag" target="_self">
+                <span>hugo</span>
+            </a>
+        
+
+        <i class="fa fa-tag" aria-hidden="true"></i>
+    </span>
+
+
+        
+       
+
+      
+      
+        
+        
+      
+
+      
+      
+      
+        
+      
+
+      
+      
+      
+        
+       
+  </div>
+
+  <div class="col text-right">
+    
+  </div>
+</div>
+
+  </header>
+
+  
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+    </picture>
+
+    <span>
+      Collaborative websites need to be forked, but if you set baseURL the forked website will load resources from the original.. Not ideal.
+The fix I applied to my GitHub Actions CI to work around this:
+jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.
+    </span>
+
+    <a href="https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
+
+  <footer>
+    
+  </footer>
+</article> 
+
+    
+  
+    
+      <article class="blog-post">
+  <header>
+    
+
+
+
+
+<h2>
   <a href="https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/" title="Hosting my Hugo static website on GitHub Pages using Actions and my own domain" target="_self">
     
       Hosting my Hugo static website on GitHub Pages using Actions and my own domain
@@ -348,7 +477,7 @@
            
           
           <span>Updated</span>
-          <time datetime="2021-04-20T18:51:10Z">
+          <time datetime="2021-04-20T18:58:40Z">
             20th
             Apr
             2021
@@ -716,7 +845,7 @@ My existing workflow combines three repositories to build the website:
            
           
           <span>Updated</span>
-          <time datetime="2021-04-20T18:51:10Z">
+          <time datetime="2021-04-20T18:58:40Z">
             20th
             Apr
             2021
@@ -839,7 +968,7 @@ My existing workflow combines three repositories to build the website:
            
           
           <span>Updated</span>
-          <time datetime="2021-04-20T18:51:10Z">
+          <time datetime="2021-04-20T18:58:40Z">
             20th
             Apr
             2021
@@ -1324,7 +1453,7 @@ This involved creating a small toggle function to turn the feature on and off, b
            
           
           <span>Updated</span>
-          <time datetime="2021-04-20T18:51:10Z">
+          <time datetime="2021-04-20T18:58:40Z">
             20th
             Apr
             2021
@@ -1375,124 +1504,6 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
     </span>
 
     <a href="https://blog.heaton.dev/2020/02/windows-terminal-change-default-profile/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post">
-  <header>
-    
-
-
-
-
-<h2>
-  <a href="https://blog.heaton.dev/2020/02/useful-unixisms/" title="Useful Unixisms" target="_self">
-    
-      Useful Unixisms
-    
-  </a>
-</h2>
-
-
-<div class="row">
-  <div class="col-8 metadata">
-      
-      
-        
-
-        
-           
-            <span>Posted</span>
-            <time datetime="2020-02-17T00:00:00Z">
-              17th
-              Feb
-              2020
-            </time>
-           
-         
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://blog.heaton.dev/tags/dev" rel="tag" target="_self">
-                <span>dev</span>
-            </a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://blog.heaton.dev/tags/bash" rel="tag" target="_self">
-                <span>bash</span>
-            </a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-          <i class="fas fa-exclamation-triangle text-info" title="Keep in mind this article is over a year old!"></i>
-        
-       
-  </div>
-
-  <div class="col text-right">
-    
-  </div>
-</div>
-
-  </header>
-
-  
-  <section class="content">
-    <picture class="thumbnail">
-      
-      
-
-      
-    </picture>
-
-    <span>
-      <p>Here&rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.</p>
-    </span>
-
-    <a href="https://blog.heaton.dev/2020/02/useful-unixisms/"  target="_self">
       Read more →
     </a>
   </section>
@@ -1606,7 +1617,7 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
 
     <div class="tag-cloud">
             
-            <a href="https://blog.heaton.dev/tags/automation" aria-label="automation (1 posts)" style="font-size: 0.800rem" target="_self">automation</a>
+            <a href="https://blog.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.085rem" target="_self">automation</a>
             
             <a href="https://blog.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.252rem" target="_self">bash</a>
             
@@ -1626,13 +1637,15 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
             
             <a href="https://blog.heaton.dev/tags/git" aria-label="git (2 posts)" style="font-size: 1.085rem" target="_self">git</a>
             
-            <a href="https://blog.heaton.dev/tags/github" aria-label="github (1 posts)" style="font-size: 0.800rem" target="_self">github</a>
+            <a href="https://blog.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.085rem" target="_self">github</a>
             
             <a href="https://blog.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
             <a href="https://blog.heaton.dev/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
             
             <a href="https://blog.heaton.dev/tags/hpc" aria-label="hpc (3 posts)" style="font-size: 1.252rem" target="_self">hpc</a>
+            
+            <a href="https://blog.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
             <a href="https://blog.heaton.dev/tags/linux" aria-label="linux (4 posts)" style="font-size: 1.370rem" target="_self">linux</a>
             

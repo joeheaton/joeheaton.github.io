@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head><meta charset="utf-8">
-<title>Heaton.dev</title>
+<title>Heaton.dev | hugo</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -11,10 +11,10 @@
 <meta name="keywords" content="Joe Heaton, developer, ">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="hugo" />
 <meta property="og:description" content="Joe Heaton&#39;s technology-focused murmurings." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.heaton.dev/tags/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
+<meta property="og:url" content="https://blog.heaton.dev/tags/hugo/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
 
 
 
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/umisqTL.png"/>
 
-<meta name="twitter:title" content="Tags"/>
+<meta name="twitter:title" content="hugo"/>
 <meta name="twitter:description" content="Joe Heaton&#39;s technology-focused murmurings."/>
 
 <meta name="twitter:dnt" content="on">
@@ -34,10 +34,10 @@
 <meta name="msapplication-TileColor" content="#519cff">
 
 <!-- Formats -->
-<link rel="alternate" type="application/rss+xml" href="https://blog.heaton.dev/tags/index.xml" title="Heaton.dev">
+<link rel="alternate" type="application/rss+xml" href="https://blog.heaton.dev/tags/hugo/index.xml" title="Heaton.dev">
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://blog.heaton.dev/tags/">
+<link rel="canonical" href="https://blog.heaton.dev/tags/hugo/">
 <link rel="icon" href="https://blog.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -87,14 +87,14 @@
   {
     "@context": "http://schema.org/",
     "@type": "Page",
-    "url": "https://blog.heaton.dev/tags/",
-    "headline": "Tags",
+    "url": "https://blog.heaton.dev/tags/hugo/",
+    "headline": "hugo",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2021-04-20T00:00:00Z",
-    "dateModified": "2021-04-20T18:58:40.224347247Z",
+    "dateModified": "2021-04-20T18:58:40.220347215Z",
     "keywords": "Joe Heaton, developer",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -255,10 +255,6 @@
   
     
   
-    
-  
-    
-  
 
   
   
@@ -272,9 +268,9 @@
 
 
 <h2>
-  <a href="https://blog.heaton.dev/tags/desktop/" title="desktop" target="_self">
+  <a href="https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/" title="Hugo: baseURL set in GitHub Actions" target="_self">
     
-      desktop
+      Hugo: baseURL set in GitHub Actions
     
   </a>
 </h2>
@@ -289,10 +285,10 @@
         
            
             <span>Posted</span>
-            <time datetime="2013-08-04T00:00:00Z">
-              4th
-              Aug
-              2013
+            <time datetime="2021-04-20T00:00:00Z">
+              20th
+              Apr
+              2021
             </time>
            
          
@@ -300,17 +296,60 @@
         
 
         
+          in
+          
+
+
+    
+
+    <span class="d-inline tags">
+        
+            
+
+            <a href="https://blog.heaton.dev/tags/automation" rel="tag" target="_self">
+                <span>automation</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/github" rel="tag" target="_self">
+                <span>github</span>
+            </a>
+        
+            
+                <span>|</span>
+            
+
+            <a href="https://blog.heaton.dev/tags/hugo" rel="tag" target="_self">
+                <span>hugo</span>
+            </a>
+        
+
+        <i class="fa fa-tag" aria-hidden="true"></i>
+    </span>
+
+
+        
        
 
       
       
+        
+        
+      
 
       
       
       
+        
+      
 
       
       
+      
+        
        
   </div>
 
@@ -331,182 +370,12 @@
     </picture>
 
     <span>
-      
+      Collaborative websites need to be forked, but if you set baseURL the forked website will load resources from the original.. Not ideal.
+The fix I applied to my GitHub Actions CI to work around this:
+jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.
     </span>
 
-    <a href="https://blog.heaton.dev/tags/desktop/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-      
-    
-  
-    
-      
-        <article class="blog-post">
-  <header>
-    
-
-
-
-
-<h2>
-  <a href="https://blog.heaton.dev/tags/gnome/" title="gnome" target="_self">
-    
-      gnome
-    
-  </a>
-</h2>
-
-
-<div class="row">
-  <div class="col-8 metadata">
-      
-      
-        
-
-        
-           
-            <span>Posted</span>
-            <time datetime="2013-08-04T00:00:00Z">
-              4th
-              Aug
-              2013
-            </time>
-           
-         
-        
-        
-
-        
-       
-
-      
-      
-
-      
-      
-      
-
-      
-      
-       
-  </div>
-
-  <div class="col text-right">
-    
-  </div>
-</div>
-
-  </header>
-
-  
-  <section class="content">
-    <picture class="thumbnail">
-      
-      
-
-      
-    </picture>
-
-    <span>
-      
-    </span>
-
-    <a href="https://blog.heaton.dev/tags/gnome/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-      
-    
-  
-    
-      
-        <article class="blog-post">
-  <header>
-    
-
-
-
-
-<h2>
-  <a href="https://blog.heaton.dev/tags/firefox/" title="firefox" target="_self">
-    
-      firefox
-    
-  </a>
-</h2>
-
-
-<div class="row">
-  <div class="col-8 metadata">
-      
-      
-        
-
-        
-           
-            <span>Posted</span>
-            <time datetime="2013-06-01T00:00:00Z">
-              1st
-              Jun
-              2013
-            </time>
-           
-         
-        
-        
-
-        
-       
-
-      
-      
-
-      
-      
-      
-
-      
-      
-       
-  </div>
-
-  <div class="col text-right">
-    
-  </div>
-</div>
-
-  </header>
-
-  
-  <section class="content">
-    <picture class="thumbnail">
-      
-      
-
-      
-    </picture>
-
-    <span>
-      
-    </span>
-
-    <a href="https://blog.heaton.dev/tags/firefox/"  target="_self">
+    <a href="https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/"  target="_self">
       Read more →
     </a>
   </section>
@@ -522,19 +391,6 @@
   
 
   
-  
-    <nav class="blog-pagination">
-  
-
-  
-    <a class="btn btn-outline-primary" href="https://blog.heaton.dev/tags/page/2/" target="_self" rel="prev" role="button">Previous page</a>
-
-    <a class="btn btn-outline-primary disabled" href="#" target="_self" role="button" aria-disabled="true">Next page</a>
-  
-  
-  
-</nav>
-
   
 
   

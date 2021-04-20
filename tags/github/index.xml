@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: baseURL set in GitHub Actions</title>
+      <link>https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.heaton.dev/2021/04/hugo-baseurl-set-in-github-actions/</guid>
+      <description>Collaborative websites need to be forked, but if you set baseURL the forked website will load resources from the original.. Not ideal.
+The fix I applied to my GitHub Actions CI to work around this:
+jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>
+    </item>
+    
     <item>
       <title>Hosting my Hugo static website on GitHub Pages using Actions and my own domain</title>
       <link>https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/</link>
