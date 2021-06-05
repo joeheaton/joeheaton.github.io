@@ -14,10 +14,9 @@
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.heaton.dev/me/</guid>
-      <description>This place is perpetually in-development!
-Me Well, I&amp;rsquo;m told I am INTJ-T.
-Socials You can find a list of my socials at the top right of the page!
-Referral Links Digital Ocean is my hosting provider, known as the &amp;ldquo;developer cloud&amp;rdquo; because of how easy it is to go from a new account to running servers. I feel comfortable with their services rather than a big cloud provider such as AWS, Azure or GCP &amp;ndash; Their clouds can feel like a house of very expensive cards and I don&amp;rsquo;t need that for my projects.</description>
+      <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
+Website Recipe I blogged about the current incarnation!
+ Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON+LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
     </item>
     
     <item>

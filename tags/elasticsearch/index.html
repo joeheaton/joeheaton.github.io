@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
-  <head><meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 <title>Heaton.dev | elasticsearch</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
@@ -43,6 +44,7 @@
 
 <!-- DNS prefetch -->
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://platform.twitter.com">
 
 <!-- Preload -->
@@ -52,10 +54,10 @@
 <link rel="manifest" href="https://blog.heaton.dev/manifest.json">
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" rel="preload" as="style">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" as="style">
 
 <!-- Primary CSS -->
-<link href="https://blog.heaton.dev/css/style.css" rel="stylesheet" >
+<link href="https://blog.heaton.dev/css/style.css" rel="stylesheet">
 
 
 <!-- FontAwesome CDN -->
@@ -123,22 +125,23 @@
     <div id="tallest" class="container-fluid">
 
       
-      <div class="masthead">
-
         
-          
-          <div class="container-xl banner d-flex">
-            
-            <a href="https://blog.heaton.dev" class="avatar" target="_self">
-              <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
-            </a>
-            
+        <div class="masthead">
 
-            <nav class="nav sharing-icons justify-content-end ml-auto">
+          
+            
+            <div class="container-xl banner d-flex justify-content-between">
+              
+              <a href="https://blog.heaton.dev" class="avatar" target="_self">
+                <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
+              </a>
               
 
+              <nav class="nav sharing-icons justify-content-between ml-auto">
+                
 
-<a class="nav-item" title="Discord: Deso#9121">
+
+<a target="_blank" class="nav-item" title="Discord: Deso#9121">
   <span class="fab fa-discord" aria-hidden="true"></span>
 </a>
 
@@ -146,55 +149,55 @@
 
 
 
-<a class="nav-item" href="https://twitter.com/Heaton_dev" title="Twitter">
+<a target="_blank" class="nav-item" href="https://twitter.com/Heaton_dev" title="Twitter">
   <span class="fab fa-twitter"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.github.com/joeheaton" title="Github">
+<a target="_blank" class="nav-item" href="https://www.github.com/joeheaton" title="Github">
   <span class="fab fa-github" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://gitlab.com/joeheaton" title="Gitlab">
+<a target="_blank" class="nav-item" href="https://gitlab.com/joeheaton" title="Gitlab">
   <span class="fab fa-gitlab" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
+<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
   <span class="fab fa-linkedin" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.flickr.com/photos/joeheaton" title="Flickr">
+<a target="_blank" class="nav-item" href="https://www.flickr.com/photos/joeheaton" title="Flickr">
   <span class="fab fa-flickr" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.patreon.com/JoeHeaton" title="Patreon">
+<a target="_blank" class="nav-item" href="https://www.patreon.com/JoeHeaton" title="Patreon">
   <span class="fab fa-patreon" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://ko-fi.com/heaton" title="Ko-fi">
+<a target="_blank" class="nav-item" href="https://ko-fi.com/heaton" title="Ko-fi">
   <span class="fas fa-coffee fa-kofi" aria-hidden="true"></span>
 </a>
 
 
 
 
-              <a class="nav-item" id="settings-toggle" target="_self" href="javascript: void(0)">
-                <span class="fas fa-cog"></span>
-              </a>
-            </nav>
-
-          </div>
+                <a class="nav-item" id="settings-toggle" target="_self" href="javascript: void(0)">
+                  <span class="fas fa-cog"></span>
+                </a>
+              </nav>
+            </div>
+            
           
         
 
@@ -212,7 +215,7 @@
               
             </div>
 
-            <div class="d-flex flex-row-reverse">
+            <div class="col-sm-4 ml-auto sidebar">
               <!-- site search -->
               <form id="sitesearch" class="search" role="search">
                 <label for="search-input">
@@ -260,24 +263,23 @@
   
     
       
-        <article class="blog-post">
+        <article class="blog-post title-only">
   <header>
     
 
 
 
 
-<h2>
+<h1>
   <a href="https://blog.heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/" title="Log monitoring with Elasticsearch - Basic overview" target="_self">
     
       Log monitoring with Elasticsearch - Basic overview
     
   </a>
-</h2>
-
+</h1>
 
 <div class="row">
-  <div class="col-8 metadata">
+  <div class="col metadata">
       
       
         
@@ -307,16 +309,14 @@
             
 
             <a href="https://blog.heaton.dev/tags/monitoring" rel="tag" target="_self">
-                <span>monitoring</span>
-            </a>
+                <span>monitoring</span></a>
         
             
                 <span>|</span>
             
 
             <a href="https://blog.heaton.dev/tags/elasticsearch" rel="tag" target="_self">
-                <span>elasticsearch</span>
-            </a>
+                <span>elasticsearch</span></a>
         
 
         <i class="fa fa-tag" aria-hidden="true"></i>
@@ -328,46 +328,24 @@
 
       
       
-
-      
-      
       
         
       
 
       
       
-      
-        
-          <i class="fas fa-exclamation-triangle text-orange" title="Keep in mind this article is over a year old!"></i>
-        
        
+
+      
+      
   </div>
 
-  <div class="col text-right">
+  <div class="col col-md-auto text-end metadata-extra">
     
   </div>
 </div>
-
   </header>
 
-  
-  <section class="content">
-    <picture class="thumbnail">
-      
-      
-
-      
-    </picture>
-
-    <span>
-      <p>Log monitoring implies using technology to avoid reading every single log message, with the benefit of catching more interesting events than if you were to read every single line!</p>
-    </span>
-
-    <a href="https://blog.heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/"  target="_self">
-      Read more →
-    </a>
-  </section>
   
 
   <footer>
@@ -384,55 +362,68 @@
 
   
   
-    <section class="vcard card mb-3 border border-primary" itemscope itemtype="http://schema.org/Person">
+    
+<section class="vcard card mb-3 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <img src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar" class="card-img" itemprop="image">
+            <img src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar" class="card-img photo" itemprop="image">
         </div>
 
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="vcard-name card-title font-weight-bold" itemprop="name">
-                    
-                        <span class="vcard-firstname" itemprop="givenName">
-                            Joe
-                        </span>
+                    <div class="vcard-personname fn n">
+                        
 
-                        <span class="vcard-lastname" itemprop="FamilyName">
-                            Heaton
-                        </span>
-                    
+                        
+                            <span class="vcard-firstname given-name" itemprop="givenName">
+                                Joe
+                            </span>
+                            
+                            <span class="vcard-additionalname additional-name" itemprop="givenName">
+                                
+                            </span>
+
+                            <span class="vcard-lastname family-name" itemprop="FamilyName">
+                                Heaton
+                            </span>
+                        
+
+                        
+                    </div>
                 </h5>
 
-                <address class="vcard-address">
-                    <p class="vcard-email">
-                        <span>
-                            <b>E</b>mail: 
-                        </span>
+                
+
+                
+
+                <address class="vcard-address adr">
+                    <p>
                         
-                        <a href="mailto:joe@heaton.dev" itemprop="email">
+                        
+                        <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        <span>
-                            <b>W</b>eb:
-                        </span>
+                        
 
                         
-                            <a href="https://blog.heaton.dev" itemprop="url">
+                            <a href="https://blog.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://blog.heaton.dev
                             </a>
                         
                     </p>
+
+                    
                 </address>
 
-                
-                <div class="card-text vcard-bio">
-                    Joe&rsquo;s technology-focused murmurings.
+                <div class="card-text vcard-bio note">
+                    
+                        Joe Heaton&rsquo;s technology-focused murmurings.
+                    
                 </div>
-                
 
                 <div class="card-text vcard-link">
                     <small class="text-muted">
@@ -451,7 +442,7 @@
 
           </div> <!-- /.blog-main -->
 
-          <aside class="col-sm-4 ml-auto sidebar">
+          <aside class="col-sm-4 sidebar">
   
 
   
@@ -531,7 +522,7 @@
 
       
 <!-- site footer -->
-<footer id="footer" class="container">
+<footer id="footer" class="container-xl">
     
 
     <div class="row">
@@ -880,7 +871,7 @@
 
             <ul class="list-group">
                 <li>
-                    <a href="https://blog.heaton.dev/index.xml" rel="alternative" type="application/rss+xml">
+                    <a href="https://blog.heaton.dev/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         Everything
                     </a>
                 </li>

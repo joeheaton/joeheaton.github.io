@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     console.log("Document ready!");
 
     // Annotate external links
-    annotate_external_links();
+    //annotate_external_links();
 
     // Setting slider
     // dep: JQuery SlideReveal

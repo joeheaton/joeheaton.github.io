@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
-  <head><meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 <title>Heaton.dev | Hi</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
@@ -12,10 +13,9 @@
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Hi" />
-<meta property="og:description" content="This place is perpetually in-development!
-Me Well, I&rsquo;m told I am INTJ-T.
-Socials You can find a list of my socials at the top right of the page!
-Referral Links Digital Ocean is my hosting provider, known as the &ldquo;developer cloud&rdquo; because of how easy it is to go from a new account to running servers. I feel comfortable with their services rather than a big cloud provider such as AWS, Azure or GCP &ndash; Their clouds can feel like a house of very expensive cards and I don&rsquo;t need that for my projects." />
+<meta property="og:description" content="I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
+Website Recipe I blogged about the current incarnation!
+ Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp; Cloudflare Pages  This place is perpetually in-development!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.heaton.dev/me/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="article:section" content="pages" />
 
@@ -28,10 +28,9 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 <meta name="twitter:image" content="https://i.imgur.com/umisqTL.png"/>
 
 <meta name="twitter:title" content="Hi"/>
-<meta name="twitter:description" content="This place is perpetually in-development!
-Me Well, I&rsquo;m told I am INTJ-T.
-Socials You can find a list of my socials at the top right of the page!
-Referral Links Digital Ocean is my hosting provider, known as the &ldquo;developer cloud&rdquo; because of how easy it is to go from a new account to running servers. I feel comfortable with their services rather than a big cloud provider such as AWS, Azure or GCP &ndash; Their clouds can feel like a house of very expensive cards and I don&rsquo;t need that for my projects."/>
+<meta name="twitter:description" content="I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
+Website Recipe I blogged about the current incarnation!
+ Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp; Cloudflare Pages  This place is perpetually in-development!"/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -50,6 +49,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
 <!-- DNS prefetch -->
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="dns-prefetch" href="https://platform.twitter.com">
 
 <!-- Preload -->
@@ -59,10 +59,10 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 <link rel="manifest" href="https://blog.heaton.dev/manifest.json">
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" rel="preload" as="style">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" as="style">
 
 <!-- Primary CSS -->
-<link href="https://blog.heaton.dev/css/style.css" rel="stylesheet" >
+<link href="https://blog.heaton.dev/css/style.css" rel="stylesheet">
 
 
 <!-- FontAwesome CDN -->
@@ -130,22 +130,23 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
     <div id="tallest" class="container-fluid">
 
       
-      <div class="masthead">
-
         
-          
-          <div class="container-xl banner d-flex">
-            
-            <a href="https://blog.heaton.dev" class="avatar" target="_self">
-              <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
-            </a>
-            
+        <div class="masthead">
 
-            <nav class="nav sharing-icons justify-content-end ml-auto">
+          
+            
+            <div class="container-xl banner d-flex justify-content-between">
+              
+              <a href="https://blog.heaton.dev" class="avatar" target="_self">
+                <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
+              </a>
               
 
+              <nav class="nav sharing-icons justify-content-between ml-auto">
+                
 
-<a class="nav-item" title="Discord: Deso#9121">
+
+<a target="_blank" class="nav-item" title="Discord: Deso#9121">
   <span class="fab fa-discord" aria-hidden="true"></span>
 </a>
 
@@ -153,55 +154,55 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
 
 
-<a class="nav-item" href="https://twitter.com/Heaton_dev" title="Twitter">
+<a target="_blank" class="nav-item" href="https://twitter.com/Heaton_dev" title="Twitter">
   <span class="fab fa-twitter"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.github.com/joeheaton" title="Github">
+<a target="_blank" class="nav-item" href="https://www.github.com/joeheaton" title="Github">
   <span class="fab fa-github" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://gitlab.com/joeheaton" title="Gitlab">
+<a target="_blank" class="nav-item" href="https://gitlab.com/joeheaton" title="Gitlab">
   <span class="fab fa-gitlab" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
+<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
   <span class="fab fa-linkedin" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.flickr.com/photos/joeheaton" title="Flickr">
+<a target="_blank" class="nav-item" href="https://www.flickr.com/photos/joeheaton" title="Flickr">
   <span class="fab fa-flickr" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://www.patreon.com/JoeHeaton" title="Patreon">
+<a target="_blank" class="nav-item" href="https://www.patreon.com/JoeHeaton" title="Patreon">
   <span class="fab fa-patreon" aria-hidden="true"></span>
 </a>
 
 
 
-<a class="nav-item" href="https://ko-fi.com/heaton" title="Ko-fi">
+<a target="_blank" class="nav-item" href="https://ko-fi.com/heaton" title="Ko-fi">
   <span class="fas fa-coffee fa-kofi" aria-hidden="true"></span>
 </a>
 
 
 
 
-              <a class="nav-item" id="settings-toggle" target="_self" href="javascript: void(0)">
-                <span class="fas fa-cog"></span>
-              </a>
-            </nav>
-
-          </div>
+                <a class="nav-item" id="settings-toggle" target="_self" href="javascript: void(0)">
+                  <span class="fas fa-cog"></span>
+                </a>
+              </nav>
+            </div>
+            
           
         
 
@@ -219,7 +220,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
               
             </div>
 
-            <div class="d-flex flex-row-reverse">
+            <div class="col-sm-4 ml-auto sidebar">
               <!-- site search -->
               <form id="sitesearch" class="search" role="search">
                 <label for="search-input">
@@ -264,17 +265,16 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
 
 
-<h2>
+<h1>
   <a href="https://blog.heaton.dev/me/" title="Hi" target="_self">
     
       Hi
     
   </a>
-</h2>
-
+</h1>
 
 <div class="row">
-  <div class="col-8 metadata">
+  <div class="col metadata">
       
       
         
@@ -288,12 +288,6 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
       
       
-        
-        
-      
-
-      
-      
       
         
       
@@ -301,25 +295,48 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
       
       
        
+
+      
+      
+        
+        
+      
   </div>
 
-  <div class="col text-right">
+  <div class="col col-md-auto text-end metadata-extra">
     
   </div>
 </div>
-
   </header>
 
   <section class="content">
     
 
-    <p>This place is perpetually in-development!</p>
+    <p>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.</p>
+<h2 id="website-recipe">Website Recipe</h2>
+<p><a href="https://blog.heaton.dev/2021/03/hosting-my-hugo-static-website-on-github-pages-using-actions-and-my-own-domain/">I blogged about the current incarnation!</a></p>
+<ul>
+<li>Compiled with the <a href="https://gohugo.io">Hugo static site generator</a>
+<ul>
+<li><a href="https://sass-lang.com/">Sass</a> to make CSS sane</li>
+<li><a href="https://getbootstrap.com/">Bootstrap</a> CSS framework</li>
+<li><a href="https://web.dev/add-manifest/">Web Manifest</a></li>
+<li><a href="https://fontawesome.com/">Font Awesome</a> for icons</li>
+<li><a href="https://github.com/olivernn/lunr.js">Lunr.js</a> static site search</li>
+<li><a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a> for privacy-respecting analytics</li>
+<li><a href="https://json-ld.org/">JSON+LD</a> for SEO metadata</li>
+</ul>
+</li>
+<li>Track my progress in Git</li>
+<li>Deploy using <a href="https://github.com/features/actions">GitHub Actions</a> &amp; <a href="https://pages.cloudflare.com/">Cloudflare Pages</a></li>
+</ul>
+<p>This place is perpetually in-development!</p>
 <h2 id="me">Me</h2>
 <p>Well, I&rsquo;m told I am <a href="https://www.16personalities.com/intj-personality">INTJ-T</a>.</p>
 <h2 id="socials">Socials</h2>
 <!-- list socials -->
 <p>You can find a list of my socials at the top right of the page!</p>
-<h2 id="referral-links">Referral Links</h2>
+<h2 id="recommended-services">Recommended Services</h2>
 <p><a href="https://m.do.co/c/2fafbed71d12">Digital Ocean</a> is my hosting provider, known as the &ldquo;developer cloud&rdquo; because of how easy it is to go from a new account to running servers. I feel comfortable with their services rather than a big cloud provider such as AWS, Azure or GCP &ndash; Their clouds can feel like a house of very expensive cards and I don&rsquo;t need that for my projects.</p>
 <p><a href="https://gandi.link/f/57bac45c">Gandi</a> is my preferred vendor for domain names, back when I bought my first domain names I was concerned about revealing my billing address publicly via the mandatory WHOIS database, Gandi was one of few providers who offered WHOIS privacy by default and for free! These days WHOIS privacy is far more common and possibly mandatory due to GDPR. I keep using Gandi because their admin interface is clean and simple but allows technical users to access all the features on offer if needed.</p>
 
@@ -328,55 +345,68 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
   
 
   <footer class="footer">
-    <section class="vcard card mb-3 border border-primary" itemscope itemtype="http://schema.org/Person">
+    
+<section class="vcard card mb-3 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <img src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar" class="card-img" itemprop="image">
+            <img src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar" class="card-img photo" itemprop="image">
         </div>
 
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="vcard-name card-title font-weight-bold" itemprop="name">
-                    
-                        <span class="vcard-firstname" itemprop="givenName">
-                            Joe
-                        </span>
+                    <div class="vcard-personname fn n">
+                        
 
-                        <span class="vcard-lastname" itemprop="FamilyName">
-                            Heaton
-                        </span>
-                    
+                        
+                            <span class="vcard-firstname given-name" itemprop="givenName">
+                                Joe
+                            </span>
+                            
+                            <span class="vcard-additionalname additional-name" itemprop="givenName">
+                                
+                            </span>
+
+                            <span class="vcard-lastname family-name" itemprop="FamilyName">
+                                Heaton
+                            </span>
+                        
+
+                        
+                    </div>
                 </h5>
 
-                <address class="vcard-address">
-                    <p class="vcard-email">
-                        <span>
-                            <b>E</b>mail: 
-                        </span>
+                
+
+                
+
+                <address class="vcard-address adr">
+                    <p>
                         
-                        <a href="mailto:joe@heaton.dev" itemprop="email">
+                        
+                        <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        <span>
-                            <b>W</b>eb:
-                        </span>
+                        
 
                         
-                            <a href="https://blog.heaton.dev" itemprop="url">
+                            <a href="https://blog.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://blog.heaton.dev
                             </a>
                         
                     </p>
+
+                    
                 </address>
 
-                
-                <div class="card-text vcard-bio">
-                    Joe&rsquo;s technology-focused murmurings.
+                <div class="card-text vcard-bio note">
+                    
+                        Joe Heaton&rsquo;s technology-focused murmurings.
+                    
                 </div>
-                
 
                 <div class="card-text vcard-link">
                     <small class="text-muted">
@@ -414,7 +444,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.heaton.dev%2fme%2f&amp;title=Hi&summary=This%20place%20is%20perpetually%20in-development%21%0aMe%20Well%2c%20I%26rsquo%3bm%20told%20I%20am%20INTJ-T.%0aSocials%20You%20can%20find%20a%20list%20of%20my%20socials%20at%20the%20top%20right%20of%20the%20page%21%0aReferral%20Links%20Digital%20Ocean%20is%20my%20hosting%20provider%2c%20known%20as%20the%20%26ldquo%3bdeveloper%20cloud%26rdquo%3b%20because%20of%20how%20easy%20it%20is%20to%20go%20from%20a%20new%20account%20to%20running%20servers.%20I%20feel%20comfortable%20with%20their%20services%20rather%20than%20a%20big%20cloud%20provider%20such%20as%20AWS%2c%20Azure%20or%20GCP%20%26ndash%3b%20Their%20clouds%20can%20feel%20like%20a%20house%20of%20very%20expensive%20cards%20and%20I%20don%26rsquo%3bt%20need%20that%20for%20my%20projects." title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.heaton.dev%2fme%2f&amp;title=Hi&summary=I%20have%20maintained%20my%20small%20space%20on%20the%20Internet%20since%202011.%20I%20like%20to%20keep%20this%20space%20personal%20and%20self-made%2c%20probably%20because%20I%20started%20out%20as%20a%20Web%20Developer.%0aWebsite%20Recipe%20I%20blogged%20about%20the%20current%20incarnation%21%0a%20Compiled%20with%20the%20Hugo%20static%20site%20generator%20%20Sass%20to%20make%20CSS%20sane%20Bootstrap%20CSS%20framework%20Web%20Manifest%20Font%20Awesome%20for%20icons%20Lunr.js%20static%20site%20search%20Cloudflare%20Web%20Analytics%20for%20privacy-respecting%20analytics%20JSON%2bLD%20for%20SEO%20metadata%20%20%20Track%20my%20progress%20in%20Git%20Deploy%20using%20GitHub%20Actions%20%26amp%3b%20Cloudflare%20Pages%20%20This%20place%20is%20perpetually%20in-development%21" title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 
@@ -469,7 +499,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
           </div> <!-- /.blog-main -->
 
-          <aside class="col-sm-4 ml-auto sidebar">
+          <aside class="col-sm-4 sidebar">
   
 
   
@@ -549,7 +579,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
       
 <!-- site footer -->
-<footer id="footer" class="container">
+<footer id="footer" class="container-xl">
     
 
     <div class="row">
@@ -898,7 +928,7 @@ Referral Links Digital Ocean is my hosting provider, known as the &ldquo;develop
 
             <ul class="list-group">
                 <li>
-                    <a href="https://blog.heaton.dev/index.xml" rel="alternative" type="application/rss+xml">
+                    <a href="https://blog.heaton.dev/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         Everything
                     </a>
                 </li>

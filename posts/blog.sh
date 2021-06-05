@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HELP="Usage: blog.sh [opts] [title]\n  [-f|--format]=[md:default|rst|html|txt]\n  [-d|--date]=[YYYY-mm-dd|today:default]\n  [-c|--category]=[name]\n  --visual\n"
+HELP="Usage: blog.sh [opts] [title]\n  [-f|--format]=[md:default|rst|html|txt]\n  [-d|--date]=[YYYY-mm-dd|today:default]\n  [-c|--category]=[name]\n  --visual\n  [-a|--autocommit]\n"
 
 [ -z "$1" ] && { printf "$HELP"; exit 1; }
 
@@ -23,6 +23,9 @@ for i in "$@"; do
     -v|--visual)
         VISUAL_MODE=true
         shift;;
+    -a|--autocommit)
+        AUTOCOMMIT=true
+        shift;;
     *) printf "" ;;
   esac
 done
@@ -39,8 +42,19 @@ fi
 
 # DIR
 if [ -z "$DIR" ]; then
-    read -p "* Which category? (only one) " DIR
-    [ -z "$DIR" ] && DIR=""
+    read -p "* Which category? [blog:default] " DIR
+    [ -z "$DIR" ] && DIR="blog"
+fi
+
+# Check data dirs in category
+TESTDIR="${DIR}/$(date +%Y)"
+if [ -d "${TESTDIR}" ]; then
+    DIR="$TESTDIR"
+
+    TESTDIR="${DIR}/$(date +%m)"
+    if [ -d "${TESTDIR}" ]; then
+        DIR="$TESTDIR"
+    fi
 fi
 
 # FILENAME
@@ -105,6 +119,11 @@ elif [[ -z "$VISUAL_MODE" && "$EDITOR" ]]; then
 else
     /bin/vi $FULLPATH
 fi; printf "..\n"
+
+# Git autocommit
+if [ "$AUTOCOMMIT" ] && [ -e .git ];  then
+    ( git diff ${FULLPATH}; git add ${FULLPATH}; git commit -m "Autosave"; )
+fi
 
 # Delete category if nothing has been saved inside
 [ "$DIR" ] && rmdir --ignore-fail-on-non-empty $DIR
