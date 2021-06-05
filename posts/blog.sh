@@ -82,7 +82,7 @@ DIR_MADE="$(mkdir $DIR 2>/dev/null)"
 # Fill in boilerplate
 case $FORMAT in
     md)
-        printf -- "---\ntitle: $TITLE\nstatus: draft\n---\n\n" > $FULLPATH;;
+        printf -- "---\ntitle: $TITLE\ndraft: true\n---\n\n" > $FULLPATH;;
     rst)
         printf "$TITLE\n" > $FULLPATH
         printf '#%.0s' $(seq 1 ${#TITLE}) >> $FULLPATH

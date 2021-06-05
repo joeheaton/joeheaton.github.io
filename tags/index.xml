@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hpc</title>
+      <link>https://www.heaton.dev/tags/hpc/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/hpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.heaton.dev/tags/linux/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>automation</title>
       <link>https://www.heaton.dev/tags/automation/</link>
@@ -32,15 +50,6 @@
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://www.heaton.dev/tags/linux/</link>
-      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -176,15 +185,6 @@
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/elasticsearch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hpc</title>
-      <link>https://www.heaton.dev/tags/hpc/</link>
-      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/hpc/</guid>
       <description></description>
     </item>
     

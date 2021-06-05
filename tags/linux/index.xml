@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Try out Spack on Arm HPC | CP2K</title>
+      <link>https://www.heaton.dev/2021/06/spack/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2021/06/spack/</guid>
+      <description>Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
+I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
+Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.</description>
+    </item>
+    
     <item>
       <title>Host Hugo static website on GitHub Pages using Actions and my domain</title>
       <link>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
