@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>postgres on Heaton.dev</title>
-    <link>https://blog.heaton.dev/tags/postgres/</link>
+    <link>https://www.heaton.dev/tags/postgres/</link>
     <description>Recent content in postgres on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Tue, 29 Sep 2020 14:00:00 +0100</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Sep 2020 14:00:00 +0100</lastBuildDate><atom:link href="https://www.heaton.dev/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Remote PostgreSQL using local PgAdmin inside Docker</title>
-      <link>https://blog.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</link>
+      <link>https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</link>
       <pubDate>Tue, 29 Sep 2020 14:00:00 +0100</pubDate>
       
-      <guid>https://blog.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</guid>
+      <guid>https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</guid>
       <description>&lt;p&gt;PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.&lt;/p&gt;</description>
     </item>
     

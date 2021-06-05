@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Heaton.dev</title>
-    <link>https://blog.heaton.dev/tags/linux/</link>
+    <link>https://www.heaton.dev/tags/linux/</link>
     <description>Recent content in linux on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Host Hugo static website on GitHub Pages using Actions and my domain</title>
-      <link>https://blog.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
+      <link>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
+      <guid>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
       <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
 My existing workflow combines three repositories to build the website:
  Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
@@ -21,28 +21,28 @@ My existing workflow combines three repositories to build the website:
     
     <item>
       <title>SSH port forwarding</title>
-      <link>https://blog.heaton.dev/2020/09/ssh-port-forwarding/</link>
+      <link>https://www.heaton.dev/2020/09/ssh-port-forwarding/</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/2020/09/ssh-port-forwarding/</guid>
+      <guid>https://www.heaton.dev/2020/09/ssh-port-forwarding/</guid>
       <description>&lt;p&gt;The following command connects to our server and forwards a specific port on our local machine to the server. In this case we forward port &lt;code&gt;5432&lt;/code&gt; which belongs to PostgreSQL, so when we connect to &lt;code&gt;localhost:5432&lt;/code&gt; on the desktop, the connection is forwarded through the secure tunnel to the server.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Patching Lustre 2.10 for Linux 4.14</title>
-      <link>https://blog.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
+      <link>https://www.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
+      <guid>https://www.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
       <description>&lt;p&gt;The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&amp;rsquo;t seem to come back into existing Lustre releases, since those releases don&amp;rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Enjoying GNOME3</title>
-      <link>https://blog.heaton.dev/2013/08/enjoying-gnome3/</link>
+      <link>https://www.heaton.dev/2013/08/enjoying-gnome3/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/2013/08/enjoying-gnome3/</guid>
+      <guid>https://www.heaton.dev/2013/08/enjoying-gnome3/</guid>
       <description>The options Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.
 I won&amp;rsquo;t go too in-depth into the actual choices available and their ups &amp;amp; downs as this isn&amp;rsquo;t a comparison posting, I just want to express my feelings on my choice.</description>
     </item>

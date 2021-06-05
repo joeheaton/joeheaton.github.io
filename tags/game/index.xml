@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>game on Heaton.dev</title>
-    <link>https://blog.heaton.dev/tags/game/</link>
+    <link>https://www.heaton.dev/tags/game/</link>
     <description>Recent content in game on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.heaton.dev/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BeatSaber mods (Custom songs  &amp; Third-Person)</title>
-      <link>https://blog.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</link>
+      <link>https://www.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</guid>
+      <guid>https://www.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</guid>
       <description>&lt;p&gt;More fun with BeatSaber! Mods provide more stats, effects and even allow a third-person mode for streaming.&lt;/p&gt;</description>
     </item>
     
