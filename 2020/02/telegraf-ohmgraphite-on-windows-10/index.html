@@ -340,7 +340,7 @@
   <section class="content">
     
 
-    <p>Download the Telegraf client from <a href="https://www.influxdata.com">influxdata.com</a>, extract the telegraf directory to a sensible place and edit <code>telegraf.conf</code>.</p>
+    <p>Download the Telegraf client from <a href="https://www.influxdata.com" target="_blank">influxdata.com</a>, extract the telegraf directory to a sensible place and edit <code>telegraf.conf</code>.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-diff" data-lang="diff">  ## Log at debug level.
 <span style="color:#d22323">- debug = false
 </span><span style="color:#d22323"></span><span style="color:#589819">+ debug = false
@@ -351,8 +351,8 @@
 <p>Now to install the service, convieniently Telegraf can handle this! Open Powershell, navigate to the Telegraf directory and run <code>.\telegraf.exe --server install --config &quot;C:\Full_Path_To_Telegraf\telegraf.conf&quot;</code>. The service can be enabled in the Services app.</p>
 <p>InfluxDB works out of the box, just install it. It should be run on a non-Windows host, any hardware will do, preferably with fast storage so bulk reads are quick, relevant soon.</p>
 <p>Use the <code>influx</code> client to connect locally to InfluxDB and run <code>CREATE DATABASE ohm;</code>.</p>
-<p>Download OhmGraphite, Ohm standing for Open Hardware Monitor, from <a href="https://github.com/nickbabcock/OhmGraphite">OhmGraphite</a>, extract to a similar location as telegraf.</p>
-<p>Edit <code>OhmGraphite.exe.config</code>, replace the contents of <code>&lt;appSettings&gt;&lt;/appSettings&gt;</code> according to the OhmGraphite <a href="https://github.com/nickbabcock/OhmGraphite#influxdb-configuration">ReadMe</a> to include:</p>
+<p>Download OhmGraphite, Ohm standing for Open Hardware Monitor, from <a href="https://github.com/nickbabcock/OhmGraphite" target="_blank">OhmGraphite</a>, extract to a similar location as telegraf.</p>
+<p>Edit <code>OhmGraphite.exe.config</code>, replace the contents of <code>&lt;appSettings&gt;&lt;/appSettings&gt;</code> according to the OhmGraphite <a href="https://github.com/nickbabcock/OhmGraphite#influxdb-configuration" target="_blank">ReadMe</a> to include:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-xml" data-lang="xml">    <span style="color:#6ab825;font-weight:bold">&lt;add</span> <span style="color:#bbb">key=</span><span style="color:#ed9d13">&#34;type&#34;</span> <span style="color:#bbb">value=</span><span style="color:#ed9d13">&#34;influxdb&#34;</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>
     <span style="color:#6ab825;font-weight:bold">&lt;add</span> <span style="color:#bbb">key=</span><span style="color:#ed9d13">&#34;interval&#34;</span> <span style="color:#bbb">value=</span><span style="color:#ed9d13">&#34;10&#34;</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>
     <span style="color:#6ab825;font-weight:bold">&lt;add</span> <span style="color:#bbb">key=</span><span style="color:#ed9d13">&#34;influx_address&#34;</span> <span style="color:#bbb">value=</span><span style="color:#ed9d13">&#34;http://Your_Influx_Server:8086&#34;</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>
@@ -360,8 +360,8 @@
 <span style="color:#999;font-style:italic">&lt;!--&lt;add key=&#34;influx_user&#34; value=&#34;myuser&#34; /&gt;
 </span><span style="color:#999;font-style:italic">    &lt;add key=&#34;influx_password&#34; value=&#34;mypassword&#34; /&gt;--&gt;</span>
 </code></pre></div><p>Run <code>OhmGraphite.exe</code> normally to confirm it works, <code>^C</code> to stop. Finally run <code>.\OhmGraphite.exe install</code> to install the service, start it using the Services app.</p>
-<p>If you had any trouble following these instructions, be sure to check the <a href="https://github.com/nickbabcock/OhmGraphite">project page</a>.</p>
-<p>You can visualise this data using the <a href="https://grafana.com/grafana/dashboards/11601">Grafana dashboard provided by the project</a>!</p>
+<p>If you had any trouble following these instructions, be sure to check the <a href="https://github.com/nickbabcock/OhmGraphite" target="_blank">project page</a>.</p>
+<p>You can visualise this data using the <a href="https://grafana.com/grafana/dashboards/11601" target="_blank">Grafana dashboard provided by the project</a>!</p>
   </section>
 
   
@@ -404,16 +404,12 @@
 
                 <address class="vcard-address adr">
                     <p>
-                        
-                        
                         <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        
-
                         
                             <a href="https://www.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://www.heaton.dev
@@ -430,7 +426,7 @@
                     
                 </div>
 
-                <div class="card-text vcard-link">
+                <div class="card-text vcard-save">
                     <small class="text-muted">
                         <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
                             &#128427; Save to contacts
@@ -466,7 +462,7 @@
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2ftelegraf-ohmgraphite-on-windows-10%2f&amp;title=Telegraf%20%26%20OhmGraphite%20on%20Windows%2010&summary=%3cp%3eDownload%20the%20Telegraf%20client%20from%20%3ca%20href%3d%22https%3a%2f%2fwww.influxdata.com%22%3einfluxdata.com%3c%2fa%3e%2c%20extract%20the%20telegraf%20directory%20to%20a%20sensible%20place%20and%20edit%20%3ccode%3etelegraf.conf%3c%2fcode%3e.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2ftelegraf-ohmgraphite-on-windows-10%2f&amp;title=Telegraf%20%26%20OhmGraphite%20on%20Windows%2010&summary=%3cp%3eDownload%20the%20Telegraf%20client%20from%20%3ca%20href%3d%22https%3a%2f%2fwww.influxdata.com%22%20target%3d%22_blank%22%3einfluxdata.com%3c%2fa%3e%2c%20extract%20the%20telegraf%20directory%20to%20a%20sensible%20place%20and%20edit%20%3ccode%3etelegraf.conf%3c%2fcode%3e.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 

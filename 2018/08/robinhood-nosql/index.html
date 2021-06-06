@@ -335,11 +335,11 @@ It does this by scanning every file on the filesystem as efficiently as possible
   <section class="content">
     
 
-    <p><a href="https://github.com/cea-hpc/robinhood">Robinhood</a> provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.</p>
+    <p><a href="https://github.com/cea-hpc/robinhood" target="_blank">Robinhood</a> provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.</p>
 <p>It does this by scanning every file on the filesystem as efficiently as possible to initially populate its MySQL/MariaDB relational database, then it continuously listen for changelogs coming from Lustre to keep its state in-line with reality.</p>
-<p>Upon looking into the type of operations the Robinhood client tools typically perform and reading some recent <a href="https://github.com/cea-hpc/robinhood/wiki/Papers-and-presentations">presentations &amp; papers</a> it seems that MySQL/MariaDB was settled on as a well-known good general database engine and not necassarily for any specific qualities that make it exceptional in this use-case.</p>
+<p>Upon looking into the type of operations the Robinhood client tools typically perform and reading some recent <a href="https://github.com/cea-hpc/robinhood/wiki/Papers-and-presentations" target="_blank">presentations &amp;amp; papers</a> it seems that MySQL/MariaDB was settled on as a well-known good general database engine and not necassarily for any specific qualities that make it exceptional in this use-case.</p>
 <p>I have worked with NoSQL quite a bit the last year and it seems the Robinhood schema could fit quite well; For example without looking into the code: the <code>rbh-find</code> user tool likely performs a full table search for matching filenames, <code>rbh-du</code> will do the same while matching the base path. This behaviour is more akin to a search engine than a key-value lookup.</p>
-<p>Without espounding the pro&rsquo;s of both DB engine types, I understand that NoSQL has advantages with &ldquo;search engine&rdquo; style queries, with significant software projects dedicated to the workload; One being Apache Lucene, while still having options to experiment further by trying <a href="https://docs.mongodb.com/manual/introduction/">MongoDB</a>, <a href="http://couchdb.apache.org/">CouchDB</a> or even <a href="https://blazingdb.com/">BlazingDB</a>.</p>
+<p>Without espounding the pro&rsquo;s of both DB engine types, I understand that NoSQL has advantages with &ldquo;search engine&rdquo; style queries, with significant software projects dedicated to the workload; One being Apache Lucene, while still having options to experiment further by trying <a href="https://docs.mongodb.com/manual/introduction/" target="_blank">MongoDB</a>, <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> or even <a href="https://blazingdb.com/" target="_blank">BlazingDB</a>.</p>
 <h1 id="experiment">Experiment</h1>
 <p>The easiest and quickest way to investigate whether the scale and typical requests would fit into NoSQL is the following:</p>
 <p><code>Lustre → Robinhood → SQL → NoSQL ← Query script</code></p>
@@ -455,16 +455,12 @@ It does this by scanning every file on the filesystem as efficiently as possible
 
                 <address class="vcard-address adr">
                     <p>
-                        
-                        
                         <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        
-
                         
                             <a href="https://www.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://www.heaton.dev
@@ -481,7 +477,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
                     
                 </div>
 
-                <div class="card-text vcard-link">
+                <div class="card-text vcard-save">
                     <small class="text-muted">
                         <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
                             &#128427; Save to contacts
@@ -517,7 +513,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2018%2f08%2frobinhood-nosql%2f&amp;title=Robinhood%20NoSQL&summary=%3cp%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fcea-hpc%2frobinhood%22%3eRobinhood%3c%2fa%3e%20provides%20indexing%2c%20search%20and%20management%20capabilities%20to%20computing%20centres%20with%20massive%20high-performnace%20filesystems%2c%20namely%20Lustre.%3c%2fp%3e%0a%3cp%3eIt%20does%20this%20by%20scanning%20every%20file%20on%20the%20filesystem%20as%20efficiently%20as%20possible%20to%20initially%20populate%20its%20MySQL%2fMariaDB%20relational%20database%2c%20then%20it%20continuously%20listen%20for%20changelogs%20coming%20from%20Lustre%20to%20keep%20its%20state%20in-line%20with%20reality.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2018%2f08%2frobinhood-nosql%2f&amp;title=Robinhood%20NoSQL&summary=%3cp%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fcea-hpc%2frobinhood%22%20target%3d%22_blank%22%3eRobinhood%3c%2fa%3e%20provides%20indexing%2c%20search%20and%20management%20capabilities%20to%20computing%20centres%20with%20massive%20high-performnace%20filesystems%2c%20namely%20Lustre.%3c%2fp%3e%0a%3cp%3eIt%20does%20this%20by%20scanning%20every%20file%20on%20the%20filesystem%20as%20efficiently%20as%20possible%20to%20initially%20populate%20its%20MySQL%2fMariaDB%20relational%20database%2c%20then%20it%20continuously%20listen%20for%20changelogs%20coming%20from%20Lustre%20to%20keep%20its%20state%20in-line%20with%20reality.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 

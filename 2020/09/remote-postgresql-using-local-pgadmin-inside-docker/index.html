@@ -345,7 +345,7 @@
 
     <p>PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.</p>
 <h2 id="docker">Docker</h2>
-<p>Using <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> and an SSH tunnel I am able to run <a href="https://www.pgadmin.org/">pgAdmin</a> locally to manage my remote databases. The critical part is, the database does not need to be exposed to the Internet, this is where the SSH tunnel comes in.</p>
+<p>Using <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker Desktop</a> and an SSH tunnel I am able to run <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a> locally to manage my remote databases. The critical part is, the database does not need to be exposed to the Internet, this is where the SSH tunnel comes in.</p>
 <p>This assumes your PostgreSQL is configured to access connections on localhost and that you have an account set up.</p>
 <p>It&rsquo;s time to start a local instance of pgAdmin using Docker.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; docker pull dpage/pgadmin4
@@ -354,7 +354,7 @@ latest: Pulling from dpage/pgadmin4
 Digest: sha256:2ab69d31e8a4cc03df29c1916431cc535016a64aabceebc91bc6762c6c53ecf5
 Status: Image is up to date for dpage/pgadmin4:latest
 docker.io/dpage/pgadmin4:latest
-</code></pre></div><p>All we have left to do is start the <a href="https://hub.docker.com/r/dpage/pgadmin4/">container</a>, this involves quite a few flags:</p>
+</code></pre></div><p>All we have left to do is start the <a href="https://hub.docker.com/r/dpage/pgadmin4/" target="_blank">container</a>, this involves quite a few flags:</p>
 <ul>
 <li><code>--name &quot;pgadmin&quot;</code>: a sensible container name, makes starting and stopping easier.</li>
 <li><code>-e &quot;PGADMIN_DEFAULT_EMAIL=me@example.com&quot;</code>: Admin username</li>
@@ -432,16 +432,12 @@ docker.io/dpage/pgadmin4:latest
 
                 <address class="vcard-address adr">
                     <p>
-                        
-                        
                         <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        
-
                         
                             <a href="https://www.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://www.heaton.dev
@@ -458,7 +454,7 @@ docker.io/dpage/pgadmin4:latest
                     
                 </div>
 
-                <div class="card-text vcard-link">
+                <div class="card-text vcard-save">
                     <small class="text-muted">
                         <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
                             &#128427; Save to contacts

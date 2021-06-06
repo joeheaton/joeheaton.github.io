@@ -349,13 +349,13 @@
 sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.preamble
 </code></pre></div><p>This bulk <code>sed</code> runs over the Lustre source code to rename two kernel variables:</p>
 <ul>
-<li><code>wait_queue_t</code> -&gt; <code>wait_queue_entry_t</code> renamed in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7cee9384cb3e25de33d75ecdbf08bb15b4ea9fa5">Linux 4.13</a></li>
-<li><code>vfs_write</code> -&gt; <code>kernel_write</code> deprecation in <a href="https://github.com/kaloz/mwlwifi/pull/271/commits/eac34911c6f5ff2e7e6e4ecd41c5dd10f97bd4ce">Linux 4.14</a></li>
+<li><code>wait_queue_t</code> -&gt; <code>wait_queue_entry_t</code> renamed in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7cee9384cb3e25de33d75ecdbf08bb15b4ea9fa5" target="_blank">Linux 4.13</a></li>
+<li><code>vfs_write</code> -&gt; <code>kernel_write</code> deprecation in <a href="https://github.com/kaloz/mwlwifi/pull/271/commits/eac34911c6f5ff2e7e6e4ecd41c5dd10f97bd4ce" target="_blank">Linux 4.14</a></li>
 </ul>
 <p>The second line removes the requirement for a specific kernel package version; I could have tweaked it to allow for later kernels but the syntax was never happy, removing the line has the same effect anyway.</p>
 <p>If you need this hotfix then just insert it at the top of the <code>%build</code> just after the <code>cd</code> in the lustre RPM SPEC file.</p>
 <p>Then - I tried to commit this upstream only to find the work had been done!</p>
-<p><a href="https://jira.whamcloud.com/browse/LU-10560">Lustre LU-10560 - Fixes for 4.14 kernel</a></p>
+<p><a href="https://jira.whamcloud.com/browse/LU-10560" target="_blank">Lustre LU-10560 - Fixes for 4.14 kernel</a></p>
   </section>
 
   
@@ -398,16 +398,12 @@ sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
 
                 <address class="vcard-address adr">
                     <p>
-                        
-                        
                         <a href="mailto:joe@heaton.dev" class="vcard-email email" itemprop="email">
                             joe@heaton.dev
                         </a>
                     </p>
 
                     <p class="vcard-homepage">
-                        
-
                         
                             <a href="https://www.heaton.dev" class="vcard-url url" itemprop="url">
                                 https://www.heaton.dev
@@ -424,7 +420,7 @@ sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
                     
                 </div>
 
-                <div class="card-text vcard-link">
+                <div class="card-text vcard-save">
                     <small class="text-muted">
                         <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
                             &#128427; Save to contacts

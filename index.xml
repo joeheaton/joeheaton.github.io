@@ -95,7 +95,7 @@ This involved creating a small toggle function to turn the feature on and off, b
       <guid>https://www.heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
 Website Recipe I blogged about the current incarnation!
- Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON+LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
+ Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
     </item>
     
     <item>
@@ -172,7 +172,7 @@ wget -O- GITHUB_URL</description>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
-      <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34; target=&#34;_blank&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -201,7 +201,7 @@ How to clear website data from your browser  Firefox - Block websites from stori
       <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2019/04/sftp-instead-of-scp/</guid>
-      <description>&lt;p&gt;SCP suffered from weak input validation for decades until &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=1666127&#34; title=&#34;openssh: Improper validation of object names allows malicious server to overwrite files via scp client&#34;&gt;CVE-2019-6111&lt;/a&gt;, the maintainers recommended using SFTP until patched versions can be deployed. I, like many others, were reminded SFTP existed!&lt;/p&gt;</description>
+      <description>&lt;p&gt;SCP suffered from weak input validation for decades until &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=1666127&#34; title=&#34;openssh: Improper validation of object names allows malicious server to overwrite files via scp client&#34; target=&#34;_blank&#34;&gt;CVE-2019-6111&lt;/a&gt;, the maintainers recommended using SFTP until patched versions can be deployed. I, like many others, were reminded SFTP existed!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,7 +252,7 @@ git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push yo
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2018/08/robinhood-nosql/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34; target=&#34;_blank&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
 &lt;p&gt;It does this by scanning every file on the filesystem as efficiently as possible to initially populate its MySQL/MariaDB relational database, then it continuously listen for changelogs coming from Lustre to keep its state in-line with reality.&lt;/p&gt;</description>
     </item>
     

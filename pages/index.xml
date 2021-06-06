@@ -16,7 +16,7 @@
       <guid>https://www.heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
 Website Recipe I blogged about the current incarnation!
- Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON+LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
+ Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
     </item>
     
     <item>

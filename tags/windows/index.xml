@@ -34,7 +34,7 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
-      <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34; target=&#34;_blank&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

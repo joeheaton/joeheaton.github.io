@@ -34,7 +34,7 @@ Spack is a source-based package manager and build system, all builds take place 
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2018/08/robinhood-nosql/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34; target=&#34;_blank&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
 &lt;p&gt;It does this by scanning every file on the filesystem as efficiently as possible to initially populate its MySQL/MariaDB relational database, then it continuously listen for changelogs coming from Lustre to keep its state in-line with reality.&lt;/p&gt;</description>
     </item>
     
