@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>spack</title>
+      <link>https://www.heaton.dev/tags/spack/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/spack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>automation</title>
       <link>https://www.heaton.dev/tags/automation/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
@@ -144,15 +153,6 @@
     </item>
     
     <item>
-      <title>git</title>
-      <link>https://www.heaton.dev/tags/git/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>monitoring</title>
       <link>https://www.heaton.dev/tags/monitoring/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
@@ -176,6 +176,15 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://www.heaton.dev/tags/git/</link>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/git/</guid>
       <description></description>
     </item>
     

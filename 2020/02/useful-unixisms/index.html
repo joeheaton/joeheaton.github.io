@@ -90,7 +90,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2020/02/useful-unixisms/",
-    "headline": "Useful Unixisms","wordCount": "220",
+    "headline": "Useful Unixisms","wordCount": "222",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -341,36 +341,38 @@
     
 
     <p>Here&rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.</p>
-<h2 id="generate-8-character-alphanumeric-string">generate 8 character alphanumeric string</h2>
-<p><code>&lt; /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo</code></p>
-<h2 id="print-between-a-and-b-in-filename-with-the-filename-as-prefix-to-each-line">print between A and B in filename with the filename as prefix to each line</h2>
-<p><code>awk '/A/,/B/{ print FILENAME, $1}' FILES</code></p>
-<h2 id="find-new-files">find new files</h2>
-<p><code>find . -printf &quot;%T+\t%p\n&quot; | sort</code></p>
-<h2 id="delete-lines-until-string">delete lines until string</h2>
-<p><code>sed -i '0,/^STRING$/d' FILE</code></p>
-<h2 id="delete-lines-x-until-y">delete lines X until Y</h2>
-<p><code>sed -i 'X,Yd' FILE</code></p>
-<h2 id="read-a-process-stdout">read a process' stdout</h2>
-<p><code>strace -p17025 -s999 -e read 2&gt;&amp;1</code></p>
-<h2 id="listening-ports-and-their-process">listening ports and their process</h2>
-<p><code>netstat -tulpn</code></p>
-<p>-t(tcp) -u(udp) -l(listening only) -p(pid) -n(no port names)</p>
-<h2 id="tcpdump-http80">tcpdump http(80)</h2>
-<p><code>/usr/sbin/tcpdump -i eth0 -n 'port 80'</code></p>
-<h2 id="watch-highlight-any-changes-permanently">watch, highlight any changes permanently</h2>
-<p><code>watch -d=cumulative -n1 date</code></p>
-<h2 id="print-colmns-2-through-5-with-awk">print colmns 2 through 5 with awk</h2>
-<p><code>awk '{ print substr($0, index($2,$5)) }'</code></p>
-<h2 id="print-columns-2-through-5-with-cut-using-comma-deliminator">print columns 2 through 5 with cut using comma deliminator</h2>
-<p><code>cut -d, -f2-5</code></p>
-<h2 id="print-average-of-column-with-awk">print average of column with awk</h2>
-<p><code>awk '{l++}{s+=$1}END{print s/l}'</code></p>
-<h2 id="find-value-in-column">find value in column</h2>
-<p><code>awk '$3 == &quot;text&quot; {print}'</code>
-<code>awk '$3 ~ /regex/ {print}'</code></p>
-<h2 id="pass-an-arg-to-8-processes-until-arguments-exhausted">pass an arg to 8 processes until arguments exhausted</h2>
-<p><code>find . | xargs -P8 -n1 -I{} cp -v {} {}.backup</code></p>
+<h3 id="generate-8-character-alphanumeric-string">generate 8 character alphanumeric string</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&lt; /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo
+</code></pre></div><h3 id="print-between-a-and-b-in-filename-with-the-filename-as-prefix-to-each-line">print between A and B in filename with the filename as prefix to each line</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;/A/,/B/ { print FILENAME, $1 }&#39; FILES
+</code></pre></div><h3 id="find-new-files">find new files</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . -printf &#34;%T+\t%p\n&#34; | sort
+</code></pre></div><h3 id="delete-lines-until-string">delete lines until string</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;0,/^STRING$/d&#39; FILE
+</code></pre></div><h3 id="delete-lines-x-through-y">delete lines X through Y</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;X,Yd&#39; FILE
+</code></pre></div><h3 id="read-a-process-stdout">read a process' stdout</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">strace -p17025 -s999 -e read 2&gt;&amp;1
+</code></pre></div><h3 id="listening-ports-and-their-process">listening ports and their process</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">netstat -tulpn
+
+# -t(tcp) -u(udp) -l(listening only) -p(pid) -n(no port names)
+</code></pre></div><h3 id="tcpdump-http80">tcpdump http(80)</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">tcpdump -i eth0 -n &#39;port 80&#39;
+</code></pre></div><h3 id="watch-highlight-changes-permanently">watch, highlight changes permanently</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">watch -d=cumulative -n1 date
+</code></pre></div><h3 id="print-colmns-2-through-5-with-awk">print colmns 2 through 5 with awk</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{ print substr($0, index($2,$5)) }&#39;
+</code></pre></div><h3 id="print-columns-2-through-5-with-cut-using-comma-deliminator">print columns 2 through 5 with cut using comma deliminator</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cut -d, -f2-5
+</code></pre></div><h3 id="print-average-of-column-with-awk">print average of column with awk</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{l++}{s+=$1}END{print s/l}&#39;
+</code></pre></div><h3 id="find-value-in-column">find value in column</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;$3 == &#34;text&#34; {print}&#39;
+awk &#39;$3 ~ /regex/ {print}&#39;
+</code></pre></div><h3 id="pass-an-arg-to-8-processes-until-arguments-exhausted">pass an arg to 8 processes until arguments exhausted</h3>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . | xargs -P8 -n1 -I{} cp -v {} {}.backup
+</code></pre></div>
   </section>
 
   
@@ -541,13 +543,13 @@
 
     <div class="tag-cloud">
             
-            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.085rem" target="_self">automation</a>
+            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.109rem" target="_self">automation</a>
             
-            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.252rem" target="_self">bash</a>
+            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.600rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -559,33 +561,35 @@
             
             <a href="https://www.heaton.dev/tags/game" aria-label="game (1 posts)" style="font-size: 0.800rem" target="_self">game</a>
             
-            <a href="https://www.heaton.dev/tags/git" aria-label="git (2 posts)" style="font-size: 1.085rem" target="_self">git</a>
+            <a href="https://www.heaton.dev/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
             
-            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.085rem" target="_self">github</a>
+            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.109rem" target="_self">github</a>
             
             <a href="https://www.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
             <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
             
-            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.370rem" target="_self">hpc</a>
+            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.419rem" target="_self">hpc</a>
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.462rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
             
-            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.252rem" target="_self">monitoring</a>
+            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             
             <a href="https://www.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
+            
+            <a href="https://www.heaton.dev/tags/spack" aria-label="spack (1 posts)" style="font-size: 0.800rem" target="_self">spack</a>
             
             <a href="https://www.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
             <a href="https://www.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.085rem" target="_self">web</a>
+            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.109rem" target="_self">web</a>
             
             <a href="https://www.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
-            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.252rem" target="_self">windows</a></div>
+            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
   
 

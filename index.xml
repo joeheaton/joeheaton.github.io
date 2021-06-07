@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Try out Spack on Arm HPC | CP2K</title>
-      <link>https://www.heaton.dev/2021/06/spack/</link>
+      <link>https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/2021/06/spack/</guid>
+      <guid>https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/</guid>
       <description>Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
 I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
 Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.</description>
@@ -134,18 +134,6 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
       
       <guid>https://www.heaton.dev/2020/02/useful-unixisms/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Github CLI headless install</title>
-      <link>https://www.heaton.dev/2020/02/github-cli-headless-install/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/2020/02/github-cli-headless-install/</guid>
-      <description>Download &amp;amp; Install Github CLI.
-Run gh pr status, you will be prompted to connect gh to your Github account, open the github.com link it generates in a web browser, login and authorize the application. You will be redirected to a localhost address, copy the full address.
-Now you will need another terminal open one the same system, use wget/curl to pass the authorization onto the gh client:
-wget -O- GITHUB_URL</description>
     </item>
     
     <item>

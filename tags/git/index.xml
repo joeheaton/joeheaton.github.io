@@ -7,19 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Github CLI headless install</title>
-      <link>https://www.heaton.dev/2020/02/github-cli-headless-install/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/2020/02/github-cli-headless-install/</guid>
-      <description>Download &amp;amp; Install Github CLI.
-Run gh pr status, you will be prompted to connect gh to your Github account, open the github.com link it generates in a web browser, login and authorize the application. You will be redirected to a localhost address, copy the full address.
-Now you will need another terminal open one the same system, use wget/curl to pass the authorization onto the gh client:
-wget -O- GITHUB_URL</description>
-    </item>
-    
+    <lastBuildDate>Tue, 09 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git feature branch &amp; merge</title>
       <link>https://www.heaton.dev/2019/04/git-feature-branch-merge/</link>

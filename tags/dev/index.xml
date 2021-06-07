@@ -38,18 +38,6 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
     </item>
     
     <item>
-      <title>Github CLI headless install</title>
-      <link>https://www.heaton.dev/2020/02/github-cli-headless-install/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/2020/02/github-cli-headless-install/</guid>
-      <description>Download &amp;amp; Install Github CLI.
-Run gh pr status, you will be prompted to connect gh to your Github account, open the github.com link it generates in a web browser, login and authorize the application. You will be redirected to a localhost address, copy the full address.
-Now you will need another terminal open one the same system, use wget/curl to pass the authorization onto the gh client:
-wget -O- GITHUB_URL</description>
-    </item>
-    
-    <item>
       <title>Run for every updated file</title>
       <link>https://www.heaton.dev/2020/02/run-for-every-updated-file/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
