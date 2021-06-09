@@ -3,7 +3,6 @@ var html = document.getElementsByTagName("html")[0];
 var head = document.getElementsByTagName("head")[0];
 
 // Site base URI - proto://domain.tld unless site_uri set in <head>
-var site_uri = document.location.origin.concat("/");
 var site_fqdn = document.location.host;
 var noSubdomain = window.location.host.split('.').slice(1).join(".");
 
@@ -262,7 +261,7 @@ window.addEventListener("DOMContentLoaded", function(event)
     title.className = "search-title";
 
     var close = document.createElement("button");
-    close.className = "close";
+    close.classList.add("btn", "close");
     close.textContent = "×";
     close.addEventListener("click", function(event) {
         target.textContent = "";
@@ -289,13 +288,18 @@ window.addEventListener("DOMContentLoaded", function(event)
 
       // Fill out search result template, adjust as needed.
       var element = template.content.cloneNode(true);
-      element.querySelector(".search-result-link").href = doc.uri;
+      element.querySelector(".search-result-link").href = site_uri.concat(doc.uri);
       // element.querySelector(".search-result-read").href = doc.uri;
       element.querySelector(".search-result-link").textContent = doc.title;
       element.querySelector(".search-result-summary").textContent = doc.content;
       target.appendChild(element);
     }
     // title.scrollIntoView(true);
+
+    lunr_powered = document.createElement('p');
+    lunr_powered.classList.add("d-flex", "justify-content-end");
+    lunr_powered.innerHTML = '<small>Powered by <a href="https://lunrjs.com/" target="_blank">lunr.js</a></small>';
+    target.appendChild(lunr_powered);
 
     searchDone();
   }
