@@ -373,6 +373,8 @@ awk &#39;$3 ~ /regex/ {print}&#39;
 </code></pre></div><h3 id="pass-an-arg-to-8-processes-until-arguments-exhausted">pass an arg to 8 processes until arguments exhausted</h3>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . | xargs -P8 -n1 -I{} cp -v {} {}.backup
 </code></pre></div>
+
+    
   </section>
 
   

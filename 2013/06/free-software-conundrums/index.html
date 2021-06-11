@@ -326,6 +326,8 @@
 <p>On the other hand there is the relative newcomer nginx(stylised with lowercase when typed), this server software was started to fufil the needs of a heavy traffic website and remains the best choice for that scenario. The trade-off is that nginx requires much more configuration, this is made more difficult by the fact the software is newer and less documented, though many devs have weblogged of their experiences and wiki.nginx.org has plenty of resources. The configuration reason doesn&rsquo;t just refer to time consumptions setting up, it also means there is more to maintain which means more to go wrong and the important thing to remember is that Apache2 can handle anything you can reasonably throw at it, up to hundreds of connections, there isn&rsquo;t much reason for now to use nginx unless you&rsquo;re running out of RAM, Apache2 is running your CPU high or your site is having problems handling the loads it gets.</p>
 <p>To put the reason behind it&rsquo;s performance simply; Apache2 loads a process for every connection to it that loads an instance of each programming language configured to be used and leaves it all there until the request is processed and closed, which means Get request, process scripts, send responce, get &lsquo;OK&rsquo; to close connection; nginx loads and discards these resources as needed [citation needed].</p>
 
+
+    
   </section>
 
   

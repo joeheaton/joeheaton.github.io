@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2018/09/robinhood-nosql-part-2/" /><meta property="og:image" content="https://i.imgur.com/umisqTL.png"/><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2021-06-11T09:49:21&#43;00:00" /><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
+<meta property="article:modified_time" content="2021-06-11T09:55:22&#43;00:00" /><meta property="og:site_name" content="Joe Heaton&#39;s Webzone" />
 
 
 
@@ -96,7 +96,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2018-09-04T00:00:00Z",
-    "dateModified": "2021-06-11T09:49:21.96529178Z",
+    "dateModified": "2021-06-11T09:55:22.178377355Z",
     "keywords": "Joe Heaton, developer, hpc",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -330,7 +330,7 @@
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-06-11T09:49:21Z">
+            <time datetime="2021-06-11T09:55:22Z">
               11th
               Jun
               2021
@@ -371,6 +371,8 @@
 </ul>
 <p>Unfortunately once this was applied to Logstash and the data ingested I noticed that the data from <code>ANEX_INFO</code> is incomplete, a lot of paths don&rsquo;t make sense or aren&rsquo;t paths. It appears I was unlucky when I used <code>LIMIT 100</code> while digging through the database, as all the rows I saw had either full or partial paths.</p>
 <p>The only table with a complete directory of files is <code>ENTRIES</code> but this requires pre-processing before ingestion as every segment of a path is connected by a foreign key. So for every full path to a file the pre-processing has to follow X amount of keys where X is the number of directories/links traversed plus the destination file. This could be achieve with a Logstash plugin written in Ruby, connecting to MySQL to execute <code>JOIN</code>&rsquo;s to save <code>SELECT</code>ing each row one at a time.</p>
+
+    
   </section>
 
   
