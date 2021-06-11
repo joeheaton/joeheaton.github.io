@@ -4,7 +4,7 @@
     "start_url": "https://www.heaton.dev",
     "display": "standalone",
     "background_color": "#519cff",
-    "description": "Joe Heaton&#39;s technology-focused murmurings.",
+    "description": "Joe&#39;s technology-focused murmurings.",
     "icons": [{
       "src": "images/favicon.png",
       "sizes": "192x192",
