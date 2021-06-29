@@ -320,7 +320,7 @@
 <p><code>sftp user@host:/path/to/remote.file /path/to/local.file</code></p>
 <p>Add <code>-r</code> to recurse a directory.</p>
 <p>It&rsquo;s less trivial than SCP, although SFTP has more features, like interactive mode:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">$ sftp user@host
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">$ sftp user@host
 Connected to host.
 sftp&gt; ls
 test
@@ -401,65 +401,20 @@ script.sh
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f&amp;text=Cool article &quot;SFTP%20instead%20of%20SCP&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f&amp;description=SFTP%20instead%20of%20SCP" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f&amp;title=SFTP%20instead%20of%20SCP&summary=%3cp%3eSCP%20suffered%20from%20weak%20input%20validation%20for%20decades%20until%20%3ca%20href%3d%22https%3a%2f%2fbugzilla.redhat.com%2fshow_bug.cgi%3fid%3d1666127%22%20title%3d%22openssh%3a%20Improper%20validation%20of%20object%20names%20allows%20malicious%20server%20to%20overwrite%20files%20via%20scp%20client%22%20target%3d%22_blank%22%3eCVE-2019-6111%3c%2fa%3e%2c%20the%20maintainers%20recommended%20using%20SFTP%20until%20patched%20versions%20can%20be%20deployed.%20I%2c%20like%20many%20others%2c%20were%20reminded%20SFTP%20existed%21%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;SFTP%20instead%20of%20SCP&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;SFTP%20instead%20of%20SCP&quot; from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=SFTP%20instead%20of%20SCP from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f&amp;body=Look at this cool article &quot;SFTP%20instead%20of%20SCP&quot; from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fsftp-instead-of-scp%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -554,6 +509,8 @@ script.sh
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -936,7 +893,7 @@ script.sh
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

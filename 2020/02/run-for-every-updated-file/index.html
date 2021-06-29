@@ -332,19 +332,19 @@
     
 
     <p>Using <code>inotifywait</code> to watch for file changes recursively in the current directory. I use <code>$CHECK</code> to ignore unwanted directories and filetypes.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#cd2828;font-weight:bold">#!/bin/bash
-</span><span style="color:#cd2828;font-weight:bold"></span>
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#0080ff">#!/bin/bash
+</span><span style="color:#0080ff"></span>
 inotifywait -r -e close_write,moved_to,create -m . |
-<span style="color:#6ab825;font-weight:bold">while</span> <span style="color:#24909d">read</span> -r DIR EVENT FILE; <span style="color:#6ab825;font-weight:bold">do</span>
-    <span style="color:#40ffff">CHECK</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#6ab825;font-weight:bold">$(</span> <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">${</span><span style="color:#40ffff">DIR</span><span style="color:#ed9d13">}${</span><span style="color:#40ffff">FILE</span><span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span> | egrep -v <span style="color:#ed9d13">&#39;^\./(\.git|\.sass-cache|node_modules|public|static)&#39;</span> | egrep -v <span style="color:#ed9d13">&#39;\.(tmp|css)$&#39;</span> <span style="color:#6ab825;font-weight:bold">)</span><span style="color:#ed9d13">&#34;</span>
+<span style="color:#2c5dcd;font-weight:bold">while</span> <span style="color:#5918bb;font-weight:bold">read</span> -r DIR EVENT FILE; <span style="color:#2c5dcd;font-weight:bold">do</span>
+    CHECK<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#34;</span><span style="color:#2c5dcd;font-weight:bold">$(</span> <span style="color:#5918bb;font-weight:bold">echo</span> <span style="color:#0c6">&#34;</span><span style="color:#0c6">${</span>DIR<span style="color:#0c6">}${</span>FILE<span style="color:#0c6">}</span><span style="color:#0c6">&#34;</span> | egrep -v <span style="color:#0c6">&#39;^\./(\.git|\.sass-cache|node_modules|public|static)&#39;</span> | egrep -v <span style="color:#0c6">&#39;\.(tmp|css)$&#39;</span> <span style="color:#2c5dcd;font-weight:bold">)</span><span style="color:#0c6">&#34;</span>
 
-    <span style="color:#6ab825;font-weight:bold">if</span> [ <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$CHECK</span><span style="color:#ed9d13">&#34;</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>
-        <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Change in </span><span style="color:#ed9d13">${</span><span style="color:#40ffff">DIR</span><span style="color:#ed9d13">}${</span><span style="color:#40ffff">FILE</span><span style="color:#ed9d13">}</span><span style="color:#ed9d13">&#34;</span>
+    <span style="color:#2c5dcd;font-weight:bold">if</span> <span style="color:#2c5dcd">[</span> <span style="color:#0c6">&#34;</span>$CHECK<span style="color:#0c6">&#34;</span> <span style="color:#2c5dcd">]</span>; <span style="color:#2c5dcd;font-weight:bold">then</span>
+        <span style="color:#5918bb;font-weight:bold">echo</span> <span style="color:#0c6">&#34;Change in </span><span style="color:#0c6">${</span>DIR<span style="color:#0c6">}${</span>FILE<span style="color:#0c6">}</span><span style="color:#0c6">&#34;</span>
 
-        <span style="color:#999;font-style:italic"># This is what gets run</span>
+        <span style="color:#0080ff;font-style:italic"># This is what gets run</span>
         make dev
-    <span style="color:#6ab825;font-weight:bold">fi</span>
-<span style="color:#6ab825;font-weight:bold">done</span>
+    <span style="color:#2c5dcd;font-weight:bold">fi</span>
+<span style="color:#2c5dcd;font-weight:bold">done</span>
 </code></pre></div><p>Install <code>inotify-tools</code> on both Debian and CentOS.</p>
 
     
@@ -413,65 +413,20 @@ inotifywait -r -e close_write,moved_to,create -m . |
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f&amp;text=Cool article &quot;Run%20for%20every%20updated%20file&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f&amp;description=Run%20for%20every%20updated%20file" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f&amp;title=Run%20for%20every%20updated%20file&summary=%3cp%3eUsing%20%3ccode%3einotifywait%3c%2fcode%3e%20to%20watch%20for%20file%20changes%20recursively%20in%20the%20current%20directory.%20I%20use%20%3ccode%3e%24CHECK%3c%2fcode%3e%20to%20ignore%20unwanted%20directories%20and%20filetypes.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Run%20for%20every%20updated%20file&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Run%20for%20every%20updated%20file&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Run%20for%20every%20updated%20file from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f&amp;body=Look at this cool article &quot;Run%20for%20every%20updated%20file&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2frun-for-every-updated-file%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -566,6 +521,8 @@ inotifywait -r -e close_write,moved_to,create -m . |
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -957,7 +914,7 @@ inotifywait -r -e close_write,moved_to,create -m . |
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

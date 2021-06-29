@@ -19,7 +19,7 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-02-21T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-11T10:18:01&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-06-29T14:14:47&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -99,7 +99,7 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
     },
     "datePublished": "2020-02-21T00:00:00Z",
     
-    "dateModified": "2021-06-11T10:18:01.831202608Z",
+    "dateModified": "2021-06-29T14:14:47.318322602Z",
     "keywords": "Joe Heaton, developer, dev, windows",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -340,8 +340,8 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-06-11T10:18:01Z">
-              11th
+            <time datetime="2021-06-29T14:14:47Z">
+              29th
               Jun
               2021
             </time>
@@ -372,20 +372,20 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
         </p></figcaption>
 </figure>
 <p>Click &ldquo;Settings&rdquo;, this will open a JSON file (for now) which looks something like this:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">{
-    <span style="color:#6ab825;font-weight:bold">&#34;defaultProfile&#34;</span>: <span style="color:#ed9d13">&#34;{987-654-321}&#34;</span>,
-    <span style="color:#6ab825;font-weight:bold">&#34;profiles&#34;</span>: [
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">{
+    <span style="color:#2c5dcd;font-weight:bold">&#34;defaultProfile&#34;</span>: <span style="color:#0c6">&#34;{987-654-321}&#34;</span>,
+    <span style="color:#2c5dcd;font-weight:bold">&#34;profiles&#34;</span>: [
         {
-            <span style="color:#6ab825;font-weight:bold">&#34;guid&#34;</span>: <span style="color:#ed9d13">&#34;{987-654-321}&#34;</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;hidden&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;name&#34;</span>: <span style="color:#ed9d13">&#34;Debian&#34;</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;source&#34;</span>: <span style="color:#ed9d13">&#34;Windows.Terminal.Wsl&#34;</span>
+            <span style="color:#2c5dcd;font-weight:bold">&#34;guid&#34;</span>: <span style="color:#0c6">&#34;{987-654-321}&#34;</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;hidden&#34;</span>: <span style="color:#2c5dcd;font-weight:bold">false</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;name&#34;</span>: <span style="color:#0c6">&#34;Debian&#34;</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;source&#34;</span>: <span style="color:#0c6">&#34;Windows.Terminal.Wsl&#34;</span>
         },
         {
-            <span style="color:#6ab825;font-weight:bold">&#34;guid&#34;</span>: <span style="color:#ed9d13">&#34;{123-456-789}&#34;</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;name&#34;</span>: <span style="color:#ed9d13">&#34;Windows PowerShell&#34;</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;commandline&#34;</span>: <span style="color:#ed9d13">&#34;powershell.exe&#34;</span>,
-            <span style="color:#6ab825;font-weight:bold">&#34;hidden&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>
+            <span style="color:#2c5dcd;font-weight:bold">&#34;guid&#34;</span>: <span style="color:#0c6">&#34;{123-456-789}&#34;</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;name&#34;</span>: <span style="color:#0c6">&#34;Windows PowerShell&#34;</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;commandline&#34;</span>: <span style="color:#0c6">&#34;powershell.exe&#34;</span>,
+            <span style="color:#2c5dcd;font-weight:bold">&#34;hidden&#34;</span>: <span style="color:#2c5dcd;font-weight:bold">false</span>
         },
 </code></pre></div><p>Copy the <code>guid</code> value from whichever flavour of Linux you want to set as default.</p>
 <p>Yay, now the new tab button and shortcut <code>Ctrl + Shift + T</code> open the profile you set in <code>defaultProfile</code>!</p>
@@ -457,65 +457,20 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f&amp;text=Cool article &quot;Windows%20Terminal%20-%20Change%20default%20profile&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f&amp;description=Windows%20Terminal%20-%20Change%20default%20profile" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f&amp;title=Windows%20Terminal%20-%20Change%20default%20profile&summary=Open%20the%20new%20tab%20dropdown%2c%20found%20to%20the%20right%20of%20your%20tabs%3a%0aWindows%20Terminal%20new%20tab%20dropdown%20%20%20Click%20%26ldquo%3bSettings%26rdquo%3b%2c%20this%20will%20open%20a%20JSON%20file%20%28for%20now%29%20which%20looks%20something%20like%20this%3a%0a%7b%20%26%2334%3bdefaultProfile%26%2334%3b%3a%20%26%2334%3b%7b987-654-321%7d%26%2334%3b%2c%20%26%2334%3bprofiles%26%2334%3b%3a%20%5b%20%7b%20%26%2334%3bguid%26%2334%3b%3a%20%26%2334%3b%7b987-654-321%7d%26%2334%3b%2c%20%26%2334%3bhidden%26%2334%3b%3a%20false%2c%20%26%2334%3bname%26%2334%3b%3a%20%26%2334%3bDebian%26%2334%3b%2c%20%26%2334%3bsource%26%2334%3b%3a%20%26%2334%3bWindows.Terminal.Wsl%26%2334%3b%20%7d%2c%20%7b%20%26%2334%3bguid%26%2334%3b%3a%20%26%2334%3b%7b123-456-789%7d%26%2334%3b%2c%20%26%2334%3bname%26%2334%3b%3a%20%26%2334%3bWindows%20PowerShell%26%2334%3b%2c%20%26%2334%3bcommandline%26%2334%3b%3a%20%26%2334%3bpowershell.exe%26%2334%3b%2c%20%26%2334%3bhidden%26%2334%3b%3a%20false%20%7d%2c%20Copy%20the%20guid%20value%20from%20whichever%20flavour%20of%20Linux%20you%20want%20to%20set%20as%20default." title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Windows%20Terminal%20-%20Change%20default%20profile&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Windows%20Terminal%20-%20Change%20default%20profile&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Windows%20Terminal%20-%20Change%20default%20profile from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f&amp;body=Look at this cool article &quot;Windows%20Terminal%20-%20Change%20default%20profile&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fwindows-terminal-change-default-profile%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -610,6 +565,8 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -1008,7 +965,7 @@ Windows Terminal new tab dropdown   Click &ldquo;Settings&rdquo;, this will open
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

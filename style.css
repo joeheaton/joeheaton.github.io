@@ -419,7 +419,10 @@ blockquote {
     white-space: pre-wrap; }
 
 p > code {
-  padding: 0 0.2rem; }
+  display: inline-block;
+  padding: 0 0.2rem;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 2px; }
 
 @media (prefers-color-scheme: dark) {
   .card {
@@ -571,8 +574,9 @@ p > code {
   .vcard .vcard-url:before {
     content: "🌐"; }
   .vcard .vcard-save {
-    text-align: right;
-    margin-top: 1rem; }
+    text-align: right; }
+    .vcard .vcard-save span {
+      display: none; }
 
 /*
  * Specifics
@@ -626,6 +630,37 @@ p > code {
 
 .footnote-backref:hover {
   text-decoration: none; }
+
+.mailinglist {
+  text-align: center;
+  /*background: linear-gradient(to bottom, $COLOR_SCHEME_LIGHT 80%, $COLOR_SCHEME 100%) repeat center center $COLOR_SCHEME;
+  color: #fff;*/ }
+  .mailinglist h4 {
+    font-weight: bold; }
+  .mailinglist .subscribe-form {
+    text-align: center; }
+    .mailinglist .subscribe-form input[type=email],
+    .mailinglist .subscribe-form input[type=text] {
+      font-family: Hack, "Fira Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      border: 0;
+      border-bottom: 1px solid #2965B4;
+      border-radius: 0; }
+    .mailinglist .subscribe-form input[type=submit] {
+      padding: 0.2rem 0.4rem;
+      background: #2965B4;
+      font-weight: bold;
+      border: 0;
+      color: #fff; }
+      .mailinglist .subscribe-form input[type=submit]:active {
+        background: #4485da; }
+    .mailinglist .subscribe-form .notice,
+    .mailinglist .subscribe-form .revue-form-footer {
+      font-size: 0.8rem;
+      margin: 1rem 0 0;
+      /*a {
+        font-weight: bold;
+        color: #fff;
+      }*/ }
 
 .bigbtns {
   text-align: center;

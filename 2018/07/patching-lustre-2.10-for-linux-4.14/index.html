@@ -340,11 +340,11 @@
 
     <p>The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&rsquo;t seem to come back into existing Lustre releases, since those releases don&rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!</p>
 <p>After tweaking flags, wondering if the odd spin of RHEL or the CPU arch might be at fault and sitting through minutes of <code>./configure</code> output each attempt - I noticed the errors were mostly the same, undefined variables.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">include/linux/wait.h:<span style="color:#3677a9">152</span>:<span style="color:#3677a9">13</span>: note: expected <span style="color:#ed9d13">&#39;struct wait_queue_entry *&#39;</span> but argument <span style="color:#6ab825;font-weight:bold">is</span> of <span style="color:#24909d">type</span> <span style="color:#ed9d13">&#39;int *&#39;</span>               
- extern void remove_wait_queue(struct wait_queue_head *wq_head, struct wait_queue_entry *wq_entry);                   
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">include<span style="color:#2c5dcd">/</span>linux<span style="color:#2c5dcd">/</span>wait<span style="color:#2c5dcd">.</span>h:<span style="color:#5918bb;font-weight:bold">152</span>:<span style="color:#5918bb;font-weight:bold">13</span>: note: expected <span style="color:#0c6">&#39;struct wait_queue_entry *&#39;</span> but argument <span style="color:#2c5dcd;font-weight:bold">is</span> of <span style="color:#5918bb;font-weight:bold">type</span> <span style="color:#0c6">&#39;int *&#39;</span>               
+ extern void remove_wait_queue(struct wait_queue_head <span style="color:#2c5dcd">*</span>wq_head, struct wait_queue_entry <span style="color:#2c5dcd">*</span>wq_entry);                   
 </code></pre></div><p>The fix was simple, finding it was less so!</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh">find -type f | xargs sed -i <span style="color:#ed9d13">&#39;s/wait_queue_t/wait_queue_entry_t/g; s/ vfs_write/ kernel_write/g&#39;</span>
-sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.preamble
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh">find -type f | xargs sed -i <span style="color:#0c6">&#39;s/wait_queue_t/wait_queue_entry_t/g; s/ vfs_write/ kernel_write/g&#39;</span>
+sed -i <span style="color:#0c6">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.preamble
 </code></pre></div><p>This bulk <code>sed</code> runs over the Lustre source code to rename two kernel variables:</p>
 <ul>
 <li><code>wait_queue_t</code> -&gt; <code>wait_queue_entry_t</code> renamed in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7cee9384cb3e25de33d75ecdbf08bb15b4ea9fa5" target="_blank">Linux 4.13</a></li>
@@ -421,65 +421,20 @@ sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f&amp;text=Cool article &quot;Patching%20Lustre%202.10%20for%20Linux%204.14&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f&amp;description=Patching%20Lustre%202.10%20for%20Linux%204.14" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f&amp;title=Patching%20Lustre%202.10%20for%20Linux%204.14&summary=%3cp%3eThe%20Lustre%20community%20supports%20recent%20point-releases%20of%20RHEL%2fCentOS%20but%20those%20patches%20don%26rsquo%3bt%20seem%20to%20come%20back%20into%20existing%20Lustre%20releases%2c%20since%20those%20releases%20don%26rsquo%3bt%20officially%20support%20later%20kernels.%20I%20installed%20client%202.10%20thinking%20it%20had%20the%20best%20chance%20of%20working%20but%20encountered%20huge%20numbers%20of%20errors%20when%20compiling%21%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Patching%20Lustre%202.10%20for%20Linux%204.14&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Patching%20Lustre%202.10%20for%20Linux%204.14&quot; from https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Patching%20Lustre%202.10%20for%20Linux%204.14 from https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f&amp;body=Look at this cool article &quot;Patching%20Lustre%202.10%20for%20Linux%204.14&quot; from https%3a%2f%2fwww.heaton.dev%2f2018%2f07%2fpatching-lustre-2.10-for-linux-4.14%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -574,6 +529,8 @@ sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -972,7 +929,7 @@ sed -i <span style="color:#ed9d13">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

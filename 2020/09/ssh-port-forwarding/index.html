@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2020/09/ssh-port-forwarding/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2021-06-11T10:18:01&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-06-29T14:14:47&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -94,7 +94,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2020-09-29T00:00:00Z",
-    "dateModified": "2021-06-11T10:18:01.831202608Z",
+    "dateModified": "2021-06-29T14:14:47.318322602Z",
     "keywords": "Joe Heaton, developer, linux",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -328,8 +328,8 @@
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-06-11T10:18:01Z">
-              11th
+            <time datetime="2021-06-29T14:14:47Z">
+              29th
               Jun
               2021
             </time>
@@ -348,10 +348,10 @@
     
 
     <p>The following command connects to our server and forwards a specific port on our local machine to the server. In this case we forward port <code>5432</code> which belongs to PostgreSQL, so when we connect to <code>localhost:5432</code> on the desktop, the connection is forwarded through the secure tunnel to the server.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c" data-lang="c">ssh -N -L <span style="color:#3677a9">5432</span>:localhost:<span style="color:#3677a9">5432</span> postgres.example.com
-<span style="color:#999;font-style:italic">//   │    └ port  └ remote  └ remote port        └ server
-</span><span style="color:#999;font-style:italic">//   │
-</span><span style="color:#999;font-style:italic">//   └ Does not run a command once connected, if you remove this you will get an interactive SSH session while forwarding
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c" data-lang="c">ssh <span style="color:#2c5dcd">-</span>N <span style="color:#2c5dcd">-</span>L <span style="color:#5918bb;font-weight:bold">5432</span><span style="color:#2c5dcd">:</span>localhost:<span style="color:#5918bb;font-weight:bold">5432</span> postgres.example.com
+<span style="color:#0080ff;font-style:italic">//   │    └ port  └ remote  └ remote port        └ server
+</span><span style="color:#0080ff;font-style:italic">//   │
+</span><span style="color:#0080ff;font-style:italic">//   └ Does not run a command once connected, if you remove this you will get an interactive SSH session while forwarding
 </span></code></pre></div><p>This avoids exposing sensitive services to the Internet in order to work with them. Ideally this isn&rsquo;t how you would want to work regularly, but it can be useful for one-off testing or fixes.</p>
 
     
@@ -420,65 +420,20 @@
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f&amp;text=Cool article &quot;SSH%20port%20forwarding&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f&amp;description=SSH%20port%20forwarding" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f&amp;title=SSH%20port%20forwarding&summary=%3cp%3eThe%20following%20command%20connects%20to%20our%20server%20and%20forwards%20a%20specific%20port%20on%20our%20local%20machine%20to%20the%20server.%20In%20this%20case%20we%20forward%20port%20%3ccode%3e5432%3c%2fcode%3e%20which%20belongs%20to%20PostgreSQL%2c%20so%20when%20we%20connect%20to%20%3ccode%3elocalhost%3a5432%3c%2fcode%3e%20on%20the%20desktop%2c%20the%20connection%20is%20forwarded%20through%20the%20secure%20tunnel%20to%20the%20server.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;SSH%20port%20forwarding&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;SSH%20port%20forwarding&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=SSH%20port%20forwarding from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f&amp;body=Look at this cool article &quot;SSH%20port%20forwarding&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fssh-port-forwarding%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -573,6 +528,8 @@
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -964,7 +921,7 @@
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

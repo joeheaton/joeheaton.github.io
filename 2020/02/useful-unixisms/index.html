@@ -340,36 +340,36 @@
 
     <p>Here&rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.</p>
 <h3 id="generate-8-character-alphanumeric-string">generate 8 character alphanumeric string</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&lt; /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&lt; /dev/urandom tr -dc A-Za-z0-9 | head -c8; echo
 </code></pre></div><h3 id="print-between-a-and-b-in-filename-with-the-filename-as-prefix-to-each-line">print between A and B in filename with the filename as prefix to each line</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;/A/,/B/ { print FILENAME, $1 }&#39; FILES
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;/A/,/B/ { print FILENAME, $1 }&#39; FILES
 </code></pre></div><h3 id="find-new-files">find new files</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . -printf &#34;%T+\t%p\n&#34; | sort
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . -printf &#34;%T+\t%p\n&#34; | sort
 </code></pre></div><h3 id="delete-lines-until-string">delete lines until string</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;0,/^STRING$/d&#39; FILE
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;0,/^STRING$/d&#39; FILE
 </code></pre></div><h3 id="delete-lines-x-through-y">delete lines X through Y</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;X,Yd&#39; FILE
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">sed -i &#39;X,Yd&#39; FILE
 </code></pre></div><h3 id="read-a-process-stdout">read a process' stdout</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">strace -p17025 -s999 -e read 2&gt;&amp;1
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">strace -p17025 -s999 -e read 2&gt;&amp;1
 </code></pre></div><h3 id="listening-ports-and-their-process">listening ports and their process</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">netstat -tulpn
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">netstat -tulpn
 
 # -t(tcp) -u(udp) -l(listening only) -p(pid) -n(no port names)
 </code></pre></div><h3 id="tcpdump-http80">tcpdump http(80)</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">tcpdump -i eth0 -n &#39;port 80&#39;
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">tcpdump -i eth0 -n &#39;port 80&#39;
 </code></pre></div><h3 id="watch-highlight-changes-permanently">watch, highlight changes permanently</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">watch -d=cumulative -n1 date
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">watch -d=cumulative -n1 date
 </code></pre></div><h3 id="print-colmns-2-through-5-with-awk">print colmns 2 through 5 with awk</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{ print substr($0, index($2,$5)) }&#39;
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{ print substr($0, index($2,$5)) }&#39;
 </code></pre></div><h3 id="print-columns-2-through-5-with-cut-using-comma-deliminator">print columns 2 through 5 with cut using comma deliminator</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cut -d, -f2-5
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cut -d, -f2-5
 </code></pre></div><h3 id="print-average-of-column-with-awk">print average of column with awk</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{l++}{s+=$1}END{print s/l}&#39;
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;{l++}{s+=$1}END{print s/l}&#39;
 </code></pre></div><h3 id="find-value-in-column">find value in column</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;$3 == &#34;text&#34; {print}&#39;
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">awk &#39;$3 == &#34;text&#34; {print}&#39;
 awk &#39;$3 ~ /regex/ {print}&#39;
 </code></pre></div><h3 id="pass-an-arg-to-8-processes-until-arguments-exhausted">pass an arg to 8 processes until arguments exhausted</h3>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . | xargs -P8 -n1 -I{} cp -v {} {}.backup
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">find . | xargs -P8 -n1 -I{} cp -v {} {}.backup
 </code></pre></div>
 
     
@@ -438,65 +438,20 @@ awk &#39;$3 ~ /regex/ {print}&#39;
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f&amp;text=Cool article &quot;Useful%20Unixisms&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f&amp;description=Useful%20Unixisms" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f&amp;title=Useful%20Unixisms&summary=%3cp%3eHere%26rsquo%3bs%20a%20list%20of%20useful%20piped%20commands%20or%20just%20commands%20for%20which%20I%20need%20a%20refresher%20on%20which%20arguments%20to%20use.%20For%20example%2c%20using%20Awk%20to%20print%20between%20two%20known%20lines%2c%20or%20seleting%20a%20line%20in%20sed%20are%20good%20examples%20of%20infrequently%20used%20commands%20which%20are%20really%20useful.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Useful%20Unixisms&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Useful%20Unixisms&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Useful%20Unixisms from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f&amp;body=Look at this cool article &quot;Useful%20Unixisms&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f02%2fuseful-unixisms%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -591,6 +546,8 @@ awk &#39;$3 ~ /regex/ {print}&#39;
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -989,7 +946,7 @@ awk &#39;$3 ~ /regex/ {print}&#39;
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

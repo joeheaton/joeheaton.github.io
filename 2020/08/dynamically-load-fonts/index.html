@@ -337,12 +337,12 @@ This involved creating a small toggle function to turn the feature on and off, b
 <p>This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&rsquo;t enough I didn&rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</p>
 <p>A last bit of work to do as there was a flash of unstyled text on-load, this is because the function was run after the page was finished loading, it is possible to run scripts before the page is fully loaded, now the flash was brief enough to ignore.</p>
 <p>A new Javascript feature I used was:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#6ab825;font-weight:bold">if</span> ([<span style="color:#ed9d13">&#34;interactive&#34;</span>, <span style="color:#ed9d13">&#34;complete&#34;</span>].includes(<span style="color:#24909d">document</span>.readyState)) {
-        <span style="color:#999;font-style:italic">// do things
-</span><span style="color:#999;font-style:italic"></span>    } <span style="color:#6ab825;font-weight:bold">else</span> {
-        <span style="color:#24909d">document</span>.addEventListener(<span style="color:#ed9d13">&#39;DOMContentLoaded&#39;</span>, <span style="color:#6ab825;font-weight:bold">function</span>() {
-            <span style="color:#999;font-style:italic">// do things
-</span><span style="color:#999;font-style:italic"></span>        });
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#2c5dcd;font-weight:bold">if</span> ([<span style="color:#0c6">&#34;interactive&#34;</span>, <span style="color:#0c6">&#34;complete&#34;</span>].includes(<span style="color:#5918bb;font-weight:bold">document</span>.readyState)) {
+        <span style="color:#0080ff;font-style:italic">// do things
+</span><span style="color:#0080ff;font-style:italic"></span>    } <span style="color:#2c5dcd;font-weight:bold">else</span> {
+        <span style="color:#5918bb;font-weight:bold">document</span>.addEventListener(<span style="color:#0c6">&#39;DOMContentLoaded&#39;</span>, <span style="color:#2c5dcd;font-weight:bold">function</span>() {
+            <span style="color:#0080ff;font-style:italic">// do things
+</span><span style="color:#0080ff;font-style:italic"></span>        });
    }
 }
 </code></pre></div><p>Pages go through readyStates loading, interactive and finish in complete. The interactive state means there are assets still loading but we can do things like <code>addEventListener</code>.</p>
@@ -414,65 +414,20 @@ This involved creating a small toggle function to turn the feature on and off, b
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f&amp;text=Cool article &quot;Dynamically%20load%20fonts&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f&amp;description=Dynamically%20load%20fonts" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f&amp;title=Dynamically%20load%20fonts&summary=I%26rsquo%3bve%20added%20a%20Dyslexia%20accessibility%20feature%20to%20my%20website%20which%20loads%20a%20Dyslexia-friendly%20font%2c%20woo%21%0aThis%20involved%20creating%20a%20small%20toggle%20function%20to%20turn%20the%20feature%20on%20and%20off%2c%20but%20when%20I%20reload%20the%20page%20it%26rsquo%3bs%20gone%2c%20so%20I%20had%20it%20bake%20a%20cookie%20so%20the%20function%20could%20trigger%20automatically%20on-reload.%20This%20still%20wasn%26rsquo%3bt%20enough%20I%20didn%26rsquo%3bt%20want%20every%20visitor%20to%20load%20the%20font%2c%20only%20users%20who%20click%20the%20toggle%20button%2c%20so%20I%20added%20a%20section%20to%20dynamically%20load%20the%20font." title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Dynamically%20load%20fonts&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Dynamically%20load%20fonts&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Dynamically%20load%20fonts from https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f&amp;body=Look at this cool article &quot;Dynamically%20load%20fonts&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f08%2fdynamically-load-fonts%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -567,6 +522,8 @@ This involved creating a small toggle function to turn the feature on and off, b
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -958,7 +915,7 @@ This involved creating a small toggle function to turn the feature on and off, b
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

@@ -347,14 +347,14 @@
 
     <p>Grafana supports SQL through MySQL/MariaDB, PostgreSQL &amp; SQL Server. Additionally Grafana supports the PostgreSQL extension TimescaleDB, this database is the best fit of all the SQL databases for Grafana since it is built specifically for large-scale time-series datasets.</p>
 <p>Below is an example of a Timescale query using <code>time_bucket_gapfill</code> function from Timescale to pad missing values. You will also need to populate or swap out the Grafana templating variables I used, they save a lot of time once your dashboards start to grow.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#6ab825;font-weight:bold">SELECT</span> time_bucket_gapfill(<span style="color:#ed9d13">&#39;$step&#39;</span>, time) <span style="color:#6ab825;font-weight:bold">AS</span> <span style="color:#ed9d13">&#34;time&#34;</span>,
-    category <span style="color:#6ab825;font-weight:bold">AS</span> category,
-    <span style="color:#6ab825;font-weight:bold">avg</span>(metric) <span style="color:#6ab825;font-weight:bold">AS</span> metric
-<span style="color:#6ab825;font-weight:bold">FROM</span> <span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#6ab825;font-weight:bold">table</span>
-<span style="color:#6ab825;font-weight:bold">WHERE</span> <span style="color:#a61717;background-color:#e3d2d2">$</span>__timeFilter(time)
-<span style="color:#6ab825;font-weight:bold">AND</span> metric <span style="color:#6ab825;font-weight:bold">IS</span> <span style="color:#6ab825;font-weight:bold">NOT</span> <span style="color:#6ab825;font-weight:bold">NULL</span>
-<span style="color:#6ab825;font-weight:bold">GROUP</span> <span style="color:#6ab825;font-weight:bold">BY</span> <span style="color:#3677a9">1</span>,<span style="color:#3677a9">2</span>
-<span style="color:#6ab825;font-weight:bold">ORDER</span> <span style="color:#6ab825;font-weight:bold">BY</span> <span style="color:#3677a9">1</span>,<span style="color:#3677a9">2</span>
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#2c5dcd;font-weight:bold">SELECT</span> time_bucket_gapfill(<span style="color:#0c6">&#39;$step&#39;</span>, time) <span style="color:#2c5dcd;font-weight:bold">AS</span> <span style="color:#0c6">&#34;time&#34;</span>,
+    category <span style="color:#2c5dcd;font-weight:bold">AS</span> category,
+    <span style="color:#2c5dcd;font-weight:bold">avg</span>(metric) <span style="color:#2c5dcd;font-weight:bold">AS</span> metric
+<span style="color:#2c5dcd;font-weight:bold">FROM</span> <span style="color:#fff;background-color:#c00">$</span><span style="color:#2c5dcd;font-weight:bold">table</span>
+<span style="color:#2c5dcd;font-weight:bold">WHERE</span> <span style="color:#fff;background-color:#c00">$</span>__timeFilter(time)
+<span style="color:#2c5dcd;font-weight:bold">AND</span> metric <span style="color:#2c5dcd;font-weight:bold">IS</span> <span style="color:#2c5dcd;font-weight:bold">NOT</span> <span style="color:#2c5dcd;font-weight:bold">NULL</span>
+<span style="color:#2c5dcd;font-weight:bold">GROUP</span> <span style="color:#2c5dcd;font-weight:bold">BY</span> <span style="color:#5918bb;font-weight:bold">1</span>,<span style="color:#5918bb;font-weight:bold">2</span>
+<span style="color:#2c5dcd;font-weight:bold">ORDER</span> <span style="color:#2c5dcd;font-weight:bold">BY</span> <span style="color:#5918bb;font-weight:bold">1</span>,<span style="color:#5918bb;font-weight:bold">2</span>
 </code></pre></div><p>Where <code>$step</code> represents an amount of time to group the data by, such as 1month, 1day, 1minute.</p>
 
     
@@ -423,65 +423,20 @@
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f&amp;text=Cool article &quot;TimescaleDB%20SQL%20in%20Grafana&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f&amp;description=TimescaleDB%20SQL%20in%20Grafana" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f&amp;title=TimescaleDB%20SQL%20in%20Grafana&summary=%3cp%3eGrafana%20supports%20SQL%20through%20MySQL%2fMariaDB%2c%20PostgreSQL%20%26amp%3b%20SQL%20Server.%20Additionally%20Grafana%20supports%20the%20PostgreSQL%20extension%20TimescaleDB%2c%20this%20database%20is%20the%20best%20fit%20of%20all%20the%20SQL%20databases%20for%20Grafana%20since%20it%20is%20built%20specifically%20for%20large-scale%20time-series%20datasets.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;TimescaleDB%20SQL%20in%20Grafana&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;TimescaleDB%20SQL%20in%20Grafana&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=TimescaleDB%20SQL%20in%20Grafana from https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f&amp;body=Look at this cool article &quot;TimescaleDB%20SQL%20in%20Grafana&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f01%2ftimescaledb-sql-in-grafana%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -576,6 +531,8 @@
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -981,7 +938,7 @@
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

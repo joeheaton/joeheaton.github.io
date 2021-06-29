@@ -346,7 +346,7 @@
 <p>Using <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker Desktop</a> and an SSH tunnel I am able to run <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a> locally to manage my remote databases. The critical part is, the database does not need to be exposed to the Internet, this is where the SSH tunnel comes in.</p>
 <p>This assumes your PostgreSQL is configured to access connections on localhost and that you have an account set up.</p>
 <p>It&rsquo;s time to start a local instance of pgAdmin using Docker.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; docker pull dpage/pgadmin4
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; docker pull dpage/pgadmin4
 Using default tag: latest
 latest: Pulling from dpage/pgadmin4
 Digest: sha256:2ab69d31e8a4cc03df29c1916431cc535016a64aabceebc91bc6762c6c53ecf5
@@ -361,7 +361,7 @@ docker.io/dpage/pgadmin4:latest
 <li><code>-p 5432:5432</code>: Map the container&rsquo;s port 5432 to your desktop port 5432. This allows the container to connect to the PostgreSQL port which we opened a forwarding to using SSH.</li>
 </ul>
 <p>All together the command is:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">docker run --name &#34;pgadmin&#34; -e &#34;PGADMIN_DEFAULT_EMAIL=me@example.com&#34; -e &#34;PGADMIN_DEFAULT_PASSWORD=boop&#34; -e &#34;PGADMIN_LISTEN_PORT=5050&#34; -p 5050:5050 -p 5432:5432 -d dpage/pgadmin4
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">docker run --name &#34;pgadmin&#34; -e &#34;PGADMIN_DEFAULT_EMAIL=me@example.com&#34; -e &#34;PGADMIN_DEFAULT_PASSWORD=boop&#34; -e &#34;PGADMIN_LISTEN_PORT=5050&#34; -p 5050:5050 -p 5432:5432 -d dpage/pgadmin4
 </code></pre></div><p>Now you can access pgAdmin in your web browser at http://localhost:5050</p>
 <h2 id="pgadmin">pgAdmin</h2>
 <p>Log in with the credentials set earlier, once in just right-click <code>Servers</code> and select <code>Create -&gt; Server...</code>.</p>
@@ -455,65 +455,20 @@ docker.io/dpage/pgadmin4:latest
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f&amp;text=Cool article &quot;Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f&amp;description=Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f&amp;title=Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker&summary=%3cp%3ePostgreSQL%20management%20is%20a%20never-ending%20rabbit%20hole%20and%20in%20my%20case%20I%20just%20want%20to%20create%20a%20user%2c%20a%20database%20and%20set%20up%20some%20ownership..%20without%20resorting%20to%20SQL%20or%20complex%20configuration%20frameworks.%3c%2fp%3e" title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f&amp;body=Look at this cool article &quot;Remote%20PostgreSQL%20using%20local%20PgAdmin%20inside%20Docker&quot; from https%3a%2f%2fwww.heaton.dev%2f2020%2f09%2fremote-postgresql-using-local-pgadmin-inside-docker%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -608,6 +563,8 @@ docker.io/dpage/pgadmin4:latest
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -1006,7 +963,7 @@ docker.io/dpage/pgadmin4:latest
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 

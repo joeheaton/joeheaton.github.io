@@ -351,14 +351,14 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
     
 
     <p>Start with your master branch</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git checkout master
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git checkout master
 git fetch origin
 </code></pre></div><p>If your local master has been modified, you can reset its state.</p>
 <p><code>git reset --hard origin/master</code></p>
 <p>Checkout a new feature branch.</p>
 <p><code>git checkout -b my-feature</code></p>
 <p>Make changes in this branch, committing as usual.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git add file.txt
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git add file.txt
 git commit -m &#34;add my file.txt&#34;
 </code></pre></div><p>You can push your branch to allow others and yourself to evaluate and commit further to it.</p>
 <p><code>git push -u origin my-feature</code></p>
@@ -367,7 +367,7 @@ git commit -m &#34;add my file.txt&#34;
 </div>
 <p>It&rsquo;s time to test, review, get approval, etc. for your branch to be merged into master!</p>
 <p>Now we merge <code>my-feature</code> into <code>master</code>:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git checkout master
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git checkout master
 git pull
 git pull origin my-feature
 git push
@@ -441,65 +441,20 @@ git push
                 </div>
 
                 <div class="card-text vcard-save">
-                    <small class="text-muted">
-                        <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
-                            &#128427; Save to contacts
-                        </a>
-                    </small>
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
+                        &#128427; <span>Save to contacts</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+    
+      
+
     
     
-      <nav class="nav sharing-icons d-flex justify-content-center">
-  <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
-
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f&amp;text=Cool article &quot;Git%20feature%20branch%20%26%20merge&quot; from Heaton.dev!" title="Tweet this" target="_blank">
-    <span class="fab fa-twitter"></span>
-  </a>
-  
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share on Reddit" target="_blank">
-    <span class="fab fa-reddit-alien" aria-hidden="true"></span>
-  </a>
-  
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share on Tumblr" target="_blank">
-    <span class="fab fa-tumblr" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share on Facebook" target="_blank">
-    <span class="fab fa-facebook-f" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f&amp;description=Git%20feature%20branch%20%26%20merge" title="Share on Pintrest" target="_blank">
-    <span class="fab fa-pinterest-p" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f&amp;title=Git%20feature%20branch%20%26%20merge&summary=Start%20with%20your%20master%20branch%0agit%20checkout%20master%20git%20fetch%20origin%20If%20your%20local%20master%20has%20been%20modified%2c%20you%20can%20reset%20its%20state.%0agit%20reset%20--hard%20origin%2fmaster%0aCheckout%20a%20new%20feature%20branch.%0agit%20checkout%20-b%20my-feature%0aMake%20changes%20in%20this%20branch%2c%20committing%20as%20usual.%0agit%20add%20file.txt%20git%20commit%20-m%20%26%2334%3badd%20my%20file.txt%26%2334%3b%20You%20can%20push%20your%20branch%20to%20allow%20others%20and%20yourself%20to%20evaluate%20and%20commit%20further%20to%20it." title="Share on LinkedIn" target="_blank">
-    <span class="fab fa-linkedin" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share on Xing" target="_blank">
-    <span class="fab fa-xing" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share on Hackernews" target="_blank">
-    <span class="fab fa-hacker-news" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Git%20feature%20branch%20%26%20merge&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f" title="Share via Telegram" target="_blank">
-    <span class="fab fa-telegram-plane" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Git%20feature%20branch%20%26%20merge&quot; from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f !" title="Share via WhatsApp" target="_blank">
-    <span class="fab fa-whatsapp" aria-hidden="true"></span>
-  </a>
-
-  <a class="nav-item" href="mailto:?subject=Git%20feature%20branch%20%26%20merge from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f&amp;body=Look at this cool article &quot;Git%20feature%20branch%20%26%20merge&quot; from https%3a%2f%2fwww.heaton.dev%2f2019%2f04%2fgit-feature-branch-merge%2f!" title="Share via Email" target="_blank">
-    <span class="fas fa-envelope" aria-hidden="true"></span>
-  </a>
-</nav>
     
 
     
@@ -594,6 +549,8 @@ git push
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
+  
+
   
 
   
@@ -992,7 +949,7 @@ git push
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="close" aria-label="Close">
+    <button type="button" class="btn btn-light close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 
