@@ -88,7 +88,7 @@ img {
 figure {
   margin-top: 0.5rem;
   text-align: center;
-  background: #2d2b38;
+  background: #333;
   border-radius: 8px;
   box-shadow: 1px 1px 3px #b4b4b4; }
   figure a:hover {
@@ -99,7 +99,8 @@ figure {
   figure img {
     border-radius: 8px 8px 0 0; }
   figure figcaption {
-    background: #2d2b38;
+    background: #333;
+    color: #fff;
     padding: 0.4rem 0.8rem;
     border-radius: 0 0 8px 8px; }
   figure .image {
@@ -125,7 +126,7 @@ blockquote {
   padding: 0 0.5rem;
   font-size: 0.6rem;
   font-family: Hack, monospace, 'Courier New', Courier;
-  color: #2d2b38;
+  color: #333;
   text-shadow: #b4b4b4 1px 1px 4px; }
   @media (prefers-color-scheme: dark) {
     .masthead-super {
