@@ -19,7 +19,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2021-07-02T12:11:02&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-07-10T12:39:27&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -98,7 +98,7 @@ Spack is a source-based package manager and build system, all builds take place 
       "name": "Joe Heaton"
     },
     "datePublished": "2021-06-04T00:00:00Z",
-    "dateModified": "2021-07-02T12:11:02.929242607Z",
+    "dateModified": "2021-07-10T12:39:27.014779377Z",
     "keywords": "Joe Heaton, developer, hpc, linux, spack",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -169,7 +169,7 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 
-<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
+<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheatondev" title="LinkedIn">
   <span class="fab fa-linkedin" aria-hidden="true"></span>
 </a>
 
@@ -346,8 +346,8 @@ Spack is a source-based package manager and build system, all builds take place 
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-07-02T12:11:02Z">
-              2nd
+            <time datetime="2021-07-10T12:39:27Z">
+              10th
               Jul
               2021
             </time>
@@ -393,8 +393,9 @@ List of matching conflicts <span style="color:#2c5dcd;font-weight:bold">for</spa
 ...
 ...
 1. <span style="color:#0c6">&#34;^openblas threads=none&#34;</span> conflicts with <span style="color:#0c6">&#34;cp2k+openmp&#34;</span>
-</code></pre></div><p>You can see the concretized spec of my cp2k installation is <code>cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64</code></p>
-<p>This includes any defaults for every variant the package supports, I prefer to leave it up to the maintainer for variants I&rsquo;m not familiar with, but if you want highly reproducible environments you will probably want to specify everything.</p>
+</code></pre></div><p>You can see the concretized spec of my cp2k installation is</p>
+<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64
+</code></pre></div><p>This includes any defaults for every variant the package supports, I prefer to leave it up to the maintainer for variants I&rsquo;m not familiar with, but if you want highly reproducible environments you will probably want to specify everything.</p>
 <p>The error <code>^openblas threads=none&quot; conflicts with &quot;cp2k+openmp</code> suggests the openblas dependency won&rsquo;t support threading, which is required because I&rsquo;m building cp2k with openmp support.</p>
 <h2 id="packagesyaml">packages.yaml</h2>
 <p>OpenBLAS isn&rsquo;t tricky to compile, so I opted to compile it manually:</p>

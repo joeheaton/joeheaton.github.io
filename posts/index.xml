@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understand Chia Pools and Farming your NFT Plots</title>
+      <link>https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/</guid>
+      <description>Chia (XCH) is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that plagues our efforts to decarbonise our energy grid. Chia was initially developed by @BramCohen, known for developing the BitTorrent protocol.
+Proof of Space-and-Time requires a you to commit a resource to the network, in this case storage space, and to mathematically prove that your commitment continues to be available to the network.</description>
+    </item>
+    
     <item>
       <title>Try out Spack on Arm HPC | CP2K</title>
       <link>https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/</link>
@@ -25,7 +35,7 @@ Spack is a source-based package manager and build system, all builds take place 
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
-      <description>Collaborative websites need to be forked, but if you set baseURL the forked website will load resources from the original.. Not ideal.
+      <description>Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
 The fix I applied to my GitHub Actions CI to work around this:
 jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>
     </item>

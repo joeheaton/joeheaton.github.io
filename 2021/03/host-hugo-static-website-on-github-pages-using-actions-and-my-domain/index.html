@@ -19,7 +19,7 @@ My existing workflow combines three repositories to build the website:
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-02T12:11:02&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-07-10T12:39:27&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -99,7 +99,7 @@ My existing workflow combines three repositories to build the website:
     },
     "datePublished": "2021-03-12T00:00:00Z",
     
-    "dateModified": "2021-07-02T12:11:02.925242535Z",
+    "dateModified": "2021-07-10T12:39:27.010779302Z",
     "keywords": "Joe Heaton, developer, automation, github, linux, webdev",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -170,7 +170,7 @@ My existing workflow combines three repositories to build the website:
 
 
 
-<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheaton93" title="LinkedIn">
+<a target="_blank" class="nav-item" href="https://www.linkedin.com/in/joeheatondev" title="LinkedIn">
   <span class="fab fa-linkedin" aria-hidden="true"></span>
 </a>
 
@@ -354,8 +354,8 @@ My existing workflow combines three repositories to build the website:
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-07-02T12:11:02Z">
-              2nd
+            <time datetime="2021-07-10T12:39:27Z">
+              10th
               Jul
               2021
             </time>
@@ -434,9 +434,13 @@ on:
 <h2>GitHub Secrets</h2>
 <p>I mentioned the <code>ACTIONS_DEPLOY_KEY</code> which allows the Action to push changes to an external repository, this is how you set that up. I followed <a href="https://github.com/peaceiris/actions-gh-pages">this documentation</a></p>
 <p>This will create a new keypair in the current directory, we will add the private key as Secret in the repo with the static site generator, this is done via the web interface and the Secret should be named <code>ACTIONS_DEPLOY_KEY</code> for <code>peaceiris/actions-gh-pages</code> to pick it up by default.</p>
-<figure class="wp-block-image size-large"><img src="https://heatondata.files.wordpress.com/2021/03/image.png?w=1024" alt="" class="wp-image-190"/></figure>
+<p>
+  <img src="images/RepositorySecrets.png" alt="Repository Secrets">
+</p>
 <p>Add the public key as a Deploy Key on <code>joeheaton.github.io</code>.</p>
-<figure class="wp-block-image"><img src="https://heatondata.files.wordpress.com/2021/03/image-1.png?w=1024" alt="" class="wp-image-192"/></figure>
+<p>
+  <img src="images/DeployKeys.png" alt="Deploy Keys">
+</p>
 <p>Once this is done the Actions on <code>hugs</code> can now push changes to <code>joeheaton.github.io</code>!</p>
 <h2>Domains &amp; CNAME</h2>
 <p>To complete replacing my old static site with GitHub Pages I need to map my personal domain to the website hosted on <code>joeheaton.github.io</code>.</p>
