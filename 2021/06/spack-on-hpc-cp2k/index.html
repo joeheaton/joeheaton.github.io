@@ -19,7 +19,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2021-07-19T20:24:03&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-07-19T20:32:39&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -98,7 +98,7 @@ Spack is a source-based package manager and build system, all builds take place 
       "name": "Joe Heaton"
     },
     "datePublished": "2021-06-04T00:00:00Z",
-    "dateModified": "2021-07-19T20:24:03.952617524Z",
+    "dateModified": "2021-07-19T20:32:39.802602185Z",
     "keywords": "Joe Heaton, developer, hpc, linux, spack",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -348,7 +348,7 @@ Spack is a source-based package manager and build system, all builds take place 
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-07-19T20:24:03Z">
+            <time datetime="2021-07-19T20:32:39Z">
               19th
               Jul
               2021
@@ -376,13 +376,15 @@ Spack is a source-based package manager and build system, all builds take place 
 </code></pre></div><p>This populates <code>~/.spack/cray/compilers.yaml</code> with all our compilers, Spack checks typical locations as well as your available modules.</p>
 <h2 id="first-attempt">First attempt</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm=blas ^fftw +openmp ^openblas threads=openmp
-</code></pre></div><p><code>+openmp</code> is default</p>
+</code></pre></div><blockquote>
+<p><code>+openmp</code> is default</p>
 <p><code>+mpi</code> to enable MPI support</p>
 <p><code>+plumed</code> to enable <a href="https://www.plumed.org/" target="_blank">PLUMED</a></p>
 <p><code>%gcc@9.2.0</code> uses GCC 9.2.0, loaded via a module by Spack</p>
 <p><code>smm=blas</code> is required as libxsmm not available on arm64, <a href="https://github.com/spack/spack/blob/fee5cf4e495984f545db7c538ab44a0d5d240841/var/spack/repos/builtin/packages/cp2k/package.py#L160" target="_blank">noted in spec</a>.</p>
 <p><code>^fftw +openmp</code> enables OpenMP for the FFTW dependency</p>
 <p><code>^openblas threads=openmp</code> uses OpenMP for threadding in OpenBLAS, I found the <code>threads=</code> options in its spec file but I could have just run <code>spack info openblas</code>.</p>
+</blockquote>
 <p>I saw some differing results when I loaded modules into my environment before running Spack so I try avoid loading any when building packages.</p>
 <p>Now, this build fails to concretize and Spack shows us what it tried to do and which packages are conflicting:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas ^fftw +openmp ^openblas <span style="color:#8be9fd;font-style:italic">threads</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">openmp</span>
