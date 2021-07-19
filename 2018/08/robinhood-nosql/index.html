@@ -318,6 +318,8 @@ It does this by scanning every file on the filesystem as efficiently as possible
 
       
       
+      
+        
        
 
       
@@ -362,31 +364,31 @@ It does this by scanning every file on the filesystem as efficiently as possible
 <p>Later it is worth investigating if multiple Robinhood instances can be merged into one Elasticsearch index. This would allow for whole-estate searches and metrics, but it assumes file id&rsquo;s are unique to the file&rsquo;s state and not incremental - Although this can be worked around by adding another field stating the source filesystem.</p>
 <h1 id="source">Source</h1>
 <p>/etc/logstash/elasticsearch.robinhood.json:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">{
-  <span style="color:#2c5dcd;font-weight:bold">&#34;template&#34;</span>: <span style="color:#0c6">&#34;rbh&#34;</span>,
-  <span style="color:#2c5dcd;font-weight:bold">&#34;version&#34;</span>: <span style="color:#5918bb;font-weight:bold">2</span>,
-  <span style="color:#2c5dcd;font-weight:bold">&#34;settings&#34;</span>: {
-    <span style="color:#2c5dcd;font-weight:bold">&#34;index.refresh_interval&#34;</span>: <span style="color:#0c6">&#34;5s&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;template&#34;</span>: <span style="color:#f1fa8c">&#34;rbh&#34;</span>,
+  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#bd93f9">2</span>,
+  <span style="color:#ff79c6">&#34;settings&#34;</span>: {
+    <span style="color:#ff79c6">&#34;index.refresh_interval&#34;</span>: <span style="color:#f1fa8c">&#34;5s&#34;</span>
   },  
-  <span style="color:#2c5dcd;font-weight:bold">&#34;mappings&#34;</span>: {
-    <span style="color:#2c5dcd;font-weight:bold">&#34;_default_&#34;</span>: {
-      <span style="color:#2c5dcd;font-weight:bold">&#34;properties&#34;</span>: {
-        <span style="color:#2c5dcd;font-weight:bold">&#34;@timestamp&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;@version&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;keyword&#34;</span> },
+  <span style="color:#ff79c6">&#34;mappings&#34;</span>: {
+    <span style="color:#ff79c6">&#34;_default_&#34;</span>: {
+      <span style="color:#ff79c6">&#34;properties&#34;</span>: {
+        <span style="color:#ff79c6">&#34;@timestamp&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;@version&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;keyword&#34;</span> },
 
-        <span style="color:#2c5dcd;font-weight:bold">&#34;class_update&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;creation_time&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;last_access&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;last_mdchange&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;last_mod&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;md_update&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;date&#34;</span> },
-        <span style="color:#2c5dcd;font-weight:bold">&#34;size&#34;</span>: { <span style="color:#2c5dcd;font-weight:bold">&#34;type&#34;</span>: <span style="color:#0c6">&#34;bytes&#34;</span> }
+        <span style="color:#ff79c6">&#34;class_update&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;creation_time&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;last_access&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;last_mdchange&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;last_mod&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;md_update&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;date&#34;</span> },
+        <span style="color:#ff79c6">&#34;size&#34;</span>: { <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;bytes&#34;</span> }
       }   
     }   
   }
 }
 </code></pre></div><p>Excerpt: /etc/logstash/conf.d/inputs.conf:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  jdbc {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  jdbc {
     jdbc_driver_library =&gt; &#34;/usr/share/java/mysql-connector-java.jar&#34;
     jdbc_driver_class =&gt; &#34;com.mysql.jdbc.Driver&#34;
     jdbc_connection_string =&gt; &#34;jdbc:mysql://HOST:3306/robinhood&#34;
@@ -399,7 +401,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
   }
 </code></pre></div><p>This Logstash JDBC configuration requires the <code>mysql-connector-java</code> package on CentOS.</p>
 <p>/etc/logstash/config/rbh.output.conf:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">output {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">output {
   if &#34;robinhood&#34; in [tags] {
     elasticsearch {
       hosts =&gt; [&#34;ELASTICBOX&#34;]
@@ -539,6 +541,10 @@ It does this by scanning every file on the filesystem as efficiently as possible
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -565,7 +571,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

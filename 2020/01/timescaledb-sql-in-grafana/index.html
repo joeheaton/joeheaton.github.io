@@ -330,6 +330,8 @@
 
       
       
+      
+        
        
 
       
@@ -347,14 +349,14 @@
 
     <p>Grafana supports SQL through MySQL/MariaDB, PostgreSQL &amp; SQL Server. Additionally Grafana supports the PostgreSQL extension TimescaleDB, this database is the best fit of all the SQL databases for Grafana since it is built specifically for large-scale time-series datasets.</p>
 <p>Below is an example of a Timescale query using <code>time_bucket_gapfill</code> function from Timescale to pad missing values. You will also need to populate or swap out the Grafana templating variables I used, they save a lot of time once your dashboards start to grow.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#2c5dcd;font-weight:bold">SELECT</span> time_bucket_gapfill(<span style="color:#0c6">&#39;$step&#39;</span>, time) <span style="color:#2c5dcd;font-weight:bold">AS</span> <span style="color:#0c6">&#34;time&#34;</span>,
-    category <span style="color:#2c5dcd;font-weight:bold">AS</span> category,
-    <span style="color:#2c5dcd;font-weight:bold">avg</span>(metric) <span style="color:#2c5dcd;font-weight:bold">AS</span> metric
-<span style="color:#2c5dcd;font-weight:bold">FROM</span> <span style="color:#fff;background-color:#c00">$</span><span style="color:#2c5dcd;font-weight:bold">table</span>
-<span style="color:#2c5dcd;font-weight:bold">WHERE</span> <span style="color:#fff;background-color:#c00">$</span>__timeFilter(time)
-<span style="color:#2c5dcd;font-weight:bold">AND</span> metric <span style="color:#2c5dcd;font-weight:bold">IS</span> <span style="color:#2c5dcd;font-weight:bold">NOT</span> <span style="color:#2c5dcd;font-weight:bold">NULL</span>
-<span style="color:#2c5dcd;font-weight:bold">GROUP</span> <span style="color:#2c5dcd;font-weight:bold">BY</span> <span style="color:#5918bb;font-weight:bold">1</span>,<span style="color:#5918bb;font-weight:bold">2</span>
-<span style="color:#2c5dcd;font-weight:bold">ORDER</span> <span style="color:#2c5dcd;font-weight:bold">BY</span> <span style="color:#5918bb;font-weight:bold">1</span>,<span style="color:#5918bb;font-weight:bold">2</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> time_bucket_gapfill(<span style="color:#f1fa8c">&#39;$step&#39;</span>, time) <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">&#34;time&#34;</span>,
+    category <span style="color:#ff79c6">AS</span> category,
+    <span style="color:#ff79c6">avg</span>(metric) <span style="color:#ff79c6">AS</span> metric
+<span style="color:#ff79c6">FROM</span> $<span style="color:#ff79c6">table</span>
+<span style="color:#ff79c6">WHERE</span> $__timeFilter(time)
+<span style="color:#ff79c6">AND</span> metric <span style="color:#ff79c6">IS</span> <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">NULL</span>
+<span style="color:#ff79c6">GROUP</span> <span style="color:#ff79c6">BY</span> <span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>
+<span style="color:#ff79c6">ORDER</span> <span style="color:#ff79c6">BY</span> <span style="color:#bd93f9">1</span>,<span style="color:#bd93f9">2</span>
 </code></pre></div><p>Where <code>$step</code> represents an amount of time to group the data by, such as 1month, 1day, 1minute.</p>
 
     
@@ -484,6 +486,10 @@
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -510,7 +516,7 @@
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

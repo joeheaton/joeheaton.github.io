@@ -323,6 +323,8 @@
 
       
       
+      
+        
        
 
       
@@ -340,11 +342,11 @@
 
     <p>The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&rsquo;t seem to come back into existing Lustre releases, since those releases don&rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!</p>
 <p>After tweaking flags, wondering if the odd spin of RHEL or the CPU arch might be at fault and sitting through minutes of <code>./configure</code> output each attempt - I noticed the errors were mostly the same, undefined variables.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">include<span style="color:#2c5dcd">/</span>linux<span style="color:#2c5dcd">/</span>wait<span style="color:#2c5dcd">.</span>h:<span style="color:#5918bb;font-weight:bold">152</span>:<span style="color:#5918bb;font-weight:bold">13</span>: note: expected <span style="color:#0c6">&#39;struct wait_queue_entry *&#39;</span> but argument <span style="color:#2c5dcd;font-weight:bold">is</span> of <span style="color:#5918bb;font-weight:bold">type</span> <span style="color:#0c6">&#39;int *&#39;</span>               
- extern void remove_wait_queue(struct wait_queue_head <span style="color:#2c5dcd">*</span>wq_head, struct wait_queue_entry <span style="color:#2c5dcd">*</span>wq_entry);                   
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">include<span style="color:#ff79c6">/</span>linux<span style="color:#ff79c6">/</span>wait<span style="color:#ff79c6">.</span>h:<span style="color:#bd93f9">152</span>:<span style="color:#bd93f9">13</span>: note: expected <span style="color:#f1fa8c">&#39;struct wait_queue_entry *&#39;</span> but argument <span style="color:#ff79c6">is</span> of <span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#f1fa8c">&#39;int *&#39;</span>               
+ extern void remove_wait_queue(struct wait_queue_head <span style="color:#ff79c6">*</span>wq_head, struct wait_queue_entry <span style="color:#ff79c6">*</span>wq_entry);                   
 </code></pre></div><p>The fix was simple, finding it was less so!</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh">find -type f | xargs sed -i <span style="color:#0c6">&#39;s/wait_queue_t/wait_queue_entry_t/g; s/ vfs_write/ kernel_write/g&#39;</span>
-sed -i <span style="color:#0c6">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.preamble
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh">find -type f | xargs sed -i <span style="color:#f1fa8c">&#39;s/wait_queue_t/wait_queue_entry_t/g; s/ vfs_write/ kernel_write/g&#39;</span>
+sed -i <span style="color:#f1fa8c">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.preamble
 </code></pre></div><p>This bulk <code>sed</code> runs over the Lustre source code to rename two kernel variables:</p>
 <ul>
 <li><code>wait_queue_t</code> -&gt; <code>wait_queue_entry_t</code> renamed in <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7cee9384cb3e25de33d75ecdbf08bb15b4ea9fa5" target="_blank">Linux 4.13</a></li>
@@ -482,6 +484,10 @@ sed -i <span style="color:#0c6">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.prea
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -508,7 +514,7 @@ sed -i <span style="color:#0c6">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.prea
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

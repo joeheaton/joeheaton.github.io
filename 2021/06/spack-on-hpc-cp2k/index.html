@@ -19,7 +19,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2021-07-10T12:39:27&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-07-19T20:24:03&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -92,13 +92,13 @@ Spack is a source-based package manager and build system, all builds take place 
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/",
-    "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1058",
+    "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1106",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2021-06-04T00:00:00Z",
-    "dateModified": "2021-07-10T12:39:27.014779377Z",
+    "dateModified": "2021-07-19T20:24:03.952617524Z",
     "keywords": "Joe Heaton, developer, hpc, linux, spack",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -333,6 +333,8 @@ Spack is a source-based package manager and build system, all builds take place 
 
       
       
+      
+        
        
 
       
@@ -346,8 +348,8 @@ Spack is a source-based package manager and build system, all builds take place 
           
           <div>
             <span>Updated</span>
-            <time datetime="2021-07-10T12:39:27Z">
-              10th
+            <time datetime="2021-07-19T20:24:03Z">
+              19th
               Jul
               2021
             </time>
@@ -370,10 +372,10 @@ Spack is a source-based package manager and build system, all builds take place 
 <p>Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.. that results in a unique package. The process of determining the packages unique hash is called concretization.</p>
 <p>You can find all of this explained much better in the <a href="https://spack.readthedocs.io/" target="_blank">public documentation</a> or by following the <a href="https://spack-tutorial.readthedocs.io/" target="_blank">Spack Tutorial</a></p>
 <h2 id="getting-started">Getting started</h2>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack compiler find
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack compiler find
 </code></pre></div><p>This populates <code>~/.spack/cray/compilers.yaml</code> with all our compilers, Spack checks typical locations as well as your available modules.</p>
 <h2 id="first-attempt">First attempt</h2>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm=blas ^fftw +openmp ^openblas threads=openmp
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm=blas ^fftw +openmp ^openblas threads=openmp
 </code></pre></div><p><code>+openmp</code> is default</p>
 <p><code>+mpi</code> to enable MPI support</p>
 <p><code>+plumed</code> to enable <a href="https://www.plumed.org/" target="_blank">PLUMED</a></p>
@@ -383,134 +385,134 @@ Spack is a source-based package manager and build system, all builds take place 
 <p><code>^openblas threads=openmp</code> uses OpenMP for threadding in OpenBLAS, I found the <code>threads=</code> options in its spec file but I could have just run <code>spack info openblas</code>.</p>
 <p>I saw some differing results when I loaded modules into my environment before running Spack so I try avoid loading any when building packages.</p>
 <p>Now, this build fails to concretize and Spack shows us what it tried to do and which packages are conflicting:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm<span style="color:#2c5dcd">=</span>blas ^fftw +openmp ^openblas threads<span style="color:#2c5dcd">=</span>openmp
-<span style="color:#2c5dcd">==</span>&gt; Error: Conflicts in concretized spec <span style="color:#0c6">&#34;cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64/kizgfsf&#34;</span>
-List of matching conflicts <span style="color:#2c5dcd;font-weight:bold">for</span> spec:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas ^fftw +openmp ^openblas <span style="color:#8be9fd;font-style:italic">threads</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">openmp</span>
+<span style="color:#ff79c6">==</span>&gt; Error: Conflicts in concretized spec <span style="color:#f1fa8c">&#34;cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64/kizgfsf&#34;</span>
+List of matching conflicts <span style="color:#ff79c6">for</span> spec:
 
-    cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch<span style="color:#2c5dcd">=</span>none lmax<span style="color:#2c5dcd">=</span><span style="color:#5918bb;font-weight:bold">5</span> smm<span style="color:#2c5dcd">=</span>blas arch<span style="color:#2c5dcd">=</span>cray-cnl7-aarch64
-        ^fftw@3.3.9%gcc@9.2.0+mpi+openmp~pfft_patches precision<span style="color:#2c5dcd">=</span>double,float arch<span style="color:#2c5dcd">=</span>cray-cnl7-aarch64
-        ^libint@2.6.0%gcc@9.2.0+fortran tune<span style="color:#2c5dcd">=</span>cp2k-lmax-5 arch<span style="color:#2c5dcd">=</span>cray-cnl7-aarch64
+    cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib <span style="color:#8be9fd;font-style:italic">cuda_arch</span><span style="color:#ff79c6">=</span>none <span style="color:#8be9fd;font-style:italic">lmax</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span> <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas <span style="color:#8be9fd;font-style:italic">arch</span><span style="color:#ff79c6">=</span>cray-cnl7-aarch64
+        ^fftw@3.3.9%gcc@9.2.0+mpi+openmp~pfft_patches <span style="color:#8be9fd;font-style:italic">precision</span><span style="color:#ff79c6">=</span>double,float <span style="color:#8be9fd;font-style:italic">arch</span><span style="color:#ff79c6">=</span>cray-cnl7-aarch64
+        ^libint@2.6.0%gcc@9.2.0+fortran <span style="color:#8be9fd;font-style:italic">tune</span><span style="color:#ff79c6">=</span>cp2k-lmax-5 <span style="color:#8be9fd;font-style:italic">arch</span><span style="color:#ff79c6">=</span>cray-cnl7-aarch64
 ...
 ...
-1. <span style="color:#0c6">&#34;^openblas threads=none&#34;</span> conflicts with <span style="color:#0c6">&#34;cp2k+openmp&#34;</span>
+1. <span style="color:#f1fa8c">&#34;^openblas threads=none&#34;</span> conflicts with <span style="color:#f1fa8c">&#34;cp2k+openmp&#34;</span>
 </code></pre></div><p>You can see the concretized spec of my cp2k installation is</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64
 </code></pre></div><p>This includes any defaults for every variant the package supports, I prefer to leave it up to the maintainer for variants I&rsquo;m not familiar with, but if you want highly reproducible environments you will probably want to specify everything.</p>
 <p>The error <code>^openblas threads=none&quot; conflicts with &quot;cp2k+openmp</code> suggests the openblas dependency won&rsquo;t support threading, which is required because I&rsquo;m building cp2k with openmp support.</p>
 <h2 id="packagesyaml">packages.yaml</h2>
 <p>OpenBLAS isn&rsquo;t tricky to compile, so I opted to compile it manually:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; make
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; make
 &gt; make PREFIX=/software/arm64/apps/openblas/0.3.15 install
 </code></pre></div><p>Now I need to tell Spack about my installation of OpenBLAS, this kind of package is called an External and they are listed in <code>~/.spack/packages.yaml</code>:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="color:#2c5dcd;font-weight:bold">packages</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">autoconf</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span>autoconf@2.69<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">prefix</span>:<span style="color:#cbcbcb"> </span>/usr<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">automake</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span>automake@1.15.1<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">prefix</span>:<span style="color:#cbcbcb"> </span>/usr<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">bash</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span>bash@4.4.23<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">prefix</span>:<span style="color:#cbcbcb"> </span>/<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb"></span>...<span style="color:#cbcbcb">
-</span></code></pre></div><p>I added OpenBLAS and a few Cray libraries to my <code>packages.yaml</code>:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">mpi</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;mpich@7.7.16&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">modules</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- cray-mpich/7.7.16<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">buildable</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">False</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">openblas</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;openblas@0.3.15&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">modules</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- apps/openblas/0.3.15<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">fftw</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;fftw+openmp&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">modules</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- cray-fftw<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">cray-libsci</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">externals</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span>- <span style="color:#2c5dcd;font-weight:bold">spec</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;cray-libsci&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">modules</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- cray-libsci<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">buildable</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">False</span><span style="color:#cbcbcb">
-</span></code></pre></div><p>Each external has a spec that Spack matches against, for example if I ask for fftw explicitly without openmp support then it won&rsquo;t use my fftw external as I have listed <code>+openmp</code> in its spec.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="color:#ff79c6">packages</span>:
+  <span style="color:#ff79c6">autoconf</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: autoconf@2.69
+      <span style="color:#ff79c6">prefix</span>: /usr
+  <span style="color:#ff79c6">automake</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: automake@1.15.1
+      <span style="color:#ff79c6">prefix</span>: /usr
+  <span style="color:#ff79c6">bash</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: bash@4.4.23
+      <span style="color:#ff79c6">prefix</span>: /
+...
+</code></pre></div><p>I added OpenBLAS and a few Cray libraries to my <code>packages.yaml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">  <span style="color:#ff79c6">mpi</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: <span style="color:#f1fa8c">&#34;mpich@7.7.16&#34;</span>
+      <span style="color:#ff79c6">modules</span>:
+      - cray-mpich/7.7.16
+    <span style="color:#ff79c6">buildable</span>: <span style="color:#ff79c6">False</span>
+  <span style="color:#ff79c6">openblas</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: <span style="color:#f1fa8c">&#34;openblas@0.3.15&#34;</span>
+      <span style="color:#ff79c6">modules</span>:
+      - apps/openblas/0.3.15
+  <span style="color:#ff79c6">fftw</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: <span style="color:#f1fa8c">&#34;fftw+openmp&#34;</span>
+      <span style="color:#ff79c6">modules</span>:
+      - cray-fftw
+  <span style="color:#ff79c6">cray-libsci</span>:
+    <span style="color:#ff79c6">externals</span>:
+    - <span style="color:#ff79c6">spec</span>: <span style="color:#f1fa8c">&#34;cray-libsci&#34;</span>
+      <span style="color:#ff79c6">modules</span>:
+      - cray-libsci
+    <span style="color:#ff79c6">buildable</span>: <span style="color:#ff79c6">False</span>
+</code></pre></div><p>Each external has a spec that Spack matches against, for example if I ask for fftw explicitly without openmp support then it won&rsquo;t use my fftw external as I have listed <code>+openmp</code> in its spec.</p>
 <p>I used <code>buildable: False</code> to tell Spack to never build an alternative for some packages. I want to use the supported system libraries where possible, instead of some apps using <code>cray-libsci</code> and others building a custom <code>libsci</code>, as an example.</p>
 <h2 id="jsondecodeerror">JSONDecodeError</h2>
 <p>This bug slowed me down, I didn&rsquo;t find out the cause and it has since cleared itself up. It may be related to loading spack on different clusters with a shared home directory and it ended up loading something confusing in <code>compilers.yaml</code>? 🤷‍♂️</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell"><span style="color:#2c5dcd">==</span>&gt; cp2k: Executing phase: <span style="color:#0c6">&#39;edit&#39;</span>
-<span style="color:#2c5dcd">==</span>&gt; Error: JSONDecodeError: Expecting value: line <span style="color:#5918bb;font-weight:bold">1</span> column <span style="color:#5918bb;font-weight:bold">1</span> <span style="color:#2c5dcd">(</span>char 0<span style="color:#2c5dcd">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">==</span>&gt; cp2k: Executing phase: <span style="color:#f1fa8c">&#39;edit&#39;</span>
+<span style="color:#ff79c6">==</span>&gt; Error: JSONDecodeError: Expecting value: line <span style="color:#bd93f9">1</span> column <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">(</span>char 0<span style="color:#ff79c6">)</span>
 
 /lustre/software/aarch64/spack/var/spack/repos/builtin/packages/cp2k/package.py:300, in edit:
-        <span style="color:#5918bb;font-weight:bold">297</span>            ldflags  <span style="color:#2c5dcd">+=</span> <span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;-hnoomp&#39;</span><span style="color:#2c5dcd">]</span>
-        <span style="color:#5918bb;font-weight:bold">298</span>
-        <span style="color:#5918bb;font-weight:bold">299</span>        <span style="color:#2c5dcd;font-weight:bold">if</span> <span style="color:#0c6">&#39;@7:&#39;</span> in spec:  <span style="color:#0080ff;font-style:italic"># recent versions of CP2K use C++14 CUDA code</span>
-  &gt;&gt;    <span style="color:#5918bb;font-weight:bold">300</span>            cxxflags.append<span style="color:#2c5dcd">(</span>self.compiler.cxx14_flag<span style="color:#2c5dcd">)</span>
-        <span style="color:#5918bb;font-weight:bold">301</span>            nvflags.append<span style="color:#2c5dcd">(</span>self.compiler.cxx14_flag<span style="color:#2c5dcd">)</span>
-        <span style="color:#5918bb;font-weight:bold">302</span>
-        <span style="color:#5918bb;font-weight:bold">303</span>        ldflags.append<span style="color:#2c5dcd">(</span>fftw.libs.search_flags<span style="color:#2c5dcd">)</span>
+        <span style="color:#bd93f9">297</span>            <span style="color:#8be9fd;font-style:italic">ldflags</span>  <span style="color:#ff79c6">+=</span> <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;-hnoomp&#39;</span><span style="color:#ff79c6">]</span>
+        <span style="color:#bd93f9">298</span>
+        <span style="color:#bd93f9">299</span>        <span style="color:#ff79c6">if</span> <span style="color:#f1fa8c">&#39;@7:&#39;</span> in spec:  <span style="color:#6272a4"># recent versions of CP2K use C++14 CUDA code</span>
+  &gt;&gt;    <span style="color:#bd93f9">300</span>            cxxflags.append<span style="color:#ff79c6">(</span>self.compiler.cxx14_flag<span style="color:#ff79c6">)</span>
+        <span style="color:#bd93f9">301</span>            nvflags.append<span style="color:#ff79c6">(</span>self.compiler.cxx14_flag<span style="color:#ff79c6">)</span>
+        <span style="color:#bd93f9">302</span>
+        <span style="color:#bd93f9">303</span>        ldflags.append<span style="color:#ff79c6">(</span>fftw.libs.search_flags<span style="color:#ff79c6">)</span>
 </code></pre></div><p>I opened bug <a href="https://github.com/spack/spack/issues/23570" target="_blank">#23570</a> to track it.</p>
 <h2 id="missing-build-dependency">Missing build dependency</h2>
 <p>I got the following error from plumed: <code>RuntimeError: Cannot generate configure: missing dependencies ['m4']</code></p>
 <p>Spack seems to think m4 isn&rsquo;t available, it turned out that the package&rsquo;s <code>package.py</code> was missing the <code>type='build'</code> on the line where <code>m4</code> is listed as a build depdenency. This was fixed in <a href="https://github.com/spack/spack/issues/23953" target="_blank">#23953</a>.</p>
 <h2 id="build">Build</h2>
 <p>Lastly I had difficulty building <code>netlib-scalapack</code> until I realised that <code>cray-libsci</code> provides the LAPACK/ScaLAPACK capabilities cp2k requires. I manually set the dependency package with <code>^cray-libsci</code>.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm<span style="color:#2c5dcd">=</span>blas ^cray-libsci
-<span style="color:#2c5dcd">==</span>&gt; Warning: Missing a <span style="color:#5918bb;font-weight:bold">source</span> id <span style="color:#2c5dcd;font-weight:bold">for</span> cray-libsci@20.06.1
-<span style="color:#2c5dcd">==</span>&gt; Warning: Missing a <span style="color:#5918bb;font-weight:bold">source</span> id <span style="color:#2c5dcd;font-weight:bold">for</span> perl@5.26.1
-<span style="color:#2c5dcd">==</span>&gt; Warning: Missing a <span style="color:#5918bb;font-weight:bold">source</span> id <span style="color:#2c5dcd;font-weight:bold">for</span> mpich@7.7.16
-<span style="color:#2c5dcd">==</span>&gt; cray-libsci@20.06.1 : has external module in <span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;cray-libsci&#39;</span><span style="color:#2c5dcd">]</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /opt/cray/pe/libsci/20.06.1/GNU/8.1/aarch64 <span style="color:#2c5dcd">(</span>external cray-libsci-20.06.1-lcxhogmgo4zwfosmyp6wddo7xvga4ybx<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">==</span>&gt; fftw@3.3.9 : has external module in <span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;cray-fftw&#39;</span><span style="color:#2c5dcd">]</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /opt/cray/pe/fftw/3.3.8.5/arm_thunderx2 <span style="color:#2c5dcd">(</span>external fftw-3.3.9-bwhmlzy6eik3ajeqobol527ww6s42vcn<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external autoconf-2.69-ememqml5q3hrhatuxevmdaeyuocnaqnk<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external automake-1.15.1-edymz5en4xwxwybe76d3535re7euacgl<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external bzip2-1.0.6-2fqflhapqghfvebfk5kvogp7g4xulquw<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/zlib-1.2.11-cx7za7abtiy5ezumlkfxsffzfxuj3xq6
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external libtool-2.4.6-utlxqeicabegxrlreyo3biinw7v4vswn<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external m4-1.4.18-og3jty4rquctsfxnxzwaufttw6bylag4<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external perl-5.26.1-lk6rvqusbsxtnumqre6ete2tvgxghgxx<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">==</span>&gt; mpich@7.7.16 : has external module in <span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;cray-mpich/7.7.16&#39;</span><span style="color:#2c5dcd">]</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /opt/cray/pe/mpt/7.7.16/gni/mpich-gnu/8.2 <span style="color:#2c5dcd">(</span>external mpich-7.7.16-ifjkd3v6a3hbtqmxekneycwh3wgrhc4k<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external pkg-config-0.29.2-ueeszbkidqgqjkns6gh6glgaxqws2x6r<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/gsl-2.6-vtuwngsrcrtb5uod2hbteacifcxich5c
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /usr <span style="color:#2c5dcd">(</span>external python-3.6.10-ifrblj537zg2nvq5baegeotax4h5dzm3<span style="color:#2c5dcd">)</span>
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/boost-1.76.0-qyx6cquksudterwipejedj3cbfmutmae
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/gmp-6.2.1-6wmrr6qexxutxbxctk5rq5d4qg5w2g3z
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/libxc-4.3.4-tur67qh7oxjbjjtmxmgi2hjty6dt4rue
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/py-setuptools-50.3.2-3rr4jqvqhjhjiclh2tkgl23x6uuj6aae
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/libint-2.6.0-3ym5vlezh7eisciqwhpeu7p74vqymata
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/py-cython-0.29.22-q4r6465kru3jpvf3ac2lliljzs4cb3an
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/plumed-2.6.2-vkrvu45ewjb3lvj5kf4uaj3x77pf3x6e
-<span style="color:#2c5dcd">[</span>+<span style="color:#2c5dcd">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/cp2k-8.1-tnejptyboq56nppfikolzk5emc6vf5sb
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas ^cray-libsci
+<span style="color:#ff79c6">==</span>&gt; Warning: Missing a <span style="color:#8be9fd;font-style:italic">source</span> id <span style="color:#ff79c6">for</span> cray-libsci@20.06.1
+<span style="color:#ff79c6">==</span>&gt; Warning: Missing a <span style="color:#8be9fd;font-style:italic">source</span> id <span style="color:#ff79c6">for</span> perl@5.26.1
+<span style="color:#ff79c6">==</span>&gt; Warning: Missing a <span style="color:#8be9fd;font-style:italic">source</span> id <span style="color:#ff79c6">for</span> mpich@7.7.16
+<span style="color:#ff79c6">==</span>&gt; cray-libsci@20.06.1 : has external module in <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;cray-libsci&#39;</span><span style="color:#ff79c6">]</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /opt/cray/pe/libsci/20.06.1/GNU/8.1/aarch64 <span style="color:#ff79c6">(</span>external cray-libsci-20.06.1-lcxhogmgo4zwfosmyp6wddo7xvga4ybx<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">==</span>&gt; fftw@3.3.9 : has external module in <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;cray-fftw&#39;</span><span style="color:#ff79c6">]</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /opt/cray/pe/fftw/3.3.8.5/arm_thunderx2 <span style="color:#ff79c6">(</span>external fftw-3.3.9-bwhmlzy6eik3ajeqobol527ww6s42vcn<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external autoconf-2.69-ememqml5q3hrhatuxevmdaeyuocnaqnk<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external automake-1.15.1-edymz5en4xwxwybe76d3535re7euacgl<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external bzip2-1.0.6-2fqflhapqghfvebfk5kvogp7g4xulquw<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/zlib-1.2.11-cx7za7abtiy5ezumlkfxsffzfxuj3xq6
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external libtool-2.4.6-utlxqeicabegxrlreyo3biinw7v4vswn<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external m4-1.4.18-og3jty4rquctsfxnxzwaufttw6bylag4<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external perl-5.26.1-lk6rvqusbsxtnumqre6ete2tvgxghgxx<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">==</span>&gt; mpich@7.7.16 : has external module in <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#39;cray-mpich/7.7.16&#39;</span><span style="color:#ff79c6">]</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /opt/cray/pe/mpt/7.7.16/gni/mpich-gnu/8.2 <span style="color:#ff79c6">(</span>external mpich-7.7.16-ifjkd3v6a3hbtqmxekneycwh3wgrhc4k<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external pkg-config-0.29.2-ueeszbkidqgqjkns6gh6glgaxqws2x6r<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/gsl-2.6-vtuwngsrcrtb5uod2hbteacifcxich5c
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /usr <span style="color:#ff79c6">(</span>external python-3.6.10-ifrblj537zg2nvq5baegeotax4h5dzm3<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/boost-1.76.0-qyx6cquksudterwipejedj3cbfmutmae
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/gmp-6.2.1-6wmrr6qexxutxbxctk5rq5d4qg5w2g3z
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/libxc-4.3.4-tur67qh7oxjbjjtmxmgi2hjty6dt4rue
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/py-setuptools-50.3.2-3rr4jqvqhjhjiclh2tkgl23x6uuj6aae
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/libint-2.6.0-3ym5vlezh7eisciqwhpeu7p74vqymata
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/py-cython-0.29.22-q4r6465kru3jpvf3ac2lliljzs4cb3an
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/plumed-2.6.2-vkrvu45ewjb3lvj5kf4uaj3x77pf3x6e
+<span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/cp2k-8.1-tnejptyboq56nppfikolzk5emc6vf5sb
 </code></pre></div><p>Success!</p>
 <p>In the end I don&rsquo;t think my OpenBLAS build was necessary, looks like libsci handled that too!</p>
 <p>My final Spack package spec:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack find -vdx cp2k
-<span style="color:#2c5dcd">==</span>&gt; <span style="color:#5918bb;font-weight:bold">1</span> installed package
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack find -vdx <span style="color:#8be9fd;font-style:italic">cp2k</span>
+<span style="color:#ff79c6">==</span>&gt; <span style="color:#bd93f9">1</span> installed package
 -- cray-cnl7-aarch64 / gcc@9.2.0 --------------------------------
-cp2k@8.1~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch<span style="color:#2c5dcd">=</span>none lmax<span style="color:#2c5dcd">=</span><span style="color:#5918bb;font-weight:bold">5</span> smm<span style="color:#2c5dcd">=</span>blas
+cp2k@8.1~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib <span style="color:#8be9fd;font-style:italic">cuda_arch</span><span style="color:#ff79c6">=</span>none <span style="color:#8be9fd;font-style:italic">lmax</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span> <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas
     cray-libsci@20.06.1~mpi~openmp+shared
-    fftw@3.3.9+mpi+openmp~pfft_patches precision<span style="color:#2c5dcd">=</span>double,float
-    libint@2.6.0+fortran tune<span style="color:#2c5dcd">=</span>cp2k-lmax-5
-        boost@1.76.0+atomic+chrono~clanglibcpp~container~context~coroutine+date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout+wave cxxstd<span style="color:#2c5dcd">=</span><span style="color:#5918bb;font-weight:bold">98</span> patches<span style="color:#2c5dcd">=</span>57a8401dee8f52b0342e0c8147a5b2db834e8d8f3fbcbbc5950016bd3e9e1ef0 visibility<span style="color:#2c5dcd">=</span>hidden
+    fftw@3.3.9+mpi+openmp~pfft_patches <span style="color:#8be9fd;font-style:italic">precision</span><span style="color:#ff79c6">=</span>double,float
+    libint@2.6.0+fortran <span style="color:#8be9fd;font-style:italic">tune</span><span style="color:#ff79c6">=</span>cp2k-lmax-5
+        boost@1.76.0+atomic+chrono~clanglibcpp~container~context~coroutine+date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout+wave <span style="color:#8be9fd;font-style:italic">cxxstd</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">98</span> <span style="color:#8be9fd;font-style:italic">patches</span><span style="color:#ff79c6">=</span>57a8401dee8f52b0342e0c8147a5b2db834e8d8f3fbcbbc5950016bd3e9e1ef0 <span style="color:#8be9fd;font-style:italic">visibility</span><span style="color:#ff79c6">=</span>hidden
             bzip2@1.0.6~debug~pic+shared
             zlib@1.2.11+optimize+pic+shared
         gmp@6.2.1
-    libxc@4.3.4~cuda+shared cuda_arch<span style="color:#2c5dcd">=</span>none
-    mpich@7.7.16~argobots+fortran+hwloc+hydra+libxml2+pci+romio~slurm~verbs+wrapperrpath device<span style="color:#2c5dcd">=</span>ch4 netmod<span style="color:#2c5dcd">=</span>ofi pmi<span style="color:#2c5dcd">=</span>pmi
-    plumed@2.6.2+gsl+mpi+shared arrayfire<span style="color:#2c5dcd">=</span>none optional_modules<span style="color:#2c5dcd">=</span>all
+    libxc@4.3.4~cuda+shared <span style="color:#8be9fd;font-style:italic">cuda_arch</span><span style="color:#ff79c6">=</span>none
+    mpich@7.7.16~argobots+fortran+hwloc+hydra+libxml2+pci+romio~slurm~verbs+wrapperrpath <span style="color:#8be9fd;font-style:italic">device</span><span style="color:#ff79c6">=</span>ch4 <span style="color:#8be9fd;font-style:italic">netmod</span><span style="color:#ff79c6">=</span>ofi <span style="color:#8be9fd;font-style:italic">pmi</span><span style="color:#ff79c6">=</span>pmi
+    plumed@2.6.2+gsl+mpi+shared <span style="color:#8be9fd;font-style:italic">arrayfire</span><span style="color:#ff79c6">=</span>none <span style="color:#8be9fd;font-style:italic">optional_modules</span><span style="color:#ff79c6">=</span>all
         gsl@2.6~external-cblas
 </code></pre></div><h2 id="playtime">Playtime</h2>
 <p>Now with Spack loaded, the simplest way to load this build of cp2k into my environment is with the following:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack load cp2k@8.1+mpi+openmp+plumed
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack load cp2k@8.1+mpi+openmp+plumed
 </code></pre></div><p>I could instead load <code>cp2k</code> or <code>cp2k@8.1</code> and Spack will check against all the builds and try find match. Right now both of these commands will succeed, since I only have one build. It is best to be more specific, so I specifically loaded cp2k version 8.1 with MPI, OpenMP &amp; Plumed support.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; which cp2k
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; which cp2k
 cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 &gt; which cp2k.popt
 /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/cp2k-8.1-tnejptyboq56nppfikolzk5emc6vf5sb/bin/cp2k.popt
@@ -654,6 +656,10 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -680,7 +686,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

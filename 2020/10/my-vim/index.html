@@ -88,7 +88,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2020/10/my-vim/",
-    "headline": "my Vim","wordCount": "464",
+    "headline": "my Vim","wordCount": "528",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -323,6 +323,8 @@
 
       
       
+      
+        
        
 
       
@@ -342,96 +344,96 @@
 <p>First off, there are some code sections below which will use Vim plugins if it can detect them. I chose to use the Pathogen plugin system as it was the most Plug &lsquo;n&rsquo; Play when I first configured Vim.</p>
 <p>I know Vim 8 has a native plugin system but that doesn&rsquo;t help if you&rsquo;re stuck with an older version of Vim.</p>
 <p>The plugins configured below include <a href="https://github.com/tpope/vim-fugitive" target="_blank">Fugitive</a>, which lists the current git repository&rsquo;s state in the status bar &amp; <a href="https://github.com/vim-syntastic/syntastic" target="_blank">Syntastic</a> which flags up syntax errors when saving.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-vim" data-lang="vim"><span style="color:#0080ff;font-style:italic">&#34; Joe&#39;s .vimrc</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34; Maintainer:   Joe Heaton</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34; Version:      3.0</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set encoding=utf<span style="color:#5918bb;font-weight:bold">-8</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Behaviour</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>filetype plugin on  <span style="color:#0080ff;font-style:italic">&#34; Load plugins with support for specific filetypes</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>syntax on           <span style="color:#0080ff;font-style:italic">&#34; Syntax highlighting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set tabstop=<span style="color:#5918bb;font-weight:bold">4</span> expandtab shiftwidth=<span style="color:#5918bb;font-weight:bold">4</span> softtabstop=<span style="color:#5918bb;font-weight:bold">4</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set formatoptions-=cro  <span style="color:#0080ff;font-style:italic">&#34; Disable automatic line commenting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set linebreak       <span style="color:#0080ff;font-style:italic">&#34; Linebreak long lines</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set smartcase       <span style="color:#0080ff;font-style:italic">&#34; Enable case-sensitivity if string has capitalisation</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set ignorecase      <span style="color:#0080ff;font-style:italic">&#34; Ignore case when searching with lowercase</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set incsearch       <span style="color:#0080ff;font-style:italic">&#34; Move cursor to matching strings as you type into search</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34;set hlsearch        &#34; Highlight search results</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set history=<span style="color:#5918bb;font-weight:bold">1000</span>    <span style="color:#0080ff;font-style:italic">&#34; Remember more commands and search history</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set tabpagemax=<span style="color:#5918bb;font-weight:bold">30</span>   <span style="color:#0080ff;font-style:italic">&#34; Maximum number of tabs</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set scrolloff=<span style="color:#5918bb;font-weight:bold">3</span>     <span style="color:#0080ff;font-style:italic">&#34; Minimum visible lines around cursor</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set number          <span style="color:#0080ff;font-style:italic">&#34; Show line numbers (set number)</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34;set number rnu      &#34; Hybrid line numbers on (set number randomnumber)</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set ruler           <span style="color:#0080ff;font-style:italic">&#34; Show column/row number in status bar</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set autoread        <span style="color:#0080ff;font-style:italic">&#34; Reads file automatically if modified outside of buffer</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set wildmenu        <span style="color:#0080ff;font-style:italic">&#34; Visual autocomplete</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set wildignore=*.swp,*.pyc  <span style="color:#0080ff;font-style:italic">&#34; Ignore files</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set shell=<span style="color:#0c6">/usr/</span>bin/env\ bash    <span style="color:#0080ff;font-style:italic">&#34; Shell for Vim terminal</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Delete comment character when joining commented lines</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> v:version &gt; <span style="color:#5918bb;font-weight:bold">703</span> || v:version == <span style="color:#5918bb;font-weight:bold">703</span> &amp;&amp; has(<span style="color:#0c6">&#34;patch541&#34;</span>)<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  set formatoptions+=j<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Appearance</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set t_Co=<span style="color:#5918bb;font-weight:bold">256</span>        <span style="color:#0080ff;font-style:italic">&#34; Set terminal 256-bit color</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>colorscheme elflord    <span style="color:#0080ff;font-style:italic">&#34; Set theme (Built-in)</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34;set mouse=          &#34; Disable mouse</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Pathogen pkg manager</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> has(<span style="color:#0c6">&#39;pathogen&#39;</span>)<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  execute pathogen#infect()<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34;&#34; Statusline</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set laststatus=<span style="color:#5918bb;font-weight:bold">2</span>      <span style="color:#0080ff;font-style:italic">&#34; Always show statusline</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline=%f     <span style="color:#0080ff;font-style:italic">&#34; Path to the file</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=\     <span style="color:#0080ff;font-style:italic">&#34; Separator</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> has(<span style="color:#0c6">&#39;fugitive&#39;</span>)<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  set statusline+=%{fugitive#statusline()}      <span style="color:#0080ff;font-style:italic">&#34; Git current branch</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%*    <span style="color:#0080ff;font-style:italic">&#34; Normal formatting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=\     <span style="color:#0080ff;font-style:italic">&#34; Separator</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> has(<span style="color:#0c6">&#39;syntastic&#39;</span>)<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  set statusline+=%#warningmsg#                 <span style="color:#0080ff;font-style:italic">&#34; Syntastic warning</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  set statusline+=%{SyntasticStatuslineFlag()}  <span style="color:#0080ff;font-style:italic">&#34; Syntastic warning</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%*    <span style="color:#0080ff;font-style:italic">&#34; Normal formatting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%=    <span style="color:#0080ff;font-style:italic">&#34; Switch to the right side</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%#error#  <span style="color:#0080ff;font-style:italic">&#34; Formatting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%h    <span style="color:#0080ff;font-style:italic">&#34; Help file flag</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%m    <span style="color:#0080ff;font-style:italic">&#34; Modified flag</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%r    <span style="color:#0080ff;font-style:italic">&#34; Read only flag</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%*    <span style="color:#0080ff;font-style:italic">&#34; Normal formatting</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%c,   <span style="color:#0080ff;font-style:italic">&#34; Cursor column</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=%l<span style="color:#0c6">/%L &#34; Cursor line/</span>Total lines<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>set statusline+=\ %P  <span style="color:#0080ff;font-style:italic">&#34; Percent through file</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>au BufRead,BufNewFile *.j2      set ft=jinja<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>au BufRead,BufNewFile *.conf    set ft=conf<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34; Spelling check language</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34;au BufRead,BufNewFile *.{txt,md,rst,tex} set spell spelllang=en_gb</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Plugins</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">&#34;&#34; Syntastic</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> has(<span style="color:#0c6">&#39;syntastic&#39;</span>)<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> g:syntastic_quiet_messages = { <span style="color:#0c6">&#34;type&#34;</span>: <span style="color:#0c6">&#34;style&#34;</span> }  <span style="color:#0080ff;font-style:italic">&#34; Disable style checkers</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> g:syntastic_check_on_open = <span style="color:#5918bb;font-weight:bold">1</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> g:syntastic_auto_jump = <span style="color:#5918bb;font-weight:bold">2</span>   <span style="color:#0080ff;font-style:italic">&#34; Jump cursor to first error</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> g:syntastic_python_pylint_args = <span style="color:#0c6">&#39;-E&#39;</span>   <span style="color:#0080ff;font-style:italic">&#34; Only check for errors</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  <span style="color:#2c5dcd;font-weight:bold">let</span> g:syntastic_aggregate_errors = <span style="color:#5918bb;font-weight:bold">1</span>    <span style="color:#0080ff;font-style:italic">&#34; Run all checkers before showing results</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#0080ff;font-style:italic">
-</span><span style="color:#0080ff;font-style:italic">&#34; Local additions</span><span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">if</span> !empty(glob(<span style="color:#0c6">&#34;~/.vimrc.local&#34;</span>))<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span>  source ~/.vimrc.local<span style="color:#fff;background-color:#c00">
-</span><span style="color:#fff;background-color:#c00"></span><span style="color:#2c5dcd;font-weight:bold">endif</span><span style="color:#fff;background-color:#c00">
-</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-vim" data-lang="vim"><span style="color:#6272a4">&#34; Joe&#39;s .vimrc</span>
+<span style="color:#6272a4">&#34; Maintainer:   Joe Heaton</span>
+<span style="color:#6272a4">&#34; Version:      3.0</span>
+
+set encoding=utf<span style="color:#bd93f9">-8</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Behaviour</span>
+filetype plugin on  <span style="color:#6272a4">&#34; Load plugins with support for specific filetypes</span>
+syntax on           <span style="color:#6272a4">&#34; Syntax highlighting</span>
+set tabstop=<span style="color:#bd93f9">4</span> expandtab shiftwidth=<span style="color:#bd93f9">4</span> softtabstop=<span style="color:#bd93f9">4</span>
+set formatoptions-=cro  <span style="color:#6272a4">&#34; Disable automatic line commenting</span>
+set linebreak       <span style="color:#6272a4">&#34; Linebreak long lines</span>
+set smartcase       <span style="color:#6272a4">&#34; Enable case-sensitivity if string has capitalisation</span>
+set ignorecase      <span style="color:#6272a4">&#34; Ignore case when searching with lowercase</span>
+set incsearch       <span style="color:#6272a4">&#34; Move cursor to matching strings as you type into search</span>
+<span style="color:#6272a4">&#34;set hlsearch        &#34; Highlight search results</span>
+set history=<span style="color:#bd93f9">1000</span>    <span style="color:#6272a4">&#34; Remember more commands and search history</span>
+set tabpagemax=<span style="color:#bd93f9">30</span>   <span style="color:#6272a4">&#34; Maximum number of tabs</span>
+set scrolloff=<span style="color:#bd93f9">3</span>     <span style="color:#6272a4">&#34; Minimum visible lines around cursor</span>
+set number          <span style="color:#6272a4">&#34; Show line numbers (set number)</span>
+<span style="color:#6272a4">&#34;set number rnu      &#34; Hybrid line numbers on (set number randomnumber)</span>
+set ruler           <span style="color:#6272a4">&#34; Show column/row number in status bar</span>
+set autoread        <span style="color:#6272a4">&#34; Reads file automatically if modified outside of buffer</span>
+set wildmenu        <span style="color:#6272a4">&#34; Visual autocomplete</span>
+set wildignore=*.swp,*.pyc  <span style="color:#6272a4">&#34; Ignore files</span>
+set shell=<span style="color:#f1fa8c">/usr/</span>bin/env\ bash    <span style="color:#6272a4">&#34; Shell for Vim terminal</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Delete comment character when joining commented lines</span>
+<span style="color:#ff79c6">if</span> v:version &gt; <span style="color:#bd93f9">703</span> || v:version == <span style="color:#bd93f9">703</span> &amp;&amp; has(<span style="color:#f1fa8c">&#34;patch541&#34;</span>)
+  set formatoptions+=j
+<span style="color:#ff79c6">endif</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Appearance</span>
+set t_Co=<span style="color:#bd93f9">256</span>        <span style="color:#6272a4">&#34; Set terminal 256-bit color</span>
+colorscheme elflord    <span style="color:#6272a4">&#34; Set theme (Built-in)</span>
+<span style="color:#6272a4">&#34;set mouse=          &#34; Disable mouse</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Pathogen pkg manager</span>
+<span style="color:#ff79c6">if</span> has(<span style="color:#f1fa8c">&#39;pathogen&#39;</span>)
+  execute pathogen#infect()
+<span style="color:#ff79c6">endif</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34;&#34; Statusline</span>
+set laststatus=<span style="color:#bd93f9">2</span>      <span style="color:#6272a4">&#34; Always show statusline</span>
+
+set statusline=%f     <span style="color:#6272a4">&#34; Path to the file</span>
+set statusline+=\     <span style="color:#6272a4">&#34; Separator</span>
+<span style="color:#ff79c6">if</span> has(<span style="color:#f1fa8c">&#39;fugitive&#39;</span>)
+  set statusline+=%{fugitive#statusline()}      <span style="color:#6272a4">&#34; Git current branch</span>
+<span style="color:#ff79c6">endif</span>
+set statusline+=%*    <span style="color:#6272a4">&#34; Normal formatting</span>
+set statusline+=\     <span style="color:#6272a4">&#34; Separator</span>
+<span style="color:#ff79c6">if</span> has(<span style="color:#f1fa8c">&#39;syntastic&#39;</span>)
+  set statusline+=%#warningmsg#                 <span style="color:#6272a4">&#34; Syntastic warning</span>
+  set statusline+=%{SyntasticStatuslineFlag()}  <span style="color:#6272a4">&#34; Syntastic warning</span>
+<span style="color:#ff79c6">endif</span>
+set statusline+=%*    <span style="color:#6272a4">&#34; Normal formatting</span>
+
+set statusline+=%=    <span style="color:#6272a4">&#34; Switch to the right side</span>
+
+set statusline+=%#error#  <span style="color:#6272a4">&#34; Formatting</span>
+set statusline+=%h    <span style="color:#6272a4">&#34; Help file flag</span>
+set statusline+=%m    <span style="color:#6272a4">&#34; Modified flag</span>
+set statusline+=%r    <span style="color:#6272a4">&#34; Read only flag</span>
+
+set statusline+=%*    <span style="color:#6272a4">&#34; Normal formatting</span>
+set statusline+=%c,   <span style="color:#6272a4">&#34; Cursor column</span>
+set statusline+=%l<span style="color:#f1fa8c">/%L &#34; Cursor line/</span>Total lines
+set statusline+=\ %P  <span style="color:#6272a4">&#34; Percent through file</span>
+
+au BufRead,BufNewFile *.j2      set ft=jinja
+au BufRead,BufNewFile *.conf    set ft=conf
+<span style="color:#6272a4">&#34; Spelling check language</span>
+<span style="color:#6272a4">&#34;au BufRead,BufNewFile *.{txt,md,rst,tex} set spell spelllang=en_gb</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Plugins</span>
+<span style="color:#6272a4">&#34;&#34; Syntastic</span>
+<span style="color:#ff79c6">if</span> has(<span style="color:#f1fa8c">&#39;syntastic&#39;</span>)
+  <span style="color:#ff79c6">let</span> g:syntastic_quiet_messages = { <span style="color:#f1fa8c">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;style&#34;</span> }  <span style="color:#6272a4">&#34; Disable style checkers</span>
+  <span style="color:#ff79c6">let</span> g:syntastic_check_on_open = <span style="color:#bd93f9">1</span>
+  <span style="color:#ff79c6">let</span> g:syntastic_auto_jump = <span style="color:#bd93f9">2</span>   <span style="color:#6272a4">&#34; Jump cursor to first error</span>
+  <span style="color:#ff79c6">let</span> g:syntastic_python_pylint_args = <span style="color:#f1fa8c">&#39;-E&#39;</span>   <span style="color:#6272a4">&#34; Only check for errors</span>
+  <span style="color:#ff79c6">let</span> g:syntastic_aggregate_errors = <span style="color:#bd93f9">1</span>    <span style="color:#6272a4">&#34; Run all checkers before showing results</span>
+<span style="color:#ff79c6">endif</span>
+<span style="color:#6272a4">
+</span><span style="color:#6272a4">&#34; Local additions</span>
+<span style="color:#ff79c6">if</span> !empty(glob(<span style="color:#f1fa8c">&#34;~/.vimrc.local&#34;</span>))
+  source ~/.vimrc.local
+<span style="color:#ff79c6">endif</span>
+</code></pre></div>
 
     
   </section>
@@ -560,6 +562,10 @@
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -586,7 +592,7 @@
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

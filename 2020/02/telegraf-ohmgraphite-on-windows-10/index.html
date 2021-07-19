@@ -323,6 +323,8 @@
 
       
       
+      
+        
        
 
       
@@ -339,24 +341,24 @@
     
 
     <p>Download the Telegraf client from <a href="https://www.influxdata.com" target="_blank">influxdata.com</a>, extract the telegraf directory to a sensible place and edit <code>telegraf.conf</code>.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-diff" data-lang="diff">  ## Log at debug level.
-<span style="background-color:#fcc">- debug = false
-</span><span style="background-color:#fcc"></span><span style="background-color:#cfc">+ debug = false
-</span><span style="background-color:#cfc"></span>  ## Log only error level messages.
-<span style="background-color:#fcc">- # quiet = false
-</span><span style="background-color:#fcc"></span><span style="background-color:#cfc">+  quiet = true
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-diff" data-lang="diff">  ## Log at debug level.
+<span style="color:#8b080b">- debug = false
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+ debug = false
+</span><span style="font-weight:bold"></span>  ## Log only error level messages.
+<span style="color:#8b080b">- # quiet = false
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+  quiet = true
 </span></code></pre></div><p>Add <code>urls = [&quot;http://Your_Influx_Server:8086&quot;]</code> in the <code>[[outputs.influxdb]]</code> section.</p>
 <p>Now to install the service, convieniently Telegraf can handle this! Open Powershell, navigate to the Telegraf directory and run <code>.\telegraf.exe --server install --config &quot;C:\Full_Path_To_Telegraf\telegraf.conf&quot;</code>. The service can be enabled in the Services app.</p>
 <p>InfluxDB works out of the box, just install it. It should be run on a non-Windows host, any hardware will do, preferably with fast storage so bulk reads are quick, relevant soon.</p>
 <p>Use the <code>influx</code> client to connect locally to InfluxDB and run <code>CREATE DATABASE ohm;</code>.</p>
 <p>Download OhmGraphite, Ohm standing for Open Hardware Monitor, from <a href="https://github.com/nickbabcock/OhmGraphite" target="_blank">OhmGraphite</a>, extract to a similar location as telegraf.</p>
 <p>Edit <code>OhmGraphite.exe.config</code>, replace the contents of <code>&lt;appSettings&gt;&lt;/appSettings&gt;</code> according to the OhmGraphite <a href="https://github.com/nickbabcock/OhmGraphite#influxdb-configuration" target="_blank">ReadMe</a> to include:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-xml" data-lang="xml">    <span style="color:#2c5dcd;font-weight:bold">&lt;add</span> <span style="color:#2c5dcd;font-style:italic">key=</span><span style="color:#0c6">&#34;type&#34;</span> <span style="color:#2c5dcd;font-style:italic">value=</span><span style="color:#0c6">&#34;influxdb&#34;</span> <span style="color:#2c5dcd;font-weight:bold">/&gt;</span>
-    <span style="color:#2c5dcd;font-weight:bold">&lt;add</span> <span style="color:#2c5dcd;font-style:italic">key=</span><span style="color:#0c6">&#34;interval&#34;</span> <span style="color:#2c5dcd;font-style:italic">value=</span><span style="color:#0c6">&#34;10&#34;</span> <span style="color:#2c5dcd;font-weight:bold">/&gt;</span>
-    <span style="color:#2c5dcd;font-weight:bold">&lt;add</span> <span style="color:#2c5dcd;font-style:italic">key=</span><span style="color:#0c6">&#34;influx_address&#34;</span> <span style="color:#2c5dcd;font-style:italic">value=</span><span style="color:#0c6">&#34;http://Your_Influx_Server:8086&#34;</span> <span style="color:#2c5dcd;font-weight:bold">/&gt;</span>
-    <span style="color:#2c5dcd;font-weight:bold">&lt;add</span> <span style="color:#2c5dcd;font-style:italic">key=</span><span style="color:#0c6">&#34;influx_db&#34;</span> <span style="color:#2c5dcd;font-style:italic">value=</span><span style="color:#0c6">&#34;ohm&#34;</span> <span style="color:#2c5dcd;font-weight:bold">/&gt;</span>
-<span style="color:#0080ff;font-style:italic">&lt;!--&lt;add key=&#34;influx_user&#34; value=&#34;myuser&#34; /&gt;
-</span><span style="color:#0080ff;font-style:italic">    &lt;add key=&#34;influx_password&#34; value=&#34;mypassword&#34; /&gt;--&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-xml" data-lang="xml">    <span style="color:#ff79c6">&lt;add</span> <span style="color:#50fa7b">key=</span><span style="color:#f1fa8c">&#34;type&#34;</span> <span style="color:#50fa7b">value=</span><span style="color:#f1fa8c">&#34;influxdb&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+    <span style="color:#ff79c6">&lt;add</span> <span style="color:#50fa7b">key=</span><span style="color:#f1fa8c">&#34;interval&#34;</span> <span style="color:#50fa7b">value=</span><span style="color:#f1fa8c">&#34;10&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+    <span style="color:#ff79c6">&lt;add</span> <span style="color:#50fa7b">key=</span><span style="color:#f1fa8c">&#34;influx_address&#34;</span> <span style="color:#50fa7b">value=</span><span style="color:#f1fa8c">&#34;http://Your_Influx_Server:8086&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+    <span style="color:#ff79c6">&lt;add</span> <span style="color:#50fa7b">key=</span><span style="color:#f1fa8c">&#34;influx_db&#34;</span> <span style="color:#50fa7b">value=</span><span style="color:#f1fa8c">&#34;ohm&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+<span style="color:#6272a4">&lt;!--&lt;add key=&#34;influx_user&#34; value=&#34;myuser&#34; /&gt;
+</span><span style="color:#6272a4">    &lt;add key=&#34;influx_password&#34; value=&#34;mypassword&#34; /&gt;--&gt;</span>
 </code></pre></div><p>Run <code>OhmGraphite.exe</code> normally to confirm it works, <code>^C</code> to stop. Finally run <code>.\OhmGraphite.exe install</code> to install the service, start it using the Services app.</p>
 <p>If you had any trouble following these instructions, be sure to check the <a href="https://github.com/nickbabcock/OhmGraphite" target="_blank">project page</a>.</p>
 <p>You can visualise this data using the <a href="https://grafana.com/grafana/dashboards/11601" target="_blank">Grafana dashboard provided by the project</a>!</p>
@@ -488,6 +490,10 @@
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -514,7 +520,7 @@
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

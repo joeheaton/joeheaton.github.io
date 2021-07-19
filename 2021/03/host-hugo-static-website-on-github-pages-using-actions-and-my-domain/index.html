@@ -19,7 +19,7 @@ My existing workflow combines three repositories to build the website:
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-10T12:39:27&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-03-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -99,7 +99,7 @@ My existing workflow combines three repositories to build the website:
     },
     "datePublished": "2021-03-12T00:00:00Z",
     
-    "dateModified": "2021-07-10T12:39:27.010779302Z",
+    "dateModified": "2021-03-12T00:00:00Z",
     "keywords": "Joe Heaton, developer, automation, github, linux, webdev",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -341,26 +341,11 @@ My existing workflow combines three repositories to build the website:
 
       
       
+      
+        
        
 
       
-      
-        
-        
-          
-          
-            
-           
-          
-          <div>
-            <span>Updated</span>
-            <time datetime="2021-07-10T12:39:27Z">
-              10th
-              Jul
-              2021
-            </time>
-          </div>
-        
       
   </div>
 
@@ -384,13 +369,13 @@ My existing workflow combines three repositories to build the website:
 <h2 id="github-actions">GitHub Actions</h2>
 <p>GitHub Actions are defined in YAML which defines the steps to run against your repo. Github hosts a <a href="https://github.com/marketplace">library</a> of official &amp; community Actions with configurable behaviour, these are useful for common operations such as checkout a git branch, etc.</p>
 <p>I used <code>actions/checkout</code>,  <code>peaceiris/actions-hugo</code> &amp; <code>peaceiris/actions-gh-pages</code>.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">name: github pages
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">name: github pages
 on:
   push:
     branches:
       - main
 </code></pre></div><p>Here we define what behaviour the Action triggers for, I specified Push, which means the Action is triggered for every <code>git push origin main</code> that hits my repository. Larger projects will probably want to set this to <code>pull_request</code> or one of the <a href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">many other events</a>.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">jobs:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -401,7 +386,7 @@ on:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 </code></pre></div><p>My build process is fairly simple so it&rsquo;s all grouped in one job called &ldquo;deploy&rdquo;. All Actions run in a container, which means we have a choice of Operating System. I don&rsquo;t have strict requirements so I set this to <code>ubuntu-latest</code>.</p>
 <p><code>steps</code> is where the build process is defined; the first step is to checkout the repo this Action is attached to. In my case this is the <code>hugs</code> repo, and I need to clone each submodule fully.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Checkout joeheaton.github.io to ./public/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Checkout joeheaton.github.io to ./public/
   uses: actions/checkout@v2
   with:
     repository: joeheaton/joeheaton.github.io
@@ -409,13 +394,13 @@ on:
     path: ./public
     fetch-depth: 0
 </code></pre></div><p>I clone another repo, this time it&rsquo;s the <code>joeheaton.github.io</code> that will host the end result, I clone this into <code>./public</code>, this means when hugo builds my website it will overwrite the contents of <code>joeheaton.github.io</code>, which I can then commit and push.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Setup Hugo 🧪
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Setup Hugo 🧪
   uses: peaceiris/actions-hugo@v2
   with:
     hugo-version: &#39;0.81.0&#39;
     # extended: true
 </code></pre></div><p>This is all that&rsquo;s needed to install any version of hugo thanks to the <code>peaceiris/actions-hugo</code> Action.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Prepare environment 🧪
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Prepare environment 🧪
   run: |
     sudo apt-get install -y sassc
 
@@ -423,7 +408,7 @@ on:
   run: |
     SITE=joeheaton.github.io make css hugo-prod
 </code></pre></div><p>Since I defined <code>runs-on: ubuntu-latest</code> at the top of my YAML, I can fulfil one of my dependcies using Ubuntu&rsquo;s package manager, after that I use my Makefile from <code>hugs</code> to invoke <code>sassc</code> &amp; <code>hugo</code> to build the static site! These commands get executed in the container using the <code>run</code> attribute, we can even use <code>sudo</code> to run as root if needed.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Deploy 📦
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">- name: Deploy 📦
   uses: peaceiris/actions-gh-pages@v3
   with:
     deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -580,6 +565,10 @@ on:
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -606,7 +595,7 @@ on:
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

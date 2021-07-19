@@ -369,7 +369,7 @@ blockquote {
       .blog-post.single #TableOfContents ul li:before,
       .sidebar-blob.single #TableOfContents ul li:before,
       .twitter-timeline.single #TableOfContents ul li:before {
-        content: counters(item, ".") " ";
+        content: counters(item, ".") ". ";
         counter-increment: item; }
   .blog-post.single .footer,
   .sidebar-blob.single .footer,

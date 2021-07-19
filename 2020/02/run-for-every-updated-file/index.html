@@ -316,6 +316,8 @@
 
       
       
+      
+        
        
 
       
@@ -332,19 +334,19 @@
     
 
     <p>Using <code>inotifywait</code> to watch for file changes recursively in the current directory. I use <code>$CHECK</code> to ignore unwanted directories and filetypes.</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#0080ff">#!/bin/bash
-</span><span style="color:#0080ff"></span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">#!/bin/bash
+</span><span style="color:#ff79c6"></span>
 inotifywait -r -e close_write,moved_to,create -m . |
-<span style="color:#2c5dcd;font-weight:bold">while</span> <span style="color:#5918bb;font-weight:bold">read</span> -r DIR EVENT FILE; <span style="color:#2c5dcd;font-weight:bold">do</span>
-    CHECK<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#34;</span><span style="color:#2c5dcd;font-weight:bold">$(</span> <span style="color:#5918bb;font-weight:bold">echo</span> <span style="color:#0c6">&#34;</span><span style="color:#0c6">${</span>DIR<span style="color:#0c6">}${</span>FILE<span style="color:#0c6">}</span><span style="color:#0c6">&#34;</span> | egrep -v <span style="color:#0c6">&#39;^\./(\.git|\.sass-cache|node_modules|public|static)&#39;</span> | egrep -v <span style="color:#0c6">&#39;\.(tmp|css)$&#39;</span> <span style="color:#2c5dcd;font-weight:bold">)</span><span style="color:#0c6">&#34;</span>
+<span style="color:#ff79c6">while</span> <span style="color:#8be9fd;font-style:italic">read</span> -r DIR EVENT FILE; <span style="color:#ff79c6">do</span>
+    <span style="color:#8be9fd;font-style:italic">CHECK</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">$(</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">FILE</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> | egrep -v <span style="color:#f1fa8c">&#39;^\./(\.git|\.sass-cache|node_modules|public|static)&#39;</span> | egrep -v <span style="color:#f1fa8c">&#39;\.(tmp|css)$&#39;</span> <span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span>
 
-    <span style="color:#2c5dcd;font-weight:bold">if</span> <span style="color:#2c5dcd">[</span> <span style="color:#0c6">&#34;</span>$CHECK<span style="color:#0c6">&#34;</span> <span style="color:#2c5dcd">]</span>; <span style="color:#2c5dcd;font-weight:bold">then</span>
-        <span style="color:#5918bb;font-weight:bold">echo</span> <span style="color:#0c6">&#34;Change in </span><span style="color:#0c6">${</span>DIR<span style="color:#0c6">}${</span>FILE<span style="color:#0c6">}</span><span style="color:#0c6">&#34;</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$CHECK</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span>; <span style="color:#ff79c6">then</span>
+        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Change in </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">FILE</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
 
-        <span style="color:#0080ff;font-style:italic"># This is what gets run</span>
+        <span style="color:#6272a4"># This is what gets run</span>
         make dev
-    <span style="color:#2c5dcd;font-weight:bold">fi</span>
-<span style="color:#2c5dcd;font-weight:bold">done</span>
+    <span style="color:#ff79c6">fi</span>
+<span style="color:#ff79c6">done</span>
 </code></pre></div><p>Install <code>inotify-tools</code> on both Debian and CentOS.</p>
 
     
@@ -474,6 +476,10 @@ inotifywait -r -e close_write,moved_to,create -m . |
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -500,7 +506,7 @@ inotifywait -r -e close_write,moved_to,create -m . |
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

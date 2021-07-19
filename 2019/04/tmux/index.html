@@ -316,6 +316,8 @@
 
       
       
+      
+        
        
 
       
@@ -335,16 +337,16 @@
 <p>My experimentation uses tmux 1.8, the version included in RHEL7, but I will include configuration options for later versions if I find any.</p>
 <h2 id="gotchas">Gotchas</h2>
 <p>It seems a fair bit of configuration is needed in order to pass key combinations such as <code>Ctrl+Arrow</code> through, that example can be solved by:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#0080ff;font-style:italic"># File: .vimrc</span>
-<span style="color:#0c6">&#34; Tmux workaround
-</span><span style="color:#0c6">if &amp;term =~ &#39;^screen&#39;
-</span><span style="color:#0c6">    &#34;</span> tmux will send xterm-style keys when xterm-keys option is on
-    execute <span style="color:#0c6">&#34;set &lt;xUp&gt;=\e[1;*A&#34;</span>
-    execute <span style="color:#0c6">&#34;set &lt;xDown&gt;=\e[1;*B&#34;</span>
-    execute <span style="color:#0c6">&#34;set &lt;xRight&gt;=\e[1;*C&#34;</span>
-    execute <span style="color:#0c6">&#34;set &lt;xLeft&gt;=\e[1;*D&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># File: .vimrc</span>
+<span style="color:#f1fa8c">&#34; Tmux workaround
+</span><span style="color:#f1fa8c">if &amp;term =~ &#39;^screen&#39;
+</span><span style="color:#f1fa8c">    &#34;</span> tmux will send xterm-style keys when xterm-keys option is on
+    execute <span style="color:#f1fa8c">&#34;set &lt;xUp&gt;=\e[1;*A&#34;</span>
+    execute <span style="color:#f1fa8c">&#34;set &lt;xDown&gt;=\e[1;*B&#34;</span>
+    execute <span style="color:#f1fa8c">&#34;set &lt;xRight&gt;=\e[1;*C&#34;</span>
+    execute <span style="color:#f1fa8c">&#34;set &lt;xLeft&gt;=\e[1;*D&#34;</span>
 endif
-</code></pre></div><div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#0080ff;font-style:italic"># File: .tmux.conf</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># File: .tmux.conf</span>
 setw -g xterm-keys on
 </code></pre></div><h2 id="text">Text</h2>
 <p><code>Shift + Mouse drag</code> to highlight text while mouse mode is enabled</p>
@@ -483,6 +485,10 @@ setw -g xterm-keys on
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -509,7 +515,7 @@ setw -g xterm-keys on
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

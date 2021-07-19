@@ -318,6 +318,8 @@ This involved creating a small toggle function to turn the feature on and off, b
 
       
       
+      
+        
        
 
       
@@ -337,12 +339,12 @@ This involved creating a small toggle function to turn the feature on and off, b
 <p>This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&rsquo;t enough I didn&rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</p>
 <p>A last bit of work to do as there was a flash of unstyled text on-load, this is because the function was run after the page was finished loading, it is possible to run scripts before the page is fully loaded, now the flash was brief enough to ignore.</p>
 <p>A new Javascript feature I used was:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#2c5dcd;font-weight:bold">if</span> ([<span style="color:#0c6">&#34;interactive&#34;</span>, <span style="color:#0c6">&#34;complete&#34;</span>].includes(<span style="color:#5918bb;font-weight:bold">document</span>.readyState)) {
-        <span style="color:#0080ff;font-style:italic">// do things
-</span><span style="color:#0080ff;font-style:italic"></span>    } <span style="color:#2c5dcd;font-weight:bold">else</span> {
-        <span style="color:#5918bb;font-weight:bold">document</span>.addEventListener(<span style="color:#0c6">&#39;DOMContentLoaded&#39;</span>, <span style="color:#2c5dcd;font-weight:bold">function</span>() {
-            <span style="color:#0080ff;font-style:italic">// do things
-</span><span style="color:#0080ff;font-style:italic"></span>        });
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#ff79c6">if</span> ([<span style="color:#f1fa8c">&#34;interactive&#34;</span>, <span style="color:#f1fa8c">&#34;complete&#34;</span>].includes(<span style="color:#8be9fd;font-style:italic">document</span>.readyState)) {
+        <span style="color:#6272a4">// do things
+</span><span style="color:#6272a4"></span>    } <span style="color:#ff79c6">else</span> {
+        <span style="color:#8be9fd;font-style:italic">document</span>.addEventListener(<span style="color:#f1fa8c">&#39;DOMContentLoaded&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
+            <span style="color:#6272a4">// do things
+</span><span style="color:#6272a4"></span>        });
    }
 }
 </code></pre></div><p>Pages go through readyStates loading, interactive and finish in complete. The interactive state means there are assets still loading but we can do things like <code>addEventListener</code>.</p>
@@ -475,6 +477,10 @@ This involved creating a small toggle function to turn the feature on and off, b
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -501,7 +507,7 @@ This involved creating a small toggle function to turn the feature on and off, b
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             

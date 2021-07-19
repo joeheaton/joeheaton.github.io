@@ -19,7 +19,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-10T12:39:27&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -99,7 +99,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
     },
     "datePublished": "2021-04-20T00:00:00Z",
     
-    "dateModified": "2021-07-10T12:39:27.010779302Z",
+    "dateModified": "2021-04-20T00:00:00Z",
     "keywords": "Joe Heaton, developer, automation, github, hugo",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -334,26 +334,11 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
 
       
       
+      
+        
        
 
       
-      
-        
-        
-          
-          
-            
-           
-          
-          <div>
-            <span>Updated</span>
-            <time datetime="2021-07-10T12:39:27Z">
-              10th
-              Jul
-              2021
-            </time>
-          </div>
-        
       
   </div>
 
@@ -368,7 +353,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
 
     <p>Collaborative websites need to be forked, but if you set a hostname variable, such as <code>baseURL</code> in Hugo, the forked website will load resources from the original.. Not ideal.</p>
 <p>The fix I applied to my GitHub Actions CI to work around this:</p>
-<div class="highlight"><pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">jobs:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">jobs:
   deploy:
     runs-on: ubuntu-latest
     defaults:
@@ -377,7 +362,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
     steps:
       - name: Build 🔨
         run: |
-          hugo --baseURL https://<span style="color:#0c6">${</span>GITHUB_REPOSITORY%%/*<span style="color:#0c6">}</span>.github.io/<span style="color:#0c6">${</span>GITHUB_REPOSITORY#*/<span style="color:#0c6">}</span>
+          hugo --baseURL https://<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">GITHUB_REPOSITORY</span>%%/*<span style="color:#f1fa8c">}</span>.github.io/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">GITHUB_REPOSITORY</span>#*/<span style="color:#f1fa8c">}</span>
 </code></pre></div><p>This overrides the configured <code>baseURL</code> at build time with your GitHub account name as the subdomain and the repository as the directory.</p>
 <p>I share this in hopes it saves you the time I lost figuring this out!</p>
 
@@ -509,6 +494,10 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
             <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
@@ -535,7 +524,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (5 posts)" style="font-size: 1.519rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             
