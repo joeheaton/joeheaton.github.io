@@ -72,12 +72,12 @@ function a11y_dyslexia_enable() {
     }
 
     // add Dyslexia font via css
-    if (!(head.querySelector("link[href='".concat(site_uri, "fonts/OpenDyslexic.css']")))) {
+    if (!(head.querySelector("link[href='".concat(site_uri, "/fonts/OpenDyslexic.css']")))) {
         console.log("a11y: append dyslexia css");
 
         var link = document.createElement("link");
         link.setAttribute("rel", "stylesheet");
-        link.setAttribute("href", site_uri.concat("fonts/OpenDyslexic.css"));
+        link.setAttribute("href", site_uri.concat("/fonts/OpenDyslexic.css"));
         head.appendChild(link);
     }
 }
