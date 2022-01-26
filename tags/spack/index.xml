@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>spack on Heaton.dev</title>
-    <link>https://localhost/hugs/build/heaton.dev/tags/spack/</link>
+    <link>joeheaton.github.io/tags/spack/</link>
     <description>Recent content in spack on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/hugs/build/heaton.dev/tags/spack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/tags/spack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Try out Spack on Arm HPC | CP2K</title>
-      <link>https://localhost/hugs/build/heaton.dev/2021/06/spack-on-hpc-cp2k/</link>
+      <link>joeheaton.github.io/2021/06/spack-on-hpc-cp2k/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/hugs/build/heaton.dev/2021/06/spack-on-hpc-cp2k/</guid>
+      <guid>joeheaton.github.io/2021/06/spack-on-hpc-cp2k/</guid>
       <description>Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
 I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
 Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.</description>

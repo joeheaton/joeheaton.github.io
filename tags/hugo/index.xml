@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Heaton.dev</title>
-    <link>https://localhost/hugs/build/heaton.dev/tags/hugo/</link>
+    <link>joeheaton.github.io/tags/hugo/</link>
     <description>Recent content in hugo on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/hugs/build/heaton.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically set your github.io domain in GitHub Actions</title>
-      <link>https://localhost/hugs/build/heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</link>
+      <link>joeheaton.github.io/2021/04/automatically-set-your-github.io-domain-in-github-actions/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/hugs/build/heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
+      <guid>joeheaton.github.io/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
       <description>Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
 The fix I applied to my GitHub Actions CI to work around this:
 jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>

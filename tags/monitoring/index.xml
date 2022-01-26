@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>monitoring on Heaton.dev</title>
-    <link>https://localhost/hugs/build/heaton.dev/tags/monitoring/</link>
+    <link>joeheaton.github.io/tags/monitoring/</link>
     <description>Recent content in monitoring on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/hugs/build/heaton.dev/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Telegraf &amp; OhmGraphite on Windows 10</title>
-      <link>https://localhost/hugs/build/heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
+      <link>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/hugs/build/heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
+      <guid>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
       <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34; target=&#34;_blank&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>TimescaleDB SQL in Grafana</title>
-      <link>https://localhost/hugs/build/heaton.dev/2020/01/timescaledb-sql-in-grafana/</link>
+      <link>joeheaton.github.io/2020/01/timescaledb-sql-in-grafana/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/hugs/build/heaton.dev/2020/01/timescaledb-sql-in-grafana/</guid>
+      <guid>joeheaton.github.io/2020/01/timescaledb-sql-in-grafana/</guid>
       <description>&lt;p&gt;Grafana supports SQL through MySQL/MariaDB, PostgreSQL &amp;amp; SQL Server. Additionally Grafana supports the PostgreSQL extension TimescaleDB, this database is the best fit of all the SQL databases for Grafana since it is built specifically for large-scale time-series datasets.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Log monitoring with Elasticsearch - Basic overview</title>
-      <link>https://localhost/hugs/build/heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/</link>
+      <link>joeheaton.github.io/2018/10/log-monitoring-with-elasticsearch-basic-overview/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/hugs/build/heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/</guid>
+      <guid>joeheaton.github.io/2018/10/log-monitoring-with-elasticsearch-basic-overview/</guid>
       <description>&lt;p&gt;Log monitoring implies using technology to avoid reading every single log message, with the benefit of catching more interesting events than if you were to read every single line!&lt;/p&gt;</description>
     </item>
     
