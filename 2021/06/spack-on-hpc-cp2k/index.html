@@ -17,9 +17,9 @@
 I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
 Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="joeheaton.github.io/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2022-01-26T00:32:21&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2022-01-26T00:42:53&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -41,8 +41,8 @@ Spack is a source-based package manager and build system, all builds take place 
 <!-- Formats -->
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="joeheaton.github.io/2021/06/spack-on-hpc-cp2k/">
-<link rel="icon" href="joeheaton.github.io/images/favicon.png">
+<link rel="canonical" href="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/">
+<link rel="icon" href="https://www.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
 <!-- DNS prefetch -->
@@ -51,7 +51,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <link rel="dns-prefetch" href="https://platform.twitter.com">
 
 <!-- Web App Manifest -->
-<link rel="manifest" href="joeheaton.github.io/manifest.json">
+<link rel="manifest" href="https://www.heaton.dev/manifest.json">
 
 <!-- Bootstrap CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -59,7 +59,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <!-- Primary CSS -->
 
 
-<link href="joeheaton.github.io/joeheaton.github.io/style.css" rel="stylesheet" as="style">
+<link href="https://www.heaton.dev/style.css" rel="stylesheet" as="style">
 
 
 <!-- FontAwesome CDN -->
@@ -94,14 +94,14 @@ Spack is a source-based package manager and build system, all builds take place 
   {
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
-    "url": "joeheaton.github.io/2021/06/spack-on-hpc-cp2k/",
+    "url": "https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/",
     "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1106",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2021-06-04T00:00:00Z",
-    "dateModified": "2022-01-26T00:32:21.660703643Z",
+    "dateModified": "2022-01-26T00:42:53.004882959Z",
     "keywords": "Joe Heaton, developer, hpc, linux, spack",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -110,13 +110,13 @@ Spack is a source-based package manager and build system, all builds take place 
     <!-- Custom JS -->
     
 <script>
-    var site_uri = "joeheaton.github.io\/joeheaton.github.io";
+    var site_uri = "https:\/\/www.heaton.dev";
 
     
     console.log("%cHello, help yourself to a coffee & croissant ☕🥐", "font-size: 2rem; color: #2965b4; ");
 </script>
 
-<script async src="joeheaton.github.io/joeheaton.github.io/js/scripts.js"></script>
+<script async src="https://www.heaton.dev/js/scripts.js"></script>
 
   </head>
 
@@ -138,7 +138,7 @@ Spack is a source-based package manager and build system, all builds take place 
               
               <div class="container-xl banner d-flex justify-content-between">
                 
-                <a href="joeheaton.github.io" class="avatar" target="_self">
+                <a href="https://www.heaton.dev" class="avatar" target="_self">
                   <img class="avatar-img" src="https://www.gravatar.com/avatar/2d837adb62a146f67102dcdedf3dd3e6?s=200" alt="avatar">
                 </a>
                 
@@ -212,11 +212,11 @@ Spack is a source-based package manager and build system, all builds take place 
         <div class="blog-nav">
           <nav class="container-xl nav d-flex justify-content-between">
             <div class="d-flex flex-row">
-                <a class="nav-link" href="joeheaton.github.io/" title="" target="_self">
+                <a class="nav-link" href="https://www.heaton.dev/" title="" target="_self">
                   Home
                 </a>
               
-                <a class="nav-link" href="joeheaton.github.io/me/" title="" target="_self">
+                <a class="nav-link" href="https://www.heaton.dev/me/" title="" target="_self">
                   Me
                 </a>
               
@@ -268,7 +268,7 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 <h1>
-  <a href="joeheaton.github.io/2021/06/spack-on-hpc-cp2k/" title="Try out Spack on Arm HPC | CP2K" target="_self">
+  <a href="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" title="Try out Spack on Arm HPC | CP2K" target="_self">
     
       Try out Spack on Arm HPC | CP2K
     
@@ -305,21 +305,21 @@ Spack is a source-based package manager and build system, all builds take place 
         
             
 
-            <a href="joeheaton.github.io/tags/hpc" rel="tag" target="_self">
+            <a href="https://www.heaton.dev/tags/hpc" rel="tag" target="_self">
                 <span>hpc</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="joeheaton.github.io/tags/linux" rel="tag" target="_self">
+            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
                 <span>linux</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="joeheaton.github.io/tags/spack" rel="tag" target="_self">
+            <a href="https://www.heaton.dev/tags/spack" rel="tag" target="_self">
                 <span>spack</span></a>
         
 
@@ -353,7 +353,7 @@ Spack is a source-based package manager and build system, all builds take place 
           
           <div>
             <span>Updated</span>
-            <time datetime="2022-01-26T00:32:21Z">
+            <time datetime="2022-01-26T00:42:53Z">
               26th
               Jan
               2022
@@ -586,8 +586,8 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
                     <p class="vcard-homepage">
                         
-                            <a href="joeheaton.github.io" class="vcard-url url" itemprop="url">
-                                joeheaton.github.io
+                            <a href="https://www.heaton.dev" class="vcard-url url" itemprop="url">
+                                https://www.heaton.dev
                             </a>
                         
                     </p>
@@ -602,7 +602,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
                 </div>
 
                 <div class="card-text vcard-save">
-                    <a href="joeheaton.github.io/joe@heaton.dev.vcf">
+                    <a href="https://www.heaton.dev/joe@heaton.dev.vcf">
                         &#128427; <span>Save to contacts</span>
                     </a>
                 </div>
@@ -617,47 +617,47 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
       <nav class="nav sharing-icons d-flex justify-content-center">
   <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
 
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;text=Cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!" title="Tweet this" target="_blank">
+  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;text=Cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!" title="Tweet this" target="_blank">
     <span class="fab fa-twitter"></span>
   </a>
   
-  <a class="nav-item" href="https://reddit.com/submit/?url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Reddit" target="_blank">
+  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Reddit" target="_blank">
     <span class="fab fa-reddit-alien" aria-hidden="true"></span>
   </a>
   
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Tumblr" target="_blank">
+  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Tumblr" target="_blank">
     <span class="fab fa-tumblr" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Facebook" target="_blank">
+  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Facebook" target="_blank">
     <span class="fab fa-facebook-f" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;description=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K" title="Share on Pintrest" target="_blank">
+  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;description=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K" title="Share on Pintrest" target="_blank">
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/sharing/share-offsite/?url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Xing" target="_blank">
+  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Xing" target="_blank">
     <span class="fab fa-xing" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Hackernews" target="_blank">
+  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Hackernews" target="_blank">
     <span class="fab fa-hacker-news" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!&amp;url=joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share via Telegram" target="_blank">
+  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share via Telegram" target="_blank">
     <span class="fab fa-telegram-plane" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f !" title="Share via WhatsApp" target="_blank">
+  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f !" title="Share via WhatsApp" target="_blank">
     <span class="fab fa-whatsapp" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="mailto:?subject=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K from joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;body=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from joeheaton.github.io%2f2021%2f06%2fspack-on-hpc-cp2k%2f!" title="Share via Email" target="_blank">
+  <a class="nav-item" href="mailto:?subject=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;body=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f!" title="Share via Email" target="_blank">
     <span class="fas fa-envelope" aria-hidden="true"></span>
   </a>
 </nav>
@@ -707,57 +707,57 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
     <div class="tag-cloud">
             
-            <a href="joeheaton.github.io/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.109rem" target="_self">automation</a>
+            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.109rem" target="_self">automation</a>
             
-            <a href="joeheaton.github.io/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
+            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
             
-            <a href="joeheaton.github.io/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
+            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="joeheaton.github.io/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
+            <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
-            <a href="joeheaton.github.io/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
+            <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
-            <a href="joeheaton.github.io/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
             
-            <a href="joeheaton.github.io/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
+            <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
-            <a href="joeheaton.github.io/tags/elasticsearch" aria-label="elasticsearch (1 posts)" style="font-size: 0.800rem" target="_self">elasticsearch</a>
+            <a href="https://www.heaton.dev/tags/elasticsearch" aria-label="elasticsearch (1 posts)" style="font-size: 0.800rem" target="_self">elasticsearch</a>
             
-            <a href="joeheaton.github.io/tags/firefox" aria-label="firefox (1 posts)" style="font-size: 0.800rem" target="_self">firefox</a>
+            <a href="https://www.heaton.dev/tags/firefox" aria-label="firefox (1 posts)" style="font-size: 0.800rem" target="_self">firefox</a>
             
-            <a href="joeheaton.github.io/tags/fun" aria-label="fun (1 posts)" style="font-size: 0.800rem" target="_self">fun</a>
+            <a href="https://www.heaton.dev/tags/fun" aria-label="fun (1 posts)" style="font-size: 0.800rem" target="_self">fun</a>
             
-            <a href="joeheaton.github.io/tags/game" aria-label="game (1 posts)" style="font-size: 0.800rem" target="_self">game</a>
+            <a href="https://www.heaton.dev/tags/game" aria-label="game (1 posts)" style="font-size: 0.800rem" target="_self">game</a>
             
-            <a href="joeheaton.github.io/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
+            <a href="https://www.heaton.dev/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
             
-            <a href="joeheaton.github.io/tags/github" aria-label="github (2 posts)" style="font-size: 1.109rem" target="_self">github</a>
+            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.109rem" target="_self">github</a>
             
-            <a href="joeheaton.github.io/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
+            <a href="https://www.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
-            <a href="joeheaton.github.io/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
+            <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
             
-            <a href="joeheaton.github.io/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.419rem" target="_self">hpc</a>
+            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.419rem" target="_self">hpc</a>
             
-            <a href="joeheaton.github.io/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
+            <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="joeheaton.github.io/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
-            <a href="joeheaton.github.io/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
+            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
             
-            <a href="joeheaton.github.io/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
+            <a href="https://www.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
             
-            <a href="joeheaton.github.io/tags/spack" aria-label="spack (1 posts)" style="font-size: 0.800rem" target="_self">spack</a>
+            <a href="https://www.heaton.dev/tags/spack" aria-label="spack (1 posts)" style="font-size: 0.800rem" target="_self">spack</a>
             
-            <a href="joeheaton.github.io/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
+            <a href="https://www.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
-            <a href="joeheaton.github.io/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
+            <a href="https://www.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="joeheaton.github.io/tags/web" aria-label="web (2 posts)" style="font-size: 1.109rem" target="_self">web</a>
+            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.109rem" target="_self">web</a>
             
-            <a href="joeheaton.github.io/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
+            <a href="https://www.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
-            <a href="joeheaton.github.io/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
+            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
     </section>
   
 
@@ -1126,7 +1126,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
             <ul class="list-group">
                 <li>
-                    <a href="joeheaton.github.io/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                    <a href="https://www.heaton.dev/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         Everything
                     </a>
                 </li>
@@ -1134,21 +1134,21 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
                 
                 
                 <li>
-                    <a href="joeheaton.github.io/tags/hpc/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                    <a href="https://www.heaton.dev/tags/hpc/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         hpc
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="joeheaton.github.io/tags/linux/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                    <a href="https://www.heaton.dev/tags/linux/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         linux
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="joeheaton.github.io/tags/spack/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                    <a href="https://www.heaton.dev/tags/spack/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
                         spack
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
@@ -1170,7 +1170,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
                     © Joe Heaton.
                 
                 
-                <a href="joeheaton.github.io/privacy" target="_self">Privacy policy <i class="fas fa-user-shield"></i></a>
+                <a href="https://www.heaton.dev/privacy" target="_self">Privacy policy <i class="fas fa-user-shield"></i></a>
             </p>
         </div>
 
@@ -1212,7 +1212,7 @@ window.cookieconsent.initialise({
     allow: 'Allow cookies',
     deny: 'Decline',
     link: 'Learn more',
-    href: 'joeheaton.github.io\/privacy',
+    href: 'https:\/\/www.heaton.dev\/privacy',
     close: '&#x274c;',
     policy: 'Cookie Policy',
     target: '_self',

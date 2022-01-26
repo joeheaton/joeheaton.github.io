@@ -1,7 +1,7 @@
 {
     "name": "Heaton.dev",
     "short_name": "Heaton.dev",
-    "start_url": "joeheaton.github.io",
+    "start_url": "https://www.heaton.dev",
     "display": "standalone",
     "background_color": "#519cff",
     "description": "Joe&#39;s technology-focused murmurings.",

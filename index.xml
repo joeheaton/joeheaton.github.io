@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Heaton.dev</title>
-    <link>joeheaton.github.io/</link>
+    <link>https://www.heaton.dev/</link>
     <description>Recent content on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understand Chia Pools and Farming your NFT Plots</title>
-      <link>joeheaton.github.io/2021/07/understand-chia-pools-and-farming-your-nft-plots/</link>
+      <link>https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/</link>
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2021/07/understand-chia-pools-and-farming-your-nft-plots/</guid>
+      <guid>https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/</guid>
       <description>Chia (XCH) is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that plagues our efforts to decarbonise our energy grid. Chia was initially developed by @BramCohen, known for developing the BitTorrent protocol.
 Proof of Space-and-Time requires a you to commit a resource to the network, in this case storage space, and to mathematically prove that your commitment continues to be available to the network.</description>
     </item>
     
     <item>
       <title>Try out Spack on Arm HPC | CP2K</title>
-      <link>joeheaton.github.io/2021/06/spack-on-hpc-cp2k/</link>
+      <link>https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2021/06/spack-on-hpc-cp2k/</guid>
+      <guid>https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/</guid>
       <description>Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
 I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
 Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.</description>
@@ -31,10 +31,10 @@ Spack is a source-based package manager and build system, all builds take place 
     
     <item>
       <title>Automatically set your github.io domain in GitHub Actions</title>
-      <link>joeheaton.github.io/2021/04/automatically-set-your-github.io-domain-in-github-actions/</link>
+      <link>https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
+      <guid>https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
       <description>Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
 The fix I applied to my GitHub Actions CI to work around this:
 jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>
@@ -42,10 +42,10 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
     
     <item>
       <title>Host Hugo static website on GitHub Pages using Actions and my domain</title>
-      <link>joeheaton.github.io/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
+      <link>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
+      <guid>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
       <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
 My existing workflow combines three repositories to build the website:
  Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
@@ -53,47 +53,47 @@ My existing workflow combines three repositories to build the website:
     
     <item>
       <title>my Vim</title>
-      <link>joeheaton.github.io/2020/10/my-vim/</link>
+      <link>https://www.heaton.dev/2020/10/my-vim/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/10/my-vim/</guid>
+      <guid>https://www.heaton.dev/2020/10/my-vim/</guid>
       <description>&lt;p&gt;This is my &lt;code&gt;.vimrc&lt;/code&gt;, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Remote PostgreSQL using local PgAdmin inside Docker</title>
-      <link>joeheaton.github.io/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</link>
+      <link>https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</guid>
+      <guid>https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/</guid>
       <description>&lt;p&gt;PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Supercomputers in media</title>
-      <link>joeheaton.github.io/2020/09/supercomputers-in-media/</link>
+      <link>https://www.heaton.dev/2020/09/supercomputers-in-media/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/09/supercomputers-in-media/</guid>
+      <guid>https://www.heaton.dev/2020/09/supercomputers-in-media/</guid>
       <description>&lt;p&gt;I thought it would be fun to gather together all the amazing looking fictional supercomputers!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dynamically load fonts</title>
-      <link>joeheaton.github.io/2020/08/dynamically-load-fonts/</link>
+      <link>https://www.heaton.dev/2020/08/dynamically-load-fonts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/08/dynamically-load-fonts/</guid>
+      <guid>https://www.heaton.dev/2020/08/dynamically-load-fonts/</guid>
       <description>I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!
 This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</description>
     </item>
     
     <item>
       <title>Hi</title>
-      <link>joeheaton.github.io/me/</link>
+      <link>https://www.heaton.dev/me/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/me/</guid>
+      <guid>https://www.heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
 Website Recipe I blogged about the current incarnation!
  Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
@@ -101,28 +101,28 @@ Website Recipe I blogged about the current incarnation!
     
     <item>
       <title>Windows 10 Revamp</title>
-      <link>joeheaton.github.io/2020/06/windows-10-revamp/</link>
+      <link>https://www.heaton.dev/2020/06/windows-10-revamp/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/06/windows-10-revamp/</guid>
+      <guid>https://www.heaton.dev/2020/06/windows-10-revamp/</guid>
       <description>&lt;p&gt;My notes on wiping Windows 10, which configuration options to watch out for and a list of useful programs. The whole process of wiping, installing and provisioning with a basic set of programs can be complete in an hour with a fast Solid-State Drive and modern hardware.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>BeatSaber mods (Custom songs  &amp; Third-Person)</title>
-      <link>joeheaton.github.io/2020/05/beatsaber-mods-custom-songs-third-person/</link>
+      <link>https://www.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/05/beatsaber-mods-custom-songs-third-person/</guid>
+      <guid>https://www.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/</guid>
       <description>&lt;p&gt;More fun with BeatSaber! Mods provide more stats, effects and even allow a third-person mode for streaming.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows Terminal - Change default profile</title>
-      <link>joeheaton.github.io/2020/02/windows-terminal-change-default-profile/</link>
+      <link>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/windows-terminal-change-default-profile/</guid>
+      <guid>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</guid>
       <description>Open the new tab dropdown, found to the right of your tabs:
 Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this will open a JSON file (for now) which looks something like this:
 { &amp;#34;defaultProfile&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;profiles&amp;#34;: [ { &amp;#34;guid&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Debian&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, { &amp;#34;guid&amp;#34;: &amp;#34;{123-456-789}&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Windows PowerShell&amp;#34;, &amp;#34;commandline&amp;#34;: &amp;#34;powershell.exe&amp;#34;, &amp;#34;hidden&amp;#34;: false }, Copy the guid value from whichever flavour of Linux you want to set as default.</description>
@@ -130,46 +130,46 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
     
     <item>
       <title>Useful Unixisms</title>
-      <link>joeheaton.github.io/2020/02/useful-unixisms/</link>
+      <link>https://www.heaton.dev/2020/02/useful-unixisms/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/useful-unixisms/</guid>
+      <guid>https://www.heaton.dev/2020/02/useful-unixisms/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Package Management for .deb &amp; .rpm for Debian, Ubuntu &amp; Red Hat, CentOS, Suse</title>
-      <link>joeheaton.github.io/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/</link>
+      <link>https://www.heaton.dev/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/</guid>
+      <guid>https://www.heaton.dev/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/</guid>
       <description>&lt;p&gt;A smattering of useful commands for dealing with package managers!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Run for every updated file</title>
-      <link>joeheaton.github.io/2020/02/run-for-every-updated-file/</link>
+      <link>https://www.heaton.dev/2020/02/run-for-every-updated-file/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/run-for-every-updated-file/</guid>
+      <guid>https://www.heaton.dev/2020/02/run-for-every-updated-file/</guid>
       <description>&lt;p&gt;Using &lt;code&gt;inotifywait&lt;/code&gt; to watch for file changes recursively in the current directory. I use &lt;code&gt;$CHECK&lt;/code&gt; to ignore unwanted directories and filetypes.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Telegraf &amp; OhmGraphite on Windows 10</title>
-      <link>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
+      <link>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
+      <guid>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
       <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34; target=&#34;_blank&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Privacy Policy</title>
-      <link>joeheaton.github.io/privacy/</link>
+      <link>https://www.heaton.dev/privacy/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/privacy/</guid>
+      <guid>https://www.heaton.dev/privacy/</guid>
       <description>Basically, you can keep your privacy!
 Contact me should you have any questions!
 How to clear website data from your browser  Firefox - Block websites from storing cookies and site data in Firefox Brave/Chrome - Clear, enable, and manage cookies in Chrome Edge - Delete cookies in Microsoft Edge  </description>
@@ -177,28 +177,28 @@ How to clear website data from your browser  Firefox - Block websites from stori
     
     <item>
       <title>TimescaleDB SQL in Grafana</title>
-      <link>joeheaton.github.io/2020/01/timescaledb-sql-in-grafana/</link>
+      <link>https://www.heaton.dev/2020/01/timescaledb-sql-in-grafana/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/01/timescaledb-sql-in-grafana/</guid>
+      <guid>https://www.heaton.dev/2020/01/timescaledb-sql-in-grafana/</guid>
       <description>&lt;p&gt;Grafana supports SQL through MySQL/MariaDB, PostgreSQL &amp;amp; SQL Server. Additionally Grafana supports the PostgreSQL extension TimescaleDB, this database is the best fit of all the SQL databases for Grafana since it is built specifically for large-scale time-series datasets.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>SFTP instead of SCP</title>
-      <link>joeheaton.github.io/2019/04/sftp-instead-of-scp/</link>
+      <link>https://www.heaton.dev/2019/04/sftp-instead-of-scp/</link>
       <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2019/04/sftp-instead-of-scp/</guid>
+      <guid>https://www.heaton.dev/2019/04/sftp-instead-of-scp/</guid>
       <description>&lt;p&gt;SCP suffered from weak input validation for decades until &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=1666127&#34; title=&#34;openssh: Improper validation of object names allows malicious server to overwrite files via scp client&#34; target=&#34;_blank&#34;&gt;CVE-2019-6111&lt;/a&gt;, the maintainers recommended using SFTP until patched versions can be deployed. I, like many others, were reminded SFTP existed!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git feature branch &amp; merge</title>
-      <link>joeheaton.github.io/2019/04/git-feature-branch-merge/</link>
+      <link>https://www.heaton.dev/2019/04/git-feature-branch-merge/</link>
       <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2019/04/git-feature-branch-merge/</guid>
+      <guid>https://www.heaton.dev/2019/04/git-feature-branch-merge/</guid>
       <description>Start with your master branch
 git checkout master git fetch origin If your local master has been modified, you can reset its state.
 git reset --hard origin/master
@@ -210,103 +210,103 @@ git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push yo
     
     <item>
       <title>tmux</title>
-      <link>joeheaton.github.io/2019/04/tmux/</link>
+      <link>https://www.heaton.dev/2019/04/tmux/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2019/04/tmux/</guid>
+      <guid>https://www.heaton.dev/2019/04/tmux/</guid>
       <description>&lt;p&gt;I find myself working on the move a lot more recently and I often have to deal with poor terminal emulators, iffy connectivity and sometimes I need resume my work on another machine entirely. As such I am trying out tmux as a way of persisting my working environment between sessions, supporting multiple tabs for when my emulator lacks it (Looking at you PuTTY, Git Bash) and lastly allowing me to resume my work on another desktop.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Log monitoring with Elasticsearch - Basic overview</title>
-      <link>joeheaton.github.io/2018/10/log-monitoring-with-elasticsearch-basic-overview/</link>
+      <link>https://www.heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/10/log-monitoring-with-elasticsearch-basic-overview/</guid>
+      <guid>https://www.heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/</guid>
       <description>&lt;p&gt;Log monitoring implies using technology to avoid reading every single log message, with the benefit of catching more interesting events than if you were to read every single line!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Robinhood NoSQL - Mixing tables</title>
-      <link>joeheaton.github.io/2018/09/robinhood-nosql-part-2/</link>
+      <link>https://www.heaton.dev/2018/09/robinhood-nosql-part-2/</link>
       <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/09/robinhood-nosql-part-2/</guid>
-      <description>&lt;p&gt;In &lt;a href=&#34;joeheaton.github.io/blog/2018/08/robinhood-nosql&#34;&gt;Robinhood NoSQL&lt;/a&gt; I experimented with porting the Robinhood database from Elasticsearch, it being a commonly-used NoSQL database with specialisation in behaving like a Search Engine. Having ingested the &lt;code&gt;ENTRIES&lt;/code&gt; table I now need to augment the records with filepaths from &lt;code&gt;ANNEX_INFO&lt;/code&gt;, as I found out previously:&lt;/p&gt;</description>
+      <guid>https://www.heaton.dev/2018/09/robinhood-nosql-part-2/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://www.heaton.dev/blog/2018/08/robinhood-nosql&#34;&gt;Robinhood NoSQL&lt;/a&gt; I experimented with porting the Robinhood database from Elasticsearch, it being a commonly-used NoSQL database with specialisation in behaving like a Search Engine. Having ingested the &lt;code&gt;ENTRIES&lt;/code&gt; table I now need to augment the records with filepaths from &lt;code&gt;ANNEX_INFO&lt;/code&gt;, as I found out previously:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Robinhood NoSQL</title>
-      <link>joeheaton.github.io/2018/08/robinhood-nosql/</link>
+      <link>https://www.heaton.dev/2018/08/robinhood-nosql/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/08/robinhood-nosql/</guid>
+      <guid>https://www.heaton.dev/2018/08/robinhood-nosql/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/cea-hpc/robinhood&#34; target=&#34;_blank&#34;&gt;Robinhood&lt;/a&gt; provides indexing, search and management capabilities to computing centres with massive high-performnace filesystems, namely Lustre.&lt;/p&gt;
 &lt;p&gt;It does this by scanning every file on the filesystem as efficiently as possible to initially populate its MySQL/MariaDB relational database, then it continuously listen for changelogs coming from Lustre to keep its state in-line with reality.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>My terminal login message</title>
-      <link>joeheaton.github.io/2018/07/my-terminal-login-message/</link>
+      <link>https://www.heaton.dev/2018/07/my-terminal-login-message/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/07/my-terminal-login-message/</guid>
-      <description>&lt;p&gt;Following on from &lt;a href=&#34;joeheaton.github.io/2018/07/25/bashrc.html&#34;&gt;bashrc&lt;/a&gt;, here is a snapshot and explaination of my &lt;code&gt;.motd&lt;/code&gt;&lt;/p&gt;</description>
+      <guid>https://www.heaton.dev/2018/07/my-terminal-login-message/</guid>
+      <description>&lt;p&gt;Following on from &lt;a href=&#34;https://www.heaton.dev/2018/07/25/bashrc.html&#34;&gt;bashrc&lt;/a&gt;, here is a snapshot and explaination of my &lt;code&gt;.motd&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>My bash profile</title>
-      <link>joeheaton.github.io/2018/07/my-bash-profile/</link>
+      <link>https://www.heaton.dev/2018/07/my-bash-profile/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/07/my-bash-profile/</guid>
+      <guid>https://www.heaton.dev/2018/07/my-bash-profile/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a snapshot of my .bashrc, I put this together to normalise my environment; which is particularly useful when working across CentOS/RHEL 6/7, SLES11/12 &amp;amp; Debian/Ubuntu.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ll overexplain some lines and underexplain others, depending on how interesting they are.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Patching Lustre 2.10 for Linux 4.14</title>
-      <link>joeheaton.github.io/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
+      <link>https://www.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
+      <guid>https://www.heaton.dev/2018/07/patching-lustre-2.10-for-linux-4.14/</guid>
       <description>&lt;p&gt;The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&amp;rsquo;t seem to come back into existing Lustre releases, since those releases don&amp;rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Enjoying GNOME3</title>
-      <link>joeheaton.github.io/2013/08/enjoying-gnome3/</link>
+      <link>https://www.heaton.dev/2013/08/enjoying-gnome3/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2013/08/enjoying-gnome3/</guid>
+      <guid>https://www.heaton.dev/2013/08/enjoying-gnome3/</guid>
       <description>The options Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.
 I won&amp;rsquo;t go too in-depth into the actual choices available and their ups &amp;amp; downs as this isn&amp;rsquo;t a comparison posting, I just want to express my feelings on my choice.</description>
     </item>
     
     <item>
       <title>Free Software Conundrums</title>
-      <link>joeheaton.github.io/2013/06/free-software-conundrums/</link>
+      <link>https://www.heaton.dev/2013/06/free-software-conundrums/</link>
       <pubDate>Sat, 29 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2013/06/free-software-conundrums/</guid>
+      <guid>https://www.heaton.dev/2013/06/free-software-conundrums/</guid>
       <description>Clients Pidgin or XChat (IRC) These days the users of XChat seem to be migrating to a maintained fork and perhaps MSWindows-centric project named HexChat, a project spawned after development on XChat slowed to a single developer and affectively ended in 2010. Either of these clients is better than the proprietary mIRC client which is free as in free beer and may be refered to as &amp;lsquo;Freeware&amp;rsquo; by some, a term which should be no means be mistaken as standing for Freedom for the user.</description>
     </item>
     
     <item>
       <title>Firefox-based browser add-on suggestions</title>
-      <link>joeheaton.github.io/2013/06/firefox-based-browser-add-on-suggestions/</link>
+      <link>https://www.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</link>
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2013/06/firefox-based-browser-add-on-suggestions/</guid>
+      <guid>https://www.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</guid>
       <description>HTTPS Everywhere [GPLv3+] Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
     </item>
     
     <item>
       <title>SSH port forwarding</title>
-      <link>joeheaton.github.io/1/01/ssh-port-forwarding/</link>
+      <link>https://www.heaton.dev/1/01/ssh-port-forwarding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/1/01/ssh-port-forwarding/</guid>
+      <guid>https://www.heaton.dev/1/01/ssh-port-forwarding/</guid>
       <description>&lt;p&gt;The following command connects to our server and forwards a specific port on our local machine to the server. In this case we forward port &lt;code&gt;5432&lt;/code&gt; which belongs to PostgreSQL, so when we connect to &lt;code&gt;localhost:5432&lt;/code&gt; on the desktop, the connection is forwarded through the secure tunnel to the server.&lt;/p&gt;</description>
     </item>
     

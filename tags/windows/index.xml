@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on Heaton.dev</title>
-    <link>joeheaton.github.io/tags/windows/</link>
+    <link>https://www.heaton.dev/tags/windows/</link>
     <description>Recent content in windows on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 10 Revamp</title>
-      <link>joeheaton.github.io/2020/06/windows-10-revamp/</link>
+      <link>https://www.heaton.dev/2020/06/windows-10-revamp/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/06/windows-10-revamp/</guid>
+      <guid>https://www.heaton.dev/2020/06/windows-10-revamp/</guid>
       <description>&lt;p&gt;My notes on wiping Windows 10, which configuration options to watch out for and a list of useful programs. The whole process of wiping, installing and provisioning with a basic set of programs can be complete in an hour with a fast Solid-State Drive and modern hardware.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows Terminal - Change default profile</title>
-      <link>joeheaton.github.io/2020/02/windows-terminal-change-default-profile/</link>
+      <link>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/windows-terminal-change-default-profile/</guid>
+      <guid>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</guid>
       <description>Open the new tab dropdown, found to the right of your tabs:
 Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this will open a JSON file (for now) which looks something like this:
 { &amp;#34;defaultProfile&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;profiles&amp;#34;: [ { &amp;#34;guid&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Debian&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, { &amp;#34;guid&amp;#34;: &amp;#34;{123-456-789}&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Windows PowerShell&amp;#34;, &amp;#34;commandline&amp;#34;: &amp;#34;powershell.exe&amp;#34;, &amp;#34;hidden&amp;#34;: false }, Copy the guid value from whichever flavour of Linux you want to set as default.</description>
@@ -30,10 +30,10 @@ Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this w
     
     <item>
       <title>Telegraf &amp; OhmGraphite on Windows 10</title>
-      <link>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
+      <link>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
+      <guid>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</guid>
       <description>&lt;p&gt;Download the Telegraf client from &lt;a href=&#34;https://www.influxdata.com&#34; target=&#34;_blank&#34;&gt;influxdata.com&lt;/a&gt;, extract the telegraf directory to a sensible place and edit &lt;code&gt;telegraf.conf&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     

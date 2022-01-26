@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Heaton.dev</title>
-    <link>joeheaton.github.io/tags/git/</link>
+    <link>https://www.heaton.dev/tags/git/</link>
     <description>Recent content in git on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Tue, 09 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="joeheaton.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git feature branch &amp; merge</title>
-      <link>joeheaton.github.io/2019/04/git-feature-branch-merge/</link>
+      <link>https://www.heaton.dev/2019/04/git-feature-branch-merge/</link>
       <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>joeheaton.github.io/2019/04/git-feature-branch-merge/</guid>
+      <guid>https://www.heaton.dev/2019/04/git-feature-branch-merge/</guid>
       <description>Start with your master branch
 git checkout master git fetch origin If your local master has been modified, you can reset its state.
 git reset --hard origin/master
