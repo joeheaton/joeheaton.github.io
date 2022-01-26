@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Heaton.dev</title>
-    <link>https://www.heaton.dev/pages/</link>
+    <link>https://localhost/hugs/build/heaton.dev/pages/</link>
     <description>Recent content in Pages on Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/hugs/build/heaton.dev/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hi</title>
-      <link>https://www.heaton.dev/me/</link>
+      <link>https://localhost/hugs/build/heaton.dev/me/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/me/</guid>
+      <guid>https://localhost/hugs/build/heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
 Website Recipe I blogged about the current incarnation!
  Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
@@ -21,10 +21,10 @@ Website Recipe I blogged about the current incarnation!
     
     <item>
       <title>Privacy Policy</title>
-      <link>https://www.heaton.dev/privacy/</link>
+      <link>https://localhost/hugs/build/heaton.dev/privacy/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/privacy/</guid>
+      <guid>https://localhost/hugs/build/heaton.dev/privacy/</guid>
       <description>Basically, you can keep your privacy!
 Contact me should you have any questions!
 How to clear website data from your browser  Firefox - Block websites from storing cookies and site data in Firefox Brave/Chrome - Clear, enable, and manage cookies in Chrome Edge - Delete cookies in Microsoft Edge  </description>

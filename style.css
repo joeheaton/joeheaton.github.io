@@ -15,14 +15,14 @@ body {
   color: #333;
   background: #f3f3f3;
   scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG); }
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  /*@media (prefers-color-scheme: dark) {
+    background: $SITE_BG_DARK;
+    color: $TEXT_COLOR_DARK;
+  }*/ }
   @media (max-width: 30em) {
     body {
       padding: 0; } }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #24262d;
-      color: #d8d8d8; } }
 a,
 a:link,
 a:hover,
@@ -127,11 +127,11 @@ blockquote {
   font-size: 0.6rem;
   font-family: Hack, monospace, 'Courier New', Courier;
   color: #333;
-  text-shadow: #b4b4b4 1px 1px 4px; }
-  @media (prefers-color-scheme: dark) {
-    .masthead-super {
-      color: #d8d8d8;
-      text-shadow: #b4b4b4 1px 1px 4px; } }
+  text-shadow: #b4b4b4 1px 1px 4px;
+  /*@media (prefers-color-scheme: dark) {
+    color: $TEXT_COLOR_DARK;
+    text-shadow: $SHADOW_LIGHT 1px 1px 4px;
+  }*/ }
   .masthead-super * {
     cursor: default; }
 
@@ -264,21 +264,15 @@ blockquote {
   flex-direction: column;
   margin: 1rem 0;
   padding: 0.6rem 1rem;
+  background: white;
   border-radius: 0.4rem;
   box-shadow: 0 0 0.25rem #b4b4b4;
+  /*@media (prefers-color-scheme: dark) {
+    background: $CONTENT_BG_DARK;
+  }*/
   /*&:not(:last-child) {
     border-bottom: 1px dashed #aaa;
   }*/ }
-  @media (prefers-color-scheme: light) {
-    .blog-post,
-    .sidebar-blob,
-    .twitter-timeline {
-      background: white; } }
-  @media (prefers-color-scheme: dark) {
-    .blog-post,
-    .sidebar-blob,
-    .twitter-timeline {
-      background: #2f2f2f; } }
   .blog-post:first-child,
   .sidebar-blob:first-child,
   .twitter-timeline:first-child {
@@ -426,10 +420,11 @@ p > code {
   background: rgba(0, 0, 0, 0.06);
   border-radius: 2px; }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   .card {
-    background-color: #24262d; } }
-
+    background-color: $SITE_BG_DARK;
+  }
+}*/
 .sharing-icons {
   padding: 0 0.2rem; }
   .sharing-icons span {
@@ -518,16 +513,16 @@ p > code {
   text-align: center;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 0 3px #b4b4b4; }
+  box-shadow: 0 0 3px #b4b4b4;
+  /*@media (prefers-color-scheme: dark) {
+    background: $CONTENT_BG_DARK;
+    border-color: $SHADOW;
+  }*/ }
   #footer p:last-child {
     margin-bottom: 0; }
   #footer > .row {
     padding: 0 0 1rem;
     margin: 1rem 0; }
-  @media (prefers-color-scheme: dark) {
-    #footer {
-      background: #2f2f2f;
-      border-color: #333; } }
   #footer ul {
     list-style-type: none; }
     #footer ul .fa-tag {
