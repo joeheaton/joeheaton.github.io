@@ -277,12 +277,22 @@ blockquote {
   .sidebar-blob:first-child,
   .twitter-timeline:first-child {
     margin-top: 0; }
-  .blog-post header h1, .blog-post header h2,
-  .sidebar-blob header h1,
-  .sidebar-blob header h2,
-  .twitter-timeline header h1,
-  .twitter-timeline header h2 {
-    margin: 0; }
+  .blog-post:last-child header,
+  .sidebar-blob:last-child header,
+  .twitter-timeline:last-child header {
+    border-bottom: 0; }
+  .blog-post header,
+  .sidebar-blob header,
+  .twitter-timeline header {
+    padding: 0 0 0.5rem;
+    margin: 0 0 0.5rem;
+    border-bottom: 1px solid #e9e9e9; }
+    .blog-post header h1, .blog-post header h2,
+    .sidebar-blob header h1,
+    .sidebar-blob header h2,
+    .twitter-timeline header h1,
+    .twitter-timeline header h2 {
+      margin: 0; }
   .blog-post.title-only,
   .sidebar-blob.title-only,
   .twitter-timeline.title-only {
@@ -369,7 +379,7 @@ blockquote {
   .blog-post.single .footer,
   .sidebar-blob.single .footer,
   .twitter-timeline.single .footer {
-    margin: 0; }
+    margin: 1rem 0 0 0; }
   .blog-post.single .sharing-icons,
   .sidebar-blob.single .sharing-icons,
   .twitter-timeline.single .sharing-icons {
@@ -561,9 +571,12 @@ p > code {
     font-family: OpenDyslexic-Mono !important; }
 
 .vcard {
-  box-shadow: 0 3px 3px -3px #333; }
+  box-shadow: 0 0 6px #b4b4b4; }
   .vcard p {
     margin: 0; }
+  .vcard img {
+    min-width: 200px;
+    width: auto; }
   .vcard .card-body {
     padding-bottom: 0; }
   .vcard .vcard-name {
@@ -574,8 +587,8 @@ p > code {
     content: "🌐"; }
   .vcard .vcard-save {
     text-align: right; }
-    .vcard .vcard-save span {
-      display: none; }
+    .vcard .vcard-save span:before {
+      content: "💾 "; }
 
 /*
  * Specifics
