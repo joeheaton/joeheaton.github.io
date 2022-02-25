@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitor Internet Health with FluentBit &amp; Grafana</title>
+      <link>https://www.heaton.dev/2022/02/monitor-internet-health-with-fluentbit-grafana/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/02/monitor-internet-health-with-fluentbit-grafana/</guid>
+      <description>&lt;p&gt;I want to keep an eye on my Internet service provider after a series of prolonged outages, to that end I setup a Grafana dashboard to monitor my connectivity to various online services.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Telegraf &amp; OhmGraphite on Windows 10</title>
       <link>https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/</link>
