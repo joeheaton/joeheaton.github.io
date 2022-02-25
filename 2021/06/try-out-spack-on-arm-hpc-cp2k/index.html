@@ -17,9 +17,9 @@
 I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
 Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" /><meta property="article:section" content="posts" />
-
-<meta property="article:modified_time" content="2022-02-25T10:43:09&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="og:url" content="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-04T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-04T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -41,7 +41,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <!-- Formats -->
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/">
+<link rel="canonical" href="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/">
 <link rel="icon" href="https://www.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -94,14 +94,15 @@ Spack is a source-based package manager and build system, all builds take place 
   {
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
-    "url": "https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/",
+    "url": "https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/",
     "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1106",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2021-06-04T00:00:00Z",
-    "dateModified": "2022-02-25T10:43:09.273359315Z",
+    
+    "dateModified": "2021-06-04T00:00:00Z",
     "keywords": "Joe Heaton, developer, hpc, linux, spack",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -252,7 +253,7 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 <h1>
-  <a href="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/" title="Try out Spack on Arm HPC | CP2K" target="_self">
+  <a href="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/" title="Try out Spack on Arm HPC | CP2K" target="_self">
     
       Try out Spack on Arm HPC | CP2K
     
@@ -327,23 +328,6 @@ Spack is a source-based package manager and build system, all builds take place 
        
 
       
-      
-        
-        
-          
-          
-            
-           
-          
-          <div>
-            <span>Updated</span>
-            <time datetime="2022-02-25T10:43:09Z">
-              25th
-              Feb
-              2022
-            </time>
-          </div>
-        
       
   </div>
 
@@ -601,47 +585,47 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
       <nav class="nav sharing-icons d-flex justify-content-center">
   <span class="nav-item fa fa-share-square sharethis" title="Share this!"><i class="text">Share</i></span>
 
-  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;text=Cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!" title="Tweet this" target="_blank">
+  <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f&amp;text=Cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!" title="Tweet this" target="_blank">
     <span class="fab fa-twitter"></span>
   </a>
   
-  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Reddit" target="_blank">
+  <a class="nav-item" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on Reddit" target="_blank">
     <span class="fab fa-reddit-alien" aria-hidden="true"></span>
   </a>
   
-  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Tumblr" target="_blank">
+  <a class="nav-item" href="http://tumblr.com/widgets/share/tool?canonicalUrl=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on Tumblr" target="_blank">
     <span class="fab fa-tumblr" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Facebook" target="_blank">
+  <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on Facebook" target="_blank">
     <span class="fab fa-facebook-f" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;description=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K" title="Share on Pintrest" target="_blank">
+  <a class="nav-item" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f&amp;description=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K" title="Share on Pintrest" target="_blank">
     <span class="fab fa-pinterest-p" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on LinkedIn" target="_blank">
+  <a class="nav-item" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on LinkedIn" target="_blank">
     <span class="fab fa-linkedin" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Xing" target="_blank">
+  <a class="nav-item" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on Xing" target="_blank">
     <span class="fab fa-xing" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share on Hackernews" target="_blank">
+  <a class="nav-item" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share on Hackernews" target="_blank">
     <span class="fab fa-hacker-news" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f" title="Share via Telegram" target="_blank">
+  <a class="nav-item" href="https://telegram.me/share/url?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from Heaton.dev!&amp;url=https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f" title="Share via Telegram" target="_blank">
     <span class="fab fa-telegram-plane" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f !" title="Share via WhatsApp" target="_blank">
+  <a class="nav-item" href="whatsapp://send?text=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f !" title="Share via WhatsApp" target="_blank">
     <span class="fab fa-whatsapp" aria-hidden="true"></span>
   </a>
 
-  <a class="nav-item" href="mailto:?subject=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f&amp;body=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2fspack-on-hpc-cp2k%2f!" title="Share via Email" target="_blank">
+  <a class="nav-item" href="mailto:?subject=Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f&amp;body=Look at this cool article &quot;Try%20out%20Spack%20on%20Arm%20HPC%20%7c%20CP2K&quot; from https%3a%2f%2fwww.heaton.dev%2f2021%2f06%2ftry-out-spack-on-arm-hpc-cp2k%2f!" title="Share via Email" target="_blank">
     <span class="fas fa-envelope" aria-hidden="true"></span>
   </a>
 </nav>
