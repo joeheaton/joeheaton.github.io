@@ -48,8 +48,8 @@
 <!-- Web App Manifest -->
 <link rel="manifest" href="https://www.heaton.dev/manifest.json">
 
-<!-- Bootstrap CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <!-- Primary CSS -->
 
@@ -57,21 +57,21 @@
 <link href="https://www.heaton.dev/style.css" rel="stylesheet" as="style">
 
 
-<!-- FontAwesome CDN -->
-<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- FontAwesome -->
+<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- JQuery Slim via CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<!-- JQuery Slim -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js" integrity="sha512-HNbo1d4BaJjXh+/e6q4enTyezg5wiXvY3p/9Vzb20NIvkJghZxhzaXeffbdJuuZSxFhJP87ORPadwmU9aN3wSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- JQuery SlideReveal via CDN --> 
+<!-- JQuery SlideReveal --> 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slideReveal/1.1.2/jquery.slidereveal.min.js" crossorigin="anonymous"></script>
 
 <!-- JS-Cookie --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Cookie notification bar -->
-<link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"> 
-
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <!-- Wikipedia Preview -->
@@ -246,7 +246,7 @@
   <div class="blog-posts-paginated">
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -291,15 +291,15 @@
         
             
 
-            <a href="https://www.heaton.dev/tags/chia" rel="tag" target="_self">
-                <span>chia</span></a>
+            <a href="https://www.heaton.dev/tags/crypto" rel="tag" target="_self">
+                <span>crypto</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/crypto" rel="tag" target="_self">
-                <span>crypto</span></a>
+            <a href="https://www.heaton.dev/tags/chia" rel="tag" target="_self">
+                <span>chia</span></a>
         
 
         <i class="fa fa-tag" aria-hidden="true"></i>
@@ -332,6 +332,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/crypto.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p><a href="https://www.chia.net/" target="_blank">Chia (XCH)</a> is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that <a href="https://www.bloomberg.com/news/articles/2021-05-26/china-s-crypto-mining-crackdown-followed-deadly-coal-accidents" target="_blank">plagues our efforts</a> to decarbonise our energy grid. Chia was initially developed by <a href="https://twitter.com/bramcohen" target="_blank">@BramCohen</a>, known for developing the BitTorrent protocol.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -341,7 +360,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -434,8 +453,8 @@
           
           <div>
             <span>Updated</span>
-            <time datetime="2022-02-02T12:40:53Z">
-              2nd
+            <time datetime="2022-02-25T10:43:09Z">
+              25th
               Feb
               2022
             </time>
@@ -451,6 +470,27 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/hpc.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
+I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
+Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.
+    </span>
+
+    <a href="https://www.heaton.dev/2021/06/spack-on-hpc-cp2k/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -460,7 +500,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -505,15 +545,15 @@
         
             
 
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
+            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
+                <span>github</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
+            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
+                <span>automation</span></a>
         
             
                 <span>|</span>
@@ -553,6 +593,26 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/github.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Collaborative websites need to be forked, but if you set a hostname variable, such as <code>baseURL</code> in Hugo, the forked website will load resources from the original.. Not ideal.</p>
+<p>The fix I applied to my GitHub Actions CI to work around this:</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -562,7 +622,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -607,15 +667,15 @@
         
             
 
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
+            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
+                <span>github</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
+            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
+                <span>automation</span></a>
         
             
                 <span>|</span>
@@ -662,6 +722,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/github.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -671,7 +750,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -716,6 +795,13 @@
         
             
 
+            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
+                <span>linux</span></a>
+        
+            
+                <span>|</span>
+            
+
             <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
                 <span>dev</span></a>
         
@@ -757,6 +843,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/linux.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>This is my <code>.vimrc</code>, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/10/my-vim/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -766,7 +871,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -811,15 +916,15 @@
         
             
 
-            <a href="https://www.heaton.dev/tags/postgres" rel="tag" target="_self">
-                <span>postgres</span></a>
+            <a href="https://www.heaton.dev/tags/docker" rel="tag" target="_self">
+                <span>docker</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/docker" rel="tag" target="_self">
-                <span>docker</span></a>
+            <a href="https://www.heaton.dev/tags/postgres" rel="tag" target="_self">
+                <span>postgres</span></a>
         
 
         <i class="fa fa-tag" aria-hidden="true"></i>
@@ -852,6 +957,33 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+        
+          
+          
+        
+          
+          
+        
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/docker.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -861,7 +993,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -940,8 +1072,8 @@
           
           <div>
             <span>Updated</span>
-            <time datetime="2022-02-02T12:40:53Z">
-              2nd
+            <time datetime="2022-02-25T10:43:09Z">
+              25th
               Feb
               2022
             </time>
@@ -957,6 +1089,54 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/fun.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>I thought it would be fun to gather together all the amazing looking fictional supercomputers!</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/09/supercomputers-in-media/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -966,7 +1146,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1045,6 +1225,26 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/web.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>I&rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!</p>
+<p>This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&rsquo;t enough I didn&rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/08/dynamically-load-fonts/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1054,7 +1254,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1133,6 +1333,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/windows.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>My notes on wiping Windows 10, which configuration options to watch out for and a list of useful programs. The whole process of wiping, installing and provisioning with a basic set of programs can be complete in an hour with a fast Solid-State Drive and modern hardware.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/06/windows-10-revamp/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1142,7 +1361,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1221,6 +1440,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/game.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>More fun with BeatSaber! Mods provide more stats, effects and even allow a third-person mode for streaming.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/05/beatsaber-mods-custom-songs-third-person/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1230,7 +1468,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1316,6 +1554,30 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+        
+          
+          
+        
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/dev.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      The new Windows Terminal requires some manual intervention to set the default profile.
+    </span>
+
+    <a href="https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1325,7 +1587,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1411,6 +1673,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/dev.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Here&rsquo;s a list of useful piped commands or just commands for which I need a refresher on which arguments to use. For example, using Awk to print between two known lines, or seleting a line in sed are good examples of infrequently used commands which are really useful.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/02/useful-unixisms/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1420,7 +1701,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1499,6 +1780,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/linux.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>A smattering of useful commands for dealing with package managers!</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1508,7 +1808,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1587,6 +1887,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/dev.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Using <code>inotifywait</code> to watch for file changes recursively in the current directory. I use <code>$CHECK</code> to ignore unwanted directories and filetypes.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/02/run-for-every-updated-file/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1596,7 +1915,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1682,6 +2001,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/windows.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Download the Telegraf client from <a href="https://www.influxdata.com" target="_blank">influxdata.com</a>, extract the telegraf directory to a sensible place and edit <code>telegraf.conf</code>.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/02/telegraf-ohmgraphite-on-windows-10/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1691,7 +2029,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1784,6 +2122,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/monitoring.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Grafana supports SQL through MySQL/MariaDB, PostgreSQL &amp; SQL Server. Additionally Grafana supports the PostgreSQL extension TimescaleDB, this database is the best fit of all the SQL databases for Grafana since it is built specifically for large-scale time-series datasets.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2020/01/timescaledb-sql-in-grafana/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1793,7 +2150,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1853,6 +2210,23 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+    </picture>
+
+    <span>
+      <p>SCP suffered from weak input validation for decades until <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1666127" title="openssh: Improper validation of object names allows malicious server to overwrite files via scp client" target="_blank">CVE-2019-6111</a>, the maintainers recommended using SFTP until patched versions can be deployed. I, like many others, were reminded SFTP existed!</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2019/04/sftp-instead-of-scp/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1862,7 +2236,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -1948,6 +2322,31 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/dev.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      Start with your master branch
+git checkout master git fetch origin If your local master has been modified, you can reset its state.
+git reset --hard origin/master
+Checkout a new feature branch.
+git checkout -b my-feature
+Make changes in this branch, committing as usual.
+git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branch to allow others and yourself to evaluate and commit further to it.
+    </span>
+
+    <a href="https://www.heaton.dev/2019/04/git-feature-branch-merge/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -1957,7 +2356,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -2036,6 +2435,25 @@
   </header>
 
   
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/dev.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>I find myself working on the move a lot more recently and I often have to deal with poor terminal emulators, iffy connectivity and sometimes I need resume my work on another machine entirely. As such I am trying out tmux as a way of persisting my working environment between sessions, supporting multiple tabs for when my emulator lacks it (Looking at you PuTTY, Git Bash) and lastly allowing me to resume my work on another desktop.</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2019/04/tmux/"  target="_self">
+      Read more →
+    </a>
+  </section>
+  
 
   <footer>
     
@@ -2045,7 +2463,7 @@
     
   
     
-      <article class="blog-post title-only">
+      <article class="blog-post ">
   <header>
     
 
@@ -2130,6 +2548,25 @@
 </div>
   </header>
 
+  
+  <section class="content">
+    <picture class="thumbnail">
+      
+      
+
+      
+        <img src="https://www.heaton.dev/images/thumbnail/monitoring.webp" alt="thumbnail">
+      
+    </picture>
+
+    <span>
+      <p>Log monitoring implies using technology to avoid reading every single log message, with the benefit of catching more interesting events than if you were to read every single line!</p>
+    </span>
+
+    <a href="https://www.heaton.dev/2018/10/log-monitoring-with-elasticsearch-basic-overview/"  target="_self">
+      Read more →
+    </a>
+  </section>
   
 
   <footer>
@@ -2248,9 +2685,9 @@
 
     <div class="tag-cloud">
             
-            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.109rem" target="_self">automation</a>
+            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.085rem" target="_self">automation</a>
             
-            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.291rem" target="_self">bash</a>
+            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.252rem" target="_self">bash</a>
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
@@ -2258,7 +2695,7 @@
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (1 posts)" style="font-size: 0.800rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.600rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.537rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -2272,19 +2709,19 @@
             
             <a href="https://www.heaton.dev/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
             
-            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.109rem" target="_self">github</a>
+            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.085rem" target="_self">github</a>
             
             <a href="https://www.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
             <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (1 posts)" style="font-size: 0.800rem" target="_self">grafana</a>
             
-            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.419rem" target="_self">hpc</a>
+            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (4 posts)" style="font-size: 1.370rem" target="_self">hpc</a>
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (6 posts)" style="font-size: 1.600rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (7 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
-            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.291rem" target="_self">monitoring</a>
+            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (3 posts)" style="font-size: 1.252rem" target="_self">monitoring</a>
             
             <a href="https://www.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
             
@@ -2294,11 +2731,11 @@
             
             <a href="https://www.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.109rem" target="_self">web</a>
+            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.085rem" target="_self">web</a>
             
             <a href="https://www.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
-            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.291rem" target="_self">windows</a></div>
+            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.252rem" target="_self">windows</a></div>
     </section>
   
 
@@ -2711,7 +3148,7 @@
 
     <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
 

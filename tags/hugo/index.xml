@@ -14,9 +14,8 @@
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
-      <description>Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
-The fix I applied to my GitHub Actions CI to work around this:
-jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>
+      <description>&lt;p&gt;Collaborative websites need to be forked, but if you set a hostname variable, such as &lt;code&gt;baseURL&lt;/code&gt; in Hugo, the forked website will load resources from the original.. Not ideal.&lt;/p&gt;
+&lt;p&gt;The fix I applied to my GitHub Actions CI to work around this:&lt;/p&gt;</description>
     </item>
     
   </channel>

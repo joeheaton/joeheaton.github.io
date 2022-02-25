@@ -25,9 +25,16 @@ Spack is a source-based package manager and build system, all builds take place 
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
-      <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
-My existing workflow combines three repositories to build the website:
- Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
+      <description>&lt;p&gt;In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>my Vim</title>
+      <link>https://www.heaton.dev/2020/10/my-vim/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2020/10/my-vim/</guid>
+      <description>&lt;p&gt;This is my &lt;code&gt;.vimrc&lt;/code&gt;, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,8 +61,7 @@ My existing workflow combines three repositories to build the website:
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2013/08/enjoying-gnome3/</guid>
-      <description>The options Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.
-I won&amp;rsquo;t go too in-depth into the actual choices available and their ups &amp;amp; downs as this isn&amp;rsquo;t a comparison posting, I just want to express my feelings on my choice.</description>
+      <description>Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.</description>
     </item>
     
     <item>

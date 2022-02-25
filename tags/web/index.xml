@@ -14,8 +14,8 @@
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/08/dynamically-load-fonts/</guid>
-      <description>I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!
-This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!&lt;/p&gt;
+&lt;p&gt;This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.&lt;/p&gt;</description>
     </item>
     
     <item>

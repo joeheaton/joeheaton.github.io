@@ -14,8 +14,7 @@
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/</guid>
-      <description>Chia (XCH) is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that plagues our efforts to decarbonise our energy grid. Chia was initially developed by @BramCohen, known for developing the BitTorrent protocol.
-Proof of Space-and-Time requires a you to commit a resource to the network, in this case storage space, and to mathematically prove that your commitment continues to be available to the network.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.chia.net/&#34; target=&#34;_blank&#34;&gt;Chia (XCH)&lt;/a&gt; is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that &lt;a href=&#34;https://www.bloomberg.com/news/articles/2021-05-26/china-s-crypto-mining-crackdown-followed-deadly-coal-accidents&#34; target=&#34;_blank&#34;&gt;plagues our efforts&lt;/a&gt; to decarbonise our energy grid. Chia was initially developed by &lt;a href=&#34;https://twitter.com/bramcohen&#34; target=&#34;_blank&#34;&gt;@BramCohen&lt;/a&gt;, known for developing the BitTorrent protocol.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,9 +34,8 @@ Spack is a source-based package manager and build system, all builds take place 
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/</guid>
-      <description>Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
-The fix I applied to my GitHub Actions CI to work around this:
-jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: Build 🔨 run: | hugo --baseURL https://${GITHUB_REPOSITORY%%/*}.github.io/${GITHUB_REPOSITORY#*/} This overrides the configured baseURL at build time with your GitHub account name as the subdomain and the repository as the directory.</description>
+      <description>&lt;p&gt;Collaborative websites need to be forked, but if you set a hostname variable, such as &lt;code&gt;baseURL&lt;/code&gt; in Hugo, the forked website will load resources from the original.. Not ideal.&lt;/p&gt;
+&lt;p&gt;The fix I applied to my GitHub Actions CI to work around this:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,9 +44,7 @@ jobs: deploy: runs-on: ubuntu-latest defaults: run: shell: bash steps: - name: B
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
-      <description>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.
-My existing workflow combines three repositories to build the website:
- Hugs (Repo) - Contains my Hugo configuration and assets Blog (Repo) - Contains the blog posts Hugo-theme (Repo) - Contains the Hugo theme  In order to use GitHub Pages I needed a fourth repository named after my GitHub account: joeheaton.</description>
+      <description>&lt;p&gt;In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,8 +80,8 @@ My existing workflow combines three repositories to build the website:
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/08/dynamically-load-fonts/</guid>
-      <description>I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!
-This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!&lt;/p&gt;
+&lt;p&gt;This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&amp;rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&amp;rsquo;t enough I didn&amp;rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,9 +108,7 @@ This involved creating a small toggle function to turn the feature on and off, b
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</guid>
-      <description>Open the new tab dropdown, found to the right of your tabs:
-Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this will open a JSON file (for now) which looks something like this:
-{ &amp;#34;defaultProfile&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;profiles&amp;#34;: [ { &amp;#34;guid&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Debian&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, { &amp;#34;guid&amp;#34;: &amp;#34;{123-456-789}&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Windows PowerShell&amp;#34;, &amp;#34;commandline&amp;#34;: &amp;#34;powershell.exe&amp;#34;, &amp;#34;hidden&amp;#34;: false }, Copy the guid value from whichever flavour of Linux you want to set as default.</description>
+      <description>The new Windows Terminal requires some manual intervention to set the default profile.</description>
     </item>
     
     <item>
@@ -257,8 +251,7 @@ git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push yo
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2013/08/enjoying-gnome3/</guid>
-      <description>The options Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.
-I won&amp;rsquo;t go too in-depth into the actual choices available and their ups &amp;amp; downs as this isn&amp;rsquo;t a comparison posting, I just want to express my feelings on my choice.</description>
+      <description>Nearly every mildly experienced GNU-like OS user has had to content with the problem of which graphical environment to install, why?, because it&amp;rsquo;s how we use OS these days, with point and click. People are often perplexed by the choice even existing as the dominent OS of the day hardly allow you to modify your environment at all let-alone replace it all together with another groups systems.</description>
     </item>
     
     <item>

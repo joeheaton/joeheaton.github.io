@@ -23,9 +23,7 @@
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2020/02/windows-terminal-change-default-profile/</guid>
-      <description>Open the new tab dropdown, found to the right of your tabs:
-Windows Terminal new tab dropdown   Click &amp;ldquo;Settings&amp;rdquo;, this will open a JSON file (for now) which looks something like this:
-{ &amp;#34;defaultProfile&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;profiles&amp;#34;: [ { &amp;#34;guid&amp;#34;: &amp;#34;{987-654-321}&amp;#34;, &amp;#34;hidden&amp;#34;: false, &amp;#34;name&amp;#34;: &amp;#34;Debian&amp;#34;, &amp;#34;source&amp;#34;: &amp;#34;Windows.Terminal.Wsl&amp;#34; }, { &amp;#34;guid&amp;#34;: &amp;#34;{123-456-789}&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;Windows PowerShell&amp;#34;, &amp;#34;commandline&amp;#34;: &amp;#34;powershell.exe&amp;#34;, &amp;#34;hidden&amp;#34;: false }, Copy the guid value from whichever flavour of Linux you want to set as default.</description>
+      <description>The new Windows Terminal requires some manual intervention to set the default profile.</description>
     </item>
     
     <item>
