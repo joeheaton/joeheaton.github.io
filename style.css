@@ -222,7 +222,7 @@ blockquote {
           font-size: 0.8rem; }
 
 #main, #footer {
-  padding: 1rem 1rem 0;
+  padding: 1rem 0 0;
   /*&.container-xl {
     padding-left: 0;
     padding-right: 0;
@@ -280,14 +280,14 @@ blockquote {
   .sidebar-blob:first-child,
   .twitter-timeline:first-child {
     margin-top: 0; }
-  .blog-post:last-child header,
-  .sidebar-blob:last-child header,
-  .twitter-timeline:last-child header {
+  .blog-post:not(.single):last-child header,
+  .sidebar-blob:not(.single):last-child header,
+  .twitter-timeline:not(.single):last-child header {
     border-bottom: 0; }
   .blog-post header,
   .sidebar-blob header,
   .twitter-timeline header {
-    padding: 0 0 0.5rem;
+    margin: 0 0 1rem;
     border-bottom: 1px solid #e9e9e9; }
     .blog-post header h1, .blog-post header h2,
     .sidebar-blob header h1,
@@ -334,19 +334,35 @@ blockquote {
   .blog-post .content,
   .sidebar-blob .content,
   .twitter-timeline .content {
-    margin: 1rem 0; }
+    margin: 0 0 1rem; }
     .blog-post .content .thumbnail,
     .sidebar-blob .content .thumbnail,
     .twitter-timeline .content .thumbnail {
       float: right;
-      margin: 0 0 0.2rem 0.4rem; }
+      position: relative;
+      min-width: 128px;
+      min-height: 64px;
+      margin: 0 0 0.2rem 1rem; }
       .blog-post .content .thumbnail img,
       .sidebar-blob .content .thumbnail img,
       .twitter-timeline .content .thumbnail img {
         max-width: 256px;
-        max-height: 128px;
+        max-height: 8rem;
         border-radius: 8px;
-        box-shadow: 0 4px 4px -4px #b4b4b4; }
+        box-shadow: 0 4px 4px -4px #333; }
+      .blog-post .content .thumbnail .title,
+      .sidebar-blob .content .thumbnail .title,
+      .twitter-timeline .content .thumbnail .title {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: Hack, "Fira Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        color: #fff;
+        text-shadow: #000 0 0 3px;
+        cursor: default; }
     .blog-post .content .footnotes,
     .sidebar-blob .content .footnotes,
     .twitter-timeline .content .footnotes {
@@ -360,24 +376,68 @@ blockquote {
   .twitter-timeline footer {
     padding: 0 0.8%;
     margin: 0 0 0.4rem; }
-  .blog-post.single #TableOfContents ul,
-  .sidebar-blob.single #TableOfContents ul,
-  .twitter-timeline.single #TableOfContents ul {
-    padding-left: 0;
-    counter-reset: item; }
-    .blog-post.single #TableOfContents ul ul,
-    .sidebar-blob.single #TableOfContents ul ul,
-    .twitter-timeline.single #TableOfContents ul ul {
-      padding-left: 1rem; }
-    .blog-post.single #TableOfContents ul li,
-    .sidebar-blob.single #TableOfContents ul li,
-    .twitter-timeline.single #TableOfContents ul li {
-      list-style-type: none; }
-      .blog-post.single #TableOfContents ul li:before,
-      .sidebar-blob.single #TableOfContents ul li:before,
-      .twitter-timeline.single #TableOfContents ul li:before {
-        content: counters(item, ".") ". ";
-        counter-increment: item; }
+  .blog-post.single h2, .blog-post.single .h2,
+  .sidebar-blob.single h2,
+  .sidebar-blob.single .h2,
+  .twitter-timeline.single h2,
+  .twitter-timeline.single .h2 {
+    margin: 2rem 0 0.8rem;
+    font-size: 1.6rem; }
+  .blog-post.single h3, .blog-post.single .h3,
+  .sidebar-blob.single h3,
+  .sidebar-blob.single .h3,
+  .twitter-timeline.single h3,
+  .twitter-timeline.single .h3 {
+    margin: 1.6rem 0 0.8rem;
+    font-size: 1.4rem; }
+  .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
+  .sidebar-blob.single h4,
+  .sidebar-blob.single .h4,
+  .sidebar-blob.single h5,
+  .sidebar-blob.single .h5,
+  .twitter-timeline.single h4,
+  .twitter-timeline.single .h4,
+  .twitter-timeline.single h5,
+  .twitter-timeline.single .h5 {
+    margin: 1.4rem 0 0.8rem;
+    font-size: 1rem; }
+  .blog-post.single .toc,
+  .sidebar-blob.single .toc,
+  .twitter-timeline.single .toc {
+    display: table;
+    padding: 0.4rem 1rem;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid lightgrey; }
+    .blog-post.single .toc header,
+    .sidebar-blob.single .toc header,
+    .twitter-timeline.single .toc header {
+      text-align: center;
+      font-weight: bold; }
+    .blog-post.single .toc ul,
+    .sidebar-blob.single .toc ul,
+    .twitter-timeline.single .toc ul {
+      padding: 0;
+      counter-reset: item;
+      color: grey; }
+      .blog-post.single .toc ul ul,
+      .sidebar-blob.single .toc ul ul,
+      .twitter-timeline.single .toc ul ul {
+        padding-left: 1rem;
+        color: #999;
+        border: 0; }
+      .blog-post.single .toc ul li,
+      .sidebar-blob.single .toc ul li,
+      .twitter-timeline.single .toc ul li {
+        list-style-type: none; }
+        .blog-post.single .toc ul li:first-letter,
+        .sidebar-blob.single .toc ul li:first-letter,
+        .twitter-timeline.single .toc ul li:first-letter {
+          initial-letter-align: auto; }
+        .blog-post.single .toc ul li:before,
+        .sidebar-blob.single .toc ul li:before,
+        .twitter-timeline.single .toc ul li:before {
+          content: counter(item, upper-roman) " ";
+          counter-increment: item; }
   .blog-post.single .sharing-icons,
   .sidebar-blob.single .sharing-icons,
   .twitter-timeline.single .sharing-icons {
@@ -578,7 +638,8 @@ p > code {
   .vcard .card-body {
     padding-bottom: 0; }
   .vcard .vcard-name {
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 1rem 0 0 0 !important; }
   .vcard .vcard-email:before {
     content: "📧"; }
   .vcard .vcard-url:before {
