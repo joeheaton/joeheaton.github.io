@@ -90,11 +90,11 @@ img {
   max-width: 100%; }
 
 figure {
-  margin-top: 0.5rem;
   text-align: center;
-  background: #333;
   border-radius: 8px;
   box-shadow: 1px 1px 3px #b4b4b4; }
+  figure img[src$="#small"] {
+    max-width: 50%; }
   figure a:hover {
     text-decoration: none; }
   figure b, figure p {
@@ -103,9 +103,8 @@ figure {
   figure img {
     border-radius: 8px 8px 0 0; }
   figure figcaption {
-    background: #333;
-    color: #fff;
     padding: 0.4rem 0.8rem;
+    border-top: 1px solid #b4b4b4;
     border-radius: 0 0 8px 8px; }
   figure .image {
     position: relative;
@@ -635,15 +634,14 @@ p > code {
   .vcard img {
     min-width: 200px;
     width: auto; }
+  .vcard i.fa-regular,
+  .vcard i.fa-solid {
+    color: #519cff; }
   .vcard .card-body {
     padding-bottom: 0; }
   .vcard .vcard-name {
     font-weight: bold;
     margin: 1rem 0 0 0 !important; }
-  .vcard .vcard-email:before {
-    content: "📧"; }
-  .vcard .vcard-url:before {
-    content: "🌐"; }
   .vcard .vcard-save {
     text-align: right; }
     .vcard .vcard-save span:before {
