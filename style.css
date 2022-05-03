@@ -362,32 +362,29 @@ blockquote {
         color: #fff;
         text-shadow: #000 0 0 3px;
         cursor: default; }
-    .blog-post .content .footnotes,
-    .sidebar-blob .content .footnotes,
-    .twitter-timeline .content .footnotes {
-      margin: 2rem 0 0 0; }
-      .blog-post .content .footnotes hr,
-      .sidebar-blob .content .footnotes hr,
-      .twitter-timeline .content .footnotes hr {
-        display: none; }
   .blog-post footer,
   .sidebar-blob footer,
   .twitter-timeline footer {
     padding: 0 0.8%;
     margin: 0 0 0.4rem; }
+    .blog-post footer .errata,
+    .sidebar-blob footer .errata,
+    .twitter-timeline footer .errata {
+      padding: 0 0 1rem;
+      border-top: 1px lightgrey solid; }
   .blog-post.single h2, .blog-post.single .h2,
   .sidebar-blob.single h2,
   .sidebar-blob.single .h2,
   .twitter-timeline.single h2,
   .twitter-timeline.single .h2 {
-    margin: 2rem 0 0.8rem;
+    margin: 1.6rem 0 0.8rem;
     font-size: 1.6rem; }
   .blog-post.single h3, .blog-post.single .h3,
   .sidebar-blob.single h3,
   .sidebar-blob.single .h3,
   .twitter-timeline.single h3,
   .twitter-timeline.single .h3 {
-    margin: 1.6rem 0 0.8rem;
+    margin: 1.4rem 0 0.8rem;
     font-size: 1.4rem; }
   .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
   .sidebar-blob.single h4,
