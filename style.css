@@ -36,13 +36,15 @@ a:hover {
 
 p a.external,
 figure figcaption a.external,
-h1 a.external, h2 a.external, h3 a.external, h4 a.external {
+h1 a.external, h2 a.external, h3 a.external, h4 a.external,
+.metadata a.external {
   background: transparent url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='external-link-alt' class='svg-inline--fa fa-external-link-alt fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='cornflowerblue' d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z'%3E%3C/path%3E%3C/svg%3E") top right no-repeat;
   background-size: 10px;
   padding-right: 12px; }
   p a.external.mailto,
   figure figcaption a.external.mailto,
-  h1 a.external.mailto, h2 a.external.mailto, h3 a.external.mailto, h4 a.external.mailto {
+  h1 a.external.mailto, h2 a.external.mailto, h3 a.external.mailto, h4 a.external.mailto,
+  .metadata a.external.mailto {
     background: transparent url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='envelope' class='svg-inline--fa fa-envelope fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='cornflowerblue' d='M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z'%3E%3C/path%3E%3C/svg%3E") top right no-repeat;
     background-size: 10px; }
 
@@ -58,15 +60,21 @@ h6 a, .h6 a {
   color: #2965B4;
   text-decoration: none;
   transition: all 0.2s; }
+  h1 a.anchor, .h1 a.anchor,
+  h2 a.anchor, .h2 a.anchor,
+  h3 a.anchor, .h3 a.anchor,
+  h4 a.anchor, .h4 a.anchor,
+  h5 a.anchor, .h5 a.anchor,
+  h6 a.anchor, .h6 a.anchor {
+    opacity: 0; }
 
-h1 a:hover, .h1 a:hover,
-h2 a:hover, .h2 a:hover,
-h3 a:hover, .h3 a:hover,
-h4 a:hover, .h4 a:hover,
-h5 a:hover, .h5 a:hover,
-h6 a:hover, .h6 a:hover {
-  border-left: 4px solid #ffa319;
-  padding-left: 0.2rem; }
+h1:hover .anchor, .h1:hover .anchor,
+h2:hover .anchor, .h2:hover .anchor,
+h3:hover .anchor, .h3:hover .anchor,
+h4:hover .anchor, .h4:hover .anchor,
+h5:hover .anchor, .h5:hover .anchor,
+h6:hover .anchor, .h6:hover .anchor {
+  opacity: 1; }
 
 h1, .h1 {
   font-size: 1.8rem; }
@@ -79,6 +87,10 @@ h3, .h3 {
 
 h4, .h4, h5, .h5 {
   font-size: 1rem; }
+
+h1 a:hover {
+  border-left: 4px solid #ffa319;
+  padding-left: 0.2rem; }
 
 iframe {
   margin: 0 0 1rem 0; }
@@ -157,6 +169,7 @@ blockquote {
       border-radius: 100%;
       box-shadow: 0 0 1px #000 inset; }
       .masthead .banner .avatar .avatar-img {
+        width: 4.8rem;
         height: 4.8rem;
         border-radius: 100%;
         box-shadow: 0 0 2px #000 inset;
@@ -325,6 +338,10 @@ blockquote {
     margin: 0.2rem 0 0;
     font-size: 0.8rem;
     color: #999; }
+    .blog-post .metadata time,
+    .sidebar-blob .metadata time,
+    .twitter-timeline .metadata time {
+      font-weight: bold; }
     .blog-post .metadata .fa.fa-tag,
     .sidebar-blob .metadata .fa.fa-tag,
     .twitter-timeline .metadata .fa.fa-tag {
@@ -473,10 +490,15 @@ blockquote {
 .highlight {
   margin: 0 0 1rem; }
   .highlight pre {
+    position: relative;
     padding: 0.4rem;
     border-radius: 0.4rem;
     box-shadow: 1px 1px 3px 0 #0003;
     white-space: pre-wrap; }
+    .highlight pre button.copy-to-clipboard {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.4rem; }
 
 p > code {
   display: inline-block;

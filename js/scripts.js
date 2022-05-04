@@ -37,6 +37,43 @@ function annotate_external_links() {
 
 
 /*
+ * Copy code to clipboard buttons
+ */
+function add_code_clipboard_btn() {
+  let blocks = document.querySelectorAll("pre");
+  
+  // only add button if browser supports Clipboard API
+  if (! navigator.clipboard) {
+    return;
+  }
+
+  blocks.forEach((block) => {
+    if (block.querySelector("code")) {
+      let button = document.createElement("button");
+      button.classList.add("copy-to-clipboard");
+      button.classList.add("btn");
+      button.classList.add("btn-sm");
+      button.classList.add("btn-light");
+      button.classList.add("fa-solid");
+      button.classList.add("fa-clone");
+      button.addEventListener("click", copyCode);
+      block.appendChild(button);
+    }
+  });
+
+  delete codeElement;
+
+  async function copyCode(event) {
+    const button = event.srcElement;
+    const pre = button.parentElement;
+    let code = pre.querySelector("code");
+    let text = code.innerText;
+    await navigator.clipboard.writeText(text);
+  }
+}
+
+
+/*
  * Check GDPR / Cookie Law consent cookie
  */
 
@@ -115,6 +152,9 @@ window.addEventListener("DOMContentLoaded", function(event)
 
     // Annotate external links
     annotate_external_links();
+
+    // Copy code to clipboard button
+    add_code_clipboard_btn();
 
     // Setting slider
     // dep: JQuery SlideReveal

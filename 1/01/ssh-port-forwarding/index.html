@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/1/01/ssh-port-forwarding/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2022-05-03T21:38:44&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2022-05-04T09:36:23&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -96,7 +96,7 @@
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "dateModified": "2022-05-03T21:38:44.063149887Z",
+    "dateModified": "2022-05-04T09:36:23.025160314Z",
     "keywords": "Joe Heaton, developer, hpc, linux",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -255,7 +255,8 @@
 </h1>
 
 <div class="row">
-  <div class="col metadata">
+  <div class="d-flex col justify-content-between metadata">
+    <span>
       
        
 
@@ -272,53 +273,23 @@
           <i class="fas fa-exclamation-triangle text-orange" title="Keep in mind this article is over a year old!"></i>
         
        
+    </span>
 
+    <span>
       
-      
-        
-        
-          
-          
-            
-           
-          
-          <div>
-            <span>Updated</span>
-            <time datetime="2022-05-03T21:38:44Z">
-              3rd
-              May
-              2022
-            </time>
-          </div>
-        
-      
+    </span>
   </div>
 
-  <div class="col col-md-auto text-end metadata-extra">
-    
+  <div class="row">
+    <div class="col metadata">
+      
+    </div>
   </div>
 </div>
   </header>
 
   <section class="content">
-    <picture class="thumbnail">
     
-
-    
-    
-
-    
-    
-      
-
-      
-
-      <div class="title">
-        linux
-      </div>
-    
-</picture>
-
     
 
     <p>The following command connects to our server and forwards a specific port on our local machine to the server. In this case we forward port <code>5432</code> which belongs to PostgreSQL, so when we connect to <code>localhost:5432</code> on the desktop, the connection is forwarded through the secure tunnel to the server.</p>
@@ -334,6 +305,8 @@
   
 
   <footer class="footer">
+    
+
     
 <section class="vcard card mb-4 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">

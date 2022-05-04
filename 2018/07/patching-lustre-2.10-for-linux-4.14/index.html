@@ -257,14 +257,15 @@
 </h1>
 
 <div class="row">
-  <div class="col metadata">
+  <div class="d-flex col justify-content-between metadata">
+    <span>
       
       
         
 
         
            
-            <span>Posted</span>
+            <span>Posted on</span>
             <time datetime="2018-07-16T00:00:00Z">
               16th
               Jul
@@ -272,6 +273,9 @@
             </time>
            
          
+
+        
+        
         
         
 
@@ -315,36 +319,23 @@
       
         
        
+    </span>
 
+    <span>
       
-      
+    </span>
   </div>
 
-  <div class="col col-md-auto text-end metadata-extra">
-    
+  <div class="row">
+    <div class="col metadata">
+      
+    </div>
   </div>
 </div>
   </header>
 
   <section class="content">
-    <picture class="thumbnail">
     
-
-    
-    
-
-    
-    
-      
-
-      
-
-      <div class="title">
-        linux
-      </div>
-    
-</picture>
-
     
 
     <p>The Lustre community supports recent point-releases of RHEL/CentOS but those patches don&rsquo;t seem to come back into existing Lustre releases, since those releases don&rsquo;t officially support later kernels. I installed client 2.10 thinking it had the best chance of working but encountered huge numbers of errors when compiling!</p>
@@ -370,6 +361,8 @@ sed -i <span style="color:#f1fa8c">&#39;/^Require/d&#39;</span> rpm/kmp-lustre.p
   
 
   <footer class="footer">
+    
+
     
 <section class="vcard card mb-4 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
