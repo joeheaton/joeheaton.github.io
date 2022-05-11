@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>Bash opinions</title>
+      <link>https://www.heaton.dev/2021/06/bash-opinions/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2021/06/bash-opinions/</guid>
+      <description>Everyone has their own preferences when it comes to writing Bash scripts, I prefer very high safety &amp;amp; syntax consistency. A good example of both is variables, ${USER} can be shortened to $USER, but any following characters could be interpreted as part of the variable name. The longer syntax is also more powerful, enabling small conditional checks, which means we&amp;rsquo;ll likely end up using the longer syntax somewhere in our script, so why not keep it consistent and use it everywhere!</description>
+    </item>
+    
+    <item>
       <title>Try out Spack on Arm HPC | CP2K</title>
       <link>https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
@@ -62,6 +71,15 @@ Spack is a source-based package manager and build system, all builds take place 
       
       <guid>https://www.heaton.dev/2020/02/package-management-for-.deb-.rpm-for-debian-ubuntu-red-hat-centos-suse/</guid>
       <description>&lt;p&gt;A smattering of useful commands for dealing with package managers!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SFTP instead of SCP</title>
+      <link>https://www.heaton.dev/2019/04/sftp-instead-of-scp/</link>
+      <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2019/04/sftp-instead-of-scp/</guid>
+      <description>&lt;p&gt;SCP suffered from weak input validation for decades until &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=1666127&#34; title=&#34;openssh: Improper validation of object names allows malicious server to overwrite files via scp client&#34; target=&#34;_blank&#34;&gt;CVE-2019-6111&lt;/a&gt;, the maintainers recommended using SFTP until patched versions can be deployed. I, like many others, were reminded SFTP existed!&lt;/p&gt;</description>
     </item>
     
     <item>

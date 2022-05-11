@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 06 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloud</title>
+      <link>https://www.heaton.dev/tags/cloud/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://www.heaton.dev/tags/terraform/</link>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dev</title>
+      <link>https://www.heaton.dev/tags/dev/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://www.heaton.dev/tags/vscode/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hpc</title>
       <link>https://www.heaton.dev/tags/hpc/</link>
@@ -81,6 +117,24 @@
     </item>
     
     <item>
+      <title>bash</title>
+      <link>https://www.heaton.dev/tags/bash/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.heaton.dev/tags/programming/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>spack</title>
       <link>https://www.heaton.dev/tags/spack/</link>
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
@@ -122,15 +176,6 @@
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/webdev/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dev</title>
-      <link>https://www.heaton.dev/tags/dev/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/dev/</guid>
       <description></description>
     </item>
     
@@ -194,15 +239,6 @@
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/game/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bash</title>
-      <link>https://www.heaton.dev/tags/bash/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/bash/</guid>
       <description></description>
     </item>
     

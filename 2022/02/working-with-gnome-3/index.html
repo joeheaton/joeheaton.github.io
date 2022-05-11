@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/02/working-with-gnome-3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-24T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-02-24T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2022-04-14T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
 
 
 
@@ -91,14 +91,14 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/02/working-with-gnome-3/",
-    "headline": "Working with Gnome 3","wordCount": "212",
+    "headline": "Working with Gnome 3","wordCount": "438",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2022-02-24T00:00:00Z",
     
-    "dateModified": "2022-02-24T00:00:00Z",
+    "dateModified": "2022-04-14T00:00:00Z",
     "keywords": "Joe Heaton, developer, hpc, linux, desktop",
     "description": "Joe\u0027s technology-focused murmurings."
   }
@@ -276,6 +276,25 @@
 
         
         
+          
+          
+            
+            
+              
+             
+            
+            
+              <span>&amp;</span>
+            
+            
+            <span>last updated on</span>
+            <time datetime="2022-04-14T00:00:00Z">
+              14th
+              Apr
+              2022
+            </time>
+          
+        
         
         
 
@@ -337,23 +356,53 @@
   <section class="content">
     
     
+  <aside class="toc">
+    <header>
+      Contents
+    </header>
+
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#extensions">Extensions</a></li>
+    <li><a href="#shortcuts">Shortcuts</a>
+      <ul>
+        <li><a href="#gnome-terminal---change-tab">Gnome Terminal - Change Tab</a></li>
+        <li><a href="#change-workspace-windows-shortcut">Change Workspace (Windows shortcut)</a></li>
+      </ul>
+    </li>
+    <li><a href="#emoji">Emoji</a></li>
+    <li><a href="#issues-and-workarounds">Issues and Workarounds</a>
+      <ul>
+        <li><a href="#screensharing">Screensharing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
 
     <p>I&rsquo;m back on Ubuntu with the Gnome 3 desktop environment and here are a few customsations to make it more productive and make moving between Gnome 3 &amp; Windows simple.</p>
-<p>There are two ways to modify Gnome&rsquo;s internal settings, the <code>dconf-editor</code> graphical application and the <code>gsettings</code> command.</p>
 <h2 id="extensions">Extensions</h2>
 <p>Gnome 3 has an extension system that allows third-party developers to add functionality to your desktop.</p>
-<h3 id="sound-input--output-device-chooser-by-kgshankhttpsextensionsgnomeorgextension906sound-output-device-chooser"><a href="https://extensions.gnome.org/extension/906/sound-output-device-chooser/" target="_blank">Sound Input &amp;amp; Output Device Chooser by kgshank</a></h3>
+<ul>
+<li><a href="https://extensions.gnome.org/extension/906/sound-output-device-chooser/" target="_blank">Sound Input &amp;amp; Output Device Chooser by kgshank</a> Conveniently switch between speakers &amp; microphones from the status menu.</li>
+</ul>
 <p>
   <img src="images/sound-input-output-device-chooser.png" alt="images/sound-input-output-device-chooser.png">
 </p>
-<p>Conveniently switch between speakers &amp; microphones from the status menu.</p>
-<h3 id="noannoyance-v2-by-bjoerndaasehttpsextensionsgnomeorgextension2182noannoyance"><a href="https://extensions.gnome.org/extension/2182/noannoyance/" target="_blank">NoAnnoyance v2 by bjoerndaase</a></h3>
-<p>Supress &ldquo;Window is ready&rdquo; notification, this notification triggers frequently and does not provide any useful information.</p>
-<h3 id="impatience-by-gfxmonkhttpsextensionsgnomeorgextension277impatience"><a href="https://extensions.gnome.org/extension/277/impatience/" target="_blank">Impatience by gfxmonk</a></h3>
-<p>Faster Gnome animations, including: Show windows side by side, Switch workspaces, Dropdown menu fade-in.</p>
-<h3 id="clipboard-indicator-by-tudmotuhttpsextensionsgnomeorgextension779clipboard-indicator"><a href="https://extensions.gnome.org/extension/779/clipboard-indicator/" target="_blank">Clipboard Indicator by Tudmotu</a></h3>
-<p>Add a clipboard history menu to the status bar</p>
+<ul>
+<li>
+<p><a href="https://extensions.gnome.org/extension/2182/noannoyance/" target="_blank">NoAnnoyance v2 by bjoerndaase</a> Supress &ldquo;Window is ready&rdquo; notification, this notification triggers frequently and does not provide any useful information.</p>
+</li>
+<li>
+<p><a href="https://extensions.gnome.org/extension/277/impatience/" target="_blank">Impatience by gfxmonk</a> Faster Gnome animations, including: Show windows side by side, Switch workspaces, Dropdown menu fade-in.</p>
+</li>
+<li>
+<p><a href="https://extensions.gnome.org/extension/779/clipboard-indicator/" target="_blank">Clipboard Indicator by Tudmotu</a> Add a clipboard history menu to the status bar</p>
+</li>
+</ul>
 <h2 id="shortcuts">Shortcuts</h2>
+<p>There are two ways to modify Gnome&rsquo;s internal settings, the <code>dconf-editor</code> graphical application and the <code>gsettings</code> command.</p>
 <h3 id="gnome-terminal---change-tab">Gnome Terminal - Change Tab</h3>
 <p>Set Gnome Terminal&rsquo;s change tab shortcuts to <code>Ctrl+Tab</code> &amp; <code>Ctrl+Shift+Tab</code> instead of <code>Ctrl+PageUp</code> &amp; <code>Ctrl+PageDown</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">gsettings set org.gnome.Terminal.Legacy.Keybindings<span style="color:#ff79c6">:</span>/org/gnome/terminal/legacy/keybindings/ next-tab &#39;&lt;Control&gt;Tab&#39;
@@ -362,8 +411,35 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings<span style="color:#ff79c6">:
 <p>Adds the Windows 10 shortcut <code>Control+Super+Arrow</code> to change virtual desktops</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>right <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Right&#39;]&#34;</span>
 gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>left <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Left&#39;]&#34;</span>
-</code></pre></div><hr>
-<p>I hope you find these suggestions useful and productive, please let me know if any of these stop working.</p>
+</code></pre></div><h2 id="emoji">Emoji</h2>
+<p>Emoji are a real pain in GNOME 3, a long way from Windows 10&rsquo;s <code>Ctrl+;</code> global shortcut.</p>
+<p>Here is a <a href="https://askubuntu.com/a/1045916" target="_blank">AskUbuntu.com</a> answer listing the various ways to use Emoji in GNOME.</p>
+<p>The <a href="https://extensions.gnome.org/extension/1162/emoji-selector/" target="_blank">Emoji Selector</a> extension looks perfect, except that it hasn&rsquo;t been updated for GNOME 40+.</p>
+<p>I&rsquo;ve settled for the <a href="https://github.com/tom-james-watson/emote" target="_blank">Emote</a> app, it provides a global shortcut of <code>Ctrl+Alt+E</code>!</p>
+<p>There are instructions to enable the global shortcut on Wayland <a href="https://github.com/tom-james-watson/Emote/wiki/Hotkey-In-Wayland" target="_blank">the instructions</a> <del>but they didn&rsquo;t work for me on Ubuntu 21.10&hellip; 🤞 for Ubuntu 22.04!</del> Works on Ubuntu 22.04!</p>
+<h2 id="issues-and-workarounds">Issues and Workarounds</h2>
+<p>There inevitably will be bugs and oddities in any desktop environment, here are a few I have encountered. I have to say that GNOME 3 has continually improved since its bumpy initial release back in 2011&hellip;</p>
+<h3 id="screensharing">Screensharing</h3>
+<p>By default GNOME runs on the Wayland display manager, a replacement for X11/Xorg. Due to Wayland&rsquo;s secure architecture applications wanting to capture the screen need to authenticate directly with Wayland. This requires the <code>xdg-desktop-portal-gnome</code> package installed.</p>
+<p>Firefox supports this protocol and Chrome has an experimental feature found at <code>chrome://flags/#enable-webrtc-pipewire-capturer</code>.</p>
+<p>On Ubuntu 21.10 this workaround only provides full-screen sharing, it isn&rsquo;t possible to share individual windows on Wayland.</p>
+<p>On Ubuntu 22.04 I found some apps can share specific windows but Chrome is still working on this.</p>
+<p>Thanks to <a href="https://wiki.archlinux.org/title/PipeWire#WebRTC_screen_sharing" target="_blank">Arch Wiki</a>. <a href="https://bugs.chromium.org/p/webrtc/issues/detail?id=13429" target="_blank">Chromium Issue 13429: Tracking bug for better Linux/Wayland screensharing support</a>.</p>
+<hr>
+<p>I hope you find these suggestions useful, please let me know if any of these stop working.</p>
+
+    
+      <h2>
+    Updates & Errata
+</h2>
+
+<ul>
+
+    <li>Updated 2022-05-10 for GNOME3 42 on Ubuntu 22.04</li>
+
+</ul>
+
+    
 
     
   </section>
@@ -371,8 +447,6 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
   
 
   <footer class="footer">
-    
-
     
 <section class="vcard card mb-4 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
@@ -488,17 +562,19 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
 
     <div class="tag-cloud">
             
-            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.052rem" target="_self">automation</a>
+            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.031rem" target="_self">automation</a>
             
-            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (3 posts)" style="font-size: 1.200rem" target="_self">bash</a>
+            <a href="https://www.heaton.dev/tags/bash" aria-label="bash (4 posts)" style="font-size: 1.263rem" target="_self">bash</a>
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
-            <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.052rem" target="_self">desktop</a>
+            <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (6 posts)" style="font-size: 1.452rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -514,33 +590,39 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             
             <a href="https://www.heaton.dev/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
             
-            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.052rem" target="_self">github</a>
+            <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.031rem" target="_self">github</a>
             
             <a href="https://www.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
-            <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (2 posts)" style="font-size: 1.052rem" target="_self">grafana</a>
+            <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (2 posts)" style="font-size: 1.031rem" target="_self">grafana</a>
             
-            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (5 posts)" style="font-size: 1.386rem" target="_self">hpc</a>
+            <a href="https://www.heaton.dev/tags/hpc" aria-label="hpc (5 posts)" style="font-size: 1.337rem" target="_self">hpc</a>
             
             <a href="https://www.heaton.dev/tags/hugo" aria-label="hugo (1 posts)" style="font-size: 0.800rem" target="_self">hugo</a>
             
-            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (9 posts)" style="font-size: 1.600rem" target="_self">linux</a>
+            <a href="https://www.heaton.dev/tags/linux" aria-label="linux (11 posts)" style="font-size: 1.600rem" target="_self">linux</a>
             
-            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (4 posts)" style="font-size: 1.305rem" target="_self">monitoring</a>
+            <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (4 posts)" style="font-size: 1.263rem" target="_self">monitoring</a>
             
             <a href="https://www.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
+            
+            <a href="https://www.heaton.dev/tags/programming" aria-label="programming (1 posts)" style="font-size: 0.800rem" target="_self">programming</a>
             
             <a href="https://www.heaton.dev/tags/spack" aria-label="spack (1 posts)" style="font-size: 0.800rem" target="_self">spack</a>
             
             <a href="https://www.heaton.dev/tags/sql" aria-label="sql (1 posts)" style="font-size: 0.800rem" target="_self">sql</a>
             
+            <a href="https://www.heaton.dev/tags/terraform" aria-label="terraform (1 posts)" style="font-size: 0.800rem" target="_self">terraform</a>
+            
             <a href="https://www.heaton.dev/tags/vim" aria-label="vim (1 posts)" style="font-size: 0.800rem" target="_self">vim</a>
             
-            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.052rem" target="_self">web</a>
+            <a href="https://www.heaton.dev/tags/vscode" aria-label="vscode (1 posts)" style="font-size: 0.800rem" target="_self">vscode</a>
+            
+            <a href="https://www.heaton.dev/tags/web" aria-label="web (2 posts)" style="font-size: 1.031rem" target="_self">web</a>
             
             <a href="https://www.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
-            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.200rem" target="_self">windows</a></div>
+            <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.167rem" target="_self">windows</a></div>
     </section>
   
 

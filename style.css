@@ -389,19 +389,36 @@ blockquote {
     .twitter-timeline footer .errata {
       padding: 0 0 1rem;
       border-top: 1px lightgrey solid; }
+  .blog-post.single h2, .blog-post.single .h2, .blog-post.single h3, .blog-post.single .h3, .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
+  .sidebar-blob.single h2,
+  .sidebar-blob.single .h2,
+  .sidebar-blob.single h3,
+  .sidebar-blob.single .h3,
+  .sidebar-blob.single h4,
+  .sidebar-blob.single .h4,
+  .sidebar-blob.single h5,
+  .sidebar-blob.single .h5,
+  .twitter-timeline.single h2,
+  .twitter-timeline.single .h2,
+  .twitter-timeline.single h3,
+  .twitter-timeline.single .h3,
+  .twitter-timeline.single h4,
+  .twitter-timeline.single .h4,
+  .twitter-timeline.single h5,
+  .twitter-timeline.single .h5 {
+    padding: 1rem 0 0 0;
+    margin: 1rem 0 0.4rem; }
   .blog-post.single h2, .blog-post.single .h2,
   .sidebar-blob.single h2,
   .sidebar-blob.single .h2,
   .twitter-timeline.single h2,
   .twitter-timeline.single .h2 {
-    margin: 1.6rem 0 0.8rem;
     font-size: 1.6rem; }
   .blog-post.single h3, .blog-post.single .h3,
   .sidebar-blob.single h3,
   .sidebar-blob.single .h3,
   .twitter-timeline.single h3,
   .twitter-timeline.single .h3 {
-    margin: 1.4rem 0 0.8rem;
     font-size: 1.4rem; }
   .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
   .sidebar-blob.single h4,
@@ -412,7 +429,6 @@ blockquote {
   .twitter-timeline.single .h4,
   .twitter-timeline.single h5,
   .twitter-timeline.single .h5 {
-    margin: 1.4rem 0 0.8rem;
     font-size: 1rem; }
   .blog-post.single .toc,
   .sidebar-blob.single .toc,
@@ -470,11 +486,14 @@ blockquote {
       font-size: 0.8rem;
       cursor: default; }
   .blog-post article img,
+  .blog-post .mermaid,
   .sidebar-blob article img,
-  .twitter-timeline article img {
+  .sidebar-blob .mermaid,
+  .twitter-timeline article img,
+  .twitter-timeline .mermaid {
     max-width: 100%;
     height: auto;
-    margin: 13px auto; }
+    margin: 1rem auto; }
   .blog-post .vcard:before,
   .sidebar-blob .vcard:before,
   .twitter-timeline .vcard:before {
