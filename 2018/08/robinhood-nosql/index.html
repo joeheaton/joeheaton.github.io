@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Robinhood NoSQL | Heaton.dev</title>
+<title>Robinhood NoSQL | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Robinhood NoSQL" />
@@ -18,7 +18,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2018/08/robinhood-nosql/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-08-31T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2018-08-31T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2018-08-31T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -93,7 +93,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2018/08/robinhood-nosql/",
-    "headline": "Robinhood NoSQL","wordCount": "896",
+    "headline": "Robinhood NoSQL","wordCount": "901",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -101,8 +101,8 @@ It does this by scanning every file on the filesystem as efficiently as possible
     "datePublished": "2018-08-31T00:00:00Z",
     
     "dateModified": "2018-08-31T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -338,12 +338,22 @@ It does this by scanning every file on the filesystem as efficiently as possible
 <p>Upon looking into the type of operations the Robinhood client tools typically perform and reading some recent <a href="https://github.com/cea-hpc/robinhood/wiki/Papers-and-presentations" target="_blank">presentations &amp;amp; papers</a> it seems that MySQL/MariaDB was settled on as a well-known good general database engine and not necassarily for any specific qualities that make it exceptional in this use-case.</p>
 <p>I have worked with NoSQL quite a bit the last year and it seems the Robinhood schema could fit quite well; For example without looking into the code: the <code>rbh-find</code> user tool likely performs a full table search for matching filenames, <code>rbh-du</code> will do the same while matching the base path. This behaviour is more akin to a search engine than a key-value lookup.</p>
 <p>Without espounding the pro&rsquo;s of both DB engine types, I understand that NoSQL has advantages with &ldquo;search engine&rdquo; style queries, with significant software projects dedicated to the workload; One being Apache Lucene, while still having options to experiment further by trying <a href="https://docs.mongodb.com/manual/introduction/" target="_blank">MongoDB</a>, <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> or even <a href="https://blazingdb.com/" target="_blank">BlazingDB</a>.</p>
-<h1 id="experiment">Experiment</h1>
+
+<h1 id="experiment">
+  Experiment
+   <a class="anchor" href="#experiment">
+    #
+  </a></h1>
 <p>The easiest and quickest way to investigate whether the scale and typical requests would fit into NoSQL is the following:</p>
 <p><code>Lustre → Robinhood → SQL → NoSQL ← Query script</code></p>
 <p>Feeding NoSQL from the existing MySQL data is easier than retrofitting Robinhood to speak to NoSQL, doing this can provide a simple query performance benchmark.</p>
 <p>I settled on using Elasticsearch as my NoSQL database as it is the easiest to get started with and I have prior experience with the system. My parsing and ingestion method is to use Logstash with the JDBC input plugin. This setup can be configured to connect to MySQL and SELECT all the entries in the ENTRIES table, it does this in configurable increments to avoid long queries.</p>
-<h1 id="results">Results</h1>
+
+<h1 id="results">
+  Results
+   <a class="anchor" href="#results">
+    #
+  </a></h1>
 <p>Using a copy of one of our production Robinhood databases our high-performance server was able to achieve:</p>
 <ul>
 <li>Ingesting 1mil rows per query from a single 54GiB MySQL instance serving Robinhood</li>
@@ -353,14 +363,29 @@ It does this by scanning every file on the filesystem as efficiently as possible
 </ul>
 <p>In my first attempt I set the per-query amount to 10'000, hoping to avoid the process stalling but this made the ingest very slow - I aborted after 9 hours to try a higher value!</p>
 <p>Something of note, Logstash is unable to reload its configuration or shutdown while the Logstash JDBC plugin is ingesting data as the plugin blocks these operations. I had to kill logstash in order to abort.</p>
-<h2 id="query-benchmark">Query Benchmark</h2>
+
+<h2 id="query-benchmark">
+  Query Benchmark
+   <a class="anchor" href="#query-benchmark">
+    #
+  </a></h2>
 <p>As hoped for Elasticsearch queries like <code>uid: xyz</code> return within a few seconds with matches of millions of records; As for dumping the matched records in-full Elasticsearch took 1.31 seconds to return 10000 records.</p>
 <p>MySQL dump with the same query (<code>SELECT * FROM ENTRIES WHERE uid = 'root' LIMIT 10000</code>) took 10.092 seconds.</p>
 <p>These numbers are to some degree not fair, the uid field in MySQL is not indexed, it is not indexed to enhance the ingest speed of the <code>ENTRIES</code> table but I believe this shows a benefit of using Elasticsearch as no additional configuration was needed to query against the uid field.</p>
-<h2 id="further-work">Further work</h2>
+
+<h2 id="further-work">
+  Further work
+   <a class="anchor" href="#further-work">
+    #
+  </a></h2>
 <p>More work is needed to make this data useful, Robinhood stores data in multiple tables and I have only ingested the one. <code>ANEX_INFO</code> seems to store the lookup table matching filepaths (<code>link</code> column) with their Robinhood/Lustre <code>ID</code>. <code>NAMES</code> seems to serve a similar purpose but splits every file into its own row and represents paths via string of a foreign keys; This means there are duplicate filenames in the table, but each of their rows have different <code>parent_id</code>&rsquo;s as they belong to different parent directories. Lastly <code>ACCT_STAT</code> contains file statistics generated by Robinhood, this is all the data people are interested in so this will need to be merged in with the Elasticsearch documents.</p>
 <p>Later it is worth investigating if multiple Robinhood instances can be merged into one Elasticsearch index. This would allow for whole-estate searches and metrics, but it assumes file id&rsquo;s are unique to the file&rsquo;s state and not incremental - Although this can be worked around by adding another field stating the source filesystem.</p>
-<h1 id="source">Source</h1>
+
+<h1 id="source">
+  Source
+   <a class="anchor" href="#source">
+    #
+  </a></h1>
 <p>/etc/logstash/elasticsearch.robinhood.json:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;template&#34;</span>: <span style="color:#f1fa8c">&#34;rbh&#34;</span>,
@@ -455,6 +480,16 @@ It does this by scanning every file on the filesystem as efficiently as possible
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -477,7 +512,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -527,9 +562,9 @@ It does this by scanning every file on the filesystem as efficiently as possible
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -541,13 +576,13 @@ It does this by scanning every file on the filesystem as efficiently as possible
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -960,7 +995,7 @@ It does this by scanning every file on the filesystem as efficiently as possible
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1085,5 +1120,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

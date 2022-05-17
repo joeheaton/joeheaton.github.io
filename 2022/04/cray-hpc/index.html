@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Cray HPC | Heaton.dev</title>
+<title>Cray HPC | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Cray HPC" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/04/cray-hpc/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-06T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-04-06T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2022-04-06T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -75,7 +75,7 @@
 
 
 <!-- Mermaid graphviz -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js" integrity="sha512-vLumCjg7NKEQKGM+xAgBYTvQ90DVu6Eo7vS1T/iPf2feNLcrpGxvumuUUmE3CPiCUPgviyKbtpWGDbhnVnmJxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js" integrity="sha512-vLumCjg7NKEQKGM+xAgBYTvQ90DVu6Eo7vS1T/iPf2feNLcrpGxvumuUUmE3CPiCUPgviyKbtpWGDbhnVnmJxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Lunr static site search -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
@@ -94,7 +94,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/04/cray-hpc/",
-    "headline": "Cray HPC","wordCount": "609",
+    "headline": "Cray HPC","wordCount": "613",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -102,8 +102,8 @@
     "datePublished": "2022-04-06T00:00:00Z",
     
     "dateModified": "2022-04-06T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -335,12 +335,21 @@
     
 
     <p>On the 50th Anniversary of Cray Research Inc.&rsquo;s founding by Seymour Cray, I thought I&rsquo;d summarise my brief but intensely interesting experience with the last crop of Cray Supercomputer systems.</p>
-<h2 id="cray-xc">Cray XC</h2>
+<h2 id="cray-xc">
+  Cray XC
+   <a class="anchor" href="#cray-xc">
+    #
+  </a></h2>
 <p>This generation started with the introduction of the Aries interconnect; This impressive network deployed in a Dragonfly topology connected all nodes within a cabinet group to every other node in the same cabinet group using copper, and then connected every cabinet group to every other cabinet group via optical fibre. This resulted in any node in the system being able to communicate with any other node within three networks.</p>
 <p>A network this interconnected required some serious networking hardware, which is why Cray created a dedicated ASIC attached to each blade to handle the networking!</p>
 <p><strong>Node#1</strong> &lt;-Copper-&gt; <strong>Node#5</strong></p>
 <p><strong>Node#1</strong> &lt;-Copper-&gt; <strong>Cabinet#1</strong> &lt;-Fibre-&gt; <strong>Cabinet#64</strong> &lt;-Copper-&gt; <strong>Node#3601</strong></p>
-<h2 id="administration">Administration</h2>
+
+<h2 id="administration">
+  Administration
+   <a class="anchor" href="#administration">
+    #
+  </a></h2>
 <p>These systems can support thousands of nodes spread over hundreds of cabinets, but the administration is suprisingly centralised on a few tiered nodes: The SMW, Boot node and SDB.</p>
 <p>The SMW, System Management Workstation, is the first point of contact for an administrator, connecting over SSH you land on a highly resilient node where you will find the logs for the entire supercomputer, as well node configurations and several proprietary administration scripts for checking the systems state.</p>
 <p>The boot node handles, well, booting nodes. Sounds simple but it handles booting thousands of nodes simultaneously, sending boot images, controlling the full lifecycle from hardware initialisation through to graceful, or otherwise, shutdown. This task is further complicated by the Aries interconnect which requires sepcial operations in order to add or remove a node from the network.</p>
@@ -355,11 +364,21 @@ flowchart LR
     User---|SSH|Login
     Admin-.-|SSH|SMW
 </div>
-<h2 id="software">Software</h2>
+
+<h2 id="software">
+  Software
+   <a class="anchor" href="#software">
+    #
+  </a></h2>
 <p>Cray systems aren&rsquo;t only impressive collections of commodity and specialised hardware, huge effort is put into the software stack. Cray spins their own Linux distro based on Suse and they control the update cycle to ensure that every point-release of their entire software stack can be supported properly and any regressions or bugs are well documented so HPC sites can make informed decisions on when to update &ndash; It&rsquo;s not just <code>yum update</code>, nowhere near it!</p>
 <p>Sites that opt for Cray systems often are running highly specialised code, and running it thousands or millions of times over the lifetime of a Cray system, as such the site will want to squeeze every milisecond of performance out of each run as they can. Cray provides a proprietary set of compilers, performance libraries and profilers, bundled alongside Cray-optimised open-source packages such as NumPy, Fast Fouier Transform, BLAS, etc..</p>
 <p>These days those proprietary tools are based on open-source projects like Clang/LLVM and simply layer ontop the Cray optimizations, enabling them to benefit from upstream performance improvements, removing the need to maintain a custom front-end, and making it easier for new users to adapt since support for Clang/LLVM is fairly widespread.</p>
-<h2 id="storage">Storage</h2>
+
+<h2 id="storage">
+  Storage
+   <a class="anchor" href="#storage">
+    #
+  </a></h2>
 <p>It&rsquo;s difficult to separate the hardware from the software when it comes to storage appliances and Cray ClusterStor is no exception; Deploying the open-source distributed filesystem Lustre across thousands of disks packed into highly resilient RAID arrays, connected via high-speed Infiniband to dedicated I/O nodes distributed across the Supercomputer sharing the load of mounting the several massive filesystems to every compute node!</p>
 <div class="mermaid">
 flowchart LR
@@ -411,6 +430,16 @@ flowchart LR
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -433,7 +462,7 @@ flowchart LR
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -483,9 +512,9 @@ flowchart LR
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -497,13 +526,13 @@ flowchart LR
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -916,7 +945,7 @@ flowchart LR
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1041,5 +1070,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

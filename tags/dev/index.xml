@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dev on Heaton.dev</title>
+    <title>dev on Joe Heaton.dev</title>
     <link>https://www.heaton.dev/tags/dev/</link>
-    <description>Recent content in dev on Heaton.dev</description>
+    <description>Recent content in dev on Joe Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understand MermaidJS; Concepts &amp; Syntax</title>
+      <link>https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/</guid>
+      <description>&lt;p&gt;MermaidJS is great because it brings graphs-as-code to the web! No longer do we need to run graphviz from the commandline to generate static image files each time we make a change; Now we see changes instantly, embed graphs with ease in source repositories and track their changes, etc..&lt;/p&gt;
+&lt;p&gt;The trouble I&amp;rsquo;ve had with Mermaid is figuring out the syntax, there are quite a few gotchas which don&amp;rsquo;t advertise themselves very clearly, such as it not tolerating blank lines, or spaces are comma-deliminated lists.. I&amp;rsquo;ll list these here so you can get graphing quicker than I did!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Styling MermaidJS</title>
+      <link>https://www.heaton.dev/2022/05/styling-mermaidjs/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/05/styling-mermaidjs/</guid>
+      <description>&lt;p&gt;What&amp;rsquo;s better than a graph? A graph with style!&lt;/p&gt;
+&lt;p&gt;Using Mermaid&amp;rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&amp;rsquo;s branding.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>My VSCode</title>
       <link>https://www.heaton.dev/2022/05/my-vscode/</link>

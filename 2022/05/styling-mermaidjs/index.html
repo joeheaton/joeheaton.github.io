@@ -2,7 +2,7 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Automatically set your github.io domain in GitHub Actions | Joe Heaton.dev</title>
+<title>Styling MermaidJS | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -12,21 +12,21 @@
 <meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="Automatically set your github.io domain in GitHub Actions" />
-<meta property="og:description" content="Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
-The fix I applied to my GitHub Actions CI to work around this:" />
+<meta property="og:title" content="Styling MermaidJS" />
+<meta property="og:description" content="What&rsquo;s better than a graph? A graph with style!
+Using Mermaid&rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&rsquo;s branding." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="og:url" content="https://www.heaton.dev/2022/05/styling-mermaidjs/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-13T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-05-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Automatically set your github.io domain in GitHub Actions"/>
-<meta name="twitter:description" content="Collaborative websites need to be forked, but if you set a hostname variable, such as baseURL in Hugo, the forked website will load resources from the original.. Not ideal.
-The fix I applied to my GitHub Actions CI to work around this:"/>
+<meta name="twitter:title" content="Styling MermaidJS"/>
+<meta name="twitter:description" content="What&rsquo;s better than a graph? A graph with style!
+Using Mermaid&rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&rsquo;s branding."/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -39,7 +39,7 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
 <!-- Formats -->
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/">
+<link rel="canonical" href="https://www.heaton.dev/2022/05/styling-mermaidjs/">
 <link rel="icon" href="https://www.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -76,6 +76,9 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+<!-- Mermaid graphviz -->
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/mermaid.min.js" integrity="sha512-vLumCjg7NKEQKGM+xAgBYTvQ90DVu6Eo7vS1T/iPf2feNLcrpGxvumuUUmE3CPiCUPgviyKbtpWGDbhnVnmJxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- Lunr static site search -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
 
@@ -92,16 +95,16 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
   {
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
-    "url": "https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/",
-    "headline": "Automatically set your github.io domain in GitHub Actions","wordCount": "97",
+    "url": "https://www.heaton.dev/2022/05/styling-mermaidjs/",
+    "headline": "Styling MermaidJS","wordCount": "296",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2021-04-20T00:00:00Z",
+    "datePublished": "2022-05-13T00:00:00Z",
     
-    "dateModified": "2021-04-20T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, cloud, github, automation, hugo",
+    "dateModified": "2022-05-13T00:00:00Z",
+    "keywords": "Joe Heaton, developer, hpc, cloud, dev",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
@@ -251,9 +254,9 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
 
 
 <h1>
-  <a href="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/" title="Automatically set your github.io domain in GitHub Actions" target="_self">
+  <a href="https://www.heaton.dev/2022/05/styling-mermaidjs/" title="Styling MermaidJS" target="_self">
     
-      Automatically set your github.io domain in GitHub Actions
+      Styling MermaidJS
     
   </a>
 </h1>
@@ -268,10 +271,10 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
         
            
             <span>Posted on</span>
-            <time datetime="2021-04-20T00:00:00Z">
-              20th
-              Apr
-              2021
+            <time datetime="2022-05-13T00:00:00Z">
+              13th
+              May
+              2022
             </time>
            
          
@@ -292,22 +295,15 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
         
             
 
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
+            <a href="https://www.heaton.dev/tags/cloud" rel="tag" target="_self">
+                <span>cloud</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/hugo" rel="tag" target="_self">
-                <span>hugo</span></a>
+            <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
+                <span>dev</span></a>
         
 
         <i class="fa fa-tag" aria-hidden="true"></i>
@@ -347,20 +343,84 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
     
     
 
-    <p>Collaborative websites need to be forked, but if you set a hostname variable, such as <code>baseURL</code> in Hugo, the forked website will load resources from the original.. Not ideal.</p>
-<p>The fix I applied to my GitHub Actions CI to work around this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-      - name: Build 🔨
-        run: |
-          hugo --baseURL https://<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">GITHUB_REPOSITORY</span>%%/*<span style="color:#f1fa8c">}</span>.github.io/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">GITHUB_REPOSITORY</span>#*/<span style="color:#f1fa8c">}</span>
-</code></pre></div><p>This overrides the configured <code>baseURL</code> at build time with your GitHub account name as the subdomain and the repository as the directory.</p>
-<p>I share this in hopes it saves you the time I lost figuring this out!</p>
+    <p>What&rsquo;s better than a graph? A graph with style!</p>
+<p>Using Mermaid&rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&rsquo;s branding.</p>
+<p>The class colour definitions below define blue, red, yellow &amp; green classes with the <code>fill</code> set to their hex colour code, <code>color</code> sets the text colour and <code>stroke</code> setting the connecting line colour.</p>
+<p>Below the <code>classDef</code> we list each element in the graph against the class we want to assign to them, so <code>class Web green</code> assigns the <code>Web</code> subgraph to our <code>green</code> class! Multiple elements are comma-deliminated with no spacing, Mermaid is quite phobic of spurious spaces.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fsharp" data-lang="fsharp">	<span style="color:#ff79c6">%%</span> Google brand
+	classDef blue fill<span style="color:#ff79c6">:#</span>4285f4<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+	classDef red fill<span style="color:#ff79c6">:#</span>db4437<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+	classDef yellow fill<span style="color:#ff79c6">:#</span>f4b400<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+	classDef green fill<span style="color:#ff79c6">:#</span>0f9d58<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+	<span style="color:#ff79c6">class</span> Servers<span style="color:#ff79c6">,</span>Storage blue
+	<span style="color:#ff79c6">class</span> Web green
+	<span style="color:#ff79c6">class</span> Network red
+	<span style="color:#ff79c6">class</span> Users yellow
+</code></pre></div><p>An example graph that incorporates these colours:</p>
+<div class="mermaid">
+flowchart LR
+    subgraph Servers
+        Server1
+        Server2
+    end
+    subgraph Storage
+        disk1[("Disk1")]
+        disk2[("Disk2")]
+    end
+    subgraph Network
+        VPN
+        Internet
+    end
+    web["🕸️ Website"]
+    users["🧑‍🤝‍🧑 Users"]
+    Servers --> Storage
+    Servers --> VPN
+    VPN --> Internet
+    Internet --> web
+    users --> web
+    %% Google brand
+	classDef blue fill:#4285f4,color:#fff;
+	classDef red fill:#db4437,color:#fff;
+	classDef yellow fill:#f4b400,color:#fff,stroke:#333;
+	classDef green fill:#0f9d58,color:#fff,stroke:#333;
+	class Servers,Storage blue
+	class web green
+	class Network red
+	class users yellow
+</div>
+<hr>
+<p>Full graph source code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fsharp" data-lang="fsharp">flowchart LR
+    subgraph Servers
+        Server1
+        Server2
+    <span style="color:#ff79c6">end</span>
+    subgraph Storage
+        disk1<span style="color:#ff79c6">[(</span><span style="color:#f1fa8c">&#34;Disk1&#34;</span><span style="color:#ff79c6">)]</span>
+        disk2<span style="color:#ff79c6">[(</span><span style="color:#f1fa8c">&#34;Disk2&#34;</span><span style="color:#ff79c6">)]</span>
+    <span style="color:#ff79c6">end</span>
+    subgraph Network
+        VPN
+        Internet
+    <span style="color:#ff79c6">end</span>
+    web<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;🕸️ Website&#34;</span><span style="color:#ff79c6">]</span>
+    users<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;🧑‍🤝‍🧑 Users&#34;</span><span style="color:#ff79c6">]</span>
+    Servers <span style="color:#ff79c6">--&gt;</span> Storage
+    Servers <span style="color:#ff79c6">--&gt;</span> VPN
+    VPN <span style="color:#ff79c6">--&gt;</span> Internet
+    Internet <span style="color:#ff79c6">--&gt;</span> web
+    users <span style="color:#ff79c6">--&gt;</span> web
+    <span style="color:#ff79c6">%%</span> Google brand
+    classDef blue fill<span style="color:#ff79c6">:#</span>4285f4<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+    classDef red fill<span style="color:#ff79c6">:#</span>db4437<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+    classDef yellow fill<span style="color:#ff79c6">:#</span>f4b400<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+    classDef green fill<span style="color:#ff79c6">:#</span>0f9d58<span style="color:#ff79c6">,</span>color<span style="color:#ff79c6">:#</span>fff<span style="color:#ff79c6">,</span>stroke<span style="color:#ff79c6">:#</span>333<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">class</span> Servers<span style="color:#ff79c6">,</span>Storage blue
+    <span style="color:#ff79c6">class</span> web green
+    <span style="color:#ff79c6">class</span> Network red
+    <span style="color:#ff79c6">class</span> users yellow
+</code></pre></div><hr>
+<p>By the way, the syntax highlighter I&rsquo;m using on the MermaidJS snippets is actually <code>fsharp</code>!</p>
 
     
 
@@ -932,22 +992,15 @@ The fix I applied to my GitHub Actions CI to work around this:"/>
                 
                 
                 <li>
-                    <a href="https://www.heaton.dev/tags/github/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
-                        github
+                    <a href="https://www.heaton.dev/tags/cloud/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                        cloud
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="https://www.heaton.dev/tags/automation/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
-                        automation
-                        <i class="fa fa-tag" aria-hidden="true"></i>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://www.heaton.dev/tags/hugo/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
-                        hugo
+                    <a href="https://www.heaton.dev/tags/dev/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                        dev
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </a>
                 </li>

@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Remote PostgreSQL using local PgAdmin inside Docker | Heaton.dev</title>
+<title>Remote PostgreSQL using local PgAdmin inside Docker | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Remote PostgreSQL using local PgAdmin inside Docker" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-09-29T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-09-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2020-09-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -91,7 +91,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/",
-    "headline": "Remote PostgreSQL using local PgAdmin inside Docker","wordCount": "335",
+    "headline": "Remote PostgreSQL using local PgAdmin inside Docker","wordCount": "337",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -99,8 +99,8 @@
     "datePublished": "2020-09-29T00:00:00Z",
     
     "dateModified": "2020-09-29T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, docker, postgres",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud, docker, postgres",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -339,7 +339,11 @@
     
 
     <p>PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.</p>
-<h2 id="docker">Docker</h2>
+<h2 id="docker">
+  Docker
+   <a class="anchor" href="#docker">
+    #
+  </a></h2>
 <p>Using <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker Desktop</a> and an SSH tunnel I am able to run <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a> locally to manage my remote databases. The critical part is, the database does not need to be exposed to the Internet, this is where the SSH tunnel comes in.</p>
 <p>This assumes your PostgreSQL is configured to access connections on localhost and that you have an account set up.</p>
 <p>It&rsquo;s time to start a local instance of pgAdmin using Docker.</p>
@@ -360,7 +364,12 @@ docker.io/dpage/pgadmin4:latest
 <p>All together the command is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">docker run --name &#34;pgadmin&#34; -e &#34;PGADMIN_DEFAULT_EMAIL=me@example.com&#34; -e &#34;PGADMIN_DEFAULT_PASSWORD=boop&#34; -e &#34;PGADMIN_LISTEN_PORT=5050&#34; -p 5050:5050 -p 5432:5432 -d dpage/pgadmin4
 </code></pre></div><p>Now you can access pgAdmin in your web browser at http://localhost:5050</p>
-<h2 id="pgadmin">pgAdmin</h2>
+
+<h2 id="pgadmin">
+  pgAdmin
+   <a class="anchor" href="#pgadmin">
+    #
+  </a></h2>
 <p>Log in with the credentials set earlier, once in just right-click <code>Servers</code> and select <code>Create -&gt; Server...</code>.</p>
 
 <figure class="figure ">
@@ -439,6 +448,16 @@ docker.io/dpage/pgadmin4:latest
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -461,7 +480,7 @@ docker.io/dpage/pgadmin4:latest
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -511,9 +530,9 @@ docker.io/dpage/pgadmin4:latest
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -525,13 +544,13 @@ docker.io/dpage/pgadmin4:latest
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -944,7 +963,7 @@ docker.io/dpage/pgadmin4:latest
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1076,5 +1095,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

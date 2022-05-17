@@ -51,30 +51,37 @@ h1 a.external, h2 a.external, h3 a.external, h4 a.external,
 input:focus {
   outline: none; }
 
-h1 a, .h1 a,
-h2 a, .h2 a,
-h3 a, .h3 a,
-h4 a, .h4 a,
-h5 a, .h5 a,
-h6 a, .h6 a {
-  color: #2965B4;
-  text-decoration: none;
-  transition: all 0.2s; }
-  h1 a.anchor, .h1 a.anchor,
-  h2 a.anchor, .h2 a.anchor,
-  h3 a.anchor, .h3 a.anchor,
-  h4 a.anchor, .h4 a.anchor,
-  h5 a.anchor, .h5 a.anchor,
-  h6 a.anchor, .h6 a.anchor {
-    opacity: 0; }
-
-h1:hover .anchor, .h1:hover .anchor,
-h2:hover .anchor, .h2:hover .anchor,
-h3:hover .anchor, .h3:hover .anchor,
-h4:hover .anchor, .h4:hover .anchor,
-h5:hover .anchor, .h5:hover .anchor,
-h6:hover .anchor, .h6:hover .anchor {
-  opacity: 1; }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  padding: 1rem 0 0 0;
+  margin: 1rem 0 0.4rem; }
+  h1 a, .h1 a,
+  h2 a, .h2 a,
+  h3 a, .h3 a,
+  h4 a, .h4 a,
+  h5 a, .h5 a,
+  h6 a, .h6 a {
+    color: #2965B4;
+    text-decoration: none;
+    transition: all 0.2s; }
+    h1 a.anchor, .h1 a.anchor,
+    h2 a.anchor, .h2 a.anchor,
+    h3 a.anchor, .h3 a.anchor,
+    h4 a.anchor, .h4 a.anchor,
+    h5 a.anchor, .h5 a.anchor,
+    h6 a.anchor, .h6 a.anchor {
+      opacity: 0; }
+  h1:hover .anchor, .h1:hover .anchor,
+  h2:hover .anchor, .h2:hover .anchor,
+  h3:hover .anchor, .h3:hover .anchor,
+  h4:hover .anchor, .h4:hover .anchor,
+  h5:hover .anchor, .h5:hover .anchor,
+  h6:hover .anchor, .h6:hover .anchor {
+    opacity: 1; }
 
 h1, .h1 {
   font-size: 1.8rem; }
@@ -246,6 +253,9 @@ blockquote {
 .sidebar {
   display: flex;
   flex-direction: column; }
+  .sidebar .h2, .sidebar .h3, .sidebar .h4 {
+    padding: 0;
+    margin: 0; }
   .sidebar .tag-cloud {
     text-align: center; }
     .sidebar .tag-cloud a {
@@ -306,6 +316,7 @@ blockquote {
     .sidebar-blob header h2,
     .twitter-timeline header h1,
     .twitter-timeline header h2 {
+      padding: 0;
       margin: 0; }
   .blog-post.title-only,
   .sidebar-blob.title-only,
@@ -389,47 +400,6 @@ blockquote {
     .twitter-timeline footer .errata {
       padding: 0 0 1rem;
       border-top: 1px lightgrey solid; }
-  .blog-post.single h2, .blog-post.single .h2, .blog-post.single h3, .blog-post.single .h3, .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
-  .sidebar-blob.single h2,
-  .sidebar-blob.single .h2,
-  .sidebar-blob.single h3,
-  .sidebar-blob.single .h3,
-  .sidebar-blob.single h4,
-  .sidebar-blob.single .h4,
-  .sidebar-blob.single h5,
-  .sidebar-blob.single .h5,
-  .twitter-timeline.single h2,
-  .twitter-timeline.single .h2,
-  .twitter-timeline.single h3,
-  .twitter-timeline.single .h3,
-  .twitter-timeline.single h4,
-  .twitter-timeline.single .h4,
-  .twitter-timeline.single h5,
-  .twitter-timeline.single .h5 {
-    padding: 1rem 0 0 0;
-    margin: 1rem 0 0.4rem; }
-  .blog-post.single h2, .blog-post.single .h2,
-  .sidebar-blob.single h2,
-  .sidebar-blob.single .h2,
-  .twitter-timeline.single h2,
-  .twitter-timeline.single .h2 {
-    font-size: 1.6rem; }
-  .blog-post.single h3, .blog-post.single .h3,
-  .sidebar-blob.single h3,
-  .sidebar-blob.single .h3,
-  .twitter-timeline.single h3,
-  .twitter-timeline.single .h3 {
-    font-size: 1.4rem; }
-  .blog-post.single h4, .blog-post.single .h4, .blog-post.single h5, .blog-post.single .h5,
-  .sidebar-blob.single h4,
-  .sidebar-blob.single .h4,
-  .sidebar-blob.single h5,
-  .sidebar-blob.single .h5,
-  .twitter-timeline.single h4,
-  .twitter-timeline.single .h4,
-  .twitter-timeline.single h5,
-  .twitter-timeline.single .h5 {
-    font-size: 1rem; }
   .blog-post.single .toc,
   .sidebar-blob.single .toc,
   .twitter-timeline.single .toc {
@@ -623,6 +593,9 @@ p > code {
     background: $CONTENT_BG_DARK;
     border-color: $SHADOW;
   }*/ }
+  #footer .h2, #footer .h3, #footer .h4, #footer .h5 {
+    padding-top: 0;
+    margin-top: 0; }
   #footer p:last-child {
     margin-bottom: 0; }
   #footer > .row {
@@ -667,6 +640,9 @@ p > code {
 
 .vcard {
   box-shadow: 0 0 6px #b4b4b4; }
+  .vcard .h4, .vcard .h5 {
+    padding: 0;
+    margin: 0; }
   .vcard p {
     margin: 0; }
   .vcard img {

@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Heaton.dev</title>
+    <title>Joe Heaton.dev</title>
     <link>https://www.heaton.dev/</link>
-    <description>Recent content on Heaton.dev</description>
+    <description>Recent content on Joe Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understand MermaidJS; Concepts &amp; Syntax</title>
+      <link>https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/</guid>
+      <description>&lt;p&gt;MermaidJS is great because it brings graphs-as-code to the web! No longer do we need to run graphviz from the commandline to generate static image files each time we make a change; Now we see changes instantly, embed graphs with ease in source repositories and track their changes, etc..&lt;/p&gt;
+&lt;p&gt;The trouble I&amp;rsquo;ve had with Mermaid is figuring out the syntax, there are quite a few gotchas which don&amp;rsquo;t advertise themselves very clearly, such as it not tolerating blank lines, or spaces are comma-deliminated lists.. I&amp;rsquo;ll list these here so you can get graphing quicker than I did!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Styling MermaidJS</title>
+      <link>https://www.heaton.dev/2022/05/styling-mermaidjs/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/05/styling-mermaidjs/</guid>
+      <description>&lt;p&gt;What&amp;rsquo;s better than a graph? A graph with style!&lt;/p&gt;
+&lt;p&gt;Using Mermaid&amp;rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&amp;rsquo;s branding.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Use Terraform Graph in MermaidJS</title>
       <link>https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/</link>
@@ -145,7 +165,7 @@ Spack is a source-based package manager and build system, all builds take place 
       
       <guid>https://www.heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
-Website Recipe I blogged about the current incarnation!
+Website Recipe #  I blogged about the current incarnation!
  Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
     </item>
     
@@ -220,7 +240,9 @@ Website Recipe I blogged about the current incarnation!
       <guid>https://www.heaton.dev/privacy/</guid>
       <description>Basically, you can keep your privacy!
 Contact me should you have any questions!
-How to clear website data from your browser  Firefox - Block websites from storing cookies and site data in Firefox Brave/Chrome - Clear, enable, and manage cookies in Chrome Edge - Delete cookies in Microsoft Edge  Third-party Cookies  Disqus commenting system Twitter embedded timeline has Do Not Track enabled  </description>
+My Cookies #  A cookie is used to remember changes in the Settings menu. This cookie won&amp;rsquo;t be used if you have declined my cookies in the cookie pop-up.
+A cookie is used to remember your choice in the cookie consent pop-up, a little contradictory but how else do you do it?!
+Cookie consent is set in the pop-up that appears in the bottom-left of the page, if you can&amp;rsquo;t see it you may have already clicked it, you can make it reappear by mousing-over the bottom-left, or you might be blocking it.</description>
     </item>
     
     <item>
@@ -336,7 +358,7 @@ git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push yo
       <pubDate>Sat, 29 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2013/06/free-software-conundrums/</guid>
-      <description>Clients Pidgin or XChat (IRC) These days the users of XChat seem to be migrating to a maintained fork and perhaps MSWindows-centric project named HexChat, a project spawned after development on XChat slowed to a single developer and affectively ended in 2010. Either of these clients is better than the proprietary mIRC client which is free as in free beer and may be refered to as &amp;lsquo;Freeware&amp;rsquo; by some, a term which should be no means be mistaken as standing for Freedom for the user.</description>
+      <description>Clients #  Pidgin or XChat (IRC) #  These days the users of XChat seem to be migrating to a maintained fork and perhaps MSWindows-centric project named HexChat, a project spawned after development on XChat slowed to a single developer and affectively ended in 2010. Either of these clients is better than the proprietary mIRC client which is free as in free beer and may be refered to as &amp;lsquo;Freeware&amp;rsquo; by some, a term which should be no means be mistaken as standing for Freedom for the user.</description>
     </item>
     
     <item>
@@ -345,7 +367,7 @@ git add file.txt git commit -m &amp;#34;add my file.txt&amp;#34; You can push yo
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</guid>
-      <description>HTTPS Everywhere [GPLv3+] Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
+      <description>HTTPS Everywhere [GPLv3+] #  Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
     </item>
     
     <item>

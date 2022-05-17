@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Heaton.dev</title>
+    <title>Pages on Joe Heaton.dev</title>
     <link>https://www.heaton.dev/pages/</link>
-    <description>Recent content in Pages on Heaton.dev</description>
+    <description>Recent content in Pages on Joe Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
@@ -15,7 +15,7 @@
       
       <guid>https://www.heaton.dev/me/</guid>
       <description>I have maintained my small space on the Internet since 2011. I like to keep this space personal and self-made, probably because I started out as a Web Developer.
-Website Recipe I blogged about the current incarnation!
+Website Recipe #  I blogged about the current incarnation!
  Compiled with the Hugo static site generator  Sass to make CSS sane Bootstrap CSS framework Web Manifest Font Awesome for icons Lunr.js static site search Cloudflare Web Analytics for privacy-respecting analytics JSON&amp;#43;LD for SEO metadata   Track my progress in Git Deploy using GitHub Actions &amp;amp; Cloudflare Pages  This place is perpetually in-development!</description>
     </item>
     
@@ -27,7 +27,9 @@ Website Recipe I blogged about the current incarnation!
       <guid>https://www.heaton.dev/privacy/</guid>
       <description>Basically, you can keep your privacy!
 Contact me should you have any questions!
-How to clear website data from your browser  Firefox - Block websites from storing cookies and site data in Firefox Brave/Chrome - Clear, enable, and manage cookies in Chrome Edge - Delete cookies in Microsoft Edge  Third-party Cookies  Disqus commenting system Twitter embedded timeline has Do Not Track enabled  </description>
+My Cookies #  A cookie is used to remember changes in the Settings menu. This cookie won&amp;rsquo;t be used if you have declined my cookies in the cookie pop-up.
+A cookie is used to remember your choice in the cookie consent pop-up, a little contradictory but how else do you do it?!
+Cookie consent is set in the pop-up that appears in the bottom-left of the page, if you can&amp;rsquo;t see it you may have already clicked it, you can make it reappear by mousing-over the bottom-left, or you might be blocking it.</description>
     </item>
     
   </channel>

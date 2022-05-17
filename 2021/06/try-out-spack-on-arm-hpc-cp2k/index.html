@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Try out Spack on Arm HPC | CP2K | Heaton.dev</title>
+<title>Try out Spack on Arm HPC | CP2K | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Try out Spack on Arm HPC | CP2K" />
@@ -19,7 +19,7 @@ Spack is a source-based package manager and build system, all builds take place 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-04T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-04T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2021-06-04T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -95,7 +95,7 @@ Spack is a source-based package manager and build system, all builds take place 
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/",
-    "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1106",
+    "headline": "Try out Spack on Arm HPC | CP2K","wordCount": "1114",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -103,8 +103,8 @@ Spack is a source-based package manager and build system, all builds take place 
     "datePublished": "2021-06-04T00:00:00Z",
     
     "dateModified": "2021-06-04T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, linux, spack",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud, linux, spack",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -353,10 +353,20 @@ Spack is a source-based package manager and build system, all builds take place 
 <p>I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.</p>
 <p>Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.. that results in a unique package. The process of determining the packages unique hash is called concretization.</p>
 <p>You can find all of this explained much better in the <a href="https://spack.readthedocs.io/" target="_blank">public documentation</a> or by following the <a href="https://spack-tutorial.readthedocs.io/" target="_blank">Spack Tutorial</a></p>
-<h2 id="getting-started">Getting started</h2>
+
+<h2 id="getting-started">
+  Getting started
+   <a class="anchor" href="#getting-started">
+    #
+  </a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack compiler find
 </code></pre></div><p>This populates <code>~/.spack/cray/compilers.yaml</code> with all our compilers, Spack checks typical locations as well as your available modules.</p>
-<h2 id="first-attempt">First attempt</h2>
+
+<h2 id="first-attempt">
+  First attempt
+   <a class="anchor" href="#first-attempt">
+    #
+  </a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 smm=blas ^fftw +openmp ^openblas threads=openmp
 </code></pre></div><blockquote>
 <p><code>+openmp</code> is default</p>
@@ -383,7 +393,12 @@ List of matching conflicts <span style="color:#ff79c6">for</span> spec:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">cp2k@8.1%gcc@9.2.0~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+libxc+mpi+openmp~pexsi+plumed~sirius~spglib cuda_arch=none lmax=5 smm=blas arch=cray-cnl7-aarch64
 </code></pre></div><p>This includes any defaults for every variant the package supports, I prefer to leave it up to the maintainer for variants I&rsquo;m not familiar with, but if you want highly reproducible environments you will probably want to specify everything.</p>
 <p>The error <code>^openblas threads=none&quot; conflicts with &quot;cp2k+openmp</code> suggests the openblas dependency won&rsquo;t support threading, which is required because I&rsquo;m building cp2k with openmp support.</p>
-<h2 id="packagesyaml">packages.yaml</h2>
+
+<h2 id="packagesyaml">
+  packages.yaml
+   <a class="anchor" href="#packagesyaml">
+    #
+  </a></h2>
 <p>OpenBLAS isn&rsquo;t tricky to compile, so I opted to compile it manually:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; make
 &gt; make PREFIX=/software/arm64/apps/openblas/0.3.15 install
@@ -427,7 +442,12 @@ List of matching conflicts <span style="color:#ff79c6">for</span> spec:
     <span style="color:#ff79c6">buildable</span>: <span style="color:#ff79c6">False</span>
 </code></pre></div><p>Each external has a spec that Spack matches against, for example if I ask for fftw explicitly without openmp support then it won&rsquo;t use my fftw external as I have listed <code>+openmp</code> in its spec.</p>
 <p>I used <code>buildable: False</code> to tell Spack to never build an alternative for some packages. I want to use the supported system libraries where possible, instead of some apps using <code>cray-libsci</code> and others building a custom <code>libsci</code>, as an example.</p>
-<h2 id="jsondecodeerror">JSONDecodeError</h2>
+
+<h2 id="jsondecodeerror">
+  JSONDecodeError
+   <a class="anchor" href="#jsondecodeerror">
+    #
+  </a></h2>
 <p>This bug slowed me down, I didn&rsquo;t find out the cause and it has since cleared itself up. It may be related to loading spack on different clusters with a shared home directory and it ended up loading something confusing in <code>compilers.yaml</code>? 🤷‍♂️</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">==</span>&gt; cp2k: Executing phase: <span style="color:#f1fa8c">&#39;edit&#39;</span>
 <span style="color:#ff79c6">==</span>&gt; Error: JSONDecodeError: Expecting value: line <span style="color:#bd93f9">1</span> column <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">(</span>char 0<span style="color:#ff79c6">)</span>
@@ -441,10 +461,20 @@ List of matching conflicts <span style="color:#ff79c6">for</span> spec:
         <span style="color:#bd93f9">302</span>
         <span style="color:#bd93f9">303</span>        ldflags.append<span style="color:#ff79c6">(</span>fftw.libs.search_flags<span style="color:#ff79c6">)</span>
 </code></pre></div><p>I opened bug <a href="https://github.com/spack/spack/issues/23570" target="_blank">#23570</a> to track it.</p>
-<h2 id="missing-build-dependency">Missing build dependency</h2>
+
+<h2 id="missing-build-dependency">
+  Missing build dependency
+   <a class="anchor" href="#missing-build-dependency">
+    #
+  </a></h2>
 <p>I got the following error from plumed: <code>RuntimeError: Cannot generate configure: missing dependencies ['m4']</code></p>
 <p>Spack seems to think m4 isn&rsquo;t available, it turned out that the package&rsquo;s <code>package.py</code> was missing the <code>type='build'</code> on the line where <code>m4</code> is listed as a build depdenency. This was fixed in <a href="https://github.com/spack/spack/issues/23953" target="_blank">#23953</a>.</p>
-<h2 id="build">Build</h2>
+
+<h2 id="build">
+  Build
+   <a class="anchor" href="#build">
+    #
+  </a></h2>
 <p>Lastly I had difficulty building <code>netlib-scalapack</code> until I realised that <code>cray-libsci</code> provides the LAPACK/ScaLAPACK capabilities cp2k requires. I manually set the dependency package with <code>^cray-libsci</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">&gt; spack install cp2k@8.1 +openmp +mpi +plumed %gcc@9.2.0 <span style="color:#8be9fd;font-style:italic">smm</span><span style="color:#ff79c6">=</span>blas ^cray-libsci
 <span style="color:#ff79c6">==</span>&gt; Warning: Missing a <span style="color:#8be9fd;font-style:italic">source</span> id <span style="color:#ff79c6">for</span> cray-libsci@20.06.1
@@ -492,7 +522,12 @@ cp2k@8.1~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+lib
     mpich@7.7.16~argobots+fortran+hwloc+hydra+libxml2+pci+romio~slurm~verbs+wrapperrpath <span style="color:#8be9fd;font-style:italic">device</span><span style="color:#ff79c6">=</span>ch4 <span style="color:#8be9fd;font-style:italic">netmod</span><span style="color:#ff79c6">=</span>ofi <span style="color:#8be9fd;font-style:italic">pmi</span><span style="color:#ff79c6">=</span>pmi
     plumed@2.6.2+gsl+mpi+shared <span style="color:#8be9fd;font-style:italic">arrayfire</span><span style="color:#ff79c6">=</span>none <span style="color:#8be9fd;font-style:italic">optional_modules</span><span style="color:#ff79c6">=</span>all
         gsl@2.6~external-cblas
-</code></pre></div><h2 id="playtime">Playtime</h2>
+</code></pre></div>
+<h2 id="playtime">
+  Playtime
+   <a class="anchor" href="#playtime">
+    #
+  </a></h2>
 <p>Now with Spack loaded, the simplest way to load this build of cp2k into my environment is with the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">&gt; spack load cp2k@8.1+mpi+openmp+plumed
 </code></pre></div><p>I could instead load <code>cp2k</code> or <code>cp2k@8.1</code> and Spack will check against all the builds and try find match. Right now both of these commands will succeed, since I only have one build. It is best to be more specific, so I specifically loaded cp2k version 8.1 with MPI, OpenMP &amp; Plumed support.</p>
@@ -500,7 +535,12 @@ cp2k@8.1~cosma~cuda~cuda_arch_35_k20x~cuda_blas~cuda_fft~elpa+libint~libvori+lib
 cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 &gt; which cp2k.popt
 /lustre/software/aarch64/spack/opt/spack/cray-cnl7-aarch64/gcc-9.2.0/cp2k-8.1-tnejptyboq56nppfikolzk5emc6vf5sb/bin/cp2k.popt
-</code></pre></div><h2 id="thoughts">Thoughts</h2>
+</code></pre></div>
+<h2 id="thoughts">
+  Thoughts
+   <a class="anchor" href="#thoughts">
+    #
+  </a></h2>
 <p>Getting started with spack took some time, mostly to wrap my head around the concepts of specs, variants, externals.. You should also be prepared to contend with build bugs, but that&rsquo;s nothing new!</p>
 <p>I found the Spack community to be responsive and helpful: <a href="https://github.com/spack/spack#community">https://github.com/spack/spack#community</a></p>
 <p>Contributing bug fixes and issues is easy, they have provided commands to print the relevant debug info, logs and discover the package maintainers which allows you to directly ping them in Github.</p>
@@ -556,6 +596,16 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -578,7 +628,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -628,9 +678,9 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -642,13 +692,13 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -1061,7 +1111,7 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1200,5 +1250,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

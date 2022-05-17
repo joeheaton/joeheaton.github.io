@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>tmux | Heaton.dev</title>
+<title>tmux | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="tmux" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2019/04/tmux/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-04-03T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-04-03T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2019-04-03T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -91,7 +91,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2019/04/tmux/",
-    "headline": "tmux","wordCount": "247",
+    "headline": "tmux","wordCount": "250",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -99,8 +99,8 @@
     "datePublished": "2019-04-03T00:00:00Z",
     
     "dateModified": "2019-04-03T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, dev",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud, dev",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -333,7 +333,12 @@
 
     <p>I find myself working on the move a lot more recently and I often have to deal with poor terminal emulators, iffy connectivity and sometimes I need resume my work on another machine entirely. As such I am trying out tmux as a way of persisting my working environment between sessions, supporting multiple tabs for when my emulator lacks it (Looking at you PuTTY, Git Bash) and lastly allowing me to resume my work on another desktop.</p>
 <p>My experimentation uses tmux 1.8, the version included in RHEL7, but I will include configuration options for later versions if I find any.</p>
-<h2 id="gotchas">Gotchas</h2>
+
+<h2 id="gotchas">
+  Gotchas
+   <a class="anchor" href="#gotchas">
+    #
+  </a></h2>
 <p>It seems a fair bit of configuration is needed in order to pass key combinations such as <code>Ctrl+Arrow</code> through, that example can be solved by:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># File: .vimrc</span>
 <span style="color:#f1fa8c">&#34; Tmux workaround
@@ -346,9 +351,19 @@
 endif
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># File: .tmux.conf</span>
 setw -g xterm-keys on
-</code></pre></div><h2 id="text">Text</h2>
+</code></pre></div>
+<h2 id="text">
+  Text
+   <a class="anchor" href="#text">
+    #
+  </a></h2>
 <p><code>Shift + Mouse drag</code> to highlight text while mouse mode is enabled</p>
-<h2 id="windows">Windows</h2>
+
+<h2 id="windows">
+  Windows
+   <a class="anchor" href="#windows">
+    #
+  </a></h2>
 <p>A single tmux instance can run multiple separate screens of panes, these are called windows.</p>
 <p><code>prefix, w</code> to list windows, you select which window you want with the arrow keys and press enter to display it;</p>
 <p><code>prefix, c</code> to create a window;</p>
@@ -399,6 +414,16 @@ setw -g xterm-keys on
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -421,7 +446,7 @@ setw -g xterm-keys on
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -471,9 +496,9 @@ setw -g xterm-keys on
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -485,13 +510,13 @@ setw -g xterm-keys on
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -904,7 +929,7 @@ setw -g xterm-keys on
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1029,5 +1054,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

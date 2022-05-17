@@ -2,14 +2,14 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Working with Gnome 3 | Heaton.dev</title>
+<title>Working with Gnome 3 | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
 
 <!-- SEO -->
-<meta name="description" content="Joe&#39;s technology-focused murmurings.">
-<meta name="keywords" content="Joe Heaton, developer, hpc, ">
+<meta name="description" content="Joe Heaton&#39;s technology-focused murmurings.">
+<meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Working with Gnome 3" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/02/working-with-gnome-3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-24T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-04-14T00:00:00&#43;00:00" /><meta property="og:site_name" content="Heaton.dev" />
+<meta property="article:modified_time" content="2022-04-14T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -91,7 +91,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/02/working-with-gnome-3/",
-    "headline": "Working with Gnome 3","wordCount": "438",
+    "headline": "Working with Gnome 3","wordCount": "445",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -99,8 +99,8 @@
     "datePublished": "2022-02-24T00:00:00Z",
     
     "dateModified": "2022-04-14T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, linux, desktop",
-    "description": "Joe\u0027s technology-focused murmurings."
+    "keywords": "Joe Heaton, developer, hpc, cloud, linux, desktop",
+    "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
 
@@ -382,7 +382,11 @@
 
 
     <p>I&rsquo;m back on Ubuntu with the Gnome 3 desktop environment and here are a few customsations to make it more productive and make moving between Gnome 3 &amp; Windows simple.</p>
-<h2 id="extensions">Extensions</h2>
+<h2 id="extensions">
+  Extensions
+   <a class="anchor" href="#extensions">
+    #
+  </a></h2>
 <p>Gnome 3 has an extension system that allows third-party developers to add functionality to your desktop.</p>
 <ul>
 <li><a href="https://extensions.gnome.org/extension/906/sound-output-device-chooser/" target="_blank">Sound Input &amp;amp; Output Device Chooser by kgshank</a> Conveniently switch between speakers &amp; microphones from the status menu.</li>
@@ -401,25 +405,55 @@
 <p><a href="https://extensions.gnome.org/extension/779/clipboard-indicator/" target="_blank">Clipboard Indicator by Tudmotu</a> Add a clipboard history menu to the status bar</p>
 </li>
 </ul>
-<h2 id="shortcuts">Shortcuts</h2>
+
+<h2 id="shortcuts">
+  Shortcuts
+   <a class="anchor" href="#shortcuts">
+    #
+  </a></h2>
 <p>There are two ways to modify Gnome&rsquo;s internal settings, the <code>dconf-editor</code> graphical application and the <code>gsettings</code> command.</p>
-<h3 id="gnome-terminal---change-tab">Gnome Terminal - Change Tab</h3>
+
+<h3 id="gnome-terminal---change-tab">
+  Gnome Terminal - Change Tab
+   <a class="anchor" href="#gnome-terminal---change-tab">
+    #
+  </a></h3>
 <p>Set Gnome Terminal&rsquo;s change tab shortcuts to <code>Ctrl+Tab</code> &amp; <code>Ctrl+Shift+Tab</code> instead of <code>Ctrl+PageUp</code> &amp; <code>Ctrl+PageDown</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">gsettings set org.gnome.Terminal.Legacy.Keybindings<span style="color:#ff79c6">:</span>/org/gnome/terminal/legacy/keybindings/ next-tab &#39;&lt;Control&gt;Tab&#39;
 gsettings set org.gnome.Terminal.Legacy.Keybindings<span style="color:#ff79c6">:</span>/org/gnome/terminal/legacy/keybindings/ prev-tab &#39;&lt;Control&gt;&lt;Shift&gt;Tab&#39;
-</code></pre></div><h3 id="change-workspace-windows-shortcut">Change Workspace (Windows shortcut)</h3>
+</code></pre></div>
+<h3 id="change-workspace-windows-shortcut">
+  Change Workspace (Windows shortcut)
+   <a class="anchor" href="#change-workspace-windows-shortcut">
+    #
+  </a></h3>
 <p>Adds the Windows 10 shortcut <code>Control+Super+Arrow</code> to change virtual desktops</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>right <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Right&#39;]&#34;</span>
 gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>left <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Left&#39;]&#34;</span>
-</code></pre></div><h2 id="emoji">Emoji</h2>
+</code></pre></div>
+<h2 id="emoji">
+  Emoji
+   <a class="anchor" href="#emoji">
+    #
+  </a></h2>
 <p>Emoji are a real pain in GNOME 3, a long way from Windows 10&rsquo;s <code>Ctrl+;</code> global shortcut.</p>
 <p>Here is a <a href="https://askubuntu.com/a/1045916" target="_blank">AskUbuntu.com</a> answer listing the various ways to use Emoji in GNOME.</p>
 <p>The <a href="https://extensions.gnome.org/extension/1162/emoji-selector/" target="_blank">Emoji Selector</a> extension looks perfect, except that it hasn&rsquo;t been updated for GNOME 40+.</p>
 <p>I&rsquo;ve settled for the <a href="https://github.com/tom-james-watson/emote" target="_blank">Emote</a> app, it provides a global shortcut of <code>Ctrl+Alt+E</code>!</p>
 <p>There are instructions to enable the global shortcut on Wayland <a href="https://github.com/tom-james-watson/Emote/wiki/Hotkey-In-Wayland" target="_blank">the instructions</a> <del>but they didn&rsquo;t work for me on Ubuntu 21.10&hellip; 🤞 for Ubuntu 22.04!</del> Works on Ubuntu 22.04!</p>
-<h2 id="issues-and-workarounds">Issues and Workarounds</h2>
+
+<h2 id="issues-and-workarounds">
+  Issues and Workarounds
+   <a class="anchor" href="#issues-and-workarounds">
+    #
+  </a></h2>
 <p>There inevitably will be bugs and oddities in any desktop environment, here are a few I have encountered. I have to say that GNOME 3 has continually improved since its bumpy initial release back in 2011&hellip;</p>
-<h3 id="screensharing">Screensharing</h3>
+
+<h3 id="screensharing">
+  Screensharing
+   <a class="anchor" href="#screensharing">
+    #
+  </a></h3>
 <p>By default GNOME runs on the Wayland display manager, a replacement for X11/Xorg. Due to Wayland&rsquo;s secure architecture applications wanting to capture the screen need to authenticate directly with Wayland. This requires the <code>xdg-desktop-portal-gnome</code> package installed.</p>
 <p>Firefox supports this protocol and Chrome has an experimental feature found at <code>chrome://flags/#enable-webrtc-pipewire-capturer</code>.</p>
 <p>On Ubuntu 21.10 this workaround only provides full-screen sharing, it isn&rsquo;t possible to share individual windows on Wayland.</p>
@@ -482,6 +516,16 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
 
                 
 
+                
+                <div>
+                    Cloud HPC Engineer
+                </div>
+
+                <div>
+                    
+                </div>
+                
+
                 <address class="vcard-address adr">
                     <p>
                         <i class="fa-solid fa-envelope"></i>
@@ -504,7 +548,7 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
 
                 <div class="card-text vcard-bio note">
                     
-                        Joe&rsquo;s technology-focused murmurings.
+                        Joe Heaton&rsquo;s technology-focused murmurings.
                     
                 </div>
 
@@ -554,9 +598,9 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
 
   
     <section class="sidebar-blob">
-      <h4>
+      <p class="h4">
         Tags
-      </h4>
+      </p>
 
       
 
@@ -568,13 +612,13 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             
             <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
             <a href="https://www.heaton.dev/tags/desktop" aria-label="desktop (2 posts)" style="font-size: 1.031rem" target="_self">desktop</a>
             
-            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (7 posts)" style="font-size: 1.449rem" target="_self">dev</a>
+            <a href="https://www.heaton.dev/tags/dev" aria-label="dev (9 posts)" style="font-size: 1.533rem" target="_self">dev</a>
             
             <a href="https://www.heaton.dev/tags/docker" aria-label="docker (1 posts)" style="font-size: 0.800rem" target="_self">docker</a>
             
@@ -987,7 +1031,7 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
         </div>
 
         <div class="col">
-            <h4><i class="fas fa-rss" title="RSS"></i> RSS Feeds</h4>
+            <p class="h4"><i class="fas fa-rss" title="RSS"></i> RSS Feeds</p>
 
             <ul class="list-group">
                 <li>
@@ -1119,5 +1163,21 @@ window.cookieconsent.initialise({
 </script>
 
     
+<script>
+    window.addEventListener("DOMContentLoaded", function(event) {
+        
+        if (typeof mermaid === 'undefined') { return }
+        mermaid.initialize({
+            theme: 'neutral', 
+            securityLevel:'antiscript',  
+            logLevel: 3, 
+            flowchart: {
+                curve: 'basis'  
+            }
+        });
+        console.log("MermaidJS initialised.")
+    });
+</script>
+
   </body>
 </html>

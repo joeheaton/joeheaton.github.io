@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web on Heaton.dev</title>
+    <title>web on Joe Heaton.dev</title>
     <link>https://www.heaton.dev/tags/web/</link>
-    <description>Recent content in web on Heaton.dev</description>
+    <description>Recent content in web on Joe Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
@@ -24,7 +24,7 @@
       <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/2013/06/firefox-based-browser-add-on-suggestions/</guid>
-      <description>HTTPS Everywhere [GPLv3+] Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
+      <description>HTTPS Everywhere [GPLv3+] #  Enforces the use of secure connections where known to be possible through the use of an updated white-list, this means where a website has the ability to deliver it&amp;rsquo;s bits to you over HTTPS(Secure HTTP) the add-on will tell it to. Browsing over a secure connection is intended to prevent third-parties, parties other than you and the server itself, from being capable of peaking into the connection and spying or tampering with the data.</description>
     </item>
     
   </channel>
