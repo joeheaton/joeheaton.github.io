@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/02/working-with-gnome-3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-24T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-04-14T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="article:modified_time" content="2022-04-18T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -81,24 +81,20 @@
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0d86e75b521d475eb08212a1ad0f7617"}'></script>
 
 
-<!-- Cloudflare Web Analytics -->
-<script defer data-domain="heaton.dev" src="https://www.heaton.dev/voice-of-the-forest/trees/script.outbound-links.js"></script>
-
-
     <!-- Structured data JSON-LD -->
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/02/working-with-gnome-3/",
-    "headline": "Working with Gnome 3","wordCount": "445",
+    "headline": "Working with Gnome 3","wordCount": "489",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2022-02-24T00:00:00Z",
     
-    "dateModified": "2022-04-14T00:00:00Z",
+    "dateModified": "2022-04-18T00:00:00Z",
     "keywords": "Joe Heaton, developer, hpc, cloud, linux, desktop",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -288,8 +284,8 @@
             
             
             <span>last updated on</span>
-            <time datetime="2022-04-14T00:00:00Z">
-              14th
+            <time datetime="2022-04-18T00:00:00Z">
+              18th
               Apr
               2022
             </time>
@@ -368,6 +364,7 @@
       <ul>
         <li><a href="#gnome-terminal---change-tab">Gnome Terminal - Change Tab</a></li>
         <li><a href="#change-workspace-windows-shortcut">Change Workspace (Windows shortcut)</a></li>
+        <li><a href="#contextual-right-click-menu-on-non-gtk-apps">Contextual (Right-click) menu on non-GTK apps</a></li>
       </ul>
     </li>
     <li><a href="#emoji">Emoji</a></li>
@@ -431,6 +428,14 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings<span style="color:#ff79c6">:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>right <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Right&#39;]&#34;</span>
 gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">-</span>to<span style="color:#ff79c6">-</span>workspace<span style="color:#ff79c6">-</span>left <span style="color:#f1fa8c">&#34;[&#39;&lt;Super&gt;&lt;Shift&gt;Page_Up&#39;, &#39;&lt;Super&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left&#39;, &#39;&lt;Super&gt;&lt;Control&gt;Left&#39;]&#34;</span>
 </code></pre></div>
+<h3 id="contextual-right-click-menu-on-non-gtk-apps">
+  Contextual (Right-click) menu on non-GTK apps
+   <a class="anchor" href="#contextual-right-click-menu-on-non-gtk-apps">
+    #
+  </a></h3>
+<p>Apps like Chrome don&rsquo;t use GNOME&rsquo;s window manager which means the right-click menu doesn&rsquo;t include GNOME-specific options, such as &ldquo;Always Visible on Workspace&rdquo;, &ldquo;Always on top&rdquo;, etc..</p>
+<p>The keyboard shortcut to show the right-click menu is <code>Alt+Space</code>.</p>
+
 <h2 id="emoji">
   Emoji
    <a class="anchor" href="#emoji">
@@ -470,6 +475,8 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
 <ul>
 
     <li>Updated 2022-05-10 for GNOME3 42 on Ubuntu 22.04</li>
+
+    <li>Updated 2022-04-18 Contextual menus on non-GTK apps (like Chrome)</li>
 
 </ul>
 
@@ -610,9 +617,7 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (4 posts)" style="font-size: 1.263rem" target="_self">bash</a>
             
-            <a href="https://www.heaton.dev/tags/chia" aria-label="chia (1 posts)" style="font-size: 0.800rem" target="_self">chia</a>
-            
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (2 posts)" style="font-size: 1.031rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (1 posts)" style="font-size: 0.800rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
@@ -624,10 +629,6 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             
             <a href="https://www.heaton.dev/tags/elasticsearch" aria-label="elasticsearch (1 posts)" style="font-size: 0.800rem" target="_self">elasticsearch</a>
             
-            <a href="https://www.heaton.dev/tags/firefox" aria-label="firefox (1 posts)" style="font-size: 0.800rem" target="_self">firefox</a>
-            
-            <a href="https://www.heaton.dev/tags/fluent" aria-label="fluent (1 posts)" style="font-size: 0.800rem" target="_self">fluent</a>
-            
             <a href="https://www.heaton.dev/tags/fun" aria-label="fun (1 posts)" style="font-size: 0.800rem" target="_self">fun</a>
             
             <a href="https://www.heaton.dev/tags/game" aria-label="game (1 posts)" style="font-size: 0.800rem" target="_self">game</a>
@@ -635,8 +636,6 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             <a href="https://www.heaton.dev/tags/git" aria-label="git (1 posts)" style="font-size: 0.800rem" target="_self">git</a>
             
             <a href="https://www.heaton.dev/tags/github" aria-label="github (2 posts)" style="font-size: 1.031rem" target="_self">github</a>
-            
-            <a href="https://www.heaton.dev/tags/gnome" aria-label="gnome (1 posts)" style="font-size: 0.800rem" target="_self">gnome</a>
             
             <a href="https://www.heaton.dev/tags/grafana" aria-label="grafana (2 posts)" style="font-size: 1.031rem" target="_self">grafana</a>
             
@@ -649,8 +648,6 @@ gsettings set org.gnome.desktop.wm.keybindings <span style="color:#ff79c6">switc
             <a href="https://www.heaton.dev/tags/monitoring" aria-label="monitoring (4 posts)" style="font-size: 1.263rem" target="_self">monitoring</a>
             
             <a href="https://www.heaton.dev/tags/postgres" aria-label="postgres (1 posts)" style="font-size: 0.800rem" target="_self">postgres</a>
-            
-            <a href="https://www.heaton.dev/tags/programming" aria-label="programming (1 posts)" style="font-size: 0.800rem" target="_self">programming</a>
             
             <a href="https://www.heaton.dev/tags/spack" aria-label="spack (1 posts)" style="font-size: 0.800rem" target="_self">spack</a>
             

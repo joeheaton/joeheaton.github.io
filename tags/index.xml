@@ -20,7 +20,7 @@
     <item>
       <title>cloud</title>
       <link>https://www.heaton.dev/tags/cloud/</link>
-      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/cloud/</guid>
       <description></description>
@@ -72,15 +72,6 @@
     </item>
     
     <item>
-      <title>fluent</title>
-      <link>https://www.heaton.dev/tags/fluent/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/fluent/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>grafana</title>
       <link>https://www.heaton.dev/tags/grafana/</link>
       <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
@@ -99,15 +90,6 @@
     </item>
     
     <item>
-      <title>chia</title>
-      <link>https://www.heaton.dev/tags/chia/</link>
-      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/chia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>crypto</title>
       <link>https://www.heaton.dev/tags/crypto/</link>
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
@@ -122,15 +104,6 @@
       <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://www.heaton.dev/tags/programming/</link>
-      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -266,24 +239,6 @@
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/elasticsearch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gnome</title>
-      <link>https://www.heaton.dev/tags/gnome/</link>
-      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/gnome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>firefox</title>
-      <link>https://www.heaton.dev/tags/firefox/</link>
-      <pubDate>Sat, 01 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/firefox/</guid>
       <description></description>
     </item>
     

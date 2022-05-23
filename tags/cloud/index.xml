@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 13 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Styling MermaidJS</title>
-      <link>https://www.heaton.dev/2022/05/styling-mermaidjs/</link>
-      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/2022/05/styling-mermaidjs/</guid>
-      <description>&lt;p&gt;What&amp;rsquo;s better than a graph? A graph with style!&lt;/p&gt;
-&lt;p&gt;Using Mermaid&amp;rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&amp;rsquo;s branding.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Terraform Graph in MermaidJS</title>
       <link>https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/</link>
