@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unity on Joe Heaton.dev</title>
+    <link>https://www.heaton.dev/tags/unity/</link>
+    <description>Recent content in unity on Joe Heaton.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; Joe Heaton</copyright>
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Export a Vroid Avatar to VRChat</title>
+      <link>https://www.heaton.dev/2022/06/export-a-vroid-avatar-to-vrchat/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/06/export-a-vroid-avatar-to-vrchat/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://vroid.com/en/studio&#34; target=&#34;_blank&#34;&gt;Vroid Studio&lt;/a&gt; is a quick &amp;amp; easy 3D character editor which can export to the &lt;a href=&#34;https://unity.com/&#34; target=&#34;_blank&#34;&gt;Unity&lt;/a&gt; game engine and from there, integrate into metaverse platforms; in this tutorial we will take our Vroid model and import it into &lt;a href=&#34;https://vrchat.com/&#34; target=&#34;_blank&#34;&gt;VRChat&lt;/a&gt;, a platform for socialising in virtual reality with user-generated worlds.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
