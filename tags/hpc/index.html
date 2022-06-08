@@ -72,14 +72,11 @@
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
 <!-- Lunr static site search -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0d86e75b521d475eb08212a1ad0f7617"}'></script>
-
-<script async data-ad-client="ca-pub-3323132479843798" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
     <!-- Structured data JSON-LD -->
@@ -94,7 +91,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-04-06T00:00:00Z",
-    "dateModified": "2022-06-06T15:46:21.456302278Z",
+    "dateModified": "2022-06-08T16:02:20.185429827Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -538,8 +535,8 @@ Spack is a source-based package manager and build system, all builds take place 
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-06T15:46:21Z">
-              6th
+            <time datetime="2022-06-08T16:02:20Z">
+              8th
               Jun
               2022
             </time>
@@ -936,6 +933,31 @@ Spack is a source-based package manager and build system, all builds take place 
 
           <aside class="col-sm-4 sidebar">
   
+  
+
+
+
+  <div class="advert">
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="7093556571"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  
+  
 
   
 
@@ -1022,6 +1044,31 @@ Spack is a source-based package manager and build system, all builds take place 
     <a class="twitter-timeline" data-dnt="true" data-height="98%" data-theme="light" href="https://twitter.com/Heaton_dev?ref_src=twsrc%5Etfw"></a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   
+
+  
+  
+
+
+
+  <div class="advert">
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="7093556571"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
 
 </aside>
 
@@ -1410,18 +1457,24 @@ Spack is a source-based package manager and build system, all builds take place 
     </div>
 
     <div id="settings-slider">
-    <button type="button" class="btn btn-light close" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+    <p class="h1">
+        Settings!
+        <button type="button" class="btn btn-light close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </p>
 
-    <p class="h1">Settings!</p>
+    <div class="row mb-2">
+        <button type="button" id="ads-toggle" class="btn btn-primary">Toggle adverts</button>
+    </div>
 
-    <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
+    <div class="row mb-2">
+        <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
+    </div>
 </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
 
-<script>
-
+window.addEventListener('DOMContentLoaded', function(){
 window.cookieconsent.initialise({
   
   autoOpen: true,
@@ -1465,15 +1518,15 @@ window.cookieconsent.initialise({
   theme: "edgeless",
   type: "opt-in",
   revokable: true,
-  onInitialise: function(status) {
+  onInitialise: function(status, chosenBefore) {
+    console.log(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
+
     if (this.options.type == 'opt-in' && this.hasConsented()) {
       
     }
   },
-  onStatusChange: function(status, chosenBefore) {
-    console.log(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
-
-    if (this.options.type == 'opt-in' && this.hasConsented()) {
+  onStatusChange: function(status) {
+    if (this.hasConsented()) {
       
     }
   },
@@ -1483,7 +1536,9 @@ window.cookieconsent.initialise({
     }
   }
 });
+});
 </script>
+
 
     
 <script>

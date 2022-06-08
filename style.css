@@ -149,6 +149,94 @@ blockquote {
   border-left: 3px lightgrey solid; }
 
 /*
+ * Cookie banner
+ */
+.cc-window {
+  box-shadow: 0 0 2px #b4b4b4; }
+
+/*
+ * Adverts
+ */
+.advert {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; }
+  .advert .notice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    color: #b4b4b4;
+    text-align: center; }
+
+ins.adsbygoogle {
+  z-index: 1; }
+  ins.adsbygoogle[data-ad-status="unfilled"] {
+    display: none !important; }
+
+/*
+ * Icon colors
+ */
+.fa-mastodon {
+  color: #2b90d9; }
+
+.fa-twitter {
+  color: #55acee; }
+
+.fa-reddit-alien {
+  color: #ff4500; }
+
+.fa-tumblr {
+  color: #35465c; }
+
+.fa-facebook-f {
+  color: #3b5998; }
+
+.fa-flickr {
+  color: #0063db; }
+
+.fa-pinterest-p {
+  color: #bd081c; }
+
+.fa-linkedin {
+  color: #0077b5; }
+
+.fa-xing {
+  color: #1a7576; }
+
+.fa-hacker-news {
+  color: #f60; }
+
+.fa-telegram {
+  color: #54a9eb; }
+
+.fa-whatsapp {
+  color: #25d366; }
+
+.fa-discord {
+  color: #7289DA; }
+
+.fa-patreon {
+  color: #e85b46; }
+
+.fa-kofi {
+  color: #29ABE0; }
+
+.fa-github {
+  color: #000; }
+
+.fa-gitlab {
+  color: #fc6d26; }
+
+.fa-envelope {
+  color: #777; }
+
+.fa-rss {
+  color: #F69537; }
+
+/*
  * Vars
  */
 #tallest {
@@ -529,63 +617,6 @@ p > code {
     font-size: 140%;
     transform: rotate(-8deg); }
 
-.fa-mastodon {
-  color: #2b90d9; }
-
-.fa-twitter {
-  color: #55acee; }
-
-.fa-reddit-alien {
-  color: #ff4500; }
-
-.fa-tumblr {
-  color: #35465c; }
-
-.fa-facebook-f {
-  color: #3b5998; }
-
-.fa-flickr {
-  color: #0063db; }
-
-.fa-pinterest-p {
-  color: #bd081c; }
-
-.fa-linkedin {
-  color: #0077b5; }
-
-.fa-xing {
-  color: #1a7576; }
-
-.fa-hacker-news {
-  color: #f60; }
-
-.fa-telegram {
-  color: #54a9eb; }
-
-.fa-whatsapp {
-  color: #25d366; }
-
-.fa-discord {
-  color: #7289DA; }
-
-.fa-patreon {
-  color: #e85b46; }
-
-.fa-kofi {
-  color: #29ABE0; }
-
-.fa-github {
-  color: #000; }
-
-.fa-gitlab {
-  color: #fc6d26; }
-
-.fa-envelope {
-  color: #777; }
-
-.fa-rss {
-  color: #F69537; }
-
 .fa-exclamation-triangle {
   color: gold; }
 
@@ -758,6 +789,9 @@ p > code {
         font-weight: bold;
         color: #fff;
       }*/ }
+
+.advert {
+  box-shadow: 0 0 0.25rem #b4b4b4; }
 
 .bigbtns {
   text-align: center;

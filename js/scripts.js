@@ -127,6 +127,31 @@ function a11y_dyslexia_disable() {
     document.body.classList.remove("dyslexia");
 }
 
+/*
+ * Settings: Ads
+ */
+
+function ads_enable() {
+  if (cookieConsent()) {
+    Cookies.set("adsplease", true, { secure: true });
+  }
+
+  var adslots = document.getElementsByClassName("adsbygoogle");
+  var adclient = adslots[0].getAttribute("data-ad-client");
+  var adscript = document.createElement("script");
+  adscript.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + adclient);
+  adscript.setAttribute("crossorigin", "anonymous");
+  adscript.setAttribute("async", "");
+
+  head.appendChild(adscript);
+}
+
+function ads_disable() {
+  if (cookieConsent()) {
+    Cookies.set("adsplease", false, { secure: true });
+  }
+}
+
 
 /*
  * Run Immediately
@@ -140,6 +165,10 @@ function a11y_dyslexia_disable() {
 if (Cookies.get("dyslexia") == "true") {
     a11y_dyslexia_enable();
 }
+if (Cookies.get("adsplease") == "true") {
+    ads_enable();
+}
+
 
 
 /*
@@ -167,7 +196,7 @@ window.addEventListener("DOMContentLoaded", function(event)
         settings_slider.slideReveal("hide", false);
     });
 
-    // Toggle button
+    // a11y_dyslexia toggle button
     var a11y_dyslexia = document.getElementById("a11y-dyslexia");
     if (a11y_dyslexia) {
         a11y_dyslexia.addEventListener("click", function(event) {
@@ -179,6 +208,34 @@ window.addEventListener("DOMContentLoaded", function(event)
                 a11y_dyslexia_enable();
                 a11y_dyslexia.classList.remove("btn-primary");
                 a11y_dyslexia.classList.add("btn-success");
+            }
+        });
+    }
+
+    // adverts toggle button
+    var ads_toggle = document.getElementById("ads-toggle");
+    if (ads_toggle) {
+        ads_toggle.addEventListener("click", function(event) {
+            if ( !Cookies.get("adsplease") ) {
+              // Set cookie and enable
+              ads_enable();
+              console.log("ads_toggle: undefined, enable");
+              ads_toggle.classList.remove("btn-primary");
+              ads_toggle.classList.add("btn-success");
+            }
+            else if ( Cookies.get("adsplease") == "false" ) {
+              // Toggle to enable
+              ads_enable();
+              console.log("ads_toggle: enable");
+              ads_toggle.classList.remove("btn-primary");
+              ads_toggle.classList.add("btn-success");
+            }
+            else if ( Cookies.get("adsplease") == "true" ) {
+              // Toggle to false
+              ads_disable();
+              console.log("ads_toggle: disable");
+              ads_toggle.classList.remove("btn-success");
+              ads_toggle.classList.add("btn-primary");
             }
         });
     }
