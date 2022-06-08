@@ -6,6 +6,11 @@ var head = document.getElementsByTagName("head")[0];
 var site_fqdn = document.location.host;
 var noSubdomain = window.location.host.split('.').slice(1).join(".");
 
+// Query strings
+const url_query = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
 /*
  * Boring functions
  */
@@ -169,6 +174,10 @@ if (Cookies.get("adsplease") == "true") {
     ads_enable();
 }
 
+// Enable if query string
+if ( url_query.ads !== null ) {
+  ads_enable();
+}
 
 
 /*
