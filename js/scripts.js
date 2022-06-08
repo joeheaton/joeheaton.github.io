@@ -142,6 +142,9 @@ function ads_enable() {
   }
 
   var adslots = document.getElementsByClassName("adsbygoogle");
+  if (adslots === "undefined") {
+    return;
+  }
   var adclient = adslots[0].getAttribute("data-ad-client");
   var adscript = document.createElement("script");
   adscript.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + adclient);
