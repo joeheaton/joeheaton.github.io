@@ -60,7 +60,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- JQuery Slim -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- JQuery SlideReveal --> 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slideReveal/1.1.2/jquery.slidereveal.min.js" crossorigin="anonymous"></script>
@@ -98,15 +98,9 @@
 </script>
 
     <!-- Custom JS -->
-    
-<script>
-    var site_uri = "https:\/\/www.heaton.dev";
-
-    
+    <script>
     console.log("%cHello, help yourself to a coffee & croissant ☕🥐", "font-size: 2rem; color: #2965b4; ");
 </script>
-
-<script async src="https://www.heaton.dev/js/scripts.js"></script>
 
   </head>
 
@@ -972,89 +966,564 @@
         <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
     </div>
 </div>
+
     <script>
 
-window.addEventListener('DOMContentLoaded', function(){
-window.cookieconsent.initialise({
-  
-  autoOpen: true,
-  cookie: {
-    name: "cookieplease",
-    expiryDays: 365,
-    secure: true,
-  },
-  content: {
-    header: 'Cookies used on the website!',
-    message: "This website uses cookies.",
-    dismiss: 'Got it!',
-    allow: 'Allow cookies',
-    deny: 'Decline',
-    link: 'Learn more',
-    href: 'https:\/\/www.heaton.dev\/privacy',
-    close: '&#x274c;',
-    policy: 'Cookie Policy',
-    target: '_self',
-  },
-  dismissOnScroll: false,
-  dismissOnTimeout: false,
-  location: false,
-  palette: {
-    popup: {
-      background: '#edeff5',
-      text: '#838391',
-      link: '#000'
-    },
-    button: {
-      background: '#4b81e8',
-      border: 'transparent',
-      text: '#fff'
-    },
-    highlight: {
-      background: 'transparent',
-      border: 'transparent',
-      text: '#000000'},
-  },
-  position: "bottom-left",
-  theme: "edgeless",
-  type: "opt-in",
-  revokable: true,
-  onInitialise: function(status, chosenBefore) {
-    console.log(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
 
-    if (this.options.type == 'opt-in' && this.hasConsented()) {
-      
-    }
-  },
-  onStatusChange: function(status) {
-    if (this.hasConsented()) {
-      
-    }
-  },
-  onRevokeChoice: function() {
-    if (this.options.type == 'opt-in') {
-      
+
+
+var html = document.getElementsByTagName("html")[0];
+var head = document.getElementsByTagName("head")[0];
+var body = document.getElementsByTagName("body")[0];
+
+
+var domain = {
+    
+    baseurl: "https:\/\/www.heaton.dev",
+    
+    proto: document.location.protocol.replace(":", ""),
+    
+    fqdn: document.location.host,
+    
+    toplevel: window.location.host.split('.').slice(-2).join("."),
+    
+    subdomain: window.location.host.split('.').reverse().slice(2).join("."),
+    
+    path: document.location.pathname.split("/").filter(Boolean),
+    
+    localhost: document.location.host == "localhost" ? true : false,
+}
+
+
+const url_query = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
+
+
+
+
+
+function devlog(log) {
+  if (domain.localhost) {
+    console.log(log);
+  }
+}
+
+
+
+
+
+
+const resolveOnLoad = (el) =>
+  new Promise((resolve) => {
+    el.onload = resolve;
+  });
+
+async function loader({src, async, crossorigin, defer, integrity, data}) {
+  let script = document.createElement("script");
+  script.src = src;
+  if (async)
+    script.setAttribute("async", true);
+  if (defer)
+    script.setAttribute("defer", true);
+  if (integrity)
+    script.setAttribute("integrity", integrity);
+  if (crossorigin)
+    script.setAttribute("crossorigin", crossorigin);
+  if (data) {
+    for (const [key, value] of Object.entries(data)) {
+      console.log(`${key}: ${value}`);
     }
   }
+
+  let loaded = Promise.all( [ resolveOnLoad(script) ] );
+
+  devlog(`Loading script: ${src} ${async} ${crossorigin} ${defer} ${integrity}`);
+  devlog(script);
+
+  document.head.appendChild(script);
+  await loaded;
+};
+
+console.log("Test promise-load");
+loader({src:"https://example.com/test", async:true, crossorigin:"anonymous", defer:false, integrity:"abc123"});
+
+
+
+
+
+
+function annotate_external_links() {
+    let hyperlinks = document.getElementsByTagName("a");
+    let whitelist = ["localhost", domain.fqdn, domain.toplevel];
+
+    for ( let i = 0; i < hyperlinks.length; i++ ) {
+      if ( ! whitelist.includes(hyperlinks[i].host) ) {
+        hyperlinks[i].classList.add("external");
+
+        if (hyperlinks[i].href.startsWith("mailto:")) {
+          hyperlinks[i].classList.add("mailto");
+        }
+      }
+    }
+}
+
+
+
+
+
+function code_clipboard_btn() {
+  let blocks = document.querySelectorAll("pre");
+
+  
+  if (! navigator.clipboard) {
+    return;
+  }
+
+  blocks.forEach((block) => {
+    if (block.querySelector("code")) {
+      let button = document.createElement("button");
+      button.classList.add("copy-to-clipboard");
+      button.classList.add("btn");
+      button.classList.add("btn-sm");
+      button.classList.add("btn-light");
+      button.classList.add("fa-solid");
+      button.classList.add("fa-clone");
+      button.addEventListener("click", copyCode);
+      block.appendChild(button);
+    }
+  });
+
+  delete codeElement;
+
+  async function copyCode(event) {
+    const button = event.srcElement;
+    const pre = button.parentElement;
+    let code = pre.querySelector("code");
+    let text = code.innerText;
+    await navigator.clipboard.writeText(text);
+  }
+}
+
+
+
+
+
+
+function cookieConsent() {
+    if ( Cookies.get("cookieplease") == "allow" ) {
+        devlog("cookieConsent: allowed");
+        return true;
+    } else {
+        devlog("cookieConsent: disallowed");
+        return false;
+    }
+}
+
+
+
+
+
+
+function a11y_dyslexia_enable() {
+    devlog("a11y: enable dyslexia mode");
+    if (cookieConsent()) {
+        Cookies.set("dyslexia", true, { secure: true });
+    }
+
+    if (["interactive", "complete"].includes(document.readyState)) {
+        devlog("a11y: dyslexia class added to body.");
+        document.body.classList.add("dyslexia");
+    } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            devlog("a11y: dyslexia class waiting for DOMContentLoaded.");
+            document.body.classList.add("dyslexia");
+        });
+    }
+
+    
+    if (!(head.querySelector("link[href='".concat(domain.baseurl, "/fonts/OpenDyslexic.css']")))) {
+        devlog("a11y: append dyslexia css");
+
+        let link = document.createElement("link");
+        link.setAttribute("rel", "stylesheet");
+        link.setAttribute("href", domain.baseurl.concat("/fonts/OpenDyslexic.css"));
+        head.appendChild(link);
+    }
+}
+
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", function(event) {
+  
+  if (Cookies.get("dyslexia") == "true") {
+    a11y_dyslexia_enable();
+  }
+
+  
+  let a11y_dyslexia = document.getElementById("a11y-dyslexia");
+  if (a11y_dyslexia) {
+      a11y_dyslexia.addEventListener("click", function(event) {
+        document.body.classList.contains("dyslexia") ? a11y_dyslexia_disable() : a11y_dyslexia_enable();
+      });
+  }
 });
+
+function a11y_dyslexia_disable() {
+    devlog("a11y: disable dyslexia mode");
+    Cookies.remove("dyslexia");
+    document.body.classList.remove("dyslexia");
+}
+
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", function(event) {
+  
+  
+  let settings_slider = $("#settings-slider").slideReveal({
+      trigger: $("#settings-toggle"),
+      position: "right"
+  });
+  $( "#settings-slider .close" ).click(function() {
+      settings_slider.slideReveal("hide", false);
+  });
+
+  
+  annotate_external_links();
+
+  
+  code_clipboard_btn();
 });
 </script>
 
 
-    
+
+
 <script>
-    window.addEventListener("DOMContentLoaded", function(event) {
-        
-        if (typeof mermaid === 'undefined') { return }
-        mermaid.initialize({
-            theme: 'neutral', 
-            securityLevel:'antiscript',  
-            logLevel: 3, 
-            flowchart: {
-                curve: 'basis'  
-            }
-        });
-        console.log("MermaidJS initialised.")
+  
+
+  function ads_enable() {
+    if (cookieConsent()) {
+      Cookies.set("adsplease", true, { secure: true });
+    }
+
+    let adslots = document.getElementsByClassName("adsbygoogle");
+    if (adslots.length == 0) {
+      return;
+    }
+    let adclient = adslots[0].getAttribute("data-ad-client");
+    loader({
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + adclient,
+      async: true,
+      crossorigin: "anonymous"
     });
+  }
+
+
+
+  
+
+  function ads_disable() {
+    if (cookieConsent()) {
+      Cookies.remove("adsplease");
+    }
+  }
+
+
+
+  
+
+  window.addEventListener("DOMContentLoaded", function(event) {
+    
+
+
+    
+    if (Cookies.get("adsplease") == "true") {
+      ads_enable();
+    }
+
+    
+    if ( url_query.ads !== null ) {
+      ads_enable();
+    }
+
+    
+    if ( body.getAttribute("data-ads-enabled") !== null ) {
+      ads_enable();
+    }
+
+    
+    let ads_toggle = document.getElementById("ads-toggle");
+    if (ads_toggle) {
+      ads_toggle.addEventListener("click", function(event) {
+        if ( !Cookies.get("adsplease") ) {
+          ads_enable();
+          devlog("ads_toggle: undefined, enable");
+        }
+        else if ( Cookies.get("adsplease") == "false" ) {
+          ads_enable();
+          devlog("ads_toggle: enable");
+        }
+        else if ( Cookies.get("adsplease") == "true" ) {
+          ads_disable();
+          devlog("ads_toggle: disable");
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+
+
+window.addEventListener('DOMContentLoaded', function(){
+  window.cookieconsent.initialise({
+    
+    autoOpen: true,
+    cookie: {
+      name: "cookieplease",
+      expiryDays: 365,
+      secure: true,
+    },
+    content: {
+      header: 'Cookies used on the website!',
+      message: 'This website uses cookies and advertisements.',
+      dismiss: 'Got it!',
+      allow: 'Allow',
+      deny: 'Decline',
+      link: 'Learn more',
+      href: 'https:\/\/www.heaton.dev\/privacy',
+      close: '&#x274c;',
+      policy: 'Cookie Policy',
+      target: '_self',
+    },
+    dismissOnScroll: false,
+    dismissOnTimeout: false,
+    location: false,
+    palette: {
+      popup: {
+        background: '#edeff5',
+        text: '#838391',
+        link: '#000'
+      },
+      button: {
+        background: '#4b81e8',
+        border: 'transparent',
+        text: '#fff'
+      },
+      highlight: {
+        background: 'transparent',
+        border: 'transparent',
+        text: '#000000'},
+    },
+    position: "bottom-left",
+    theme: "edgeless",
+    type: "opt-in",
+    revokable: true,
+    onInitialise: function(status, chosenBefore) {
+      
+
+      if (this.options.type == 'opt-in' && this.hasConsented()) {
+        
+      }
+    },
+    onStatusChange: function(status) {
+      if (this.hasConsented()) {
+        
+      }
+    },
+    onRevokeChoice: function() {
+      if (this.options.type == 'opt-in') {
+        
+      }
+    }
+  });
+});
+</script>
+
+<script>
+
+
+
+window.addEventListener("DOMContentLoaded", function(event)
+{
+  let index = null;
+  let lookup = null;
+  let queuedTerm = null;
+
+  let form = document.getElementById("sitesearch");
+  let input = document.getElementById("sitesearch-input");
+
+  form.addEventListener("submit", function(event)
+  {
+    event.preventDefault();
+
+    let term = input.value.trim();
+    if (!term)
+      return;
+
+    startSearch(term);
+  }, false);
+
+  function startSearch(term)
+  {
+    
+    form.setAttribute("data-running", "true");
+
+    if (index)
+    {
+      
+      search(term);
+    }
+    else if (queuedTerm)
+    {
+      
+      queuedTerm = term;
+    }
+    else
+    {
+      
+      queuedTerm = term;
+      initIndex();
+    }
+  }
+
+  function searchDone()
+  {
+    
+    form.removeAttribute("data-running");
+
+    queuedTerm = null;
+  }
+
+  function initIndex()
+  {
+    let request = new XMLHttpRequest();
+    request.open("GET", domain.baseurl.concat("/search.json"));
+    request.responseType = "json";
+    request.addEventListener("load", function(event)
+    {
+      lookup = {};
+      index = lunr(function()
+      {
+        
+        
+
+        this.ref("uri");
+
+        
+        this.field("title");
+        this.field("content");
+        this.field("categories");
+        this.field("tags");
+
+        for (let doc of request.response)
+        {
+          this.add(doc);
+          lookup[doc.uri] = doc;
+        }
+      });
+
+      
+      search(queuedTerm);
+    }, false);
+    request.addEventListener("error", searchDone, false);
+    request.send(null);
+  }
+
+  function search(term)
+  {
+    let results = index.search(term);
+
+    
+    resultsContainer = "#search-results";
+    let target = document.querySelector(resultsContainer);
+
+    
+    target.addEventListener("click", function(event){
+        event.stopPropagation();
+    });
+
+    
+    window.addEventListener("click", function (){
+        target.textContent = "";
+    });
+
+    while (target.firstChild)
+      target.removeChild(target.firstChild);
+
+    let title = document.createElement("h3");
+    title.className = "search-title";
+
+    let close = document.createElement("button");
+    close.classList.add("btn", "close");
+    close.textContent = "×";
+    close.addEventListener("click", function(event) {
+        target.textContent = "";
+    });
+
+    if (results.length == 0) {
+      title.textContent = `No results found for “${term}”`;
+    } else if (results.length == 1) {
+      title.textContent = `Found one result for “${term}”`;
+    } else {
+      title.textContent = `Found ${results.length} results for “${term}”`;
+    }
+
+    target.appendChild(title);
+    target.appendChild(close);
+    
+    
+    
+
+    let template = document.getElementById("search-result");
+    for (let result of results)
+    {
+      let doc = lookup[result.ref];
+
+      
+      let element = template.content.cloneNode(true);
+      element.querySelector(".search-result-link").href = domain.baseurl.concat(doc.uri);
+      
+      element.querySelector(".search-result-link").textContent = doc.title;
+      element.querySelector(".search-result-summary").textContent = doc.content;
+      target.appendChild(element);
+    }
+    
+
+    lunr_powered = document.createElement('p');
+    lunr_powered.classList.add("d-flex", "justify-content-end");
+    lunr_powered.innerHTML = '<small>Powered by <a href="https://lunrjs.com/" target="_blank">lunr.js</a></small>';
+    target.appendChild(lunr_powered);
+
+    searchDone();
+  }
+}, false);
+</script>
+
+<script>
+
+
+  window.addEventListener("DOMContentLoaded", function(event) {
+      
+      if (typeof mermaid === 'undefined') { return }
+      mermaid.initialize({
+          theme: 'neutral', 
+          securityLevel:'antiscript',  
+          logLevel: 3, 
+          flowchart: {
+              curve: 'basis'  
+          }
+      });
+      devlog("MermaidJS initialised.")
+  });
 </script>
 
   </body>

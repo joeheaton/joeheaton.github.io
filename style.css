@@ -240,6 +240,10 @@ ins.adsbygoogle {
 /*
  * Vars
  */
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1680px; } }
+
 #tallest {
   padding: 0;
   border-radius: 8px; }
