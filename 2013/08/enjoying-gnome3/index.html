@@ -106,7 +106,9 @@
 
   </head>
 
-  <body>
+  <body
+  data-ads-enabled="true">
+
     <!-- a11y: skip to content -->
     <a href="#main" target="_self" class="skip-to-main">Skip to content.</a>
 
@@ -225,7 +227,7 @@
       <!-- main content -->
       <main id="main" class="container-xl">
         <div class="row">
-          <div class="col-sm-8 container-fluid main">
+          <div class="col-sm-9 container-fluid main">
 
             
 
@@ -595,9 +597,9 @@ The extensions</p>
 
           </div> <!-- /.blog-main -->
 
-          <aside class="col-sm-4 sidebar">
-  
-  
+          <aside class="col-sm-3 sidebar">
+            
+
 
 
 
@@ -625,18 +627,18 @@ The extensions</p>
  
 
 
-  
-  
 
-  
 
-  
-    <section class="sidebar-blob">
-      <p class="h4">
-        Tags
-      </p>
 
-      
+
+
+
+  <section class="sidebar-blob">
+    <p class="h4">
+      Tags
+    </p>
+
+    
 
     <div class="tag-cloud">
             
@@ -697,25 +699,25 @@ The extensions</p>
             <a href="https://www.heaton.dev/tags/webdev" aria-label="webdev (1 posts)" style="font-size: 0.800rem" target="_self">webdev</a>
             
             <a href="https://www.heaton.dev/tags/windows" aria-label="windows (3 posts)" style="font-size: 1.167rem" target="_self">windows</a></div>
-    </section>
-  
+  </section>
 
-  
 
-  
-    
+
+
 
   
 
   
 
-  
-    <a class="twitter-timeline" data-dnt="true" data-height="98%" data-theme="light" href="https://twitter.com/Heaton_dev?ref_src=twsrc%5Etfw"></a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  
 
-  
-  
+
+
+  <a class="twitter-timeline" data-dnt="true" data-height="98%" data-theme="light" href="https://twitter.com/Heaton_dev?ref_src=twsrc%5Etfw"></a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
 
 
 
@@ -744,8 +746,8 @@ The extensions</p>
 
 
 
-</aside>
 
+          </aside>
 
         </div>
 
@@ -1168,14 +1170,17 @@ The extensions</p>
 
 
 
-var html = document.getElementsByTagName("html")[0];
-var head = document.getElementsByTagName("head")[0];
-var body = document.getElementsByTagName("body")[0];
+const html = document.getElementsByTagName("html")[0];
+const head = document.getElementsByTagName("head")[0];
+const body = document.getElementsByTagName("body")[0];
+const baseurl = new URL("https:\/\/www.heaton.dev");
 
 
-var domain = {
+const domain = {
     
-    baseurl: "https:\/\/www.heaton.dev",
+    baseurl: baseurl,
+    
+    basedir: baseurl.href,
     
     proto: document.location.protocol.replace(":", ""),
     
@@ -1185,7 +1190,10 @@ var domain = {
     
     subdomain: window.location.host.split('.').reverse().slice(2).join("."),
     
-    path: document.location.pathname.split("/").filter(Boolean),
+    path: document.location.pathname.split("/").filter(Boolean).filter(
+      
+      function (str) { return str.indexOf(baseurl.pathname.replace("/", "")) === -1; }
+    ),
     
     localhost: document.location.host == "localhost" ? true : false,
 }
@@ -1241,9 +1249,6 @@ async function loader({src, async, crossorigin, defer, integrity, data}) {
   document.head.appendChild(script);
   await loaded;
 };
-
-console.log("Test promise-load");
-loader({src:"https://example.com/test", async:true, crossorigin:"anonymous", defer:false, integrity:"abc123"});
 
 
 
@@ -1325,7 +1330,7 @@ function cookieConsent() {
 function a11y_dyslexia_enable() {
     devlog("a11y: enable dyslexia mode");
     if (cookieConsent()) {
-        Cookies.set("dyslexia", true, { secure: true });
+        Cookies.set("dyslexia", true, { secure: true, sameSite: 'strict' });
     }
 
     if (["interactive", "complete"].includes(document.readyState)) {
@@ -1407,7 +1412,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
   function ads_enable() {
     if (cookieConsent()) {
-      Cookies.set("adsplease", true, { secure: true });
+      Cookies.set("adsplease", true, { secure: true, sameSite: 'strict' });
     }
 
     let adslots = document.getElementsByClassName("adsbygoogle");
@@ -1487,10 +1492,11 @@ window.addEventListener('DOMContentLoaded', function(){
       name: "cookieplease",
       expiryDays: 365,
       secure: true,
+      sameSite: "Strict"
     },
     content: {
       header: 'Cookies used on the website!',
-      message: 'This website uses cookies and advertisements.',
+      message: 'This website uses cookies and personalised advertisements.',
       dismiss: 'Got it!',
       allow: 'Allow',
       deny: 'Decline',
