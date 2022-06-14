@@ -1398,12 +1398,12 @@ window.addEventListener("DOMContentLoaded", function(event) {
     }
 
     
-    if ( url_query.ads !== null && Cookies.get("adsplease") == "true" ) {
+    if ( url_query.ads !== null ) {
       ads_enable();
     }
 
     
-    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("adsplease") == "true") {
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("cookieplease") == "allow") {
       ads_enable();
     }
   });

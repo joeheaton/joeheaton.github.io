@@ -91,7 +91,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-06-01T00:00:00Z",
-    "dateModified": "2022-06-14T10:58:22.690959621Z",
+    "dateModified": "2022-06-14T11:02:43.338465695Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -2936,12 +2936,12 @@ window.addEventListener("DOMContentLoaded", function(event) {
     }
 
     
-    if ( url_query.ads !== null && Cookies.get("adsplease") == "true" ) {
+    if ( url_query.ads !== null ) {
       ads_enable();
     }
 
     
-    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("adsplease") == "true") {
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("cookieplease") == "allow") {
       ads_enable();
     }
   });

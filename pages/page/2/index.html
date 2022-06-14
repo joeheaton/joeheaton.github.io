@@ -1334,7 +1334,7 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-14T10:58:22Z">
+            <time datetime="2022-06-14T11:02:43Z">
               14th
               Jun
               2022
@@ -3193,12 +3193,12 @@ window.addEventListener("DOMContentLoaded", function(event) {
     }
 
     
-    if ( url_query.ads !== null && Cookies.get("adsplease") == "true" ) {
+    if ( url_query.ads !== null ) {
       ads_enable();
     }
 
     
-    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("adsplease") == "true") {
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("cookieplease") == "allow") {
       ads_enable();
     }
   });
