@@ -1113,24 +1113,6 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
   window.addEventListener("DOMContentLoaded", function(event) {
     
-
-
-    
-    if (Cookies.get("adsplease") == "true") {
-      ads_enable();
-    }
-
-    
-    if ( url_query.ads !== null ) {
-      ads_enable();
-    }
-
-    
-    if ( body.getAttribute("data-ads-enabled") !== null ) {
-      ads_enable();
-    }
-
-    
     let ads_toggle = document.getElementById("ads-toggle");
     if (ads_toggle) {
       ads_toggle.addEventListener("click", function(event) {
@@ -1147,6 +1129,24 @@ window.addEventListener("DOMContentLoaded", function(event) {
           devlog("ads_toggle: disable");
         }
       });
+    }
+
+    
+
+
+    
+    if (Cookies.get("adsplease") == "true") {
+      ads_enable();
+    }
+
+    
+    if ( url_query.ads !== null && Cookies.get("adsplease") == "true" ) {
+      ads_enable();
+    }
+
+    
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("adsplease") == "true") {
+      ads_enable();
     }
   });
 </script>

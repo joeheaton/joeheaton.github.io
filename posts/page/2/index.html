@@ -91,7 +91,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-06-01T00:00:00Z",
-    "dateModified": "2022-06-14T10:55:46.254649011Z",
+    "dateModified": "2022-06-14T10:58:22.690959621Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -1353,7 +1353,7 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-14T10:55:46Z">
+            <time datetime="2022-06-14T10:58:22Z">
               14th
               Jun
               2022
@@ -3242,24 +3242,6 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
   window.addEventListener("DOMContentLoaded", function(event) {
     
-
-
-    
-    if (Cookies.get("adsplease") == "true") {
-      ads_enable();
-    }
-
-    
-    if ( url_query.ads !== null ) {
-      ads_enable();
-    }
-
-    
-    if ( body.getAttribute("data-ads-enabled") !== null ) {
-      ads_enable();
-    }
-
-    
     let ads_toggle = document.getElementById("ads-toggle");
     if (ads_toggle) {
       ads_toggle.addEventListener("click", function(event) {
@@ -3276,6 +3258,24 @@ window.addEventListener("DOMContentLoaded", function(event) {
           devlog("ads_toggle: disable");
         }
       });
+    }
+
+    
+
+
+    
+    if (Cookies.get("adsplease") == "true") {
+      ads_enable();
+    }
+
+    
+    if ( url_query.ads !== null && Cookies.get("adsplease") == "true" ) {
+      ads_enable();
+    }
+
+    
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("adsplease") == "true") {
+      ads_enable();
     }
   });
 </script>
