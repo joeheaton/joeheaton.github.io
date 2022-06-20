@@ -57,7 +57,9 @@
 <link href="https://www.heaton.dev/style.css" rel="stylesheet" as="style">
 
 <!-- FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/webfonts/fa-regular-400.ttf" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- JQuery Slim -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -72,11 +74,18 @@
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<!-- Google Adsense -->
+<link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3323132479843798" as="script" crossorigin="anonymous">
+
 <!-- Lunr static site search -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0d86e75b521d475eb08212a1ad0f7617"}'></script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKW4BYC0QJ"></script>
+
 
 
     <!-- Structured data JSON-LD -->
@@ -91,7 +100,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-04-06T00:00:00Z",
-    "dateModified": "2022-06-14T11:26:33.803738361Z",
+    "dateModified": "2022-06-20T13:48:38.606011033Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -168,7 +177,7 @@
 
 
 
-                  <a class="nav-item" id="settings-toggle" target="_self" href="javascript: void(0)">
+                  <a class="nav-item" id="settings-toggle" target="_self" title="Settings">
                     <span class="fas fa-cog"></span>
                   </a>
                 </nav>
@@ -197,9 +206,8 @@
               <form id="sitesearch" class="search" role="search">
                 <label for="sitesearch-input">
                   <i class="fa fa-search "></i>
+                  <input type="search" id="sitesearch-input" class="search-input">
                 </label>
-
-                <input type="search" id="sitesearch-input" class="search-input">
               </form>
             </div>
 
@@ -531,8 +539,8 @@ Spack is a source-based package manager and build system, all builds take place 
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-14T11:26:33Z">
-              14th
+            <time datetime="2022-06-20T13:48:38Z">
+              20th
               Jun
               2022
             </time>
@@ -1325,7 +1333,7 @@ Spack is a source-based package manager and build system, all builds take place 
                 </div>
 
                 <div id="bigbtns_hostedbtn">
-                    <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">
+                    <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" title="Always Self-Hosted">
                         
                         <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 2 48 48" enable-background="new 0 2 48 48" xml:space="preserve">
@@ -1424,21 +1432,49 @@ Spack is a source-based package manager and build system, all builds take place 
 
     </div>
 
-    <div id="settings-slider">
-    <p class="h1">
-        Settings!
+    <div id="settings-slider" class="d-flex flex-column">
+    <header class="d-flex justify-content-between">
+        <p class="h1 m-0 p-0">
+            Settings
+        </p>
+
         <button type="button" class="btn btn-light close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-    </p>
+    </header>
 
-    <div class="row mb-2">
-        <button type="button" id="ads-toggle" class="btn btn-primary">Toggle adverts</button>
+    <div class="options">
+        <div class="row mb-2">
+            <button type="button" id="reveal-cookie" class="btn btn-primary">Cookie choice</button>
+            <p>
+                Reveal the cookie consent prompt
+            </p>
+        </div>
+
+        <div class="row mb-2">
+            <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
+            <p>
+                Use Dyslexia-friendly font OpenDyslexia
+            </p>
+        </div>
+
+        <div class="row mb-2">
+            <button type="button" id="ads-toggle" class="btn btn-primary">Toggle adverts</button>
+            <p>
+                Toggle advertisements
+            </p>
+        </div>
+
+        <div>
+
+        </div>
     </div>
 
-    <div class="row mb-2">
-        <button type="button" id="a11y-dyslexia" class="btn btn-primary">Dyslexia mode</button>
-    </div>
+    <footer>
+        <small>
+            
+        </small>
+    </footer>
 </div>
 
     <script>
@@ -1517,7 +1553,7 @@ async function loader({src, async, crossorigin, defer, integrity, data}) {
 
   let loaded = Promise.all( [ resolveOnLoad(script) ] );
 
-  devlog(`Loading script: ${src} ${async} ${crossorigin} ${defer} ${integrity}`);
+  
   devlog(script);
 
   document.head.appendChild(script);
@@ -1529,7 +1565,166 @@ async function loader({src, async, crossorigin, defer, integrity, data}) {
 
 
 
-function annotate_external_links() {
+function cookieConsent() {
+    if ( Cookies.get("cookieplease") == "allow" ) {
+        devlog("cookieConsent: allowed");
+        return true;
+    } else {
+        devlog("cookieConsent: disallowed");
+        return false;
+    }
+}
+</script>
+<script>
+
+
+window.addEventListener('DOMContentLoaded', function(){
+  window.cookieconsent.initialise({
+    
+    autoOpen: true,
+    cookie: {
+      name: "cookieplease",
+      expiryDays: 365,
+      secure: true,
+      sameSite: "Strict"
+    },
+    content: {
+      header: 'Cookies used on the website!',
+      message: 'This website uses cookies for analytics and personalised advertisements.',
+      dismiss: 'Got it!',
+      allow: 'Allow',
+      deny: 'Decline',
+      link: 'Learn more',
+      href: 'https:\/\/www.heaton.dev\/privacy',
+      close: '&#x274c;',
+      policy: 'Cookie Policy',
+      target: '_self',
+    },
+    dismissOnScroll: false,
+    dismissOnTimeout: false,
+    location: false,
+    palette: {
+      popup: {
+        background: '#edeff5',
+        text: '#838391',
+        link: '#000'
+      },
+      button: {
+        background: '#4b81e8',
+        border: 'transparent',
+        text: '#fff'
+      },
+      highlight: {
+        background: 'transparent',
+        border: 'transparent',
+        text: '#000000'},
+    },
+    position: "bottom-left",
+    theme: "edgeless",
+    type: "opt-in",
+    revokable: true,
+    onInitialise: function(status, chosenBefore) {
+      
+      
+      
+
+
+      if (this.options.type == 'opt-in' && this.hasConsented()) {
+        
+      }
+    },
+    onStatusChange: function(status) {
+      if (this.hasConsented()) {
+        
+      }
+    },
+    onRevokeChoice: function() {
+      if (this.options.type == 'opt-in') {
+        
+      }
+    }
+  });
+});
+</script>
+
+<script>
+  
+
+  async function ads_enable() {
+    if (cookieConsent()) {
+      Cookies.set("adsplease", true, { secure: true, sameSite: 'strict' });
+    }
+
+    let adslots = document.getElementsByClassName("adsbygoogle");
+    if (adslots.length == 0) {
+      return;
+    }
+    let adclient = adslots[0].getAttribute("data-ad-client");
+    loader({
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + adclient,
+      async: true,
+      crossorigin: "anonymous"
+    });
+  }
+
+
+
+  
+
+  async function ads_disable() {
+    if (cookieConsent()) {
+      Cookies.remove("adsplease");
+    }
+  }
+
+
+
+  
+
+  window.addEventListener("DOMContentLoaded", function(event) {
+    
+    let ads_toggle = document.getElementById("ads-toggle");
+    if (ads_toggle) {
+      ads_toggle.addEventListener("click", function(event) {
+        if ( !Cookies.get("adsplease") ) {
+          ads_enable();
+          devlog("ads_toggle: undefined, enable");
+        }
+        else if ( Cookies.get("adsplease") == "false" ) {
+          ads_enable();
+          devlog("ads_toggle: enable");
+        }
+        else if ( Cookies.get("adsplease") == "true" ) {
+          ads_disable();
+          devlog("ads_toggle: disable");
+        }
+      });
+    }
+
+    
+
+
+    
+    if (Cookies.get("adsplease") == "true") {
+      ads_enable();
+    }
+
+    
+    if ( url_query.ads !== null ) {
+      ads_enable();
+    }
+
+    
+    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("cookieplease") == "allow") {
+      ads_enable();
+    }
+  });
+</script>
+<script>
+
+
+
+async function annotate_external_links() {
     let hyperlinks = document.getElementsByTagName("a");
     let whitelist = ["localhost", domain.fqdn, domain.toplevel];
 
@@ -1548,7 +1743,7 @@ function annotate_external_links() {
 
 
 
-function code_clipboard_btn() {
+async function code_clipboard_btn() {
   let blocks = document.querySelectorAll("pre");
 
   
@@ -1586,18 +1781,29 @@ function code_clipboard_btn() {
 
 
 
-function cookieConsent() {
-    if ( Cookies.get("cookieplease") == "allow" ) {
-        devlog("cookieConsent: allowed");
-        return true;
-    } else {
-        devlog("cookieConsent: disallowed");
-        return false;
-    }
-}
+window.addEventListener("DOMContentLoaded", function(event) {
+  
+  
+  let settings_slider = $("#settings-slider").slideReveal({
+      trigger: $("#settings-toggle"),
+      position: "right"
+  });
+  $( "#settings-slider .close" ).click(function() {
+      settings_slider.slideReveal("hide", false);
+  });
+
+  
+  annotate_external_links();
+
+  
+  code_clipboard_btn();
+});
+</script>
 
 
 
+
+<script>
 
 
 
@@ -1658,171 +1864,20 @@ function a11y_dyslexia_disable() {
 
 
 
-
 window.addEventListener("DOMContentLoaded", function(event) {
-  
-  
-  let settings_slider = $("#settings-slider").slideReveal({
-      trigger: $("#settings-toggle"),
-      position: "right"
-  });
-  $( "#settings-slider .close" ).click(function() {
-      settings_slider.slideReveal("hide", false);
-  });
-
-  
-  annotate_external_links();
-
-  
-  code_clipboard_btn();
-});
-</script>
-
-
-
-
-<script>
-  
-
-  function ads_enable() {
-    if (cookieConsent()) {
-      Cookies.set("adsplease", true, { secure: true, sameSite: 'strict' });
-    }
-
-    let adslots = document.getElementsByClassName("adsbygoogle");
-    if (adslots.length == 0) {
-      return;
-    }
-    let adclient = adslots[0].getAttribute("data-ad-client");
-    loader({
-      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + adclient,
-      async: true,
-      crossorigin: "anonymous"
+  let reveal_cookie = document.getElementById("reveal-cookie");
+  let ccwindow  = document.getElementsByClassName("cc-window")[0];
+  if (reveal_cookie) {
+    reveal_cookie.addEventListener("click", function(event) {
+      ccwindow.classList.remove("cc-invisible");
+      ccwindow.style["display"] = "";
     });
   }
-
-
-
-  
-
-  function ads_disable() {
-    if (cookieConsent()) {
-      Cookies.remove("adsplease");
-    }
-  }
-
-
-
-  
-
-  window.addEventListener("DOMContentLoaded", function(event) {
-    
-    let ads_toggle = document.getElementById("ads-toggle");
-    if (ads_toggle) {
-      ads_toggle.addEventListener("click", function(event) {
-        if ( !Cookies.get("adsplease") ) {
-          ads_enable();
-          devlog("ads_toggle: undefined, enable");
-        }
-        else if ( Cookies.get("adsplease") == "false" ) {
-          ads_enable();
-          devlog("ads_toggle: enable");
-        }
-        else if ( Cookies.get("adsplease") == "true" ) {
-          ads_disable();
-          devlog("ads_toggle: disable");
-        }
-      });
-    }
-
-    
-
-
-    
-    if (Cookies.get("adsplease") == "true") {
-      ads_enable();
-    }
-
-    
-    if ( url_query.ads !== null ) {
-      ads_enable();
-    }
-
-    
-    if ( body.getAttribute("data-ads-enabled") !== null && Cookies.get("cookieplease") == "allow") {
-      ads_enable();
-    }
-  });
-</script>
-
-<script>
-
-
-window.addEventListener('DOMContentLoaded', function(){
-  window.cookieconsent.initialise({
-    
-    autoOpen: true,
-    cookie: {
-      name: "cookieplease",
-      expiryDays: 365,
-      secure: true,
-      sameSite: "Strict"
-    },
-    content: {
-      header: 'Cookies used on the website!',
-      message: 'This website uses cookies and personalised advertisements.',
-      dismiss: 'Got it!',
-      allow: 'Allow',
-      deny: 'Decline',
-      link: 'Learn more',
-      href: 'https:\/\/www.heaton.dev\/privacy',
-      close: '&#x274c;',
-      policy: 'Cookie Policy',
-      target: '_self',
-    },
-    dismissOnScroll: false,
-    dismissOnTimeout: false,
-    location: false,
-    palette: {
-      popup: {
-        background: '#edeff5',
-        text: '#838391',
-        link: '#000'
-      },
-      button: {
-        background: '#4b81e8',
-        border: 'transparent',
-        text: '#fff'
-      },
-      highlight: {
-        background: 'transparent',
-        border: 'transparent',
-        text: '#000000'},
-    },
-    position: "bottom-left",
-    theme: "edgeless",
-    type: "opt-in",
-    revokable: true,
-    onInitialise: function(status, chosenBefore) {
-      
-
-      if (this.options.type == 'opt-in' && this.hasConsented()) {
-        
-      }
-    },
-    onStatusChange: function(status) {
-      if (this.hasConsented()) {
-        
-      }
-    },
-    onRevokeChoice: function() {
-      if (this.options.type == 'opt-in') {
-        
-      }
-    }
-  });
 });
 </script>
+
+
+
 
 <script>
 
@@ -1982,6 +2037,13 @@ window.addEventListener("DOMContentLoaded", function(event)
     searchDone();
   }
 }, false);
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RKW4BYC0QJ');
 </script>
 
 <script>
