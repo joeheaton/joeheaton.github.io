@@ -100,7 +100,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-06-21T00:00:00Z",
-    "dateModified": "2022-06-21T14:42:21.230909478Z",
+    "dateModified": "2022-06-21T15:03:24.247995862Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -247,11 +247,13 @@
     
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
   
@@ -2213,7 +2215,7 @@ Spack is a source-based package manager and build system, all builds take place 
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-21T14:42:21Z">
+            <time datetime="2022-06-21T15:03:24Z">
               21st
               Jun
               2022
@@ -2738,11 +2740,13 @@ Spack is a source-based package manager and build system, all builds take place 
   
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
 
@@ -2753,11 +2757,13 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
 
@@ -2854,11 +2860,13 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
 
@@ -3307,6 +3315,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -3567,7 +3577,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

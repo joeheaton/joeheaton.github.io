@@ -247,11 +247,11 @@ I&rsquo;ll overexplain some lines and underexplain others, depending on how inte
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -268,9 +268,9 @@ I&rsquo;ll overexplain some lines and underexplain others, depending on how inte
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 <article class="blog-post single">
@@ -649,11 +649,11 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
     
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -670,9 +670,9 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
     
@@ -709,11 +709,11 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -730,9 +730,9 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -829,11 +829,11 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -850,9 +850,9 @@ bashColor<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</sp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -1310,6 +1310,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -1570,7 +1572,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

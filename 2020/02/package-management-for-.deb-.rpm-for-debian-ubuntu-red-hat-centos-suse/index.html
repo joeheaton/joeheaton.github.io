@@ -245,11 +245,11 @@
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -266,9 +266,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 <article class="blog-post single">
@@ -648,11 +648,11 @@ ${_prefix}/nano
     
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -669,9 +669,9 @@ ${_prefix}/nano
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
     
@@ -708,11 +708,11 @@ ${_prefix}/nano
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -729,9 +729,9 @@ ${_prefix}/nano
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -828,11 +828,11 @@ ${_prefix}/nano
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -849,9 +849,9 @@ ${_prefix}/nano
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -1309,6 +1309,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -1569,7 +1571,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

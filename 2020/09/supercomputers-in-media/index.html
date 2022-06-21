@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2020/09/supercomputers-in-media/" /><meta property="article:section" content="posts" />
 
-<meta property="article:modified_time" content="2022-06-21T14:42:21&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="article:modified_time" content="2022-06-21T15:03:24&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -101,7 +101,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2020-09-23T00:00:00Z",
-    "dateModified": "2022-06-21T14:42:21.210908585Z",
+    "dateModified": "2022-06-21T15:03:24.23599565Z",
     "keywords": "Joe Heaton, developer, hpc, cloud, fun",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -244,11 +244,11 @@
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -265,9 +265,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 <article class="blog-post single">
@@ -317,7 +317,7 @@
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-21T14:42:21Z">
+            <time datetime="2022-06-21T15:03:24Z">
               21st
               Jun
               2022
@@ -704,11 +704,11 @@
     
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -725,9 +725,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
     
@@ -764,11 +764,11 @@
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -785,9 +785,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -884,11 +884,11 @@
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -905,9 +905,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -1365,6 +1365,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -1625,7 +1627,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

@@ -249,11 +249,11 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -270,9 +270,9 @@ Spack is a source-based package manager and build system, all builds take place 
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 <article class="blog-post single">
@@ -676,11 +676,11 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
     
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -697,9 +697,9 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
     
@@ -736,11 +736,11 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -757,9 +757,9 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -856,11 +856,11 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -877,9 +877,9 @@ cp2k.popt        cp2k.psmp        cp2k_shell.psmp
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -1351,6 +1351,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -1611,7 +1613,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

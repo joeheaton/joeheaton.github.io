@@ -100,7 +100,7 @@
       "name": "Joe Heaton"
     },
     "datePublished": "2022-06-21T00:00:00Z",
-    "dateModified": "2022-06-21T14:42:21.230909478Z",
+    "dateModified": "2022-06-21T15:03:24.247995862Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -247,11 +247,11 @@
     
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -268,9 +268,9 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
   
@@ -1476,7 +1476,7 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
             
             
             <span>last updated on</span>
-            <time datetime="2022-06-21T14:42:21Z">
+            <time datetime="2022-06-21T15:03:24Z">
               21st
               Jun
               2022
@@ -2506,11 +2506,11 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
   
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -2527,9 +2527,9 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -2540,11 +2540,11 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -2561,9 +2561,9 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -2660,11 +2660,11 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
 
 
 
+<div class="advert">
 
 
  
  
-  <div class="advert">
     <div class="notice">
         Advertisement
     </div>
@@ -2681,9 +2681,9 @@ git add file.txt git commit -m &#34;add my file.txt&#34; You can push your branc
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
  
 
+</div>
 
 
 
@@ -3132,6 +3132,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -3392,7 +3394,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");

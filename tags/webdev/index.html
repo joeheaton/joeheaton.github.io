@@ -470,11 +470,13 @@
 
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
 
@@ -571,11 +573,13 @@
 
 
 
+<div class="advert">
 
 
  
  
 
+</div>
 
 
 
@@ -1024,6 +1028,8 @@ const domain = {
     
     baseurl: baseurl.href,
     
+    url: document.location.href,
+    
     proto: document.location.protocol.replace(":", ""),
     
     fqdn: document.location.host,
@@ -1284,7 +1290,7 @@ async function code_clipboard_btn() {
   }
 
   blocks.forEach((block) => {
-    if (block.querySelector("code")) {
+    if (block.querySelector('code[class^="language-"')) {
       let button = document.createElement("button");
       button.classList.add("copy-to-clipboard");
       button.classList.add("btn");
