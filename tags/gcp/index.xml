@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloud on Joe Heaton.dev</title>
-    <link>https://www.heaton.dev/tags/cloud/</link>
-    <description>Recent content in cloud on Joe Heaton.dev</description>
+    <title>gcp on Joe Heaton.dev</title>
+    <link>https://www.heaton.dev/tags/gcp/</link>
+    <description>Recent content in gcp on Joe Heaton.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Cloud CLI &#39;gcloud&#39; Variables</title>
       <link>https://www.heaton.dev/2022/06/google-cloud-cli-gcloud-variables/</link>
@@ -21,15 +21,6 @@
 &lt;font color=&#34;#870000&#34;&gt;GCP&lt;/font&gt; $GCP_CONFIGURATION=my-project
 &lt;font color=&#34;#0000FF&#34;&gt;GCP&lt;/font&gt; $GCP_PROJECT=my-project&lt;/pre&gt;
 &lt;/blockquote&gt;</description>
-    </item>
-    
-    <item>
-      <title>Use Terraform Graph in MermaidJS</title>
-      <link>https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/</link>
-      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/</guid>
-      <description>&lt;p&gt;Terraform has a built-in command to generate a Graphviz digraph representing the output of &lt;code&gt;terraform plan&lt;/code&gt;, but this output is pretty messy and can&amp;rsquo;t render in MermaidJS.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -7,7 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Cloud CLI &#39;gcloud&#39; Variables</title>
+      <link>https://www.heaton.dev/2022/06/google-cloud-cli-gcloud-variables/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/06/google-cloud-cli-gcloud-variables/</guid>
+      <description>&lt;p&gt;I find it useful to frontload my terminals with context about my environment; You wouldn&amp;rsquo;t want to deploy to the wrong environment now would you?&lt;/p&gt;
+&lt;p&gt;Here I extract information from &lt;a href=&#34;https://cloud.google.com/cli&#34; target=&#34;_blank&#34;&gt;Google Cloud CLI&lt;/a&gt; and print it at the start of every new terminal tab in order to understand exactly where my Google Cloud API requests will go by default.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;font color=&#34;#5FAF00&#34;&gt;GCP&lt;/font&gt; $GCP_APP_CRED_PROJECT=my-project
+&lt;font color=&#34;#870000&#34;&gt;GCP&lt;/font&gt; $GCP_CONFIGURATION=my-project
+&lt;font color=&#34;#0000FF&#34;&gt;GCP&lt;/font&gt; $GCP_PROJECT=my-project&lt;/pre&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
     <item>
       <title>Export a Vroid Avatar to VRChat</title>
       <link>https://www.heaton.dev/2022/06/export-a-vroid-avatar-to-vrchat/</link>

@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloud</title>
+      <link>https://www.heaton.dev/tags/cloud/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcp</title>
+      <link>https://www.heaton.dev/tags/gcp/</link>
+      <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>metaverse</title>
       <link>https://www.heaton.dev/tags/metaverse/</link>
@@ -41,15 +59,6 @@
       <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/dev/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloud</title>
-      <link>https://www.heaton.dev/tags/cloud/</link>
-      <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/cloud/</guid>
       <description></description>
     </item>
     
