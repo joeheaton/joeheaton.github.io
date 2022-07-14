@@ -199,7 +199,8 @@ blockquote {
     text-align: center; }
 
 ins.adsbygoogle {
-  z-index: 1; }
+  z-index: 1;
+  text-align: center; }
   ins.adsbygoogle[data-ad-status="unfilled"] {
     display: none !important; }
 
@@ -390,7 +391,7 @@ ins.adsbygoogle {
       .sidebar .tag-cloud a:nth-child(3n+4) {
         transform: rotate(-4deg); }
   .sidebar .twitter-timeline {
-    margin: 0 0 1.5rem 0 !important; }
+    margin: 1rem 0 1.5rem 0 !important; }
 
 /* Pagination */
 .blog-pagination {
@@ -407,12 +408,13 @@ ins.adsbygoogle {
 /*
  * Blog posts
  */
+.advert,
 .blog-post,
 .sidebar-blob,
 .twitter-timeline {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 1rem 0 0;
   padding: 0.6rem 1rem;
   background: white;
   border-radius: 0.4rem;
@@ -423,26 +425,27 @@ ins.adsbygoogle {
   /*&:not(:last-child) {
     border-bottom: 1px dashed #aaa;
   }*/ }
-  .blog-post:first-child,
-  .sidebar-blob:first-child,
-  .twitter-timeline:first-child {
-    margin-top: 0; }
+  .advert:not(.single):last-child header,
   .blog-post:not(.single):last-child header,
   .sidebar-blob:not(.single):last-child header,
   .twitter-timeline:not(.single):last-child header {
     border-bottom: 0; }
+  .advert header,
   .blog-post header,
   .sidebar-blob header,
   .twitter-timeline header {
     margin: 0 0 1rem;
     border-bottom: 1px solid #e9e9e9; }
-    .blog-post header h1, .blog-post header h2,
+    .advert header h1, .advert header h2,
+    .blog-post header h1,
+    .blog-post header h2,
     .sidebar-blob header h1,
     .sidebar-blob header h2,
     .twitter-timeline header h1,
     .twitter-timeline header h2 {
       padding: 0;
       margin: 0; }
+  .advert.title-only,
   .blog-post.title-only,
   .sidebar-blob.title-only,
   .twitter-timeline.title-only {
@@ -451,42 +454,51 @@ ins.adsbygoogle {
     margin: 0;
     border-radius: 0;
     box-shadow: none; }
+    .advert.title-only:nth-of-type(1),
     .blog-post.title-only:nth-of-type(1),
     .sidebar-blob.title-only:nth-of-type(1),
     .twitter-timeline.title-only:nth-of-type(1) {
       border-radius: 0.4rem 0.4rem 0 0; }
+    .advert.title-only:last-of-type,
     .blog-post.title-only:last-of-type,
     .sidebar-blob.title-only:last-of-type,
     .twitter-timeline.title-only:last-of-type {
       margin-bottom: 1rem;
       border-radius: 0 0 0.4rem 0.4rem; }
+    .advert.title-only h1,
     .blog-post.title-only h1,
     .sidebar-blob.title-only h1,
     .twitter-timeline.title-only h1 {
       font-size: 1.4rem; }
+  .advert .description,
   .blog-post .description,
   .sidebar-blob .description,
   .twitter-timeline .description {
     color: #999; }
+  .advert .metadata,
   .blog-post .metadata,
   .sidebar-blob .metadata,
   .twitter-timeline .metadata {
     margin: 0.2rem 0 0;
     font-size: 0.8rem;
     color: #999; }
+    .advert .metadata time,
     .blog-post .metadata time,
     .sidebar-blob .metadata time,
     .twitter-timeline .metadata time {
       font-weight: bold; }
+    .advert .metadata .fa.fa-tag,
     .blog-post .metadata .fa.fa-tag,
     .sidebar-blob .metadata .fa.fa-tag,
     .twitter-timeline .metadata .fa.fa-tag {
       vertical-align: bottom;
       color: #2965B4; }
+  .advert .content,
   .blog-post .content,
   .sidebar-blob .content,
   .twitter-timeline .content {
     margin: 0 0 1rem; }
+    .advert .content .thumbnail,
     .blog-post .content .thumbnail,
     .sidebar-blob .content .thumbnail,
     .twitter-timeline .content .thumbnail {
@@ -495,6 +507,7 @@ ins.adsbygoogle {
       min-width: 128px;
       min-height: 64px;
       margin: 0 0 0.2rem 1rem; }
+      .advert .content .thumbnail img,
       .blog-post .content .thumbnail img,
       .sidebar-blob .content .thumbnail img,
       .twitter-timeline .content .thumbnail img {
@@ -502,6 +515,7 @@ ins.adsbygoogle {
         max-height: 8rem;
         border-radius: 8px;
         box-shadow: 0 4px 4px -4px #333; }
+      .advert .content .thumbnail .title,
       .blog-post .content .thumbnail .title,
       .sidebar-blob .content .thumbnail .title,
       .twitter-timeline .content .thumbnail .title {
@@ -515,16 +529,19 @@ ins.adsbygoogle {
         color: #fff;
         text-shadow: #000 0 0 3px;
         cursor: default; }
+  .advert footer,
   .blog-post footer,
   .sidebar-blob footer,
   .twitter-timeline footer {
     padding: 0 0.8%;
     margin: 0 0 0.4rem; }
+    .advert footer .errata,
     .blog-post footer .errata,
     .sidebar-blob footer .errata,
     .twitter-timeline footer .errata {
       padding: 0 0 1rem;
       border-top: 1px lightgrey solid; }
+  .advert.single .toc,
   .blog-post.single .toc,
   .sidebar-blob.single .toc,
   .twitter-timeline.single .toc {
@@ -532,45 +549,54 @@ ins.adsbygoogle {
     padding: 0.4rem 1rem;
     margin: 0 1rem 1rem 0;
     border: 1px solid lightgrey; }
+    .advert.single .toc header,
     .blog-post.single .toc header,
     .sidebar-blob.single .toc header,
     .twitter-timeline.single .toc header {
       text-align: center;
       font-weight: bold; }
+    .advert.single .toc ul,
     .blog-post.single .toc ul,
     .sidebar-blob.single .toc ul,
     .twitter-timeline.single .toc ul {
       padding: 0;
       counter-reset: item;
       color: grey; }
+      .advert.single .toc ul ul,
       .blog-post.single .toc ul ul,
       .sidebar-blob.single .toc ul ul,
       .twitter-timeline.single .toc ul ul {
         padding-left: 1rem;
         color: #999;
         border: 0; }
+      .advert.single .toc ul li,
       .blog-post.single .toc ul li,
       .sidebar-blob.single .toc ul li,
       .twitter-timeline.single .toc ul li {
         list-style-type: none; }
+        .advert.single .toc ul li:first-letter,
         .blog-post.single .toc ul li:first-letter,
         .sidebar-blob.single .toc ul li:first-letter,
         .twitter-timeline.single .toc ul li:first-letter {
           initial-letter-align: auto; }
+        .advert.single .toc ul li:before,
         .blog-post.single .toc ul li:before,
         .sidebar-blob.single .toc ul li:before,
         .twitter-timeline.single .toc ul li:before {
           content: counter(item, upper-roman) " ";
           counter-increment: item; }
+  .advert.single .sharing-icons,
   .blog-post.single .sharing-icons,
   .sidebar-blob.single .sharing-icons,
   .twitter-timeline.single .sharing-icons {
     font-size: 1.6rem;
     margin: 1rem 0; }
+    .advert.single .sharing-icons a span,
     .blog-post.single .sharing-icons a span,
     .sidebar-blob.single .sharing-icons a span,
     .twitter-timeline.single .sharing-icons a span {
       min-width: 2.2rem; }
+    .advert.single .sharing-icons .sharethis .text,
     .blog-post.single .sharing-icons .sharethis .text,
     .sidebar-blob.single .sharing-icons .sharethis .text,
     .twitter-timeline.single .sharing-icons .sharethis .text {
@@ -580,6 +606,8 @@ ins.adsbygoogle {
       margin: -0.2rem 0 0 -0.4rem;
       font-size: 0.8rem;
       cursor: default; }
+  .advert article img,
+  .advert .mermaid,
   .blog-post article img,
   .blog-post .mermaid,
   .sidebar-blob article img,
@@ -589,6 +617,7 @@ ins.adsbygoogle {
     max-width: 100%;
     height: auto;
     margin: 1rem auto; }
+  .advert .vcard:before,
   .blog-post .vcard:before,
   .sidebar-blob .vcard:before,
   .twitter-timeline .vcard:before {
@@ -821,8 +850,7 @@ p > code {
       }*/ }
 
 .advert {
-  margin: 1rem 0 0;
-  box-shadow: 0 0 0.25rem #b4b4b4; }
+  padding: 0; }
 
 .bigbtns {
   text-align: center;
