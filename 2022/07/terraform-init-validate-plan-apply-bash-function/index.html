@@ -2,7 +2,7 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>webdev | Joe Heaton.dev</title>
+<title>Terraform init-validate-plan-apply Bash function | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -12,17 +12,19 @@
 <meta name="keywords" content="Joe Heaton, developer, hpc, cloud, ">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="webdev" />
-<meta property="og:description" content="Joe Heaton&#39;s technology-focused murmurings." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.heaton.dev/tags/webdev/" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="og:title" content="Terraform init-validate-plan-apply Bash function" />
+<meta property="og:description" content="Tired of typing Terraform init, validate, apply? I&rsquo;ve written this bash function to speed this up and implement some good practices." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-14T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-07-14T11:39:36&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="webdev"/>
-<meta name="twitter:description" content="Joe Heaton&#39;s technology-focused murmurings."/>
+<meta name="twitter:title" content="Terraform init-validate-plan-apply Bash function"/>
+<meta name="twitter:description" content="Tired of typing Terraform init, validate, apply? I&rsquo;ve written this bash function to speed this up and implement some good practices."/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -33,10 +35,9 @@
 <meta name="msapplication-TileColor" content="#519cff">
 
 <!-- Formats -->
-<link rel="alternate" type="application/rss+xml" href="https://www.heaton.dev/tags/webdev/index.xml" title="Joe Heaton.dev">
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://www.heaton.dev/tags/webdev/">
+<link rel="canonical" href="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/">
 <link rel="icon" href="https://www.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -92,16 +93,17 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
-    "@type": "Page",
-    "url": "https://www.heaton.dev/tags/webdev/",
-    "headline": "webdev",
+    "@type": "BlogPosting",
+    "url": "https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/",
+    "headline": "Terraform init-validate-plan-apply Bash function","wordCount": "325",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
-    "datePublished": "2021-03-12T00:00:00Z",
-    "dateModified": "2021-03-12T00:00:00Z",
-    "keywords": "Joe Heaton, developer, hpc, cloud",
+    "datePublished": "2022-07-14T00:00:00Z",
+    
+    "dateModified": "2022-07-14T11:39:36.418345986Z",
+    "keywords": "Joe Heaton, developer, hpc, cloud, terraform, bash",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
 </script>
@@ -239,16 +241,37 @@
 
             
 
-  
-  
-    
-  
 
-  
-  
+
+
+
+<div class="advert">
+
+
+ 
+ 
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
     
-      
-        <article class="blog-post ">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="2120980238"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+ 
+
+</div>
+
+
+<article class="blog-post single">
   <header>
     
 
@@ -256,9 +279,9 @@
 
 
 <h1>
-  <a href="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/" title="Host Hugo static website on GitHub Pages using Actions and my domain" target="_self">
+  <a href="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/" title="Terraform init-validate-plan-apply Bash function" target="_self">
     
-      Host Hugo static website on GitHub Pages using Actions and my domain
+      Terraform init-validate-plan-apply Bash function
     
   </a>
 </h1>
@@ -273,15 +296,18 @@
         
            
             <span>Posted on</span>
-            <time datetime="2021-03-12T00:00:00Z">
-              12th
-              Mar
-              2021
+            <time datetime="2022-07-14T00:00:00Z">
+              14th
+              Jul
+              2022
             </time>
            
          
 
         
+        
+          
+          
         
         
         
@@ -297,29 +323,22 @@
         
             
 
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
+            <a href="https://www.heaton.dev/tags/cloud" rel="tag" target="_self">
+                <span>cloud</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
+            <a href="https://www.heaton.dev/tags/terraform" rel="tag" target="_self">
+                <span>terraform</span></a>
         
             
                 <span>|</span>
             
 
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/webdev" rel="tag" target="_self">
-                <span>webdev</span></a>
+            <a href="https://www.heaton.dev/tags/bash" rel="tag" target="_self">
+                <span>bash</span></a>
         
 
         <i class="fa fa-tag" aria-hidden="true"></i>
@@ -355,34 +374,104 @@
 </div>
   </header>
 
-  
   <section class="content">
     
+    
 
-    <span>
-      <p>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.</p>
-    </span>
+    <p>Tired of typing Terraform init, validate, apply? I&rsquo;ve written this bash function to speed this up and implement some good practices.</p>
+<h2 id="features">
+  Features
+   <a class="anchor" href="#features">
+    #
+  </a></h2>
+<ul>
+<li>Directory argument is passed to <code>-chdir=</code> before running Terraform
+<ul>
+<li>Example: <code>tf-iva my-terraform/v1</code></li>
+</ul>
+</li>
+<li>All invocations generate a Terraform plan which is saved to <code>$TMPDIR/terraform/&lt;UUID&gt;.tfplan</code>
+<ul>
+<li>Set <code>TF_PLANS</code> to save your plans to a specific directory</li>
+<li>UUIDs are randomly generated using <code>/proc/sys/kernel/random/uuid</code>, if your platform does not provide this feature then you will need to subsitute it</li>
+</ul>
+</li>
+<li>User is prompted whether to apply the plan, plans are saved prior to this prompt</li>
+<li><code>-h</code>/<code>--help</code> arguments prints usage information</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># tf-iva - init, validate, plan, apply</span>
+<span style="color:#ff79c6">function</span> tf-iva <span style="color:#ff79c6">{</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-h|--help<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
+		cat <span style="color:#f1fa8c">&lt;&lt;-EOT
+</span><span style="color:#f1fa8c">			tf-iva - Terraform init, validate, plan, apply by Joe Heaton.dev
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">			Usage: [TF_PLANS=DIR] tf-iva [chdir]
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">		Default destiantion for tfplans is \$TMPDIR/terraform
+</span><span style="color:#f1fa8c">		EOT</span>
+        <span style="color:#ff79c6">return</span>
+    <span style="color:#ff79c6">fi</span>
 
-    <a href="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/"  target="_self">
-      Read more →
-    </a>
+    <span style="color:#6272a4"># Use argument as dir</span>
+    <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">||</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span>
+
+    <span style="color:#6272a4"># Set tfplan destination</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TF_PLANS</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span>; <span style="color:#ff79c6">then</span>
+        <span style="color:#6272a4"># Override DEST if $TF_PLANS set</span>
+        <span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TF_PLANS</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#ff79c6">else</span>
+        <span style="color:#6272a4"># Set TMPDIR if missing</span>
+        <span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TMPDIR</span><span style="color:#ff79c6">:-</span>/tmp<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/terraform&#34;</span>
+    <span style="color:#ff79c6">fi</span>
+
+    <span style="color:#6272a4"># Make temp directory for terraform</span>
+    <span style="color:#ff79c6">[</span> ! -d <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> mkdir <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span> &gt;/dev/null
+
+    <span style="color:#6272a4"># Get random UUID for our plan name</span>
+    <span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">$(</span>&lt; /proc/sys/kernel/random/uuid <span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span>
+    
+    <span style="color:#8be9fd;font-style:italic">echo</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> init&#34;</span>
+    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> init
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform init failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
+
+    <span style="color:#8be9fd;font-style:italic">echo</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> validate&#34;</span>
+    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> validate
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform validate failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
+
+    <span style="color:#8be9fd;font-style:italic">echo</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> plan -out </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> plan -out <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform plan failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
+
+    <span style="color:#8be9fd;font-style:italic">echo</span>
+    <span style="color:#8be9fd;font-style:italic">read</span> -n1 -p <span style="color:#f1fa8c">&#34;Apply this plan? [Y/n]: &#34;</span> yn
+    <span style="color:#8be9fd;font-style:italic">echo</span>
+    <span style="color:#ff79c6">case</span> <span style="color:#8be9fd;font-style:italic">$yn</span> in
+        <span style="color:#ff79c6">[</span>nN<span style="color:#ff79c6">]</span>*<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Aborting..&#34;</span>; <span style="color:#ff79c6">return</span>;;
+        <span style="color:#ff79c6">[</span>yY<span style="color:#ff79c6">]</span>*<span style="color:#ff79c6">)</span>
+            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+            terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+            ;;
+        <span style="color:#f1fa8c">&#34;&#34;</span><span style="color:#ff79c6">)</span>
+            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+            terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+            ;;
+        *<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Aborting..&#34;</span>; <span style="color:#ff79c6">return</span>;;
+    <span style="color:#ff79c6">esac</span> 
+<span style="color:#ff79c6">}</span>
+
+</code></pre></div><p>Download <a href="./tf-iva.sh">tf-iva.sh</a></p>
+
+    
+
+    
   </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-      
-    
-  
 
   
-  
 
-  
-  
+  <footer class="footer">
     
 <section class="vcard card mb-4 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
@@ -459,8 +548,66 @@
         </div>
     </div>
 </section>
-  
 
+    
+    
+    
+
+    
+    
+
+
+<div class="advert">
+
+
+ 
+ 
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="4474561276"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+ 
+
+</div>
+
+
+    
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "heaton-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+  </footer>
+
+</article> 
 
 
           </div> <!-- /.blog-main -->
@@ -474,6 +621,23 @@
 
 
  
+ 
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="7093556571"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
  
 
 </div>
@@ -577,6 +741,23 @@
 
 
  
+ 
+    <div class="notice">
+        Advertisement
+    </div>
+
+    <!-- Google AdSense -->
+    
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3323132479843798"
+        data-ad-slot="7093556571"
+        data-ad-format="auto"
+        
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
  
 
 </div>
@@ -938,6 +1119,29 @@
                     </a>
                 </li>
 
+                
+                
+                <li>
+                    <a href="https://www.heaton.dev/tags/cloud/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                        cloud
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.heaton.dev/tags/terraform/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                        terraform
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.heaton.dev/tags/bash/index.xml" target="_blank" rel="alternative" type="application/rss+xml">
+                        bash
+                        <i class="fa fa-tag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
                 
             </ul>
         </div>
