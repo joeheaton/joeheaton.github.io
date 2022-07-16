@@ -308,8 +308,6 @@ ins.adsbygoogle {
       border-radius: 100%;
       box-shadow: 0 0 1px #000 inset; }
       .masthead .banner .avatar img {
-        width: 5.2rem;
-        height: 5.2rem;
         border-radius: 100%;
         box-shadow: 0 0 2px #000 inset;
         background-size: 120%;
@@ -701,6 +699,8 @@ p > code {
     margin: 1rem 0; }
   #footer ul {
     list-style-type: none; }
+    #footer ul li {
+      margin: 0; }
     #footer ul .fa-tag {
       vertical-align: bottom; }
 
