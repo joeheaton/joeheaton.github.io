@@ -337,6 +337,8 @@ ins.adsbygoogle {
       margin: 1%;
       border: 1px solid #fff;
       border-radius: 8px; }
+      .masthead .blog-nav .nav .search label {
+        width: 100%; }
       .masthead .blog-nav .nav .search i.fa-search {
         position: absolute;
         margin: 0.28rem 0 0 0.4rem;
@@ -523,7 +525,7 @@ ins.adsbygoogle {
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
-        font-family: Hack, "Fira Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-variant: small-caps;
         color: #fff;
         text-shadow: #000 0 0 3px;
         cursor: default; }
