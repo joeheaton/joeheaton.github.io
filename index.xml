@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HPC Newsletter | July 2022</title>
+      <link>https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/</link>
+      <pubDate>Fri, 29 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Joe’s effort to keep up with High Performance Computing’s ever-expanding horizon, with a chance of clouds. ☁️&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
     <item>
       <title>Terraform init-validate-plan-apply Bash function</title>
       <link>https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/</link>

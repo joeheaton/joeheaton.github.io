@@ -2,7 +2,7 @@
 <html lang="en" prefix="dc: http://purl.org/dc/elements/1.1/ og: http://ogp.me/ns#" >
   <head>
     <meta charset="utf-8">
-<title>Joe Heaton.dev</title>
+<title>HPC Newsletter | July 2022 | Joe Heaton.dev</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.81.0" />
@@ -13,17 +13,23 @@
 <meta name="author" content="Joe Heaton">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="Joe Heaton.dev" />
-<meta property="og:description" content="Joe Heaton&#39;s technology-focused murmurings." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.heaton.dev/" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="og:title" content="HPC Newsletter | July 2022" />
+<meta property="og:description" content="
+Joe’s effort to keep up with High Performance Computing’s ever-expanding horizon, with a chance of clouds. ☁️
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-07-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Joe Heaton.dev"/>
-<meta name="twitter:description" content="Joe Heaton&#39;s technology-focused murmurings."/>
+<meta name="twitter:title" content="HPC Newsletter | July 2022"/>
+<meta name="twitter:description" content="
+Joe’s effort to keep up with High Performance Computing’s ever-expanding horizon, with a chance of clouds. ☁️
+"/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -34,10 +40,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- Formats -->
-<link rel="alternate" type="application/rss+xml" href="https://www.heaton.dev/index.xml" title="Joe Heaton.dev">
 
 <!-- Bits n bobs -->
-<link rel="canonical" href="https://www.heaton.dev/">
+<link rel="canonical" href="https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/">
 <link rel="icon" href="https://www.heaton.dev/images/favicon.png">
 <link rel="license" href="#copyright">
 
@@ -90,15 +95,16 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
-    "@type": "Blog",
-    "url": "https://www.heaton.dev/",
-    "headline": "Joe Heaton.dev",
+    "@type": "BlogPosting",
+    "url": "https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/",
+    "headline": "HPC Newsletter | July 2022","wordCount": "719",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2022-07-29T00:00:00Z",
-    "dateModified": "2022-08-02T11:15:09.422761463Z",
+    
+    "dateModified": "2022-07-29T00:00:00Z",
     "keywords": "Joe Heaton, developer, hpc, cloud",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -189,7 +195,7 @@
         <div class="blog-nav">
           <nav class="container-xl nav d-flex justify-content-between">
             <div class="d-flex flex-row">
-                <a class="nav-link active" href="https://www.heaton.dev/" title="" target="_self">
+                <a class="nav-link" href="https://www.heaton.dev/" title="" target="_self">
                   Home
                 </a>
               
@@ -237,12 +243,6 @@
 
             
 
-  
-
-  
-  <div class="blog-posts-paginated">
-    
-    
 
 
 
@@ -252,9 +252,9 @@
 
 
 
-  
-    
-      <article class="blog-post ">
+
+
+<article class="blog-post single">
   <header>
     
 
@@ -325,2423 +325,155 @@
 
   </header>
 
-  
   <section class="content">
     
+    
+  <aside class="toc">
+    <header>
+      Contents
+    </header>
 
-    <span>
-      <blockquote>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-cloud-hpc-toolkit">Google Cloud <strong>HPC Toolkit</strong></a></li>
+    <li><a href="#google-cloud-flexes-arms-with-ampere-altra">Google Cloud flexes Arms with <strong>Ampere Altra</strong></a></li>
+    <li><a href="#aws-parallelcluster-32-adds-slurm-memory-aware-scheduling-and-expands-filesystem-support">AWS ParallelCluster 3.2 adds Slurm <strong>memory-aware</strong> scheduling and expands filesystem support</a></li>
+    <li><a href="#rocky-linux-on-google-cloud-as-fully-supported-alternative-to-centos">Rocky Linux on Google Cloud as fully supported alternative to CentOS</a></li>
+    <li><a href="#also-this-month">Also This Month</a>
+      <ul>
+        <li><a href="#john-c-linford-publishes-a-comprehensive-getting-started-with-nvidia-arm-hpc-developers-kit">John C. Linford publishes a comprehensive <strong>Getting Started with NVIDIA Arm HPC Developers Kit</strong></a></li>
+        <li><a href="#fujitsu-to-provide-a64fx-hpc-as-a-service-via-new-cloud">Fujitsu to provide <strong>A64FX HPC as a service</strong> via new Cloud</a></li>
+        <li><a href="#atos-sees-federated-hpc-cloud-as-the-future-with-their-acquisition-of-nimbix-and-their-hpc-cloud-experience"><strong>Atos</strong> sees <strong>Federated HPC Cloud</strong> as the future, with their acquisition of Nimbix and their HPC Cloud experience</a></li>
+        <li><a href="#cxl-further-cements-itself-as-the-leading-cpu-interconnect-standard"><strong>CXL</strong> further cements itself as the leading CPU interconnect standard</a></li>
+        <li><a href="#interesting-paper-that-quantifies-the-carbon-intensity-of-hddssd-drives-by-capexopex-ie-carbon-to-produce-and-carbon-to-run">Interesting paper that quantifies the carbon intensity of HDD/SSD drives by CAPEX/OPEX, i.e. carbon to produce and carbon to run.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+
+
+    <blockquote>
 <p>Joe’s effort to keep up with High Performance Computing’s ever-expanding horizon, with a chance of clouds. ☁️</p>
 </blockquote>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/"  target="_self">
-      Read more →
+<h2 id="google-cloud-hpc-toolkit">
+  Google Cloud <strong>HPC Toolkit</strong>
+   <a class="anchor" href="#google-cloud-hpc-toolkit">
+    #
+  </a></h2>
+<p>Google&rsquo;s Cloud HPC Toolkit allows admins to define a cluster in YAML and their <code>ghpc</code> command-line tool combine various Google-maintained and community Terraform modules to produce a static directory of Terraform to apply, tear down and apply again! Modules already exist to have a fully working Slurm batch scheduler, optionally in federation with your OnPrem cluster, with a wide array of software support available, including <a href="https://spack.io/" target="_blank">Spack</a> and Intel’s OneAPI suite.</p>
+<p>Taking advantage of the best of cloud these clusters are capable of autoscaling and can take advantage of Google Cloud&rsquo;s services and partners.</p>
+<p>All using industry standard tooling: <a href="https://www.hashicorp.com/" target="_blank">HashiCorp’s</a> Terraform &amp; Packer, implementing Google’s best practices in <a href="https://sre.google/" target="_blank">SRE</a>.</p>
+<p>
+  <figure>
+    <a href="images/hpc-toolkit.png" target="_blank">
+      <img src="images/hpc-toolkit.png" alt="HPC Toolkit diagram">
     </a>
-  </section>
-  
-
-  <footer>
     
-  </footer>
-</article> 
+    <figcaption>
+        Google Cloud HPC Toolkit workflow
+    </figcaption>
+  </figure>
 
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/" title="Terraform init-validate-plan-apply Bash function" target="_self">
-    
-      Terraform init-validate-plan-apply Bash function
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-07-14T00:00:00Z">
-              14th
-              Jul
-              2022
-            </time>
-           
-         
-
-        
-        
-          
-          
-            
-            
-              
-             
-            
-            
-              <span>&amp;</span>
-            
-            
-            <span>last updated on</span>
-            <time datetime="2022-08-02T11:15:09Z">
-              2nd
-              Aug
-              2022
-            </time>
-          
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/cloud" rel="tag" target="_self">
-                <span>cloud</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/terraform" rel="tag" target="_self">
-                <span>terraform</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/bash" rel="tag" target="_self">
-                <span>bash</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-        <span>Crossposted to:</span>
-
-        <span>
-          
-            
-
-            
-            <a href="https://gist.github.com/joeheaton/e3afab991db13d30ec518545496b4b04" target="_blank">gist.github.com</a>
-          
-        </span>
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>Tired of typing Terraform init, validate, apply? I&rsquo;ve written this bash function to speed this up and implement some good practices.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/06/google-cloud-cli-gcloud-variables/" title="Google Cloud CLI &#39;gcloud&#39; Variables" target="_self">
-    
-      Google Cloud CLI &#39;gcloud&#39; Variables
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-06-21T00:00:00Z">
-              21st
-              Jun
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/cloud" rel="tag" target="_self">
-                <span>cloud</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/gcp" rel="tag" target="_self">
-                <span>gcp</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>I find it useful to frontload my terminals with context about my environment; You wouldn&rsquo;t want to deploy to the wrong environment now would you?</p>
-<p>Here I extract information from <a href="https://cloud.google.com/cli" target="_blank">Google Cloud CLI</a> and print it at the start of every new terminal tab in order to understand exactly where my Google Cloud API requests will go by default.</p>
+</p>
+<p><a href="https://cloud.google.com/blog/products/compute/new-google-cloud-hpc-toolkit" target="_blank">Accelerate your High Performance Computing journey with new Google Cloud HPC Toolkit | Google Cloud</a></p>
 <blockquote>
-<pre><font color="#5FAF00">GCP</font> $GCP_APP_CRED_PROJECT=my-project
-<font color="#870000">GCP</font> $GCP_CONFIGURATION=my-project
-<font color="#0000FF">GCP</font> $GCP_PROJECT=my-project</pre>
+<p>Google Cloud: Cloud HPC Toolkit, an open source tool that enables users to easily create repeatable, turnkey HPC clusters based on proven best practices.</p>
 </blockquote>
-    </span>
+<p><a href="https://www.nextplatform.com/2022/07/07/with-cloud-hpc-toolkit-google-pursues-hpc-intel-pushes-oneapi/" target="_blank">WITH CLOUD HPC TOOLKIT, GOOGLE PURSUES HPC, INTEL PUSHES ONEAPI | Next Platform</a></p>
+<p><a href="https://www.hpcwire.com/off-the-wire/intel-and-google-cloud-announce-cloud-hpc-toolkit/" target="_blank">Intel and Google Cloud Announce Cloud HPC Toolkit | HPC Wire</a></p>
 
-    <a href="https://www.heaton.dev/2022/06/google-cloud-cli-gcloud-variables/"  target="_self">
-      Read more →
-    </a>
+<h2 id="google-cloud-flexes-arms-with-ampere-altra">
+  Google Cloud flexes Arms with <strong>Ampere Altra</strong>
+   <a class="anchor" href="#google-cloud-flexes-arms-with-ampere-altra">
+    #
+  </a></h2>
+<p><a href="https://cloud.google.com/blog/products/compute/tau-t2a-is-first-compute-engine-vm-on-an-arm-chip" target="_blank">Expanding the Tau VM family with Arm-based processors | Google Cloud</a></p>
+<p>Google Cloud enters the <strong>Arm Neoverse</strong> with <strong>Ampere Altra</strong> Arm processors!</p>
+<p>Scaling up to 48 vCPUs, Tau T2A VMs can be deployed as part of <strong>Google Kubernetes Engine</strong>, as <strong>Compute</strong> and in <strong>Dataflow</strong>.</p>
+<p><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5mZWVkYnVybmVyLmNvbS9HY3BQb2RjYXN0/episode/NGExYmIyODktYTE4NS00N2E0LWFkNmYtNzdiMTViNjM2OGJl?sa=X&amp;ved=0CAUQkfYCahcKEwiQzvSV7af5AhUAAAAAHQAAAAAQcw" target="_blank">Google Cloud Podcast discusses Arm Servers on GCP with Jon Masters and Emma Haruka Iwao</a></p>
+
+<h2 id="aws-parallelcluster-32-adds-slurm-memory-aware-scheduling-and-expands-filesystem-support">
+  AWS ParallelCluster 3.2 adds Slurm <strong>memory-aware</strong> scheduling and expands filesystem support
+   <a class="anchor" href="#aws-parallelcluster-32-adds-slurm-memory-aware-scheduling-and-expands-filesystem-support">
+    #
+  </a></h2>
+<p><a href="https://aws.amazon.com/blogs/hpc/slurm-based-memory-aware-scheduling-in-aws-parallelcluster-3-2/" target="_blank">Slurm-based memory-aware scheduling in AWS ParallelCluster 3.2</a> by Oliver Perks</p>
+<p>tldr; <code>--mem</code> and <code>--mem-per-cpu</code> job flags are now available!</p>
+<p><a href="https://aws.amazon.com/blogs/hpc/expanded-filesystems-support-in-aws-parallelcluster-3-2/" target="_blank">Expanded filesystems support in AWS ParallelCluster 3.2</a> by Oliver Perks</p>
+<blockquote>
+<p>ParallelCluster already has support for <a href="https://aws.amazon.com/efs" target="_blank">Amazon Elastic File System (EFS)</a>, <a href="https://aws.amazon.com/ebs/" target="_blank">Amazon Elastic Block Store (EBS)</a> and <a href="https://aws.amazon.com/fsx/lustre/" target="_blank">Amazon FSx for Lustre</a>. In this release we added support for the <a href="https://aws.amazon.com/fsx/netapp-ontap/" target="_blank">FSx for NetApp ONTAP</a> and <a href="https://aws.amazon.com/fsx/openzfs/" target="_blank">FSx for OpenZFS</a> filesystems.</p>
+</blockquote>
+<blockquote>
+<p>With this ParallelCluster 3.2, you can now mount up to 20 Amazon FSx file systems and up to 20 Amazon EFS filesystems.</p>
+</blockquote>
+<p>→ <a href="https://twitter.com/boofla/status/1552662087066959874" target="_blank">Brendan Bouffler’s “HPC guy @awscloud” Twitter thread on the release</a></p>
+
+<h2 id="rocky-linux-on-google-cloud-as-fully-supported-alternative-to-centos">
+  Rocky Linux on Google Cloud as fully supported alternative to CentOS
+   <a class="anchor" href="#rocky-linux-on-google-cloud-as-fully-supported-alternative-to-centos">
+    #
+  </a></h2>
+<p>→ <a href="https://cloud.google.com/blog/products/application-modernization/introducing-rocky-linux-optimized-for-google-cloud" target="_blank">Moving off CentOS? Introducing Rocky Linux Optimized for Google Cloud</a></p>
+<blockquote>
+<p>As CentOS 7 reaches end of life, many enterprises are considering their options for an enterprise-grade, downstream Linux distribution on which to run their production applications. Rocky Linux has emerged as a strong alternative that, like CentOS, is 100% compatible with Red Hat Enterprise Linux.</p>
+</blockquote>
+
+<h2 id="also-this-month">
+  Also This Month
+   <a class="anchor" href="#also-this-month">
+    #
+  </a></h2>
+
+<h3 id="john-c-linford-publishes-a-comprehensive-getting-started-with-nvidia-arm-hpc-developers-kit">
+  John C. Linford publishes a comprehensive <strong>Getting Started with NVIDIA Arm HPC Developers Kit</strong>
+   <a class="anchor" href="#john-c-linford-publishes-a-comprehensive-getting-started-with-nvidia-arm-hpc-developers-kit">
+    #
+  </a></h3>
+<p>→ <a href="https://github.com/arm-hpc-devkit/nvidia-arm-hpc-devkit-users-guide" target="_blank">Getting started with HPC on Arm64 | GitHub</a></p>
+<blockquote>
+<p>This guide includes how-to guides, sample code, recommendations, and technical best practices to help new users get started with Arm-based systems like the NVIDIA Arm HPC Developer Kit. While it is intended for the users and administrators of NVIDIA&rsquo;s Arm-based platforms, this guide is also generically useful for anyone running HPC applications on Arm CPUs, with or without GPUs. The focus is mostly on the CPU since Arm-hosted GPUs are just the same as GPUs hosted by any other CPUs.</p>
+</blockquote>
+<p>→ <a href="https://twitter.com/johnclinford/" target="_blank">John C. Linford on Twitter</a></p>
+
+<h3 id="fujitsu-to-provide-a64fx-hpc-as-a-service-via-new-cloud">
+  Fujitsu to provide <strong>A64FX HPC as a service</strong> via new Cloud
+   <a class="anchor" href="#fujitsu-to-provide-a64fx-hpc-as-a-service-via-new-cloud">
+    #
+  </a></h3>
+<p>→ <a href="https://www.fujitsu.com/global/about/resources/news/press-releases/2022/0406-01.html" target="_blank">Fujitsu launches “Fujitsu Computing as a Service (CaaS),” delivering customers access to world-leading computing technologies via the public cloud | Fujitsu</a></p>
+<p>→ <a href="https://www.theregister.com/2022/07/25/fujitsu_hpc_cloud_space/" target="_blank">Japanese space agency to put massive HPC cloud to the test | The Register</a></p>
+
+<h3 id="atos-sees-federated-hpc-cloud-as-the-future-with-their-acquisition-of-nimbix-and-their-hpc-cloud-experience">
+  <strong>Atos</strong> sees <strong>Federated HPC Cloud</strong> as the future, with their acquisition of Nimbix and their HPC Cloud experience
+   <a class="anchor" href="#atos-sees-federated-hpc-cloud-as-the-future-with-their-acquisition-of-nimbix-and-their-hpc-cloud-experience">
+    #
+  </a></h3>
+<p>→ <a href="https://www.nextplatform.com/2022/07/12/pulling-all-the-levers-for-hpc-in-the-cloud/" target="_blank">PULLING ALL THE LEVERS FOR HPC IN THE CLOUD | Next Platform</a></p>
+
+<h3 id="cxl-further-cements-itself-as-the-leading-cpu-interconnect-standard">
+  <strong>CXL</strong> further cements itself as the leading CPU interconnect standard
+   <a class="anchor" href="#cxl-further-cements-itself-as-the-leading-cpu-interconnect-standard">
+    #
+  </a></h3>
+<p>Having previously absorbed AMD/Arm’s CCIX, HPE’s Gen-Z and now IBM’s OpenCAPI. CXL enhances PCIe, enables device caching of main memory and most interesting for HPC enables <strong>coherent memory access</strong>.</p>
+<p>→ <a href="https://www.hpcwire.com/2022/08/01/opencapi-to-be-folded-into-cxl/" target="_blank">OpenCAPI to Be Folded into CXL | HPCWire</a></p>
+
+<h3 id="interesting-paper-that-quantifies-the-carbon-intensity-of-hddssd-drives-by-capexopex-ie-carbon-to-produce-and-carbon-to-run">
+  Interesting paper that quantifies the carbon intensity of HDD/SSD drives by CAPEX/OPEX, i.e. carbon to produce and carbon to run.
+   <a class="anchor" href="#interesting-paper-that-quantifies-the-carbon-intensity-of-hddssd-drives-by-capexopex-ie-carbon-to-produce-and-carbon-to-run">
+    #
+  </a></h3>
+<p>→ <a href="https://arxiv.org/abs/2207.10793" target="_blank">The Dirty Secret of SSDs: Embodied Carbon | arxiv</a></p>
+
+    
+
+    
   </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/06/export-a-vroid-avatar-to-vrchat/" title="Export a Vroid Avatar to VRChat" target="_self">
-    
-      Export a Vroid Avatar to VRChat
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-06-01T00:00:00Z">
-              1st
-              Jun
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/metaverse" rel="tag" target="_self">
-                <span>metaverse</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/unity" rel="tag" target="_self">
-                <span>unity</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/vr" rel="tag" target="_self">
-                <span>vr</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p><a href="https://vroid.com/en/studio" target="_blank">Vroid Studio</a> is a quick &amp; easy 3D character editor which can export to the <a href="https://unity.com/" target="_blank">Unity</a> game engine and from there, integrate into metaverse platforms; in this tutorial we will take our Vroid model and import it into <a href="https://vrchat.com/" target="_blank">VRChat</a>, a platform for socialising in virtual reality with user-generated worlds.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/06/export-a-vroid-avatar-to-vrchat/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/" title="Understand MermaidJS; Concepts &amp; Syntax" target="_self">
-    
-      Understand MermaidJS; Concepts &amp; Syntax
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-05-17T00:00:00Z">
-              17th
-              May
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
-                <span>dev</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>MermaidJS is great because it brings graphs-as-code to the web! No longer do we need to run graphviz from the commandline to generate static image files each time we make a change; Now we see changes instantly, embed graphs with ease in source repositories and track their changes, etc..</p>
-<p>The trouble I&rsquo;ve had with Mermaid is figuring out the syntax, there are quite a few gotchas which don&rsquo;t advertise themselves very clearly, such as it not tolerating blank lines, or spaces are comma-deliminated lists.. I&rsquo;ll list these here so you can get graphing quicker than I did!</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/05/understand-mermaidjs-concepts-syntax/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/05/styling-mermaidjs/" title="Styling MermaidJS" target="_self">
-    
-      Styling MermaidJS
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-05-13T00:00:00Z">
-              13th
-              May
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
-                <span>dev</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>What&rsquo;s better than a graph? A graph with style!</p>
-<p>Using Mermaid&rsquo;s class definitions we can style blocks and subgraphs to reflect the ecosystem they belong to; In this case I want to style my infrastructure diagrams to Google&rsquo;s branding.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/05/styling-mermaidjs/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/" title="Use Terraform Graph in MermaidJS" target="_self">
-    
-      Use Terraform Graph in MermaidJS
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-05-11T00:00:00Z">
-              11th
-              May
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/cloud" rel="tag" target="_self">
-                <span>cloud</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/terraform" rel="tag" target="_self">
-                <span>terraform</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>Terraform has a built-in command to generate a Graphviz digraph representing the output of <code>terraform plan</code>, but this output is pretty messy and can&rsquo;t render in MermaidJS.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/05/my-vscode/" title="My VSCode" target="_self">
-    
-      My VSCode
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-05-02T00:00:00Z">
-              2nd
-              May
-              2022
-            </time>
-           
-         
-
-        
-        
-          
-          
-            
-            
-              
-             
-            
-            
-              <span>&amp;</span>
-            
-            
-            <span>last updated on</span>
-            <time datetime="2022-05-23T00:00:00Z">
-              23rd
-              May
-              2022
-            </time>
-          
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
-                <span>dev</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/vscode" rel="tag" target="_self">
-                <span>vscode</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>Visual Studio Code, &ldquo;VSCode&rdquo;, is the hugely featureful successor to projects like Atom &amp; Visual Studio itself, the extensibility of VSCode is key to this success and I&rsquo;m going to share what I do to make VSCode work for me.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/05/my-vscode/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/04/cray-hpc/" title="Cray HPC" target="_self">
-    
-      Cray HPC
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-04-06T00:00:00Z">
-              6th
-              Apr
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/hpc" rel="tag" target="_self">
-                <span>hpc</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>On the 50th Anniversary of Cray Research Inc.&rsquo;s founding by Seymour Cray, I thought I&rsquo;d summarise my brief but intensely interesting experience with the last crop of Cray Supercomputer systems.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/04/cray-hpc/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/02/working-with-gnome-3/" title="Working with Gnome 3" target="_self">
-    
-      Working with Gnome 3
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-02-24T00:00:00Z">
-              24th
-              Feb
-              2022
-            </time>
-           
-         
-
-        
-        
-          
-          
-            
-            
-              
-             
-            
-            
-              <span>&amp;</span>
-            
-            
-            <span>last updated on</span>
-            <time datetime="2022-04-18T00:00:00Z">
-              18th
-              Apr
-              2022
-            </time>
-          
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/desktop" rel="tag" target="_self">
-                <span>desktop</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>I&rsquo;m back on Ubuntu with the Gnome 3 desktop environment and here are a few customsations to make it more productive and make moving between Gnome 3 &amp; Windows simple.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/02/working-with-gnome-3/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2022/02/monitor-internet-health-with-fluentbit-grafana/" title="Monitor Internet Health with FluentBit &amp; Grafana" target="_self">
-    
-      Monitor Internet Health with FluentBit &amp; Grafana
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2022-02-21T00:00:00Z">
-              21st
-              Feb
-              2022
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/monitoring" rel="tag" target="_self">
-                <span>monitoring</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/grafana" rel="tag" target="_self">
-                <span>grafana</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>I want to keep an eye on my Internet service provider after a series of prolonged outages, to that end I setup a Grafana dashboard to monitor my connectivity to various online services.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2022/02/monitor-internet-health-with-fluentbit-grafana/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/" title="Understand Chia Pools and Farming your NFT Plots" target="_self">
-    
-      Understand Chia Pools and Farming your NFT Plots
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2021-07-10T00:00:00Z">
-              10th
-              Jul
-              2021
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/crypto" rel="tag" target="_self">
-                <span>crypto</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p><a href="https://www.chia.net/" target="_blank">Chia (XCH)</a> is a cryptocurrency based on Proof of Space-and-Time rather than the much more familiar Proof of Work that <a href="https://www.bloomberg.com/news/articles/2021-05-26/china-s-crypto-mining-crackdown-followed-deadly-coal-accidents" target="_blank">plagues our efforts</a> to decarbonise our energy grid. Chia was initially developed by <a href="https://twitter.com/bramcohen" target="_blank">@BramCohen</a>, known for developing the BitTorrent protocol.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2021/07/understand-chia-pools-and-farming-your-nft-plots/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2021/06/bash-opinions/" title="Bash opinions" target="_self">
-    
-      Bash opinions
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2021-06-25T00:00:00Z">
-              25th
-              Jun
-              2021
-            </time>
-           
-         
 
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/bash" rel="tag" target="_self">
-                <span>bash</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      Everyone has their own preferences when it comes to writing Bash scripts, I prefer very high safety &amp; syntax consistency. A good example of both is variables, ${USER} can be shortened to $USER, but any following characters could be interpreted as part of the variable name. The longer syntax is also more powerful, enabling small conditional checks, which means we&rsquo;ll likely end up using the longer syntax somewhere in our script, so why not keep it consistent and use it everywhere!
-    </span>
-
-    <a href="https://www.heaton.dev/2021/06/bash-opinions/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/" title="Try out Spack on Arm HPC | CP2K" target="_self">
-    
-      Try out Spack on Arm HPC | CP2K
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2021-06-04T00:00:00Z">
-              4th
-              Jun
-              2021
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/hpc" rel="tag" target="_self">
-                <span>hpc</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/spack" rel="tag" target="_self">
-                <span>spack</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      Diverse users running across a diverse set of architectures, it seems Spack was built just for this!
-I want to share my experiences with Spack, here my focus is on CP2K. My build environment is a Cray XC50 running Thunder X2 Arm CPUs.
-Spack is a source-based package manager and build system, all builds take place in self-contained environments. Every installed package is defined by a spec, the spec is a string that represents the enabled features, compiler, etc.
-    </span>
-
-    <a href="https://www.heaton.dev/2021/06/try-out-spack-on-arm-hpc-cp2k/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/" title="Automatically set your github.io domain in GitHub Actions" target="_self">
-    
-      Automatically set your github.io domain in GitHub Actions
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2021-04-20T00:00:00Z">
-              20th
-              Apr
-              2021
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/hugo" rel="tag" target="_self">
-                <span>hugo</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>Collaborative websites need to be forked, but if you set a hostname variable, such as <code>baseURL</code> in Hugo, the forked website will load resources from the original.. Not ideal.</p>
-<p>The fix I applied to my GitHub Actions CI to work around this:</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2021/04/automatically-set-your-github.io-domain-in-github-actions/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/" title="Host Hugo static website on GitHub Pages using Actions and my domain" target="_self">
-    
-      Host Hugo static website on GitHub Pages using Actions and my domain
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2021-03-12T00:00:00Z">
-              12th
-              Mar
-              2021
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/github" rel="tag" target="_self">
-                <span>github</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/automation" rel="tag" target="_self">
-                <span>automation</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/webdev" rel="tag" target="_self">
-                <span>webdev</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2020/10/my-vim/" title="my Vim" target="_self">
-    
-      my Vim
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2020-10-14T00:00:00Z">
-              14th
-              Oct
-              2020
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/linux" rel="tag" target="_self">
-                <span>linux</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/dev" rel="tag" target="_self">
-                <span>dev</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/vim" rel="tag" target="_self">
-                <span>vim</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>This is my <code>.vimrc</code>, I find it benefitial to use this where I do development to normalise my editor across different operating systems, and to enable some useful untapped features to make Vim feel a bit less prehistoric.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2020/10/my-vim/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/" title="Remote PostgreSQL using local PgAdmin inside Docker" target="_self">
-    
-      Remote PostgreSQL using local PgAdmin inside Docker
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2020-09-29T00:00:00Z">
-              29th
-              Sep
-              2020
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/docker" rel="tag" target="_self">
-                <span>docker</span></a>
-        
-            
-                <span>|</span>
-            
-
-            <a href="https://www.heaton.dev/tags/postgres" rel="tag" target="_self">
-                <span>postgres</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>PostgreSQL management is a never-ending rabbit hole and in my case I just want to create a user, a database and set up some ownership.. without resorting to SQL or complex configuration frameworks.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2020/09/remote-postgresql-using-local-pgadmin-inside-docker/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2020/09/supercomputers-in-media/" title="Supercomputers in media" target="_self">
-    
-      Supercomputers in media
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2020-09-23T00:00:00Z">
-              23rd
-              Sep
-              2020
-            </time>
-           
-         
-
-        
-        
-          
-          
-            
-            
-              
-             
-            
-            
-              <span>&amp;</span>
-            
-            
-            <span>last updated on</span>
-            <time datetime="2022-08-02T11:15:09Z">
-              2nd
-              Aug
-              2022
-            </time>
-          
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/fun" rel="tag" target="_self">
-                <span>fun</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>I thought it would be fun to gather together all the amazing looking fictional supercomputers!</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2020/09/supercomputers-in-media/"  target="_self">
-      Read more →
-    </a>
-  </section>
-  
-
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-    
-      <article class="blog-post ">
-  <header>
-    
-
-
-
-
-<h1>
-  <a href="https://www.heaton.dev/2020/08/dynamically-load-fonts/" title="Dynamically load fonts" target="_self">
-    
-      Dynamically load fonts
-    
-  </a>
-</h1>
-
-<div class="row">
-  <div class="d-flex col justify-content-between metadata">
-    <span>
-      
-      
-        
-
-        
-           
-            <span>Posted on</span>
-            <time datetime="2020-08-26T00:00:00Z">
-              26th
-              Aug
-              2020
-            </time>
-           
-         
-
-        
-        
-        
-        
-
-        
-          in
-          
-
-
-    
-
-    <span class="d-inline tags">
-        
-            
-
-            <a href="https://www.heaton.dev/tags/web" rel="tag" target="_self">
-                <span>web</span></a>
-        
-
-        <i class="fa fa-tag" aria-hidden="true"></i>
-    </span>
-
-
-        
-       
-
-      
-      
-      
-        
-      
-
-      
-      
-      
-        
-       
-    </span>
-
-    <span>
-      
-    </span>
-  </div>
-
-  <div class="row">
-    <div class="col metadata">
-      
-
-      
-    </div>
-  </div>
-</div>
-
-
-  </header>
-
-  
-  <section class="content">
-    
-
-    <span>
-      <p>I&rsquo;ve added a Dyslexia accessibility feature to my website which loads a Dyslexia-friendly font, woo!</p>
-<p>This involved creating a small toggle function to turn the feature on and off, but when I reload the page it&rsquo;s gone, so I had it bake a cookie so the function could trigger automatically on-reload. This still wasn&rsquo;t enough I didn&rsquo;t want every visitor to load the font, only users who click the toggle button, so I added a section to dynamically load the font.</p>
-    </span>
-
-    <a href="https://www.heaton.dev/2020/08/dynamically-load-fonts/"  target="_self">
-      Read more →
-    </a>
-  </section>
   
 
-  <footer>
-    
-  </footer>
-</article> 
-
-    
-  
-  </div>
-
-  
-  
-    <nav class="blog-pagination">
-  
-
-  
-  
-  
-    <a class="btn btn-outline-primary disabled" href="#" target="_self" role="button" aria-disabled="true">Previous page</a>
-  
-    <a class="btn btn-outline-primary" href="https://www.heaton.dev/page/2/" target="_self" rel="next" role="button">Next page</a>
-  
-</nav>
-
-  
-
-  
-  
+  <footer class="footer">
     
 <section class="vcard card mb-4 border border-primary" itemscope itemtype="http://schema.org/Person">
     <div class="row no-gutters">
@@ -2818,10 +550,13 @@ Spack is a source-based package manager and build system, all builds take place 
         </div>
     </div>
 </section>
-  
 
-  
-  
+    
+    
+    
+
+    
+    
 
 
 
@@ -2840,7 +575,7 @@ Spack is a source-based package manager and build system, all builds take place 
     <ins class="adsbygoogle"
         style="display:block"
         data-ad-client="ca-pub-3323132479843798"
-        data-ad-slot="5269656246"
+        data-ad-slot="4474561276"
         data-ad-format="auto"
         
         data-full-width-responsive="true"></ins>
@@ -2852,6 +587,32 @@ Spack is a source-based package manager and build system, all builds take place 
 
 
 
+
+    
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "heaton-dev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+  </footer>
+
+</article> 
 
 
           </div> <!-- /.blog-main -->
