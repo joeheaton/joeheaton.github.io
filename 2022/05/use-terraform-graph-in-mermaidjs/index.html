@@ -96,7 +96,7 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/05/use-terraform-graph-in-mermaidjs/",
-    "headline": "Use Terraform Graph in MermaidJS","wordCount": "335",
+    "headline": "Use Terraform Graph in MermaidJS","wordCount": "339",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
@@ -355,7 +355,8 @@
     
 
     <p>Terraform has a built-in command to generate a Graphviz digraph representing the output of <code>terraform plan</code>, but this output is pretty messy and can&rsquo;t render in MermaidJS.</p>
-<p>These steps should clean things up so your graphs can be used in Gitlab, your blog, anywhere that supports MermaidJS!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-shell" data-lang="shell">terraform graph &gt; graph.dot
+</code></pre></div><p>These steps should clean things up so your graphs can be used in Gitlab, your blog, anywhere that supports MermaidJS!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-postscript" data-lang="postscript"><span style="color:#50fa7b">digraph</span> {
 	<span style="color:#50fa7b">compound</span> <span style="color:#50fa7b">=</span> <span style="color:#50fa7b">&#34;true&#34;</span>
 	<span style="color:#50fa7b">newrank</span> <span style="color:#50fa7b">=</span> <span style="color:#50fa7b">&#34;true&#34;</span>

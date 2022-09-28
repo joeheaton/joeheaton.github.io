@@ -18,7 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-14T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-08-02T11:15:09&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="article:modified_time" content="2022-09-28T10:58:54&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -93,14 +93,14 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/",
-    "headline": "Terraform init-validate-plan-apply Bash function","wordCount": "325",
+    "headline": "Terraform init-validate-plan-apply Bash function","wordCount": "451",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2022-07-14T00:00:00Z",
     
-    "dateModified": "2022-08-02T11:15:09.410761158Z",
+    "dateModified": "2022-09-28T10:58:54.550134244Z",
     "keywords": "Joe Heaton, developer, hpc, cloud, terraform, bash",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -297,9 +297,9 @@
             
             
             <span>last updated on</span>
-            <time datetime="2022-08-02T11:15:09Z">
-              2nd
-              Aug
+            <time datetime="2022-09-28T10:58:54Z">
+              28th
+              Sep
               2022
             </time>
           
@@ -407,23 +407,64 @@
 </ul>
 </li>
 <li>User is prompted whether to apply the plan, plans are saved prior to this prompt</li>
+<li>Flags
+<ul>
 <li><code>-h</code>/<code>--help</code> arguments prints usage information</li>
+<li><code>-t</code>/<code>--target</code> for targetted apply (not destroy)</li>
+<li><code>-d</code>/<code>--destroy</code> to destroy</li>
 </ul>
+</li>
+</ul>
+
+<h2 id="code">
+  Code
+   <a class="anchor" href="#code">
+    #
+  </a></h2>
+<p>Download <a href="./tf-iva.sh">tf-iva.sh</a>, also available as a <a href="https://gist.github.com/joeheaton/e3afab991db13d30ec518545496b4b04" target="_blank">GitHub Gist</a>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># tf-iva - init, validate, plan, apply</span>
 <span style="color:#ff79c6">function</span> tf-iva <span style="color:#ff79c6">{</span>
-    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-h|--help<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-h|--?help<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
 		cat <span style="color:#f1fa8c">&lt;&lt;-EOT
 </span><span style="color:#f1fa8c">			tf-iva - Terraform init, validate, plan, apply by Joe Heaton.dev
 </span><span style="color:#f1fa8c">
-</span><span style="color:#f1fa8c">			Usage: [TF_PLANS=DIR] tf-iva [chdir]
+</span><span style="color:#f1fa8c">			Usage: [TF_PLANS=DIR] tf-iva [FLAGS] [chdir]
 </span><span style="color:#f1fa8c">
-</span><span style="color:#f1fa8c">		Default destiantion for tfplans is \$TMPDIR/terraform
+</span><span style="color:#f1fa8c">			Flags:
+</span><span style="color:#f1fa8c">			    -h|--help    - Display this help text
+</span><span style="color:#f1fa8c">			    -d|--destroy - Perform a destroy instead of apply
+</span><span style="color:#f1fa8c">			    -t|--target  - Targetted apply (does not support destroy)
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">			Example:
+</span><span style="color:#f1fa8c">			    tf-iva --target module.folder my_terraform
+</span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">			Default destiantion for tfplans is \$TMPDIR/terraform
 </span><span style="color:#f1fa8c">		EOT</span>
         <span style="color:#ff79c6">return</span>
     <span style="color:#ff79c6">fi</span>
 
-    <span style="color:#6272a4"># Use argument as dir</span>
-    <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">||</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span>
+    <span style="color:#8be9fd;font-style:italic">terraform</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">$(</span> which terraform 2&gt;/dev/null <span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span>
+
+    <span style="color:#6272a4"># --destroy and exit</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-d|--?destroy<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
+        <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#8be9fd;font-style:italic">echo</span>
+        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> destroy&#34;</span>
+        <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> destroy
+        <span style="color:#ff79c6">return</span>
+    <span style="color:#ff79c6">fi</span>
+
+    <span style="color:#6272a4"># --target set TARGET &amp; DIR</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-t|--?target<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
+        <span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">3</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#ff79c6">fi</span>
+
+    <span style="color:#6272a4"># Use argument as DIR if DIR unset</span>
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">||</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span>
+
+    <span style="color:#6272a4"># Abort if DIR unset</span>
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;DIR unset.. Aborting!&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
     <span style="color:#6272a4"># Set tfplan destination</span>
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TF_PLANS</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span>; <span style="color:#ff79c6">then</span>
@@ -442,37 +483,46 @@
     
     <span style="color:#8be9fd;font-style:italic">echo</span>
     <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> init&#34;</span>
-    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> init
+    <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> init
     <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform init failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
     <span style="color:#8be9fd;font-style:italic">echo</span>
     <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> validate&#34;</span>
-    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> validate
+    <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> validate
     <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform validate failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
-    <span style="color:#8be9fd;font-style:italic">echo</span>
-    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> plan -out </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
-    terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> plan -out <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> plan </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> -out </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+    <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> plan <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span> -out <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
     <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform plan failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
-    <span style="color:#8be9fd;font-style:italic">echo</span>
-    <span style="color:#8be9fd;font-style:italic">read</span> -n1 -p <span style="color:#f1fa8c">&#34;Apply this plan? [Y/n]: &#34;</span> yn
+    <span style="color:#8be9fd;font-style:italic">read</span> -r -p <span style="color:#f1fa8c">&#34;Apply this plan? [Y/n]: &#34;</span> yn
+	<span style="color:#ff79c6">[[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">yn</span>,,<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^y|yes$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>
     <span style="color:#8be9fd;font-style:italic">echo</span>
     <span style="color:#ff79c6">case</span> <span style="color:#8be9fd;font-style:italic">$yn</span> in
         <span style="color:#ff79c6">[</span>nN<span style="color:#ff79c6">]</span>*<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Aborting..&#34;</span>; <span style="color:#ff79c6">return</span>;;
         <span style="color:#ff79c6">[</span>yY<span style="color:#ff79c6">]</span>*<span style="color:#ff79c6">)</span>
-            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
-            terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+            <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
             ;;
         <span style="color:#f1fa8c">&#34;&#34;</span><span style="color:#ff79c6">)</span>
-            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
-            terraform <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
+            <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> apply </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.tfplan&#34;</span>
+            <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> apply <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DEST</span><span style="color:#f1fa8c">}</span>/<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">UUID</span><span style="color:#f1fa8c">}</span>.tfplan
             ;;
         *<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Aborting..&#34;</span>; <span style="color:#ff79c6">return</span>;;
     <span style="color:#ff79c6">esac</span> 
 <span style="color:#ff79c6">}</span>
+</code></pre></div>
 
-</code></pre></div><p>Download <a href="./tf-iva.sh">tf-iva.sh</a></p>
+    
+      <h2>
+    Updates & Errata
+</h2>
+
+<ul>
+
+    <li>2022-09-28 - Support `--destroy` and `--target`, safer user prompt</li>
+
+</ul>
 
     
 
