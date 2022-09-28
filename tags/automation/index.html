@@ -363,11 +363,7 @@
     
 
     <span>
-      Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames.
-I&rsquo;ve brought together some scripts to make it trivial to connect Ansible to your Google Cloud compute infrastructure:
- https://github.com/joeheaton/ansible-gcp
-Clone the repo and edit inventory.gcp.yml:
---- plugin: gcp_compute projects: - MY-PROJECT auth_kind: application keyed_groups: - key: labels prefix: label - key: zone prefix: zone - key: (tags.
+      <p>Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames.</p>
     </span>
 
     <a href="https://www.heaton.dev/2022/09/ansible-via-google-cloud-iap-tunnel/"  target="_self">

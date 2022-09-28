@@ -14,11 +14,7 @@
 
 <!-- OpenGraph -->
 <meta property="og:title" content="Ansible via Google Cloud IAP Tunnel" />
-<meta property="og:description" content="Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames.
-I&rsquo;ve brought together some scripts to make it trivial to connect Ansible to your Google Cloud compute infrastructure:
- https://github.com/joeheaton/ansible-gcp
-Clone the repo and edit inventory.gcp.yml:
---- plugin: gcp_compute projects: - MY-PROJECT auth_kind: application keyed_groups: - key: labels prefix: label - key: zone prefix: zone - key: (tags." />
+<meta property="og:description" content="Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/09/ansible-via-google-cloud-iap-tunnel/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-23T00:00:00&#43;00:00" />
@@ -29,11 +25,7 @@ Clone the repo and edit inventory.gcp.yml:
 <!-- Twitter -->
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ansible via Google Cloud IAP Tunnel"/>
-<meta name="twitter:description" content="Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames.
-I&rsquo;ve brought together some scripts to make it trivial to connect Ansible to your Google Cloud compute infrastructure:
- https://github.com/joeheaton/ansible-gcp
-Clone the repo and edit inventory.gcp.yml:
---- plugin: gcp_compute projects: - MY-PROJECT auth_kind: application keyed_groups: - key: labels prefix: label - key: zone prefix: zone - key: (tags."/>
+<meta name="twitter:description" content="Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames."/>
 
 <meta name="twitter:dnt" content="on">
 
@@ -410,7 +402,6 @@ python3 -m pip install -r requirements.txt
 <asciinema-player class="embed" src="https://www.heaton.dev/2022/09/ansible-via-google-cloud-iap-tunnel/tmpxz1ay6at-ascii.cast" idle-time-limit="1" rows="24" cols="128" fit="width" theme="asciinema" preload="false"></asciinema-player>
 
 <p>I hope you find this useful!</p>
-
 
     
 
