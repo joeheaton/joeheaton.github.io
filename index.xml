@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Fri, 29 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible via Google Cloud IAP Tunnel</title>
+      <link>https://www.heaton.dev/2022/09/ansible-via-google-cloud-iap-tunnel/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2022/09/ansible-via-google-cloud-iap-tunnel/</guid>
+      <description>Ansible is a great tool for managing configuration across a fleet of compute resources, but it struggles with dynamic sets of compute that are constantly being destroyed and spawned since it the user has to maintain a static list of hostnames.
+I&amp;rsquo;ve brought together some scripts to make it trivial to connect Ansible to your Google Cloud compute infrastructure:
+ https://github.com/joeheaton/ansible-gcp
+Clone the repo and edit inventory.gcp.yml:
+--- plugin: gcp_compute projects: - MY-PROJECT auth_kind: application keyed_groups: - key: labels prefix: label - key: zone prefix: zone - key: (tags.</description>
+    </item>
+    
     <item>
       <title>HPC Newsletter | July 2022</title>
       <link>https://www.heaton.dev/2022/07/hpc-newsletter-july-2022/</link>

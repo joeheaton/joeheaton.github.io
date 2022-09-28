@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>&amp;copy; Joe Heaton</copyright>
-    <lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.heaton.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>bash</title>
-      <link>https://www.heaton.dev/tags/bash/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      <title>automation</title>
+      <link>https://www.heaton.dev/tags/automation/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/tags/bash/</guid>
+      <guid>https://www.heaton.dev/tags/automation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cloud</title>
       <link>https://www.heaton.dev/tags/cloud/</link>
-      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://www.heaton.dev/tags/bash/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/tags/bash/</guid>
       <description></description>
     </item>
     
@@ -149,15 +158,6 @@
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/spack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://www.heaton.dev/tags/automation/</link>
-      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/automation/</guid>
       <description></description>
     </item>
     

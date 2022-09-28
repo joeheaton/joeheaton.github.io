@@ -66,7 +66,7 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slideReveal/1.1.2/jquery.slidereveal.min.js" crossorigin="anonymous"></script>
 
 <!-- JS-Cookie --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Cookie notification bar -->
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -619,11 +619,11 @@
 
     <div class="tag-cloud">
             
-            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (2 posts)" style="font-size: 1.031rem" target="_self">automation</a>
+            <a href="https://www.heaton.dev/tags/automation" aria-label="automation (3 posts)" style="font-size: 1.167rem" target="_self">automation</a>
             
             <a href="https://www.heaton.dev/tags/bash" aria-label="bash (5 posts)" style="font-size: 1.337rem" target="_self">bash</a>
             
-            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (3 posts)" style="font-size: 1.167rem" target="_self">cloud</a>
+            <a href="https://www.heaton.dev/tags/cloud" aria-label="cloud (4 posts)" style="font-size: 1.263rem" target="_self">cloud</a>
             
             <a href="https://www.heaton.dev/tags/crypto" aria-label="crypto (1 posts)" style="font-size: 0.800rem" target="_self">crypto</a>
             
@@ -691,8 +691,7 @@
 
 
 
-  <a class="twitter-timeline" data-dnt="true" data-height="98%" data-theme="light" href="https://twitter.com/Heaton_dev?ref_src=twsrc%5Etfw"></a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
 
 
 
@@ -1289,24 +1288,29 @@ window.addEventListener('DOMContentLoaded', function(){
     type: "opt-in",
     revokable: true,
     onInitialise: function(status, chosenBefore) {
-      
+      devlog(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
       
       
 
 
-      if (this.options.type == 'opt-in' && this.hasConsented()) {
-        
-      }
+      
+
+
+      return;
     },
     onStatusChange: function(status) {
       if (this.hasConsented()) {
         
+        devlog(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
       }
+      return;
     },
     onRevokeChoice: function() {
       if (this.options.type == 'opt-in') {
         
+        devlog(this.hasConsented() ? "cookieconsent: enable cookies" : "cookieconsent: disable cookies");
       }
+      return;
     }
   });
 });
