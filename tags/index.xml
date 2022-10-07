@@ -153,11 +153,11 @@
     </item>
     
     <item>
-      <title>spack</title>
-      <link>https://www.heaton.dev/tags/spack/</link>
-      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      <title>git</title>
+      <link>https://www.heaton.dev/tags/git/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/tags/spack/</guid>
+      <guid>https://www.heaton.dev/tags/git/</guid>
       <description></description>
     </item>
     
@@ -180,11 +180,11 @@
     </item>
     
     <item>
-      <title>webdev</title>
-      <link>https://www.heaton.dev/tags/webdev/</link>
+      <title>web</title>
+      <link>https://www.heaton.dev/tags/web/</link>
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.heaton.dev/tags/webdev/</guid>
+      <guid>https://www.heaton.dev/tags/web/</guid>
       <description></description>
     </item>
     
@@ -225,15 +225,6 @@
     </item>
     
     <item>
-      <title>web</title>
-      <link>https://www.heaton.dev/tags/web/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>windows</title>
       <link>https://www.heaton.dev/tags/windows/</link>
       <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
@@ -257,15 +248,6 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.heaton.dev/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://www.heaton.dev/tags/git/</link>
-      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.heaton.dev/tags/git/</guid>
       <description></description>
     </item>
     

@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Host Hugo static website on GitHub Pages using Actions and my domain</title>
+      <link>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.heaton.dev/2021/03/host-hugo-static-website-on-github-pages-using-actions-and-my-domain/</guid>
+      <description>&lt;p&gt;In a cost-saving exercise I wanted to try host my personal website on a free platform, since the code repository is hosted on GitHub, I decided to look into GitHub pages.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>my Vim</title>
       <link>https://www.heaton.dev/2020/10/my-vim/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>

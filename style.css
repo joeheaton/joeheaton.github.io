@@ -681,7 +681,7 @@ p > code {
  * Footer
  */
 #footer {
-  margin: 1rem auto 1rem;
+  margin: 0 auto;
   padding: 1rem 0 0;
   text-align: center;
   background-color: #f9f9f9;
@@ -906,6 +906,9 @@ p > code {
 
 #bigbtns_firefoxbtn {
   background: linear-gradient(to bottom, #962BB9 0%, #4D1A69 100%) repeat scroll 0 0 #962BB9; }
+
+#bigbtns_chromebtn {
+  background: linear-gradient(to bottom, #34a853 0%, #1e8e3e 100%) repeat scroll 0 0 #962BB9; }
 
 #bigbtns_hostedbtn {
   background: linear-gradient(to bottom, #5d80bb 0%, #253c76 100%) repeat scroll 0 0 #5d80bb; }
