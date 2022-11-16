@@ -681,7 +681,7 @@ p > code {
  * Footer
  */
 #footer {
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 1rem 0 0;
   text-align: center;
   background-color: #f9f9f9;
