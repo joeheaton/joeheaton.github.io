@@ -18,7 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-14T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2022-11-16T15:42:25&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
+<meta property="article:modified_time" content="2022-11-21T00:00:00&#43;00:00" /><meta property="og:site_name" content="Joe Heaton.dev" />
 
 
 
@@ -94,14 +94,14 @@
     "@context": "http://schema.org/",
     "@type": "BlogPosting",
     "url": "https://www.heaton.dev/2022/07/terraform-init-validate-plan-apply-bash-function/",
-    "headline": "Terraform init-validate-plan-apply Bash function","wordCount": "451",
+    "headline": "Terraform init-validate-plan-apply Bash function","wordCount": "592",
     "author": {
       "@type": "Person",
       "name": "Joe Heaton"
     },
     "datePublished": "2022-07-14T00:00:00Z",
     
-    "dateModified": "2022-11-16T15:42:25.218788189Z",
+    "dateModified": "2022-11-21T00:00:00Z",
     "keywords": "Joe Heaton, developer, hpc, cloud, terraform, bash",
     "description": "Joe Heaton\u0027s technology-focused murmurings."
   }
@@ -298,8 +298,8 @@
             
             
             <span>last updated on</span>
-            <time datetime="2022-11-16T15:42:25Z">
-              16th
+            <time datetime="2022-11-21T00:00:00Z">
+              21st
               Nov
               2022
             </time>
@@ -411,8 +411,9 @@
 <li>Flags
 <ul>
 <li><code>-h</code>/<code>--help</code> arguments prints usage information</li>
-<li><code>-t</code>/<code>--target</code> for targetted apply (not destroy)</li>
+<li><code>-t</code>/<code>--target</code> for targetted apply</li>
 <li><code>-d</code>/<code>--destroy</code> to destroy</li>
+<li><code>-c</code>/<code>--chdir</code> to chdir, not required but handled if used</li>
 </ul>
 </li>
 </ul>
@@ -429,43 +430,68 @@
 		cat <span style="color:#f1fa8c">&lt;&lt;-EOT
 </span><span style="color:#f1fa8c">			tf-iva - Terraform init, validate, plan, apply by Joe Heaton.dev
 </span><span style="color:#f1fa8c">
-</span><span style="color:#f1fa8c">			Usage: [TF_PLANS=DIR] tf-iva [FLAGS] [chdir]
+</span><span style="color:#f1fa8c">			Usage: [TF_PLANS=DIR] tf-iva [FLAGS] [DIR]
 </span><span style="color:#f1fa8c">
 </span><span style="color:#f1fa8c">			Flags:
-</span><span style="color:#f1fa8c">			    -h|--help    - Display this help text
-</span><span style="color:#f1fa8c">			    -d|--destroy - Perform a destroy instead of apply
-</span><span style="color:#f1fa8c">			    -t|--target  - Targetted apply (does not support destroy)
+</span><span style="color:#f1fa8c">			    -h|--help      - Display this help text
+</span><span style="color:#f1fa8c">			    -d|--destroy   - Destroy, cannot be mixed with other flags
+</span><span style="color:#f1fa8c">			    -t|--target    - Targetted apply
+</span><span style="color:#f1fa8c">			    -c|--chdir - Catch -chdir, not required
 </span><span style="color:#f1fa8c">
 </span><span style="color:#f1fa8c">			Example:
-</span><span style="color:#f1fa8c">			    tf-iva --target module.folder my_terraform
+</span><span style="color:#f1fa8c">			    # Apply in current directory
+</span><span style="color:#f1fa8c">			    tf-iva
+</span><span style="color:#f1fa8c">			    
+</span><span style="color:#f1fa8c">			    # Apply target in current directory
+</span><span style="color:#f1fa8c">			    tf-iva --target module.folder
 </span><span style="color:#f1fa8c">
+</span><span style="color:#f1fa8c">			    # Apply target in chdir directory
+</span><span style="color:#f1fa8c">			    tf-iva --target module.folder my_tf
+</span><span style="color:#f1fa8c">			    
+</span><span style="color:#f1fa8c">			    # Destroy in current directory
+</span><span style="color:#f1fa8c">			    tf-iva --destroy
+</span><span style="color:#f1fa8c">			    
+</span><span style="color:#f1fa8c">			    # Destroy in chdir directory
+</span><span style="color:#f1fa8c">			    tf-iva --destroy my_tf
+</span><span style="color:#f1fa8c">			
 </span><span style="color:#f1fa8c">			Default destiantion for tfplans is \$TMPDIR/terraform
 </span><span style="color:#f1fa8c">		EOT</span>
         <span style="color:#ff79c6">return</span>
     <span style="color:#ff79c6">fi</span>
 
-    <span style="color:#8be9fd;font-style:italic">terraform</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">$(</span> which terraform 2&gt;/dev/null <span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#8be9fd;font-style:italic">local</span> DIR TARGET DEST UUID
+    <span style="color:#8be9fd;font-style:italic">local</span> <span style="color:#8be9fd;font-style:italic">terraform</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">$(</span> which terraform 2&gt;/dev/null <span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">terraform</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform not found.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
     <span style="color:#6272a4"># --destroy and exit</span>
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-d|--?destroy<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
         <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#6272a4"># Targetted destroy: tf-iva --destroy --target module.test dir</span>
+        <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-t|--?target<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">3</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>; <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">4</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>; <span style="color:#ff79c6">}</span>
+        <span style="color:#6272a4"># Error on all other flags</span>
+        <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^- <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Destroy cannot be used with another flag&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
         <span style="color:#8be9fd;font-style:italic">echo</span>
-        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> destroy&#34;</span>
-        <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> destroy
-        <span style="color:#ff79c6">return</span>
+        <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;&gt; terraform </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c"> destroy </span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#8be9fd;font-style:italic">$terraform</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span>:+-chdir=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}}</span> destroy <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span>:+-target=<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}}</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">$?</span>
     <span style="color:#ff79c6">fi</span>
 
     <span style="color:#6272a4"># --target set TARGET &amp; DIR</span>
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-t|--?target<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span>; <span style="color:#ff79c6">then</span>
         <span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
-        <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">3</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">3</span><span style="color:#ff79c6">:-</span><span style="color:#8be9fd;font-style:italic">$PWD</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+        <span style="color:#6272a4"># Catch --chdir and set DIR</span>
+        <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">3</span><span style="color:#f1fa8c">}</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-c|--?chdir<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">4</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
     <span style="color:#ff79c6">fi</span>
 
     <span style="color:#6272a4"># Use argument as DIR if DIR unset</span>
-    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">||</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span>
+    <span style="color:#ff79c6">[[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^- <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
 
-    <span style="color:#6272a4"># Abort if DIR unset</span>
-    <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}${</span><span style="color:#8be9fd;font-style:italic">TARGET</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;DIR unset.. Aborting!&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
+    <span style="color:#6272a4"># Catch --chdir and set DIR</span>
+    <span style="color:#ff79c6">[[</span> <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>-c|--?chdir<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+
+    <span style="color:#6272a4"># Abort if DIR missing</span>
+    <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">[</span> ! -d <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">DIR</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Directory does not exist.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
     <span style="color:#6272a4"># Set tfplan destination</span>
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">TF_PLANS</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">]</span>; <span style="color:#ff79c6">then</span>
@@ -497,7 +523,7 @@
     <span style="color:#ff79c6">[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$?</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">{</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Error: Terraform plan failed.&#34;</span>; <span style="color:#ff79c6">return</span> 1; <span style="color:#ff79c6">}</span>
 
     <span style="color:#8be9fd;font-style:italic">read</span> -r -p <span style="color:#f1fa8c">&#34;Apply this plan? [Y/n]: &#34;</span> yn
-	<span style="color:#ff79c6">[[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">yn</span>,,<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^y|yes$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>
+	<span style="color:#ff79c6">[[</span> ! <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">yn</span>,,<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#ff79c6">=</span>~ ^<span style="color:#ff79c6">(</span>y|yes<span style="color:#ff79c6">)</span>$ <span style="color:#ff79c6">]]</span> <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>
     <span style="color:#8be9fd;font-style:italic">echo</span>
     <span style="color:#ff79c6">case</span> <span style="color:#8be9fd;font-style:italic">$yn</span> in
         <span style="color:#ff79c6">[</span>nN<span style="color:#ff79c6">]</span>*<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Aborting..&#34;</span>; <span style="color:#ff79c6">return</span>;;
@@ -522,6 +548,8 @@
 <ul>
 
     <li>2022-09-28 - Support <code>--destroy</code> and <code>--target</code>, safer user prompt</li>
+
+    <li>2022-11-21 - Better help, handle <code>--chdir</code>, targetted <code>--destroy</code></li>
 
 </ul>
 
